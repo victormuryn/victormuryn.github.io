@@ -1,0 +1,227 @@
+
+
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8">
+		<title>Nerds</title>
+		<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/style.min.css">
+	</head>
+	<body>
+		<header class="shopHeader">
+			<div class="headerLine">
+				<div class="logo">
+					<a href="index.html">
+					<img src="img/svg/nerds-logo.svg" alt="Nerds" class="mainLogo">
+					</a>
+				</div>
+				<ul class="mainNav">
+					<li class="navItem"><a href="javascript://0">Студия</a></li>
+					<li class="navItem"><a href="javascript://0">Клиенты</a></li>
+					<li class="navItem"><span class="activePage">Магазин</span></li>
+					<li class="navItem"><a href="javascript://0">Контакты</a></li>
+				</ul>
+				<div class="bin">		
+					<a href="javascript://0">Корзина</a>
+				</div>
+			</div>
+			<div class="title">
+				<h1>Магазин готовых шаблонов</h1>
+			</div>
+		</header>
+		<div class="mainContainer">
+			<div class="container">
+				<section class="catalog">
+					<form action="javascript://0" class="shopForm">
+						<div class="filter">
+							<p class="catalogTitle catalogTitleFirst">Стоимость:</p>
+							<div class="filterRange">
+								<div class="range">
+									<div class="line">
+										<div class="activeLine"></div>
+										<button>
+										<img src="img/svg/filter-button.svg" alt="Filter button">
+										</button>
+										<button class="secondButton">
+										<img src="img/svg/filter-button.svg" alt="Filter button">
+										</button>
+									</div>
+								</div>
+								<div class="price">
+									<div class="from">
+										<label for="from"><span class="priceText">От</span></label>
+										<input type="text" id="from" placeholder="0">
+									</div>
+									<div class="to">
+										<label for="to"><span class="priceText">До</span></label>
+										<input type="text" id="to" placeholder="15 000">
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="grid">
+							<p class="catalogTitle">Сетка:</p>
+							<input type="radio" name="gridRadio" id="radio1" checked>
+							<label for="radio1" class="filterInputs">Адаптивная</label>
+							<input type="radio" name="gridRadio" id="radio2">
+							<label for="radio2" class="filterInputs">Фиксированная</label>
+							<input type="radio" name="gridRadio" id="radio3" disabled>
+							<label for="radio3" class="filterInputs">Резиновая</label>
+						</div>
+						<div class="features">
+							<p class="catalogTitle">Особенности:</p>
+							<input type="checkbox" id="checkbox1" checked>
+							<label for="checkbox1" class="filterInputs">Слайдер</label>
+							<input type="checkbox" id="checkbox2">
+							<label for="checkbox2" class="filterInputs">Блок преимуществ</label>
+							<input type="checkbox" id="checkbox3" checked>
+							<label for="checkbox3" class="filterInputs">Новости</label>
+							<input type="checkbox" id="checkbox4">
+							<label for="checkbox4" class="filterInputs">Галарея</label>
+							<input type="checkbox" id="checkbox5">
+							<label for="checkbox5" class="filterInputs">Корзина</label>
+						</div>
+						<input type="submit" value="Показать">
+					</form>
+					<div class="items">
+						<div class="column">
+							<p class="catalogTitle">Сортировать:</p>
+							<div class="product" tabindex="0">
+								<img src="img/svg/browser.svg" alt="Decoration element" class="browser">
+								<img src="img/templates/sedona.jpg" alt="Sedona" class="productImg">
+								<div class="aboutProduct">
+									<h4>Sedona</h4>
+									<p>Информационный сайт<br>для туристов</p>
+									<button>9 900 руб.</button>
+								</div>
+							</div>
+							<div class="product" tabindex="0">
+								<img src="img/svg/browser.svg" alt="Decoration element" class="browser">
+								<img src="img/templates/borodinski.jpg" alt="Borodinski" class="productImg">
+								<div class="aboutProduct">
+									<h4>Barbershop</h4>
+									<p>Сайт салоны красоты.<br>Для мужчин, да.</p>
+									<button>9 900 руб.</button>
+								</div>
+							</div>
+							<div class="product" tabindex="0">
+								<img src="img/svg/browser.svg" alt="Decoration element" class="browser">
+								<img src="img/templates/aplus.jpg" alt="A+" class="productImg">
+								<div class="aboutProduct">
+									<h4>A Plus</h4>
+									<p>Лендинг курсов повышения<br>квалификации</p>
+									<button>9 900 руб.</button>
+								</div>
+							</div>
+						</div>
+						<div class="column">
+							<div class="sortType">
+								<a href="#" class="sortTypeLink activeType">По цене</a>
+								<a href="#" class="sortTypeLink">По типу</a>
+								<a href="#" class="sortTypeLink">По названию</a>
+								<a href="#" class="sortTypeLink activeType"><img src="img/svg/icon-down-dir.svg" alt="Сверху вниз"></a>
+								<a href="#" class="sortTypeLink"><img src="img/svg/icon-up-dir.svg" class="activeType" alt="Снизу вверх"></a>
+							</div>
+							<div class="product" tabindex="0">
+								<img src="img/svg/browser.svg" alt="Decoration element" class="browser">
+								<img src="img/templates/pink.jpg" alt="Pink app" class="productImg">
+								<div class="aboutProduct">
+									<h4>Pink app</h4>
+									<p>Продуктовый лендинг <br> приложения для iOS и Android</p>
+									<button>9 900 руб.</button>
+								</div>
+							</div>
+							<div class="product" tabindex="0">
+								<img src="img/svg/browser.svg" alt="Decoration element" class="browser">
+								<img src="img/templates/mishka.jpg" alt="Mishka" class="productImg">
+								<div class="aboutProduct">
+									<h4>Mishka</h4>
+									<p>Интернет-магазин <br> вязаных игрушек</p>
+									<button>9 900 руб.</button>
+								</div>
+							</div>
+							<div class="product" tabindex="0">
+								<img src="img/svg/browser.svg" alt="Decoration element" class="browser">
+								<img src="img/templates/kvast.jpg" alt="Кваст" class="productImg">
+								<div class="aboutProduct">
+									<h4>КВАСТ</h4>
+									<p>Промо-сайт производителя<br>крафтового кваса</p>
+									<button>9 900 руб.</button>
+								</div>
+							</div>
+						</div>
+						<div id="pageNumber">
+							<button class="pageButton activePageList">1</button>
+							<button class="pageButton">2</button>
+							<button class="pageButton">3</button>
+							<button class="pageButton nextPage">Cледующая</button>
+						</div>
+					</div>
+				</section>
+			</div>
+		</div>
+		<section class="map">
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5989424123877!2d30.320894615910287!3d59.93879686904809!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywg0KDQvtGB0ZbRjywgMTkxMTg2!5e0!3m2!1suk!2sua!4v1530129263235" width="100%" height="416" frameborder="0" style="border:0" allowfullscreen></iframe>
+			<div class="contacts">
+				<h5>Nёrds design studio</h5>
+				<p>191186, Санкт-Петербург, <br> ул. Б. Конюшенная, д. 19/8</p>
+				<p>тел. +7 (812) 275-75-75</p>
+				<button class="openButton">Напишите нам</button>
+			</div>
+			<section class="popUp">
+				<form action="javascript://0" method="get">
+					<div class="popUpHeader">
+						<h2>Напишите нам</h2>
+						<button class="closeBtn"><img src="img/svg/close-cross.svg" alt="Закрить"></button>
+					</div>
+					<div class="popUpInformation">
+						<label for="name">
+							<p>Ваше имя:</p>
+							<input class="popUpInput popUpInput1" type="text" id="name" name="name" placeholder="Представтесь, пожалуйста">
+						</label>
+						<label for="email">
+							<p>Ваш e-mail:</p>
+							<input class="popUpInput popUpInput2" type="email" id="email" name="email" placeholder="Для отправки ответа">
+						</label>
+					</div>
+					<label for="text">
+						<p>Текст письма:</p>
+						<textarea class="popUpInput popUpInput3" name="text" id="text" placeholder="В свободной форме"></textarea>
+					</label>
+					<input type="submit" class="closePopub" value="Отправить">
+				</form>
+			</section>
+		</section>
+		<div class="mainContainer">
+			<footer>
+				<div class="socialLinks">
+					<ul>
+						<li class="socialItem">
+							<a href="https://vk.com/" target="_blank">
+							<img src="img/svg/vk-icon.svg" alt="Vkontakte">
+							</a>
+						</li>
+						<li class="socialItem">
+							<a href="https://www.facebook.com/" target="_blank">
+							<img src="img/svg/fb-icon.svg" alt="Facebook">
+							</a>
+						</li>
+						<li class="socialItem">
+							<a href="https://www.instagram.com/" target="_blank">
+							<img src="img/svg/insta-icon.svg" alt="Instagram">
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="friends">
+					<h2>Давайте дружить, это выгодно!</h2>
+					<p>Скидка 10% для друзей из социальных сетей.</p>
+				</div>
+			</footer>
+		</div>
+		<script src="js/script.min.js"></script>
+	</body>
+</html>
+
