@@ -230,13 +230,15 @@ footer {
 	animation-name: aboutProductAnimation;
 	animation-duration: 1s;
 }
-
+.aboutProduct p {
+	margin: 0 auto 30px;
+	max-width: 250px;	
+}
 .aboutProduct p,
 .aboutProduct p:active,
 .aboutProduct p:visited {
 	color: #666;
 	line-height: 18px;
-	margin: 0 0 30px;
 }
 
 @keyframes aboutProductAnimation {
