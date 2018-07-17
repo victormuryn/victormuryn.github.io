@@ -1,0 +1,166 @@
+/*================================ FONTS ==============================*/
+@font-face {
+	font-family: Cuprum;
+	src:url(../fonts/cuprum.woff);
+	src:url(../fonts/cuprum.woff2);
+}/*Cuprum           */
+@font-face {
+	font-family: CuprumBold;
+	src:url(../fonts/cuprumbold.woff);
+	src:url(../fonts/cuprumbold.woff2);
+}/*CuprumBold       */
+@font-face {
+	font-family: CuprumBoldItalic;
+	src:url(../fonts/cuprumbolditakic.woff);
+	src:url(../fonts/cuprumbolditakic.woff2);
+}/*CuprumBoldItalic */
+@font-face {
+	font-family: CuprumItalic;
+	src:url(../fonts/cuprumitslic.woff);
+	src:url(../fonts/cuprumitslic.woff2);
+}/*CuprumItalic     */
+@font-face {
+	font-family: PTsans;
+	src:url(../fonts/ptsans.woff);
+	src:url(../fonts/ptsans.woff2);
+}/*PTsans           */
+@font-face {
+	font-family: PTsansBold;
+	src:url(../fonts/ptsansbold.woff);
+	src:url(../fonts/ptsansbold.woff2);
+}/*PTsansBold       */
+/*================================ BASIC STYLES ==============================*/
+body {
+	margin: 0;
+	padding: 0;
+	font-family: Cuprum, PTsans, sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+}
+*,
+*::bofore,
+*::after {
+	box-sizing: content-box;
+}
+.container {
+	width: 940px;
+	margin: 0 auto;
+}
+/*================================ PAGE STYLES ==============================*/
+header {
+	background-color: #f3f7f8;
+}
+.mainHeader {
+	background-color: #33445a;
+	height: 42px;
+}
+.headerLine {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+}
+.logo {
+	width: 220px;
+	height: 47px;
+	box-shadow: inset 0 -5px 0 rgba(0, 0, 0, 0.24);
+	background-color: #ff5357;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #fff;
+	font-size: 24px;
+	line-height: 24px;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+.logo p {
+	color: #fff;
+	font-size: 24px;
+	line-height: 24px;
+	margin: 0;
+	text-transform: uppercase;
+}
+.search {
+	position: relative;
+}
+.search input {
+	width: 270px;
+	height: 42px;
+	background-color: transparent;
+	border: 0;
+	padding-left: 49px;
+}
+.search input::-webkit-input-placeholder { color: #fff; }
+.search input:-ms-input-placeholder { color: #fff; }
+.search input::-ms-input-placeholder { color: #fff; }
+.search input::placeholder { color: #fff; }
+
+.search::before {
+	content: url(../img/svg/icon-search.svg);
+	display: block;
+	position: absolute;
+	left: 17px;
+	top: 12px;
+}
+.search:hover,
+.search input:hover {
+	cursor: pointer;
+}
+.search input:focus {
+	background-color: #fff;
+}
+.bookmarks button {
+	width: 150px;
+	height: 42px;
+	border: 0;
+	background-color: transparent;
+	color: #fff;
+	font-size: 17px;
+	line-height: 18px;
+	position: relative;
+}
+.bookmarks button:hover {
+	cursor: pointer;
+}
+.bookmarks button::before {
+	content: url(../img/svg/icon-bookmark.svg);
+	opacity: 0.3;
+	position: absolute;
+	left: 15px;
+	top: 12px;
+}
+.bin button {
+	width: 150px;
+	height: 42px;
+	border: 0;
+	background-color: transparent;
+	color: #fff;
+	font-size: 17px;
+	line-height: 18px;
+	position: relative;
+}
+.bin button:hover {
+	cursor: pointer;
+}
+.bin button::before {
+	content: url(../img/svg/icon-cart.svg);
+	opacity: 0.3;
+	position: absolute;
+	left: 15px;
+	top: 12px;
+}
+.order button {
+	width: 150px;
+	height: 42px;
+	background-color: #6db254;
+	color: #fff;
+	font-size: 17px;
+	line-height: 18px;
+	border: 0;
+}
