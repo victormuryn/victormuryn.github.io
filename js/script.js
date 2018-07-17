@@ -2,13 +2,13 @@ var productList = document.querySelector(".items");
 var pages = [
 	{
 		name: "Sedona",
-		description: "Інформаційний сайт для туристів",
+		description: "Інформаційний сайт<br>для туристів",
 		img: "img/templates/sedona.jpg",
 		src: "Sedona/index.html"
 	},
 	{
 		name: "Nerds",
-		description: "Маленька дизайн-студія з Краснодару",
+		description: "Маленька дизайн-студія<br>з Краснодару",
 		img: "img/templates/nerds.jpg",
 		src: "Nerds/index.html"
 	},
@@ -25,7 +25,7 @@ function makeElement(tagName, className, text) {
 		element.classList.add(className);
 	}
 	if(text) {
-		element.textContent = text;
+		element.innerHTML = text;
 	}
 	return element;
 };
