@@ -54,13 +54,16 @@ button:hover {
 	margin: 0 auto;
 }
 
-
+section,
+header,
+footer {
+	padding: 0 10px;
+}
 /*======================= PAGE STYLE =========================*/
 
 header {
 	height: 524px;
 	background-color: #eee;
-	padding: 40px 9.7% 0;
 	position: relative;
 }
 
@@ -531,6 +534,7 @@ header {
 
 .map {
 	position: relative;
+	padding: 0;
 }
 
 .contacts {
