@@ -1,22 +1,32 @@
 var productList = document.querySelector(".catalog");
 var pages = [
 	{
+		name: "Technomart",
+		description: "Інтернет-магазин будівельних матеріалів та інструментів для ремонту",
+		img: "img/templates/technomart.jpg",
+		src: "Technomart/index.html",
+		type: "inProcess"
+	},
+	{
 		name: "The Great Keksby",
 		description: "Інтернет-магазин кота Кекса",
 		img: "img/templates/TheGreatKeksby.png",
-		src: "TheGreatKeksby/index.html"
+		src: "TheGreatKeksby/index.html",
+		type: "new"
 	},
 	{
 		name: "Nerds",
 		description: "Маленька дизайн-студія з Краснодару",
 		img: "img/templates/nerds.jpg",
-		src: "Nerds/index.html"
+		src: "Nerds/index.html",
+		type: "normal"
 	},
 	{
 		name: "Sedona",
 		description: "Інформаційний сайт для туристів",
 		img: "img/templates/sedona.jpg",
-		src: "Sedona/index.html"
+		src: "Sedona/index.html",
+		type: "normal"
 	}
 ]
 function makeElement(tagName, className, text) {
@@ -32,9 +42,15 @@ function makeElement(tagName, className, text) {
 
 function makeProduct(data) {
 	var wrapper = makeElement("div", "column");
-	var link = makeElement("a", "product");
-	link.href = "pages/" + data.src;
-	link.target = "_blank";
+	if (data.type === "inProcess") {
+		var link = makeElement("div", "product");
+	} else {
+		var link = makeElement("a", "product");
+		link.href = "pages/" + data.src;
+		link.target = "_blank";
+	}
+
+	
 
 	var browser = makeElement("img", "browser");
 	browser.src = "img/svg/browser.svg";
@@ -46,14 +62,30 @@ function makeProduct(data) {
 	productPhoto.alt = data.name;
 	link.appendChild(productPhoto);
 
-	var hoverContainer = makeElement("div", "aboutProduct");
+	if(data.type === "new") {
+		var newProduct = makeElement("div", "new");
+		var newText = makeElement("p", "", "new");
+		newProduct.appendChild(newText);
 
-	var productName = makeElement("h4", "", data.name);
-	var productDescription = makeElement("p", "", data.description);
+		link.appendChild(newProduct);
+	}	else if(data.type === "inProcess") {
+		wrapper.classList.add('inProcessDiv');
+		var processWrapper = makeElement("div", "inProcess");
+		var processText = makeElement("p", "", "В розробці");
+		processWrapper.appendChild(processText);
 
-	hoverContainer.appendChild(productName);
-	hoverContainer.appendChild(productDescription);
-	link.appendChild(hoverContainer);
+		wrapper.appendChild(processWrapper);
+	} else {
+		var hoverContainer = makeElement("div", "aboutProduct");
+
+		var productName = makeElement("h4", "", data.name);
+		var productDescription = makeElement("p", "", data.description);
+
+		hoverContainer.appendChild(productName);
+		hoverContainer.appendChild(productDescription);
+		link.appendChild(hoverContainer);
+	}
+
 	wrapper.appendChild(link);
 
 	return wrapper;

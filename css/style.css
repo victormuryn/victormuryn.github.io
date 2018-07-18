@@ -1,9 +1,9 @@
 /*================= BASIC SETTING =========================*/
 
 body {
+	font-family: 'Roboto', 'Arial', sans-serif;
 	margin: 0;
 	padding: 0;
-	font-family: 'Roboto', "Arial", sans-serif;
 }
 
 *,
@@ -17,9 +17,9 @@ img {
 }
 
 ul {
-	list-style: none;
 	margin: 0;
 	padding: 0;
+	list-style: none;
 }
 
 button:hover {
@@ -30,53 +30,53 @@ button:hover {
 /*======================= PAGE STYLE =========================*/
 
 header {
-	height: 200px;
 	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
 	display: -o-flex;
 	display: flex;
+	height: 200px;
+	background-color: #eee;
 	align-items: center;
 	justify-content: center;
-	background-color: #eee;
 }
 
 header h1 {
 	font-size: 55px;
 	font-weight: 500;
 	line-height: 55px;
-	text-align: center;
 	margin-top: 0;
 	margin-bottom: 10px;
+	text-align: center;
 }
 
 header small {
-	text-align: center;
-	color: #555;
-	display: block;
 	font-size: 20px;
 	font-weight: 400;
+	display: block;
+	text-align: center;
+	color: #555;
 }
 
 footer {
-	max-width: 80.5%;
-	margin: 0 auto;
-	padding: 0px 0 50px;
 	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
 	display: -o-flex;
 	display: flex;
+	max-width: 80.5%;
+	margin: 0 auto;
+	padding: 0 0 50px;
 	align-items: center;
 }
 
 .socialLinks {
-	width: 100%;
 	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
 	display: -o-flex;
 	display: flex;
+	width: 100%;
 	justify-content: center;
 }
 
@@ -91,18 +91,36 @@ footer {
 }
 
 .socialItem {
-	width: 79px;
-	height: 79px;
-	background-color: #e1e1e1;
-	border-radius: 50%;
 	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
 	display: -o-flex;
 	display: flex;
+	width: 79px;
+	height: 79px;
+	margin-right: 12px;
+	border-radius: 50%;
+	background-color: #e1e1e1;
 	justify-content: center;
 	align-items: center;
-	margin-right: 12px;
+}
+
+.new {
+	position: absolute;
+	top: 5px;
+	right: -30px;
+	width: 100px;
+	height: 30px;
+	transform: rotate(45deg);
+	text-align: center;
+	background-color: #ff5357;
+}
+
+.new p {
+	font-size: 14px;
+	line-height: 30px;
+	margin: 0;
+	color: #fff;
 }
 
 .socialItem:last-child {
@@ -119,8 +137,8 @@ footer {
 }
 
 .socialItem a {
-	padding: 30px;
 	overflow: hidden;
+	padding: 30px;
 	border-radius: 50%;
 }
 
@@ -130,26 +148,50 @@ footer {
 	display: -ms-flex;
 	display: -o-flex;
 	display: flex;
-	justify-content: space-between;
-	flex-wrap: wrap;
 	max-width: 85vw;
 	margin: 0 auto;
 	padding: 80px 0 0;
+	justify-content: space-between;
+	flex-wrap: wrap;
 }
 
-.catalog div {
-	flex-basis: 360px;
+.catalog > div {
+	overflow: hidden;
 	margin: 0 auto;
+	flex-basis: 360px;
 }
-
+.inProcessDiv img:nth-child(2) {
+	opacity: .7;
+}
+.inProcessDiv {
+	position: relative;
+}
+.inProcess {
+	width: 100%;
+	height: 50px;
+	background-color: #00ca74;
+	position: absolute;
+	left: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	z-index: 2;
+}
+.inProcess p {
+	color: #fff;
+	text-align: center;
+	font-size: 21px;
+	margin: 0;
+	line-height: 50px;
+	font-weight: 500;
+}
 .browser {
 	opacity: .12;
 }
 
 .product {
-	margin-bottom: 33px;
 	position: relative;
 	display: block;
+	margin-bottom: 33px;
 }
 
 .product img {
@@ -157,7 +199,7 @@ footer {
 }
 
 .productImg {
-	border: 1px solid rgba(0, 1, 1, 0.1);
+	border: 1px solid rgba(0, 1, 1, .1);
 	border-top: none;
 }
 
@@ -179,42 +221,44 @@ footer {
 .aboutProduct h4,
 .aboutProduct h4:active,
 .aboutProduct h4:visited {
-	color: #000;
 	font-weight: 700;
 	line-height: 30px;
-	text-transform: uppercase;
 	margin: 0 0 25px;
+	text-transform: uppercase;
+	color: #000;
 }
 
 .aboutProduct {
 	position: absolute;
-	left: 0;
 	bottom: 0;
+	left: 0;
+	display: none;
 	width: 100%;
 	height: 172px;
-	background-color: #eee;
-	text-align: center;
 	padding: 35px 0 43px;
-	display: none;
 	animation-name: aboutProductAnimation;
 	animation-duration: 1s;
+	text-align: center;
+	background-color: #eee;
 }
+
 .aboutProduct p {
+	max-width: 80%;
 	margin: 0 auto 30px;
-	max-width: 80%;	
 }
+
 .aboutProduct p,
 .aboutProduct p:active,
 .aboutProduct p:visited {
-	color: #666;
 	line-height: 18px;
+	color: #666;
 }
 
 @keyframes aboutProductAnimation {
 	0% {
+		font-size: 0;
 		height: 0;
 		padding: 0;
-		font-size: 0;
 	}
 	50% {
 		font-size: 0;
