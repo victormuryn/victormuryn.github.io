@@ -22,13 +22,6 @@ img {
 	max-width: 100%;
 }
 
-.container {
-	padding: 80px 0 0;
-	margin: 0 auto;
-	box-sizing: content-box;
-	width: 80.5%;
-}
-
 ul {
 	list-style: none;
 	margin: 0;
@@ -155,22 +148,16 @@ footer {
 	display: -ms-flex;
 	display: -o-flex;
 	display: flex;
-	justify-content: space-around;
-}
-
-.items {
-	width: 1160px;
-	display: -webkit-flex;
-	display: -moz-flex;
-	display: -ms-flex;
-	display: -o-flex;
-	display: flex;
 	justify-content: space-between;
 	flex-wrap: wrap;
+	width: 85vw;
+	margin: 0 auto;
+	padding: 80px 0 0;
 }
 
-.items div {
+.catalog div {
 	flex-basis: 360px;
+	margin: 0 auto;
 }
 
 .browser {

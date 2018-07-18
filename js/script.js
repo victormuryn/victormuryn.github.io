@@ -1,4 +1,4 @@
-var productList = document.querySelector(".items");
+var productList = document.querySelector(".catalog");
 var pages = [
 	{
 		name: "The Great Keksby",
