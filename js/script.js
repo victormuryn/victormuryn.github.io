@@ -8,13 +8,13 @@ var pages = [
 	},
 	{
 		name: "Nerds",
-		description: "Маленька дизайн-студія<br>з Краснодару",
+		description: "Маленька дизайн-студія з Краснодару",
 		img: "img/templates/nerds.jpg",
 		src: "Nerds/index.html"
 	},
 	{
 		name: "Sedona",
-		description: "Інформаційний сайт<br>для туристів",
+		description: "Інформаційний сайт для туристів",
 		img: "img/templates/sedona.jpg",
 		src: "Sedona/index.html"
 	}
@@ -60,11 +60,6 @@ function makeProduct(data) {
 };
 
 for (var i = 0; i < pages.length; i++) {
-	var newProduct = makeProduct(pages[i]); 
-	if ((i + 1) == pages.length && (i + 1) % 3 != 0) {
-		newProduct.classList.add("column-center");
-	} else if (i == (pages.length - 2) && i % 3 == 0) {
-		newProduct.classList.add("column-center");
-	}
+	var newProduct = makeProduct(pages[i]);
 	productList.appendChild(newProduct);
 };

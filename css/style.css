@@ -30,9 +30,6 @@ ul {
 button:hover {
 	cursor: pointer;
 }
-.column-center {
-	margin: 0 auto;
-}
 .visually-hidden {
 	position: absolute !important;
 	clip: rect(1px 1px 1px 1px);
@@ -209,7 +206,6 @@ footer {
 	left: 0;
 	bottom: 0;
 	width: 100%;
-	max-width: 100%;
 	height: 172px;
 	background-color: #eee;
 	text-align: center;
