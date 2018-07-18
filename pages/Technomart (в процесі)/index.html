@@ -6,6 +6,7 @@
 		<link rel="stylesheet" href="css/normalize.css">
 		<link rel="stylesheet" href="css/style.css">
 		<link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700&amp;subset=cyrillic-ext" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic-ext" rel="stylesheet">
 	</head>
 	<body>
 		<header>
@@ -16,19 +17,185 @@
 						<div class="search">
 							<input type="text" placeholder="Поиск:">
 						</div>
-							<div class="bookmarks">
-								<button>Закладки: 0</button>
-							</div>
-							<div class="bin">
-								<button>Корзина: 0</button>
-							</div>
-							<div class="order">
-								<button>Оформить заказ</button>
+						<div class="bookmarks">
+							<button>Закладки: 0</button>
+						</div>
+						<div class="bin">
+							<button>Корзина: 0</button>
+						</div>
+						<div class="order">
+							<button>Оформить заказ</button>
 						</div>
 					</div>
 				</div>
 			</div>
+			<div class="container">
+				<div class="info">
+					<div class="headerAbout">
+						<p class="aboutText">
+							Интернет-магазин строительных материалов и инструментов для ремонта
+						</p>
+					</div>
+					<div class="headerContacts">
+						<a href="tel:78125550555" class="phoneNumber">+7 (812) 555-05-55</a>
+						<a href="https://goo.gl/zaDedF" target="_blank" class="location">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</a>
+					</div>
+					<div class="account">
+						<a href="#" class="signInLink">Войти</a>
+						<a href="#" class="signUpLink">Регистрация</a>
+					</div>
+				</div>
+			</div>
+			<div class="container">
+				<nav class="headerNav">
+					<ul class="headerNavList">
+						<li class="headerNavItem"><a href="#">Главная</a></li>
+						<li class="headerNavItem"><a href="#">Компания</a></li>
+						<li class="headerNavItem"><a href="#">Каталог</a></li>
+						<li class="headerNavItem"><a href="#">Новости</a></li>
+						<li class="headerNavItem"><a href="#">Спецпредложения</a></li>
+						<li class="headerNavItem"><a href="#">Доставка</a></li>
+						<li class="headerNavItem"><a href="#">Контакты</a></li>
+					</ul>
+				</nav>
+			</div>
 		</header>
-		<script src="js/script.js"></script>	
+		<div class="container">
+			<section class="services">
+				<div class="servicesLine">
+					<div class="servicesItem servicesMaterial">
+						<div class="new"><p>new</p></div>
+						<h3>Материалы</h3>
+						<button>На любой вкус</button>
+					</div>
+					<div class="servicesItem servicesTools">
+						<h3>Инструмент</h3>
+						<button>На все случаи</button>
+					</div>
+					<div class="servicesItem servicesMachinery">
+						<h3>Техника</h3>
+						<button>Для стройки</button>
+					</div>
+				</div>
+				<div class="servicesLine">
+					<div class="servicesSlider">
+						<input type="radio" id="sliderRadio1" checked name="sliderRadio">
+						<input type="radio" id="sliderRadio2" name="sliderRadio">
+						<button class="katalog">Открыть каталог</button>
+						<label for="sliderRadio1" class="prev sliderControl"><img src="img/svg/icon-left.svg" alt="Prev"></label>
+						<label for="sliderRadio2" class="next sliderControl"><img src="img/svg/icon-right.svg" alt="Next"></label>
+						<div class="dots">
+							<label for="sliderRadio1"></label>
+							<label for="sliderRadio2"></label>
+						</div>
+						<div class="sliderItem sliderItem1">
+							<h3>Перфораторы</h3>
+							<p>Настоящие мужские игрушки</p>
+						</div>
+						<div class="sliderItem sliderItem2">
+							<h3>Дрели</h3>
+							<p>Соседям на радость!</p>
+						</div>
+					</div>
+					<div class="servicesContainer">
+						<div class="servicesItem servicesDiscount">
+							<h3>Скидка 50%</h3>
+							<button>На 350 товаров</button>
+						</div>
+						<div class="servicesItem servicesDelivery">
+							<h3>Доставка</h3>
+							<button>Бесплатно</button>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="popular">
+				<div class="sectionTitle">
+					<h2>Популярные товары:</h2>
+					<button>Все популярные товары</button>
+				</div>
+				<div class="goods">
+					<ul class="goodsList">
+						<li class="goodsItem">
+							<div class="front">
+								<img width="184" height="164" src="img/goods/goods1.jpg" alt="Перфоратор BOSCH BFG 9000">
+								<h4>Перфоратор BOSCH BFG 9000</h4>
+								<del>32500 P.</del>
+								<p class="price">22500 P.</p>
+							</div>
+							<div class="back">
+								<button class="toBuyBtn">Купить</button>
+								<button class="toBookmarksBtn">В закладки</button>
+								<h4>Перфоратор BOSCH BFG 9000</h4>
+								<p class="price">22500 P.</p>
+							</div>
+						</li>
+						<li class="goodsItem">
+							<div class="front">
+								<img src="img/goods/goods2.jpg" alt="Перфоратор BOSCH BFG 3000">
+								<h4>Перфоратор BOSCH BFG 3000</h4>
+								<del>22500 P.</del>
+								<p class="price">15500 P.</p>
+							</div>
+							<div class="back">
+								<button class="toBuyBtn">Купить</button>
+								<button class="toBookmarksBtn">В закладки</button>
+								<h4>Перфоратор BOSCH BFG 3000</h4>
+								<p class="price">15500 P.</p>
+							</div>
+						</li>
+						<li class="goodsItem">
+							<div class="front">
+								<img src="img/goods/goods3.jpg" alt="Перфоратор BOSCH BFG 6000">
+								<h4>Перфоратор BOSCH BFG 6000</h4>
+								<del>30500 P.</del>
+								<p class="price">25500 P.</p>
+							</div>
+							<div class="back">
+								<button class="toBuyBtn">Купить</button>
+								<button class="toBookmarksBtn">В закладки</button>
+								<h4>Перфоратор BOSCH BFG 6000</h4>
+								<p class="price">25500 P.</p>
+							</div>
+						</li>
+						<li class="goodsItem newParent">
+							<div class="front">
+								<div class="new"><p>new</p></div>
+								<img src="img/goods/goods4.jpg" alt="Перфоратор BOSCH BFG 2000">
+								<h4>Перфоратор BOSCH BFG 2000</h4>
+								<p class="price">12500 P.</p>
+							</div>
+							<div class="back">
+								<div class="new"><p>new</p></div>
+								<button class="toBuyBtn">Купить</button>
+								<button class="toBookmarksBtn">В закладки</button>
+								<h4>Перфоратор BOSCH BFG 2000</h4>
+								<p class="price">12500 P.</p>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</section>
+		</div>
+		<div class="prosto">
+			<img src="img/svg/checkbox-off.svg" alt="#">
+			<img src="img/svg/checkbox-on.svg" alt="#">
+			<img src="img/svg/filter-button.svg" alt="#">
+			<img src="img/svg/form-1.svg" alt="#">
+			<img src="img/svg/form-2.svg" alt="#">
+			<img src="img/svg/icon-down-dir.svg" alt="#">
+			<img src="img/svg/icon-fb.svg" alt="#">
+			<img src="img/svg/icon-home.svg" alt="#">
+			<img src="img/svg/icon-insta.svg" alt="#">
+			<img src="img/svg/icon-logout.svg" alt="#">
+			<img src="img/svg/icon-phone.svg" alt="#">
+			<img src="img/svg/icon-right-small.svg" alt="#">
+			<img src="img/svg/icon-up-dir.svg" alt="#">
+			<img src="img/svg/icon-user.svg" alt="#">
+			<img src="img/svg/icon-vk.svg" alt="#">
+			<img src="img/svg/radio-off.svg" alt="#">
+			<img src="img/svg/radio-on.svg" alt="#">
+		</div>
+		<script src="js/script.js"></script>
 	</body>
 </html>
