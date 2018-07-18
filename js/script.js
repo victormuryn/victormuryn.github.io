@@ -60,8 +60,10 @@ function makeProduct(data) {
 };
 
 for (var i = 0; i < pages.length; i++) {
-	var newProduct = makeProduct(pages[i]);
-	if ((i + 1) == pages.length && (i + 1) % 2 != 0) {
+	var newProduct = makeProduct(pages[i]); 
+	if ((i + 1) == pages.length && (i + 1) % 3 != 0) {
+		newProduct.classList.add("column-center");
+	} else if (i == (pages.length - 2) && i % 3 == 0) {
 		newProduct.classList.add("column-center");
 	}
 	productList.appendChild(newProduct);

@@ -1,15 +1,3 @@
-/*================================ FONTS ==============================*/
-/*@font-face {
-	font-family: PTsans;
-	src:url(../fonts/ptsans.woff2);
-	src:url(../fonts/ptsans.woff);
-}
-@font-face {
-	font-family: PTsansBold;
-	src:url(../fonts/ptsansbold.woff2);
-	src:url(../fonts/ptsansbold.woff);
-	font-weight: bold;
-}*/
 /*================================ BASIC STYLES ==============================*/
 body {
 	margin: 0;
