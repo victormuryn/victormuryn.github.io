@@ -682,10 +682,52 @@ header {
 	margin-bottom: 30px;
 }
 
+.popularPartners {
+	margin-top: 21px;
+}
+.partners {
+	margin-top: 20px;
+}
 
-
-
-
+.partners .partnersList{
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.partnersList .partnersItem {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+	width: 220px;
+	height: 145px;
+	border: 1px solid #eaeaea;
+	background-color: #fff;
+	margin-bottom: 20px;
+}
+.partnersItem a {
+	width: 220px;
+	height: 145px;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	align-items: center;
+	justify-content: center;	
+}
 
 
 
