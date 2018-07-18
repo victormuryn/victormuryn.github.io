@@ -1,10 +1,10 @@
 var productList = document.querySelector(".items");
 var pages = [
 	{
-		name: "Sedona",
-		description: "Інформаційний сайт<br>для туристів",
-		img: "img/templates/sedona.jpg",
-		src: "Sedona/index.html"
+		name: "The Great Keksby",
+		description: "Інтернет-магазин кота Кекса",
+		img: "img/templates/TheGreatKeksby.png",
+		src: "TheGreatKeksby/index.html"
 	},
 	{
 		name: "Nerds",
@@ -13,10 +13,10 @@ var pages = [
 		src: "Nerds/index.html"
 	},
 	{
-		name: "The Great Keksby",
-		description: "Інтернет-магазин кота Кекса",
-		img: "img/templates/TheGreatKeksby.png",
-		src: "TheGreatKeksby/index.html"
+		name: "Sedona",
+		description: "Інформаційний сайт<br>для туристів",
+		img: "img/templates/sedona.jpg",
+		src: "Sedona/index.html"
 	}
 ]
 function makeElement(tagName, className, text) {
@@ -33,6 +33,8 @@ function makeElement(tagName, className, text) {
 function makeProduct(data) {
 	var wrapper = makeElement("div", "column");
 	var link = makeElement("a", "product");
+	link.href = "pages/" + data.src;
+	link.target = "_blank";
 
 	var browser = makeElement("img", "browser");
 	browser.src = "img/svg/browser.svg";

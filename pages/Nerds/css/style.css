@@ -65,6 +65,7 @@ header {
 	height: 524px;
 	background-color: #eee;
 	position: relative;
+	padding-top: 40px;
 }
 
 .headerLine {
