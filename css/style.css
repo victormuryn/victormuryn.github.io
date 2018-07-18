@@ -220,7 +220,7 @@ footer {
 }
 .aboutProduct p {
 	margin: 0 auto 30px;
-	max-width: 250px;	
+	max-width: 80%;	
 }
 .aboutProduct p,
 .aboutProduct p:active,
