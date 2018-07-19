@@ -9,7 +9,7 @@ var pages = [
 	},
 	{
 		name: "The Great Keksby",
-		description: "Інтернет-магазин кота Кекса",
+		description: "Інтернет-магазин аксесуарів для котів Колекції FW15",
 		img: "img/templates/TheGreatKeksby.png",
 		src: "TheGreatKeksby/index.html",
 		type: "new"
