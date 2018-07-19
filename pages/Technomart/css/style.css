@@ -13,6 +13,7 @@ body
 *::after
 {
     box-sizing: border-box;
+    outline: 0;
 }
 .container
 {
@@ -83,7 +84,8 @@ header
     justify-content: center;
     align-items: center;
 }
-.logo:hover {
+.logo:hover,
+.logo:focus {
     box-shadow: inset 0 -5px 0 rgba(0, 0, 0, 0.24);
     background-color: #ca2c37;
 }
@@ -121,7 +123,8 @@ header
 {
     color: #fff;
 }
-.search:hover input {
+.search:hover input,
+.search:focus input {
     background-color: #212a3a;
 }
 .search input:focus {
@@ -140,16 +143,20 @@ header
 .search svg path {
     fill: #fff;
 }
-.search:hover svg {
+.search:hover svg,
+.search:focus svg {
     opacity: 1;
 }
+.search input:hover ~ svg path,
 .search input:focus ~ svg path {
     fill: #ee3643;
     opacity: 1;
     background-color: red;
 }
 .search:hover,
-.search input:hover
+.search:hover,
+.search input:hover,
+.search input:focus
 {
     cursor: pointer;
 }
@@ -202,7 +209,9 @@ header
     opacity: .3;
 }
 .bookmarks button:hover::before,
-.bin button:hover::before {
+.bookmarks button:focus::before,
+.bin button:hover::before,
+.bin button:focus::before {
     opacity: 1;
 }
 .bookmarks button:active::before,
@@ -223,7 +232,8 @@ header
     border: 0;
     background-color: #6db254;
 }
-.order button:hover {
+.order button:hover,
+.order button:focus {
     background-color: #5fbb2d;
 }
 .order button:active {
@@ -352,10 +362,12 @@ header
     opacity: .3;
     background: url(../img/svg/icon-login.svg) no-repeat center center;
 }
-.account a:hover {
+.account a:hover,
+.account a:focus {
     color: #ee3643;
 }
-.signInLink:hover::before {
+.signInLink:hover::before,
+.signInLink:focus::before {
     opacity: 1;
 }
 .account a:active {
@@ -430,7 +442,8 @@ header
 
     color: #fff;
 }
-.headerNavItem a:hover {
+.headerNavItem a:hover,
+.headerNavItem a:focus {
     background-color: #293449;
 }
 .headerNavItem a:active {
@@ -538,7 +551,8 @@ header
     background-color: rgba(0, 0, 0, .1);
     border-radius: 5px;
 }
-.servicesItem button:hover {
+.servicesItem button:hover,
+.servicesItem button:focus {
     background-color: rgba(0, 0, 0, 0.2);
 }
 .servicesItem button:active {
@@ -672,7 +686,7 @@ header
     right: 20px;
 }
 
-.servicesSlider .katalog
+.servicesSlider .catalog
 {
     font-size: 14px;
 
@@ -691,10 +705,11 @@ header
     border-radius: 5px;
     background-color: #ff5357;
 }
-.servicesSlider .katalog:hover {
+.servicesSlider .catalog:hover,
+.servicesSlider .catalog:focus {
     background-color: #ca2c37;
 }
-.servicesSlider .katalog:active {
+.servicesSlider .catalog:active {
     background-color: #ba2732;
 }
 .sliderItem
@@ -871,10 +886,12 @@ header
     opacity: .3;
     background: url(../img/svg/icon-cart.svg);
 }
-.back .toBuyBtn:hover {
+.back .toBuyBtn:hover,
+.back .toBuyBtn:focus {
     background-color: #5fbb2d;
 }
-.back .toBuyBtn:hover::before {
+.back .toBuyBtn:hover::before,
+.back .toBuyBtn:focus::before {
     opacity: 1;
 }
 .back .toBuyBtn:active {
@@ -900,25 +917,29 @@ header
     border-radius: 3px;
     background-color: transparent;
 }
-.back .toBookmarksBtn:hover {
+.back .toBookmarksBtn:hover,
+.back .toBookmarksBtn:focus {
     border: 3px solid #32425c;
 }
 .back .toBookmarksBtn:active {
     border: 3px solid rgba(50,66,92, .3);
     color: rgba(50,66,92, .3);
-    outline: none;
+    outline: 0;
 }
-.goodsItem:hover .back {
+.goodsItem:hover .back,
+.goodsItem:focus .back {
     display: -webkit-flex;
     display: -moz-flex;
     display: -ms-flex;
     display: -o-flex;
     display: flex;
 }
-.goodsItem:hover img {
+.goodsItem:hover img,
+.goodsItem:focus img {
     opacity: 0;
 }
-.goodsItem:hover {
+.goodsItem:hover,
+.goodsItem:focus {
     box-shadow: 0 10px 25px rgba(41, 52, 73, 0.5);
 }
 
@@ -1040,7 +1061,8 @@ header
     align-items: center;
     justify-content: center;
 }
-.partnersItem:hover {
+.partnersItem:hover,
+.partnersItem:focus {
     box-shadow: 0 10px 25px rgba(41, 52, 73, 0.5);
     border: 0;
 }
@@ -1114,7 +1136,8 @@ header
     cursor: pointer;
     border-bottom: 2px solid #344355;
 }
-.bonusesItemWrapper label:hover {
+.bonusesItemWrapper label:hover,
+.bonusesItemWrapper label:focus {
     box-shadow: 0 1px 0 #293449, inset 0 1px 0 #405069;
     background-color: #293449;
 }
@@ -1486,7 +1509,9 @@ div.bonusesDiscription3 p {
     text-decoration: none;
 }
 .footerNavItem a:hover,
-.footerNavItem2 a:hover {
+.footerNavItem a:focus,
+.footerNavItem2 a:hover,
+.footerNavItem2 a:focus {
     text-decoration: underline;
 }
 .footerNavItem a:active,
@@ -1549,6 +1574,7 @@ div.bonusesDiscription3 p {
     overflow: hidden;
 }
 .socialLinksItem:hover,
+.socialLinksItem:focus,
 .socialLinksItem:active {
     background-color: #ee3643;
 }
@@ -1587,7 +1613,8 @@ div.bonusesDiscription3 p {
     color: #ffda96;
     text-decoration: none;
 }
-.author a:hover {
+.author a:hover,
+.author a:focus {
     text-decoration: underline;
 }
 .author a:active {
