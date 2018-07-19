@@ -48,9 +48,7 @@ function makeProduct(data) {
 		var link = makeElement("a", "product");
 		link.href = "pages/" + data.src;
 		link.target = "_blank";
-	}
-
-	
+	}	
 
 	var browser = makeElement("img", "browser");
 	browser.src = "img/svg/browser.svg";
@@ -67,24 +65,29 @@ function makeProduct(data) {
 		var newText = makeElement("p", "", "new");
 		newProduct.appendChild(newText);
 
+		var hoverContainer = makeElement("div", "aboutProduct");
+
+		var productName = makeElement("h4", "", data.name);
+		var productDescription = makeElement("p", "", data.description);
+
 		link.appendChild(newProduct);
-	}	else if(data.type === "inProcess") {
+	}	else if (data.type === "inProcess") {
 		wrapper.classList.add('inProcessDiv');
 		var processWrapper = makeElement("div", "inProcess");
 		var processText = makeElement("p", "", "В розробці");
 		processWrapper.appendChild(processText);
 
 		wrapper.appendChild(processWrapper);
-	} else {
-		var hoverContainer = makeElement("div", "aboutProduct");
-
-		var productName = makeElement("h4", "", data.name);
-		var productDescription = makeElement("p", "", data.description);
-
-		hoverContainer.appendChild(productName);
-		hoverContainer.appendChild(productDescription);
-		link.appendChild(hoverContainer);
 	}
+
+	var hoverContainer = makeElement("div", "aboutProduct");
+
+	var productName = makeElement("h4", "", data.name);
+	var productDescription = makeElement("p", "", data.description);
+
+	hoverContainer.appendChild(productName);
+	hoverContainer.appendChild(productDescription);
+	link.appendChild(hoverContainer);
 
 	wrapper.appendChild(link);
 
