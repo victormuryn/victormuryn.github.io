@@ -363,7 +363,7 @@ header
     display:         flex;
     overflow: hidden;
 
-    width: 134.2857142857143px;
+    width: calc(100% / 7);
 
     align-items: center;
     justify-content: center;
@@ -975,6 +975,146 @@ header
     align-items: center;
     justify-content: center;
 }
+
+.bonuses {
+    background-color: #f2f7f8;
+    margin-top: 65px;
+    padding-top: 68px;
+    /*padding-bottom: 102px;*/
+}
+
+.bonusesTitle h2 {
+    font-family: Cuprum;
+    font-size: 30px;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-top: 0;
+    margin-bottom: 35px;
+}
+
+.bonusesTitle p {
+    font-family: "PT Sans";
+    font-size: 14px;
+    font-weight: 400;
+}
+.bonuses input[name=bonusesItem] {
+    display: none;
+}
+.bonusesList {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    margin-top: 74px;
+}
+.bonuses .columnWrapper {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    flex-direction: column;
+}
+.bonusesItemWrapper {
+    height: 180px;
+    position: relative;
+    margin-right: 80px;
+}
+.bonusesItemWrapper::after {
+    content: url(../img/shadow.png);
+    position: absolute;
+    right: 0;
+    top: -34px;
+}
+.bonusesItemWrapper label {
+    height: 61px;
+    width: 240px;
+    line-height: 61px;
+    box-shadow: inset 0 -1px 0 #3d546e;
+    background-color: #3d546e;
+    color: #fff;
+    font-size: 21px;
+    font-weight: 700;
+    padding-left: 23px;
+    cursor: pointer;
+    border-bottom: 2px solid #344355;
+}
+.bonusesItemDiscription h3 {
+    color: #3d546e;
+    font-family: Cuprum;
+    font-size: 36px;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin: 0;
+    margin-bottom: 30px;
+}
+.bonusesItemDiscription {
+    width: calc(100% - 240px);
+    height: 270px;
+}
+.bonusesItemDiscription p {
+    font-family: "Myriad Pro", "PTsans", sans-serif;
+    font-weight: 400;
+    max-width: 280px;
+    font-size: 13px;
+    margin: 0;
+    line-height: 24px;
+}
+
+.bonusesItemDiscription div.bonusesDiscription1 {
+    background: url(../img/bonuses/bonuses1.png) no-repeat right top 21px;
+    display: none;
+    height: 282px;
+}
+
+.bonusesItemDiscription div.bonusesDiscription2 {
+    background: url(../img/bonuses/bonuses2.png) no-repeat right top 21px;
+    display: none;
+    height: 282px;
+}
+div.bonusesDiscription2 p {
+    max-width: 379px;
+}
+.bonusesItemDiscription div.bonusesDiscription3 {
+    background: url(../img/bonuses/bonuses3.png) no-repeat right top 21px;
+    height: 282px;
+    display: none;
+}
+div.bonusesDiscription3 p {
+    max-width: 559px;
+}
+
+#bonusesItem1:checked ~ .bonusesList > .bonusesItemDiscription > .bonusesDiscription1 {
+    display: block;
+}
+#bonusesItem1:checked ~ .bonusesList > .bonusesItemWrapper > label[for=bonusesItem1] {
+    background-color: #fff;
+    color: #3d546e;
+    border-bottom: 0;
+}
+
+#bonusesItem2:checked ~ .bonusesList > .bonusesItemDiscription > .bonusesDiscription2 {
+    display: block;
+}
+#bonusesItem2:checked ~ .bonusesList > .bonusesItemWrapper > label[for=bonusesItem2] {
+    background-color: #fff;
+    color: #3d546e;
+    border-bottom: 0;
+}
+
+#bonusesItem3:checked ~ .bonusesList > .bonusesItemDiscription > .bonusesDiscription3 {
+    display: block;
+}
+#bonusesItem3:checked ~ .bonusesList > .bonusesItemWrapper > label[for=bonusesItem3] {
+    background-color: #fff;
+    color: #3d546e;
+    border-bottom: 0;
+}
+
+
+
+
 
 
 
