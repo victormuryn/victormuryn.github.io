@@ -21,8 +21,8 @@
 						<div class="bookmarks">
 							<button>Закладки: 0</button>
 						</div>
-						<div class="bin">
-							<button>Корзина: 0</button>
+						<div class="bin redBin">
+							<button>Корзина: 10</button>
 						</div>
 						<div class="order">
 							<button>Оформить заказ</button>
@@ -42,15 +42,24 @@
 						<a href="https://goo.gl/zaDedF" target="_blank" class="location">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</a>
 					</div>
 					<div class="account">
-						<a href="javascript://0" class="signInLink">Войти</a>
-						<a href="javascript://0" class="signUpLink">Регистрация</a>
+						<div class="loggedIn">
+							<a href="javascript://0" class="loggedInName">Равшан Джамшутович</a>
+							<a href="javascript://0" class="logOutIcon">
+								<span class="visually-hidden">Выйти</span>
+								<img src="img/svg/icon-logout.svg" alt="Выйти">
+							</a>
+						</div>
+						<div class="accountInfo">
+							<a href="javascript://0">Мои заказы</a>
+							<a href="javascript://0">Личный кабинет</a>
+						</div>
 					</div>
 				</div>
 			</div>
 			<div class="container">
 				<nav class="headerNav">
 					<ul class="headerNavList">
-						<li class="headerNavItem"><a href="javascript://0">Главная</a></li>
+						<li class="headerNavItem"><a href="index.html">Главная</a></li>
 						<li class="headerNavItem"><a href="javascript://0">Компания</a></li>
 						<li class="headerNavItem"><a href="catalog.html">Каталог</a></li>
 						<li class="headerNavItem"><a href="javascript://0">Новости</a></li>
@@ -62,90 +71,260 @@
 			</div>
 		</header>
 		
-		<footer class="footer">
-			<div class="container">
-				<div class="footerLogo">
-					<div class="logo"><a href="index.html">Техномарт</a></div>
-					<nav class="footerNav">
-						<ul class="footerNavList">
-							<li class="footerNavItem"><a href="javascript://0">Компания</a></li>
-							<li class="footerNavItem"><a href="javascript://0">Новости</a></li>
-							<li class="footerNavItem"><a href="catalog.html">Каталог</a></li>
-							<li class="footerNavItem"><a href="javascript://0">Доставка</a></li>
-							<li class="footerNavItem"><a href="javascript://0">Контакты</a></li>
-						</ul>
-					</nav>
+		<div class="container">
+			<section class="crumbs">
+				<a href="index.html">
+					<img src="img/svg/icon-home.svg" alt="Главная страница">
+					<span class="visually-hidden">Главная страница</span>
+				</a>
+				<img src="img/svg/icon-right-small.svg" alt="Decoration element">
+				<a href="javascript://0">Каталог</a>
+				<img src="img/svg/icon-right-small.svg" alt="Decoration element">
+				<a href="javascript://0">Инструмент</a>
+				<img src="img/svg/icon-right-small.svg" alt="Decoration element">
+				<a href="javascript://0">Перфораторы</a>
+			</section>
+			<section class="perforators">
+				<div class="perforatorsTitle">
+					<h2>Перфораторы</h2>
 				</div>
-				<div class="footerContacts">
-					<div class="contactsItems">
-						<a href="https://goo.gl/uoT9q8" target="_blank">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</a>
-						<a href="tel:+78125550555">+7 (812) 555-05-55</a>
+				<div class="perforatorsWrapper">
+					<div class="perforatorsFilters">
+						<div class="perforatorsFiltersTitle">
+							<p>Фильтр:</p>
+						</div>
+						<form action="#" method="get" class="filterForm">
+							<div class="filterFormGroup rangeGroup">
+								<h4 class="formTitle">Цена:</h4>
+								<div class="range">
+									<div class="fullLine">
+										<div class="activeLine">
+											<button><img src="img/svg/filter-button.svg" alt="Filter button"></button>
+											<button><img src="img/svg/filter-button.svg" alt="Filter button"></button>
+										</div>
+									</div>
+								</div>
+								<div class="rangeGroupWrapper">
+									<input type="text" value="0">
+									<span>—</span>
+									<input type="text" value="30000">
+								</div>
+							</div>
+							<div class="filterFormGroup formGroupCheckboxes">
+								<h4 class="formTitle">Производители:</h4>
+								<input type="checkbox" id="manufacturer1" checked>
+								<input type="checkbox" id="manufacturer2">
+								<input type="checkbox" id="manufacturer3" checked>
+								<input type="checkbox" id="manufacturer4">
+								<input type="checkbox" id="manufacturer5">
+								<label for="manufacturer1">Bosch</label>
+								<label for="manufacturer2">Интерскол</label>
+								<label for="manufacturer3">Makita</label>
+								<label for="manufacturer4">Dewalt</label>
+								<label for="manufacturer5">Hitachi</label>
+							</div>
+							<div class="filterFormGroup formGroupRadio">
+								<h4 class="formTitle">Питание:</h4>
+								<input type="radio" name="batteryType" id="battery1" checked>
+								<label for="battery1">Аккумуляторные</label>
+								<input type="radio" name="batteryType" id="battery2">
+								<label for="battery2">Сетевые</label>
+							</div>
+							<input type="submit" value="Показать">
+						</form>
 					</div>
-					<nav class="footerNav2">
-						<ul class="footerNavList2">
-							<li class="footerNavItem2"><a href="javascript://0">Материалы</a></li>
-							<li class="footerNavItem2"><a href="javascript://0">Техника</a></li>
-							<li class="footerNavItem2"><a href="javascript://0">Инструмент</a></li>
-							<li class="footerNavItem2"><a href="javascript://0">Спецпредложения</a></li>
-						</ul>
-					</nav>
+					<div class="perforatorsList">
+						<div class="perforatorsListHeader">
+							<div class="perforatorsListHeaderTitle">
+								<p>Сортировка:</p>
+								<div class="perforatorsListHeaderTitleWrapper">
+									<a href="javascript://0" class="perforatorsType activeType">По цене</a>
+									<a href="javascript://0" class="perforatorsType">По типу</a>
+									<a href="javascript://0" class="perforatorsType perforatorsTypeLast">По функционалу</a>
+									<a href="javascript://0" class="typeIcon activeTypeIcon">
+									<svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10"><path d="M5.5 0L0 10h11z"></svg>
+								</a>
+								<a href="javascript://0" class="typeIcon">
+								<svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10"><path d="M5.5 10L0 0h11"></svg>
+							</a>
+						</div>
+					</div>
+				</div>
+				<ul class="perforatorsListUl">
+					<li class="perforatorsItem">
+						<img src="img/goods/goods2.jpg" alt="Перфоратор BOSCH BFG 3000">
+						<h3>Перфоратор BOSCH BFG 3000</h3>
+						<del>22500 Р.</del>
+						<p class="price">15500 Р.</p>
+						<div class="back">
+							<button class="toBuyBtn">Купить</button>
+							<button class="toBookmarksBtn">В закладки</button>
+						</div>
+					</li>
+					<li class="perforatorsItem">
+						<img src="img/goods/goods3.jpg" alt="Перфоратор BOSCH BFG 6000">
+						<h3>Перфоратор BOSCH BFG 6000</h3>
+						<del>30500 Р.</del>
+						<p class="price">25500 Р.</p>
+						<div class="back">
+							<button class="toBuyBtn">Купить</button>
+							<button class="toBookmarksBtn">В закладки</button>
+						</div>
+					</li>
+					<li class="perforatorsItem">
+						<div class="new"><p>new</p></div>
+						<img src="img/goods/goods4.jpg" alt="Перфоратор BOSCH BFG 2000">
+						<h3>Перфоратор BOSCH BFG 2000</h3>
+						<p class="price">12500 Р.</p>
+						<div class="back">
+							<button class="toBuyBtn">Купить</button>
+							<button class="toBookmarksBtn">В закладки</button>
+						</div>
+					</li>
+					<li class="perforatorsItem">
+						<img src="img/goods/goods2.jpg" alt="Перфоратор BOSCH BFG 3000">
+						<h3>Перфоратор BOSCH BFG 3000</h3>
+						<del>22500 Р.</del>
+						<p class="price">15500 Р.</p>
+						<div class="back">
+							<button class="toBuyBtn">Купить</button>
+							<button class="toBookmarksBtn">В закладки</button>
+						</div>
+					</li>
+					<li class="perforatorsItem">
+						<div class="new"><p>new</p></div>
+						<img src="img/goods/goods3.jpg" alt="Перфоратор BOSCH BFG 6000">
+						<h3>Перфоратор BOSCH BFG 6000</h3>
+						<del>30500 Р.</del>
+						<p class="price">25500 Р.</p>
+						<div class="back">
+							<button class="toBuyBtn">Купить</button>
+							<button class="toBookmarksBtn">В закладки</button>
+						</div>
+					</li>
+					<li class="perforatorsItem">
+						<img src="img/goods/goods4.jpg" alt="Перфоратор BOSCH BFG 2000">
+						<h3>Перфоратор BOSCH BFG 2000</h3>
+						<p class="price">12500 Р.</p>
+						<div class="back">
+							<button class="toBuyBtn">Купить</button>
+							<button class="toBookmarksBtn">В закладки</button>
+						</div>
+					</li>
+					<li class="perforatorsItem">
+						<div class="new"><p>new</p></div>
+						<img src="img/goods/goods2.jpg" alt="Перфоратор BOSCH BFG 3000">
+						<h3>Перфоратор BOSCH BFG 3000</h3>
+						<del>22500 Р.</del>
+						<p class="price">15500 Р.</p>
+						<div class="back">
+							<button class="toBuyBtn">Купить</button>
+							<button class="toBookmarksBtn">В закладки</button>
+						</div>
+					</li>
+					<li class="perforatorsItem">
+						<img src="img/goods/goods3.jpg" alt="Перфоратор BOSCH BFG 6000">
+						<h3>Перфоратор BOSCH BFG 6000</h3>
+						<del>30500 Р.</del>
+						<p class="price">25500 Р.</p>
+						<div class="back">
+							<button class="toBuyBtn">Купить</button>
+							<button class="toBookmarksBtn">В закладки</button>
+						</div>
+					</li>
+					<li class="perforatorsItem">
+						<img src="img/goods/goods4.jpg" alt="Перфоратор BOSCH BFG 2000">
+						<h3>Перфоратор BOSCH BFG 2000</h3>
+						<p class="price">12500 Р.</p>
+						<div class="back">
+							<button class="toBuyBtn">Купить</button>
+							<button class="toBookmarksBtn">В закладки</button>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</section>
+</div>
+<footer class="footer">
+	<div class="container">
+		<div class="footerLogo">
+			<div class="logo"><a href="index.html">Техномарт</a></div>
+			<nav class="footerNav">
+				<ul class="footerNavList">
+					<li class="footerNavItem"><a href="javascript://0">Компания</a></li>
+					<li class="footerNavItem"><a href="javascript://0">Новости</a></li>
+					<li class="footerNavItem"><a href="catalog.html">Каталог</a></li>
+					<li class="footerNavItem"><a href="javascript://0">Доставка</a></li>
+					<li class="footerNavItem"><a href="javascript://0">Контакты</a></li>
+				</ul>
+			</nav>
+		</div>
+		<div class="footerContacts">
+			<div class="contactsItems">
+				<a href="https://goo.gl/uoT9q8" target="_blank">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</a>
+				<a href="tel:+78125550555">+7 (812) 555-05-55</a>
+			</div>
+			<nav class="footerNav2">
+				<ul class="footerNavList2">
+					<li class="footerNavItem2"><a href="javascript://0">Материалы</a></li>
+					<li class="footerNavItem2"><a href="javascript://0">Техника</a></li>
+					<li class="footerNavItem2"><a href="javascript://0">Инструмент</a></li>
+					<li class="footerNavItem2"><a href="javascript://0">Спецпредложения</a></li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+	<div class="footerCopyright">
+		<div class="container footerCopyrightСontainer">
+			<div class="copyright">
+				<p>&copy; 2010–2018 Компания «Техномарт»<br>Все права защищены</p>
+			</div>
+			<div class="footerSocialLinks">
+				<ul class="socialLinksList">
+					<li class="socialLinksItem">
+						<a href="https://vk.com" target="_blank">
+							<span class="visually-hidden">Vkontakte</span>
+							<img src="img/svg/icon-vk.svg" alt="Vkontakte">
+						</a>
+					</li>
+					<li class="socialLinksItem">
+						<a href="https://www.facebook.com" target="_blank">
+							<span class="visually-hidden">Facebook</span>
+							<img src="img/svg/icon-fb.svg" alt="Facebook">
+						</a>
+					</li>
+					<li class="socialLinksItem">
+						<a href="https://www.instagram.com" target="_blank">
+							<span class="visually-hidden">Instagram</span>
+							<img src="img/svg/icon-insta.svg" alt="Instagram">
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="author">
+				<div class="authorGroup">
+					<p>Обратная связь:</p>
+					<a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+				</div>
+				<div class="authorGroup">
+					<p>Разработано —</p>
+					<a href="https://murynofficial.github.io" target="_blank">muryn.official</a>
 				</div>
 			</div>
-			<div class="footerCopyright">
-				<div class="container footerCopyrightСontainer">
-					<div class="copyright">
-						<p>&copy; 2010–2018 Компания «Техномарт»<br>Все права защищены</p>
-					</div>
-					<div class="footerSocialLinks">
-						<ul class="socialLinksList">
-							<li class="socialLinksItem">
-								<a href="https://vk.com" target="_blank">
-									<span class="visually-hidden">Vkontakte</span>
-									<img src="img/svg/icon-vk.svg" alt="Vkontakte">
-								</a>
-							</li>
-							<li class="socialLinksItem">
-								<a href="https://www.facebook.com" target="_blank">
-									<span class="visually-hidden">Facebook</span>
-									<img src="img/svg/icon-fb.svg" alt="Facebook">
-								</a>
-							</li>
-							<li class="socialLinksItem">
-								<a href="https://www.instagram.com" target="_blank">
-									<span class="visually-hidden">Instagram</span>
-									<img src="img/svg/icon-insta.svg" alt="Instagram">
-								</a>
-							</li>
-						</ul>
-					</div>
-					<div class="author">
-						<div class="authorGroup">
-							<p>Обратная связь:</p>
-							<a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-						</div>
-						<div class="authorGroup">
-							<p>Разработано —</p>
-							<a href="https://murynofficial.github.io" target="_blank">muryn.official</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</footer>
-		<!-- 	<div class="prosto">
-				<img src="img/svg/checkbox-off.svg" alt="#">
-				<img src="img/svg/checkbox-on.svg" alt="#">
-				<img src="img/svg/filter-button.svg" alt="#">
-				<img src="img/svg/form-1.svg" alt="#">
-				<img src="img/svg/icon-down-dir.svg" alt="#">
-				<img src="img/svg/icon-home.svg" alt="#">
-				<img src="img/svg/icon-logout.svg" alt="#">
-				<img src="img/svg/icon-phone.svg" alt="#">
-				<img src="img/svg/icon-right-small.svg" alt="#">
-				<img src="img/svg/icon-up-dir.svg" alt="#">
-				<img src="img/svg/icon-user.svg" alt="#">
-				<img src="img/svg/radio-off.svg" alt="#">
-				<img src="img/svg/radio-on.svg" alt="#">
-		</div> -->
-		<script src="js/script.js"></script>
-	</body>
+		</div>
+	</div>
+</footer>
+<!-- <div class="prosto">
+					<img src="img/svg/checkbox-off.svg" alt="#">
+					<img src="img/svg/checkbox-on.svg" alt="#">
+					<img src="img/svg/filter-button.svg" alt="#">
+					<img src="img/svg/form-1.svg" alt="#">
+					<img src="img/svg/icon-down-dir.svg" alt="#">
+					<img src="img/svg/icon-up-dir.svg" alt="#">
+					<img src="img/svg/radio-off.svg" alt="#">
+					<img src="img/svg/radio-on.svg" alt="#">
+</div> -->
+<script src="js/script.js"></script>
+</body>
 </html>
