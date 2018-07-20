@@ -1,13 +1,18 @@
-let openPopUp1 = document.querySelector(".openWriteUs");
-let	writeUsPopUp = document.querySelector(".writeUs");
-let closeBtn1 = document.querySelector(".closeBtn");
-let inputFocus = document.querySelector("#name");
-let closeBtn2 = document.querySelector(".writeUs input[type=submit]");
-let allWriteUsInputs = document.querySelectorAll(".writeUs input, .writeUs textarea");
-let openPopUp2 = document.querySelector(".openMapPopUp");
-let mapPopUp = document.querySelector(".mapPopUp");
-let closeBtn3 = document.querySelector(".closeBtn2");
+let openPopUp1 = document.querySelector(".openWriteUs"),
+writeUsPopUp = document.querySelector(".writeUs"),
+closeBtn1 = document.querySelector(".closeBtn"),
+inputFocus = document.querySelector("#name"),
+closeBtn2 = document.querySelector(".writeUs input[type=submit]"),
+openPopUp2 = document.querySelector(".openMapPopUp"),
+mapPopUp = document.querySelector(".mapPopUp"),
+allWriteUsInputs = document.querySelectorAll(".writeUs input, .writeUs textarea"),
+closeBtn3 = document.querySelector(".closeBtn2"),
+openCatalogPopUp = document.querySelectorAll(".catalogBookmarks"),
+catalogPopUp = document.querySelector(".catalogPopUp"),
+closeBtn4 = document.querySelector(".closeBtn4"),
+closeBtn5 = document.querySelector(".closeBtn5");
 
+if (openPopUp1) {
 openPopUp1.addEventListener('click', function (e) {
 	e.preventDefault();
 	writeUsPopUp.classList.add("showPopUp");
@@ -34,3 +39,20 @@ closeBtn3.addEventListener('click', function (e) {
 	e.preventDefault();
 	mapPopUp.classList.remove("showPopUp");
 });
+
+} else {
+	for (let i = 0; i < openCatalogPopUp.length; i++) {
+		openCatalogPopUp[i].addEventListener('click', function (e) {
+			e.preventDefault();
+			catalogPopUp.classList.add("showPopUp");
+	});
+	}
+	closeBtn4.addEventListener('click', function (e) {
+		e.preventDefault();
+		catalogPopUp.classList.remove("showPopUp");
+	});
+	closeBtn5.addEventListener('click', function (e) {
+		e.preventDefault();
+		catalogPopUp.classList.remove("showPopUp");
+	});
+}

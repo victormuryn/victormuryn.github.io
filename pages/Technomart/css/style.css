@@ -282,6 +282,7 @@ header
     margin: 0;
 
     color: #ff5357;
+    width: 196px;
 }
 .headerContacts .phoneNumber
 {
@@ -934,7 +935,8 @@ header
 {
     opacity: 1;
 }
-.back .toBookmarksBtn
+.back .toBookmarksBtn,
+.back .catalogBookmarks
 {
     font-family: Cuprum, sans-serif;
     font-size: 14px;
@@ -951,11 +953,14 @@ header
     background-color: transparent;
 }
 .back .toBookmarksBtn:hover,
-.back .toBookmarksBtn:focus
+.back .toBookmarksBtn:focus,
+.back .catalogBookmarks:hover,
+.back .catalogBookmarks:focus
 {
     border: 3px solid #32425c;
 }
-.back .toBookmarksBtn:active
+.back .toBookmarksBtn:active,
+.back .catalogBookmarks:active
 {
     color: rgba(50,66,92, .3);
     border: 3px solid rgba(50,66,92, .3);
@@ -1513,7 +1518,7 @@ div.bonusesDiscription3 p
 
     width: 100%;
     height: 38px;
-    margin-top: 88px;
+    margin-top: 80px;
 
     text-transform: uppercase;
 
@@ -1550,9 +1555,11 @@ div.bonusesDiscription3 p
     box-shadow: 0 10px 25px rgba(41, 52, 73, .5);
 }
 
-.showPopUp
+div.showPopUp
 {
     display: block;
+    animation-name: showPopUp;
+    animation-duration: .5s;
 }
 
 .footer
@@ -1868,6 +1875,17 @@ div.bonusesDiscription3 p
 
     color: #000;
 }
+.loggedIn .loggedInName:hover,
+.loggedIn .loggedInName:focus {
+    color: #000;
+}
+.loggedIn .loggedInName:hover::before {
+    opacity: 1;
+}
+.loggedIn .loggedInName:active,
+.loggedIn .loggedInName:active::before {
+    opacity: .3;
+}
 .loggedIn .loggedInName::before
 {
     position: absolute;
@@ -1876,11 +1894,21 @@ div.bonusesDiscription3 p
 
     content: url(../img/svg/icon-user.svg);
     transform: translateY(-50%);
+    opacity: .3;
 }
 
 .logOutIcon
 {
     margin-left: 25px;
+}
+.logOutIcon img {
+    opacity: .3;
+}
+.logOutIcon img:hover {
+    opacity: 1;
+}
+.logOutIcon img:active {
+    opacity: .3;
 }
 .accountInfo
 {
@@ -1937,6 +1965,7 @@ div.bonusesDiscription3 p
 
 .perforators
 {
+    position: relative;
     margin-top: 25px;
 }
 .perforators .perforatorsTitle
@@ -2090,6 +2119,10 @@ div.bonusesDiscription3 p
     position: absolute;
     left: 0;
     top: 0;
+    opacity: .8;
+}
+.formGroupCheckboxes label:hover::before {
+    opacity: 1;
 }
 #manufacturer1:checked ~ label[for=manufacturer1]::before {
     content: url(../img/svg/checkbox-on.svg);
@@ -2105,6 +2138,22 @@ div.bonusesDiscription3 p
 }
 #manufacturer5:checked ~ label[for=manufacturer5]::before {
     content: url(../img/svg/checkbox-on.svg);
+}
+
+#manufacturer1:disabled ~ label[for=manufacturer1]::before {
+    opacity: .3;
+}
+#manufacturer2:disabled ~ label[for=manufacturer2]::before {
+    opacity: .3;
+}
+#manufacturer3:disabled ~ label[for=manufacturer3]::before {
+    opacity: .3;
+}
+#manufacturer4:disabled ~ label[for=manufacturer4]::before {
+    opacity: .3;
+}
+#manufacturer5:disabled ~ label[for=manufacturer5]::before {
+    opacity: .3;
 }
 
 .formGroupRadio  {
@@ -2141,12 +2190,22 @@ div.bonusesDiscription3 p
     position: absolute;
     left: 0;
     top: 0;
+    opacity: .8;
+}
+.formGroupRadio label:hover::before {
+    opacity: 1;
 }
 #battery1:checked ~ label[for=battery1]::before {
     content: url(../img/svg/radio-on.svg);
 }
 #battery2:checked ~ label[for=battery2]::before {
     content: url(../img/svg/radio-on.svg);
+}
+#battery1:disabled ~ label[for=battery1]::before {
+    opacity: .3;
+}
+#battery2:disabled ~ label[for=battery2]::before {
+    opacity: .3;
 }
 
 .filterForm input[type=submit] {
@@ -2195,9 +2254,13 @@ div.bonusesDiscription3 p
     font-family: "PT Sans";
     font-size: 13px;
     line-height: 18px;
-    border-bottom: 1px dashed #ee3643;
+    border-bottom: 1px dotted #ee3643;
     text-decoration: none;
     margin-right: 65px;
+}
+.perforatorsListHeaderTitleWrapper .perforatorsType:hover {
+    color: #000;
+    border-bottom: 1px solid #ee3643;
 }
 .perforatorsListHeaderTitleWrapper .perforatorsTypeLast {
     margin-right: 46px;
@@ -2212,6 +2275,9 @@ div.bonusesDiscription3 p
 } 
 .typeIcon path {
     fill: #c5c5c5;
+}
+.typeIcon:hover path {
+    fill: #000;
 }
 .activeTypeIcon path {
     fill: #ee3643;
@@ -2308,15 +2374,134 @@ div.bonusesDiscription3 p
     animation-duration: .3s;
     animation-fill-mode: forwards;
 }
+.catalogPopUp {
+    position: fixed;
+    border-top: 7px solid #e43546;
+    z-index: 3;
+    left: 50%;
+    top: 40%;
 
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    width: 620px;
+    height: 283px;
+    box-shadow: 0 20px 40px rgba(41, 52, 73, 0.75);
+    display: none;
+}
+.catalogPopUp .catalogPopUpMain {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: center;
+    -ms-align-items: center;
+    align-items: center;
+    height: 163px;
+}
+.catalogPopUpMain h3 {
+    margin-left: 32px;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 18px;
+}
+.catalogPopUp .catalogPopUpFooter {
+    background-color: #f1f1f1;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    justify-content: center;
+    -ms-align-items: center;
+    align-items: center;
+    display: flex;
+    height: 113px;
+}
+.catalogPopUpFooter .catalogPopUpFooterBuy {
+    width: 220px;
+    height: 38px;
+    background-color: #ee3643;
+    color: #fff;
+    font-size: 14px;
+    line-height: 18px;
+    text-transform: uppercase;
+    border: 0;
+    border-radius: 5px;
+    margin-right: 20px;
+}
+.catalogPopUpFooter .catalogPopUpFooterContinue {
+    width: 220px;
+    height: 38px;
+    background-color: #fff;
+    border: 0;
+    border-radius: 5px;
+    font-size: 14px;
+    line-height: 18px;
+    text-transform: uppercase;
+}
+.perforatorsListPages button {
+    height: 38px;
+    font-family: "PT Sans";
+    font-size: 13px;
+    line-height: 38px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    border: 1px solid #e5e5e5;
+    padding: 0;
+}
+.perforatorsListPages button:hover {
+    border: 1px solid #bdc6ca;
+    background-color: transparent;
+    color: #000; 
+}
+.perforatorsListPages button:active {
+    border: 1px solid #ee3643;
+    background-color: transparent;
+    color: #000; 
+}
+.perforatorsListPages .numberPageBtn {
+    width: 38px;
+    background-color: #fff;
+}
+.perforatorsListPages .activeBtn {
+    background-color: #ee3643;
+    color: #fff;
+}
+.perforatorsListPages .nextPage {
+    width: 140px;
+    background-color: #fff;
+}
+.aboutPerforators {
+    background-color: #f2f6f8;
+    color: #000;
+    font-family: "PT Sans";
+    font-size: 13px;
+    font-weight: 400;
+    margin-top: 60px;
+    line-height: 24px;
+    padding: 70px 0;
+    margin-right: 6px;
+}
 
-
-
-
-
-
-
-
+.aboutPerforators h2 {
+    font-family: Cuprum;
+    font-size: 30px;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin: 0;
+    margin-bottom: 40px;
+}
+.aboutPerforators p {
+    font-size: 14px;
+    margin: 0;
+}
+.catalogFooter {
+    margin: 0;
+}
+div.popUpError {
+    animation-name: popUpError;
+    animation-duration: .5s;
+}
 /* KEYFRAMES */
 @-webkit-keyframes perforatorsOpacity {
     to { opacity: 0; }
@@ -2347,28 +2532,40 @@ div.bonusesDiscription3 p
     to { opacity: 1; }
 }
 
+@-webkit-keyframes popUpError {
+    0%,100% { transform: translateX(0) translateX(-50%) }
+    10%, 30%, 50%, 70%, 90% { transform: translateX(-10px) translateX(-50%) }
+    20%, 40%, 60%, 80% { transform: translateX(10px) translateX(-50%) }
+}
+@-o-keyframes popUpError {
+    0%,100% { transform: translateX(0) translateX(-50%) }
+    10%, 30%, 50%, 70%, 90% { transform: translateX(-10px) translateX(-50%) }
+    20%, 40%, 60%, 80% { transform: translateX(10px) translateX(-50%) }
+}
+@-moz-keyframes popUpError {
+    0%,100% { transform: translateX(0) translateX(-50%) }
+    10%, 30%, 50%, 70%, 90% { transform: translateX(-10px) translateX(-50%) }
+    20%, 40%, 60%, 80% { transform: translateX(10px) translateX(-50%) }
+}
+@keyframes popUpError {
+    0%,100% { transform: translateX(0) translateX(-50%) }
+    10%, 30%, 50%, 70%, 90% { transform: translateX(-10px) translateX(-50%) }
+    20%, 40%, 60%, 80% { transform: translateX(10px) translateX(-50%) }
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.prosto
-{
-    background-color: #3bbce3;
+@-webkit-keyframes showPopUp {
+    from { opacity: 0 }
+    to { opacity: 1; }
+}
+@-o-keyframes showPopUp {
+    from { opacity: 0 }
+    to { opacity: 1; }
+}
+@-moz-keyframes showPopUp {
+    from { opacity: 0 }
+    to { opacity: 1; }
+}
+@keyframes showPopUp {
+    from { opacity: 0 }
+    to { opacity: 1; }
 }

@@ -5,7 +5,7 @@ var pages = [
 		description: "Інтернет-магазин будівельних матеріалів та інструментів для ремонту",
 		img: "img/templates/technomart.jpg",
 		src: "Technomart/index.html",
-		type: "inProcess"
+		type: "new"
 	},
 	{
 		name: "The Great Keksby",
