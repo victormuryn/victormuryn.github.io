@@ -6,10 +6,10 @@ let productList = document.querySelector(".catalog");
 // type = project type (new, inProcces, updated, normal)
 let pages = [
 	{
-		name: "Gllacy",
-		description: "Магазин Глейсі - це онлайн і офлайн магазин з продажу морозива власного виробництва на вагу",
-		img: "img/templates/gllacy.jpg",
-		src: "Gllacy/index.html",
+		name: "Device",
+		description: "Величезний вибір гаджетів не залишить байдужим geek'a, який є в кожному з нас.",
+		img: "img/templates/device.jpg",
+		src: "Device/index.html",
 		type: "inProcess"
 	},
 	{
@@ -24,7 +24,7 @@ let pages = [
 		description: "Інтернет-магазин аксесуарів для котів Колекції FW15",
 		img: "img/templates/TheGreatKeksby.png",
 		src: "TheGreatKeksby/index.html",
-		type: "new"
+		type: "normal"
 	},
 	{
 		name: "Nerds",
@@ -47,7 +47,7 @@ function makeElement(tagName, className, text) {
 		element.classList.add(className);
 	}
 	if(text) {
-		element.innerHTML = text;
+		element.textContent = text;
 	}
 	return element;
 };

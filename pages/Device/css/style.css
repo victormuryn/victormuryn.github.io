@@ -1,0 +1,61 @@
+/******************************* FONTS ***********************************/
+@font-face {
+ font-family: 'Gilroy - Extra Bold';
+ font-style: normal;
+ font-weight: 800;
+ src:
+  local('Gilroy ExtraBold'),
+ 	local('Gilroy-ExtraBold'),
+ 	url(../fonts/gilroyextrabold.woff2) format('woff2'),
+ 	url(../fonts/gilroyextrabold.woff) format('woff');
+}
+
+@font-face {
+ font-family: Gilroy;
+ font-style: normal;
+ font-weight: 300;
+ src:
+  local('Gilroy Light'),
+ 	local('Gilroy-Light'),
+ 	url(../fonts/gilroylight.woff2) format('woff2'),
+ 	url(../fonts/gilroylight.woff) format('woff');
+}
+/******************************* BASIC SETTINGS *******************************/
+body {
+	margin: 0;
+	padding: 21px 0 0;
+	box-sizing: border-box;
+	font-family: "Open Sans";
+	font-weight: 400;
+}
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+img {
+	max-width: 100%
+}
+
+.visually-hidden {
+	position: absolute !important;
+	overflow: hidden !important;
+	clip: rect(1px 1px 1px 1px);
+	clip: rect(1px, 1px, 1px, 1px);
+	width: 1px !important;
+	height: 1px !important;
+	padding: 0 !important;
+	border: 0 !important;
+}
+.container {
+	max-width: 1160px;
+	margin: 0 auto;
+}
+/************************** PAGE STYLES *****************************/
