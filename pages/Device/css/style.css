@@ -55,10 +55,10 @@ img {
 	border: 0 !important;
 }
 .container {
-	max-width: 1160px;
+	width: 1160px;
 	margin: 0 auto;
 }
-body button:before {
+body button::before {
 	content: "";
 	background-color: #f0c52e;
 	position: absolute;
@@ -214,11 +214,8 @@ a.lastItem {
 	cursor: pointer;
 }
 .catalogMenuWrapper:hover .catalogMenu {
-	display: -webkit-flex;
-	display: -moz-flex;
-	display: -ms-flex;
-	display: -o-flex;
-	display: flex;
+	clip: rect(auto auto auto auto);
+	clip: rect(auto, auto, auto, auto);
 }
 .headerNavigation .menuTitle::after {
 	content: url(../img/svg/plus.svg);
@@ -234,10 +231,16 @@ a.lastItem {
 	position: absolute;
 	top: 18px;
 	left: 0;
-	display: none;
 	padding: 37px 0;
 	z-index: 2;
 	width: 100%;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	clip: rect(1px 1px 1px 1px);
+	clip: rect(1px, 1px, 1px, 1px);
 }
 .catalogMenu .catalogItem {
 	display: -webkit-flex;
@@ -398,6 +401,7 @@ a.lastItem {
 .slide3 img {
 	width: 526px;
 height: 334px;
+margin-top: 70px;
 }
 .productBenefits {
 	display: -webkit-flex;
@@ -469,6 +473,185 @@ height: 334px;
 	font-size: 18px;
 	letter-spacing: 0.18px;
 }
+input[name=bentefitsRadio] {
+	display: none;
+}
+.benefits {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	margin-top: 181px;
+	min-height: 288px;
+	background-image: linear-gradient(to bottom, transparent 0, transparent 10px, #e5e5e5 10px, #e5e5e5 388px, transparent 388px);
+}
+.bentefitContainer {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+}
+.bentefitContainer .titles::after {
+	content: "";
+	display: block;
+	position: absolute;
+	right: -132px;
+	top: -94px;
+	width: 7px;
+	height: 319px;
+	background-color: #000;
+}
+.bentefitContainer .titles {
+	position: relative;
+	margin-right: 258px;
+}
+.titles label {
+	font-family: "Gilroy - Extra Bold";
+	font-size: 18px;
+	text-transform: uppercase;
+	letter-spacing: 2.15px;
+	margin-bottom: 49px;
+	display: block;
+	position: relative;
+	z-index: 1;
+	cursor: pointer;
+}
+.titles label::before {
+	content: "";
+	background-color: #f0c52e;
+	position: absolute;
+	top: 50%;
+	left: -25%;
+	transform: translateY(-50%);
+	height: 8px;
+	width: 160px;
+	z-index: -1;
+}
+.titles label:hover::before {
+	animation-name: buttonBefore;
+	animation-duration: .3s;
+	animation-fill-mode: both;
+}
+.titles label:last-of-type {
+	margin: 0;
+}
+
+
+
+
+#benefitsRadio1:checked ~ .titles > label[for=benefitsRadio1] {
+	color: #f7e184;
+}
+#benefitsRadio1:checked ~ .titles > label[for=benefitsRadio1]::before {
+	width: 270px;
+	background-color: #000;
+	height: 40px;
+	animation: none;
+}
+#benefitsRadio2:checked ~ .titles > label[for=benefitsRadio2] {
+	color: #f7e184;
+}
+#benefitsRadio2:checked ~ .titles > label[for=benefitsRadio2]::before {
+	width: 270px;
+	background-color: #000;
+	height: 40px;
+	animation: none;
+}
+#benefitsRadio3:checked ~ .titles > label[for=benefitsRadio3] {
+	color: #f7e184;
+}
+#benefitsRadio3:checked ~ .titles > label[for=benefitsRadio3]::before {
+	width: 270px;
+	background-color: #000;
+	height: 40px;
+	animation: none;
+}
+#benefitsRadio1:checked ~ .bentefit1 {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+}
+#benefitsRadio2:checked ~ .bentefit2 {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+}
+#benefitsRadio3:checked ~ .bentefit3 {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+}
+.bentefit {
+	display: none;
+	justify-content: space-between;
+}
+.bentefit  img {
+	-ms-align-self: flex-start;
+	align-self: flex-start;
+	margin-left: 160px;
+	display: block;
+}
+.bentefit h3 {
+	font-family: "Gilroy - Extra Bold";
+	font-size: 47px;
+	letter-spacing: 0.21px;
+	margin: -23px 0 40px;
+}
+
+.bentefit p {
+	margin: 0;
+	color: #464646;
+	font-family: "Open Sans";
+	font-size: 15px;
+	font-weight: 300;
+	line-height: 30px;
+	letter-spacing: 0.15px;
+	width: 430px;
+}
+.parters {
+margin-top: 94px;
+}
+.parters .partnersList {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.partnersItem {
+	cursor: pointer;
+}
+.partnersItem img {
+	filter: grayscale(1);
+	-webkit-transition: opacity .2s;
+	-o-transition: opacity .2s;
+	transition: opacity .2s;
+	opacity: .2;
+}
+.partnersItem:hover img {
+	filter: grayscale(0);
+	opacity: 1;
+}
+
+
+
+
+
+
+
 /********************* KEYFRAMES ********************/
 
 @-webkit-keyframes buttonBefore {
