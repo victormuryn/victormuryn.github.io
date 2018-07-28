@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Device</title>
-		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400&amp;subset=cyrillic-ext" rel="stylesheet"> 
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400&amp;subset=cyrillic-ext" rel="stylesheet">
 		<link rel="stylesheet" href="css/normalize.css">
 		<link rel="stylesheet" href="css/style.css">
 	</head>
@@ -14,15 +14,172 @@
 					<h2 class="headerLogo">Device</h2>
 				</div>
 				<div class="searchLine">
-					<input type="text" class="headerSearch">
+					<div class="searchInput">
+						<input type="text" class="headerSearch" placeholder="Поиск по сайту">
+						<button>Найти</button>
+					</div>
 					<div class="logIn">
 						<a href="javascript://0">Войти</a>
 					</div>
-					.bin
+					<div class="bin">
+						<a href="javascript://0" class="compare">Сравнить</a>
+						<a href="javascript://0" class="binLink">Корзина</a>
+					</div>
 				</div>
-				<nav class="headerNavigation"></nav>
-				<div class="slider"></div>
+				<nav class="headerNavigation">
+					<div class="catalogMenuWrapper">
+						<a href="javascript://0" class="menuTitle">Каталог товаров</a>
+						<div class="catalogMenu">
+							<div class="catalogItem">
+								<a href="javascript://0">Виртуальная реальность</a>
+								<a href="javascript://0">Моноподы для селфи</a>
+								<a href="javascript://0">Экшн-камеры</a>
+							</div>
+							<div class="catalogItem">
+								<a href="javascript://0">Фитнес-браслеты</a>
+								<a href="javascript://0">Умные часы</a>
+							</div>
+							<div class="catalogItem">
+								<a href="javascript://0">Квадрокоптеры</a>
+							</div>
+						</div>
+					</div>
+					<a href="javascript://0">Доставка</a>
+					<a href="javascript://0">Гарантия</a>
+					<a href="javascript://0" class="lastItem">Контакты</a>
+				</nav>
+				<div class="slider">
+					<input type="radio" name="sliderRadio" id="sliderRadio1" checked>
+					<input type="radio" name="sliderRadio" id="sliderRadio2">
+					<input type="radio" name="sliderRadio" id="sliderRadio3">
+					<div class="dots">
+						<label for="sliderRadio1"></label>
+						<label for="sliderRadio2"></label>
+						<label for="sliderRadio3"></label>
+					</div>
+					<div class="slide1 sliderItem">
+						<img src="img/sliderPhotos/slider-1.png" alt="Селфи-палка">
+						<div class="info">
+							<h3>Делай селфи,<br> как Бен Стиллер!</h3>
+							<h2 class="number">01</h2>
+							<p class="productDescription">Самая длинная палка для селфи доступна в нашем магазине.<br> Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
+							<button>Подробнее</button>
+							<ul class="productBenefits">
+								<li class='productBenefitsItem'>
+									<h4>8,5 м</h4>
+									<p>Длина палки</p>
+								</li>
+								<li class='productBenefitsItem'>
+									<h4>5 кг</h4>
+									<p>Вес палки</p>
+								</li>
+								<li class='productBenefitsItem'>
+									<h4>Карбон</h4>
+									<p>Материал</p>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="slide2 sliderItem">
+						<img src="img/sliderPhotos/slider-2.png" alt="Часы">
+						<div class="info">
+							<h3>Худеем<br>правильно!</h3>
+							<h2 class="number">02</h2>
+							<p class="productDescription">Мотивирующие фитнес-браслеты помогут найти в себе силы <br> не пропускать занятия и соблюдать диету.</p>
+							<button>Подробнее</button>
+							<ul class="productBenefits">
+								<li class='productBenefitsItem'>
+									<h4>48 часов</h4>
+									<p>Без подзарядки</p>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="slide3 sliderItem">
+						<img src="img/sliderPhotos/slider-3.png" alt="Квадрокоптер">
+						<div class="info">
+							<h3>Порхает как бабочка,<br>жалит как пчела!</h3>
+							<h2 class="number">03</h2>
+							<p class="productDescription">Этот обычный, на первый взгляд, квадрокоптер оснащен<br>мощным лазером, замаскированным под стандартную камеру.</p>
+							<button>Подробнее</button>
+							<ul class="productBenefits">
+								<li class='productBenefitsItem'>
+									<h4>800 м</h4>
+									<p>Дальность полета</p>
+								</li>
+								<li class='productBenefitsItem'>
+									<h4>50 м</h4>
+									<p>Радиус поражения</p>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
 			</header>
+
+			<section class="products">
+				<ul class="productsList">
+					<li>
+						<div class="productImgWrapper">
+							<img src="img/popular/popular-1.svg" alt="Виртуальная реальность">
+						</div>
+						<p>Виртуальная реальность</p>
+					</li>
+					<li>
+						<div class="productImgWrapper">
+							<img src="img/popular/popular-2.svg" alt="Моноподы для селфи">
+						</div>
+						<p>Моноподы для селфи</p>
+					</li>
+					<li>
+						<div class="productImgWrapper">
+							<img src="img/popular/popular-3.svg" alt="Экшн-камеры">
+						</div>
+						<p>Экшн-камеры</p>
+					</li>
+					<li>
+						<div class="productImgWrapper">
+							<img src="img/popular/popular-4.svg" alt="Фитнес-браслеты">
+						</div>
+						<p>Фитнес-браслеты</p>
+					</li>
+					<li>
+						<div class="productImgWrapper">
+							<img src="img/popular/popular-5.svg" alt="Умные часы">
+						</div>
+						<p>Умные часы</p>
+					</li>
+					<li>
+						<div class="productImgWrapper">
+							<img src="img/popular/popular-6.svg" alt="Квадрокоптеры">
+						</div>
+						<p>Квадрокоптеры</p>
+					</li>
+				</ul>
+			</section>
+		</div>
+		<div class="prosto">
+			<img src="img/svg/cart.svg" alt="1">
+			<img src="img/svg/checkbox-off.svg" alt="1">
+			<img src="img/svg/checkbox-on.svg" alt="1">
+			<img src="img/svg/compare.svg" alt="1">
+			<img src="img/svg/credit.svg" alt="1">
+			<img src="img/svg/delivery.svg" alt="1">
+			<img src="img/svg/fb.svg" alt="1">
+			<img src="img/svg/filter-button.svg" alt="1">
+			<img src="img/svg/icon-down-dir.svg" alt="1">
+			<img src="img/svg/icon-up-dir.svg" alt="1">
+			<img src="img/svg/logo-html.svg" alt="1">
+			<img src="img/svg/menu-close.svg" alt="1">
+			<img src="img/svg/modal-close.svg" alt="1">
+			<img src="img/svg/nav-arrow.svg" alt="1">
+			<img src="img/svg/radio-off.svg" alt="1">
+			<img src="img/svg/radio-on.svg" alt="1">
+			<img src="img/svg/tick.svg" alt="1">
+			<img src="img/svg/twitter.svg" alt="1">
+			<img src="img/svg/vk.svg" alt="1">
+			<img src="img/svg/warranty.svg" alt="1">
+			<img src="img/svg/tick.svg" alt="1">
 		</div>
 	</body>
 </html>
