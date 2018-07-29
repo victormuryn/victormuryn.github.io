@@ -1053,10 +1053,9 @@ footer .social {
 	position: fixed;
 	top: 50%;
 	left: 50%;
-	transform: translate(-50%, -50%);
 	background-color: #fff;
 	z-index: 5;
-	display: none;
+	transform: translate(-150vw,-50%) skew(45deg);
 }
 .writeUs {
 	width: 960px;
@@ -1065,10 +1064,10 @@ footer .social {
 	position: fixed;
 	top: 50%;
 	left: 50%;
-	transform: translate(-50%, -50%);
 	background-color: #fff;
 	z-index: 5;
 	padding: 99px 100px 92px;
+	transform: translate(-150vw,-50%) skew(45deg);
 }
 .close {
 	position: absolute;
@@ -1119,7 +1118,8 @@ footer .social {
 	outline: 0;
 	padding-left: 17px;
 }
-.invalidInput {
+.writeUs input.invalidInput,
+.writeUs textarea.invalidInput {
 	background-color: rgba(237,181,181,.5);
 }
 .writeUs input {
@@ -1148,6 +1148,12 @@ footer .social {
 .writeUs button::before {
 	width: 200px;
 	left: -34px;
+}
+.popUpOpen {
+	animation-name: openPopUp;
+	animation-duration: .4s;
+	animation-timing-function: ease-in-out;
+	animation-fill-mode: both; 
 }
 /********************* KEYFRAMES ********************/
 /*Unhide animation*/
@@ -1206,9 +1212,27 @@ footer .social {
 		background-color: #000;
 	}
 }
-
-
-
+/*Open pop up anim*/
+@-webkit-keyframes openPopUp {
+	from { transform: translate(-200%,-50%) skew(45deg); }
+	80% { transform: translate(-40%,-50%) skew(5deg); }
+	to { transform: translate(-50%,-50%) skew(0deg); }
+}
+@-o-keyframes openPopUp {
+	from { transform: translate(-200%,-50%) skew(45deg); }
+	80% { transform: translate(-40%,-50%) skew(5deg); }
+	to { transform: translate(-50%,-50%) skew(0deg); }
+}
+@-moz-keyframes openPopUp {
+	from { transform: translate(-200%,-50%) skew(45deg); }
+	80% { transform: translate(-40%,-50%) skew(5deg); }
+	to { transform: translate(-50%,-50%) skew(0deg); }
+}
+@keyframes openPopUp {
+	from { transform: translate(-200%,-50%) skew(45deg); }
+	80% { transform: translate(-40%,-50%) skew(5deg); }
+	to { transform: translate(-50%,-50%) skew(0deg); }
+}
 
 
 
