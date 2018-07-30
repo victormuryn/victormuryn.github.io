@@ -18,7 +18,7 @@
 	font-family: 'Open Sans Light';
 	font-weight: 300;
 	font-style: normal;
-	src: local('OpenSans-Light'), local('Gilroy-Light'), url(../fonts/opensanslight.woff2) format('woff2'), url(../fonts/opensanslight.woff) format('woff');
+	src: local('OpenSans-Light'), local('OpenSans PLight'), url(../fonts/opensanslight.woff2) format('woff2'), url(../fonts/opensanslight.woff) format('woff');
 }
 
 
