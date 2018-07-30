@@ -2,42 +2,42 @@ let productList = document.querySelector(".catalog");
 // name = product name,
 // description = product description,
 // img = source to product img
-// src = source to site,
+// folder = source to site,
 // type = project type (new, inProcces, updated, normal)
 let pages = [
 	{
 		name: "Device",
 		description: "Величезний вибір гаджетів не залишить байдужим geek'a, який є в кожному з нас.",
 		img: "img/templates/device.jpg",
-		src: "Device/index.html",
+		folder: "Device",
 		type: "new"
 	},
 	{
 		name: "Technomart",
 		description: "Інтернет-магазин будівельних матеріалів та інструментів для ремонту",
 		img: "img/templates/technomart.jpg",
-		src: "Technomart/index.html",
+		folder: "Technomart",
 		type: "new"
 	},
 	{
 		name: "The Great Keksby",
 		description: "Інтернет-магазин аксесуарів для котів Колекції FW15",
 		img: "img/templates/TheGreatKeksby.png",
-		src: "TheGreatKeksby/index.html",
+		folder: "TheGreatKeksby",
 		type: "normal"
 	},
 	{
 		name: "Nerds",
 		description: "Маленька дизайн-студія з Краснодару",
 		img: "img/templates/nerds.jpg",
-		src: "Nerds/index.html",
+		folder: "Nerds",
 		type: "normal"
 	},
 	{
 		name: "Sedona",
 		description: "Інформаційний сайт для туристів",
 		img: "img/templates/sedona.jpg",
-		src: "Sedona/index.html",
+		folder: "Sedona",
 		type: "normal"
 	}
 ]
@@ -58,7 +58,7 @@ function makeProduct(data) {
 		var link = makeElement("div", "product");
 	} else {
 		var link = makeElement("a", "product");
-		link.href = "pages/" + data.src;
+		link.href = "pages/" + data.folder + "/index.html";
 		link.target = "_blank";
 	}	
 
