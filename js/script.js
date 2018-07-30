@@ -10,7 +10,7 @@ let pages = [
 		description: "Величезний вибір гаджетів не залишить байдужим geek'a, який є в кожному з нас.",
 		img: "img/templates/device.jpg",
 		src: "Device/index.html",
-		type: "inProcess"
+		type: "new"
 	},
 	{
 		name: "Technomart",
