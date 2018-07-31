@@ -1,7 +1,14 @@
+/***********************  FONTS ********************************/
+@font-face {
+	font-family: 'Gilroy - Extra Bold';
+	font-weight: 800;
+	font-style: normal;
+	src: local('Gilroy ExtraBold'), local('Gilroy-ExtraBold'), url(../fonts/gilroyextrabold.woff2) format('woff2'), url(../fonts/gilroyextrabold.woff) format('woff');
+}
 /*================= BASIC SETTING =========================*/
 
 body {
-	font-family: 'Roboto', 'Arial', sans-serif;
+	font-family: Roboto, Arial, sans-serif;
 	margin: 0;
 	padding: 0;
 }
@@ -201,14 +208,12 @@ footer {
 	line-height: 50px;
 	font-weight: 500;
 }
-.browser {
-	opacity: .12;
-}
 
 .product {
 	position: relative;
 	display: block;
 	margin-bottom: 33px;
+	padding-top: 40px;
 }
 
 .product img {
@@ -229,7 +234,16 @@ footer {
 	display: block;
 }
 
-.product:hover .browser {
+.product::before {
+	content: url(../img/svg/browser.svg);
+	width: 100%;
+	opacity: .12;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.product:hover::before {
 	animation-name: browserAnimation;
 	animation-duration: 1s;
 	opacity: 1;
@@ -270,7 +284,80 @@ footer {
 	line-height: 18px;
 	color: #666;
 }
+/************************** PAGES LIST ************************************/
+.pages {
+	background-color: #ebebeb;
+	display: none;
+}
+.activePages {
+	display: block;
+}
+.pagesContainer {
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	height: 70px;
+	margin-bottom: 73px;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	-ms-align-items: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	max-width: 85vw;
+	margin: 0 auto;
+	margin-bottom: 33px;
+}
+.pages button {
+	font-family: 'Gilroy - Extra Bold';
+	font-size: 16px;
+	line-height: 70px;
+	padding: 0;
+	padding: 0 30px;
+	letter-spacing: .91px;
+	text-transform: uppercase;
+	color: #000;
+	border: 0;
+	outline: 0;
+	background-color: transparent;
+}
 
+.pages button:hover {
+	background-color: #d8d8d8;
+}
+
+.pages button:active {
+	color: rgba(0, 0, 0, .3);
+	background-color: #d8d8d8;
+}
+
+.totalPages a {
+	font-family: 'Gilroy - Extra Bold', "PT Sans", sans-serif;
+	font-size: 16px;
+	margin-right: 31px;
+	text-decoration: none;
+	letter-spacing: .91px;
+	text-transform: uppercase;
+	color: rgba(0, 0, 0, .3);
+	cursor: pointer;
+}
+
+.totalPages a:hover {
+	color: rgba(0, 0, 0, .6);
+}
+
+.totalPages a:active {
+	color: #000;
+}
+
+.totalPages a.activePage {
+	color: #000;
+}
+/*************************** KEYFRAMES ****************************/
 @keyframes aboutProductAnimation {
 	0% {
 		font-size: 0;
