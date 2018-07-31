@@ -1,14 +1,17 @@
 /***********************  FONTS ********************************/
+
 @font-face {
 	font-family: 'Gilroy - Extra Bold';
 	font-weight: 800;
 	font-style: normal;
 	src: local('Gilroy ExtraBold'), local('Gilroy-ExtraBold'), url(../fonts/gilroyextrabold.woff2) format('woff2'), url(../fonts/gilroyextrabold.woff) format('woff');
 }
+
+
 /*================= BASIC SETTING =========================*/
 
 body {
-	font-family: Roboto, Arial, sans-serif;
+	font-family: "PT Sans", Roboto, Arial, sans-serif;
 	margin: 0;
 	padding: 0;
 }
@@ -35,14 +38,19 @@ button:hover {
 
 .visually-hidden {
 	position: absolute !important;
-	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+	clip: rect(1px 1px 1px 1px);
+	/* IE6, IE7 */
 	clip: rect(1px, 1px, 1px, 1px);
-	padding:0 !important;
-	border:0 !important;
+	padding: 0 !important;
+	border: 0 !important;
 	height: 1px !important;
 	width: 1px !important;
 	overflow: hidden;
 }
+
+
+
+
 /*======================= PAGE STYLE =========================*/
 
 header {
@@ -156,6 +164,7 @@ footer {
 	margin: 0;
 	color: #fff;
 }
+
 .socialItem:last-child {
 	margin-right: 0;
 }
@@ -188,17 +197,20 @@ footer {
 	flex-wrap: wrap;
 }
 
-.catalog > div {
+.catalog>div {
 	overflow: hidden;
 	margin: 0 auto;
 	flex-basis: 360px;
 }
+
 .inProcessDiv img:nth-child(2) {
 	opacity: .7;
 }
+
 .inProcessDiv {
 	position: relative;
 }
+
 .inProcess {
 	width: 100%;
 	height: 50px;
@@ -209,6 +221,7 @@ footer {
 	transform: translateY(-50%);
 	z-index: 2;
 }
+
 .inProcess p {
 	color: #fff;
 	text-align: center;
@@ -293,14 +306,21 @@ footer {
 	line-height: 18px;
 	color: #666;
 }
+
+
+
+
 /************************** PAGES LIST ************************************/
+
 .pages {
 	background-color: #ebebeb;
 	display: none;
 }
+
 .activePages {
 	display: block;
 }
+
 .pagesContainer {
 	display: -moz-flex;
 	display: -ms-flex;
@@ -321,6 +341,7 @@ footer {
 	margin: 0 auto;
 	margin-bottom: 33px;
 }
+
 .pages button {
 	font-family: 'Gilroy - Extra Bold';
 	font-size: 16px;
@@ -355,6 +376,10 @@ footer {
 	cursor: pointer;
 }
 
+.totalPages a:last-of-type {
+	margin-right: 0;
+}
+
 .totalPages a:hover {
 	color: rgba(0, 0, 0, .6);
 }
@@ -366,7 +391,12 @@ footer {
 .totalPages a.activePage {
 	color: #000;
 }
+
+
+
+
 /*************************** KEYFRAMES ****************************/
+
 @keyframes aboutProductAnimation {
 	0% {
 		font-size: 0;
