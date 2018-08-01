@@ -1,4 +1,4 @@
-window.onload = function() {
+	window.onload = function() {
 	let
 		productList = document.querySelector(".catalog"),
 		articlesOnPage = 9; // articles on page count
@@ -8,6 +8,13 @@ window.onload = function() {
 	// folder = source to site,
 	// type = project type (new, inProcces, updated, normal)
 	let pages = [{
+			name: "Pink",
+			description: "Приложения позволит вам победить осеннюю хандру  и депресию буквально в несколько кликов!",
+			img: "img/templates/pink.jpg",
+			folder: "Pink",
+			type: "inProcces"
+		},
+		{
 			name: "Device",
 			description: "Величезний вибір гаджетів не залишить байдужим geek'a, який є в кожному з нас.",
 			img: "img/templates/device.jpg",
