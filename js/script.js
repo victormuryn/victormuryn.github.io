@@ -6,13 +6,13 @@
 	// description = product description,
 	// img = source to product img
 	// folder = source to site,
-	// type = project type (new, inProcces, updated, normal)
+	// type = project type (new, inProcess, updated, normal)
 	let pages = [{
 			name: "Pink",
 			description: "Приложения позволит вам победить осеннюю хандру  и депресию буквально в несколько кликов!",
 			img: "img/templates/pink.jpg",
 			folder: "Pink",
-			type: "inProcces"
+			type: "inProcess"
 		},
 		{
 			name: "Device",

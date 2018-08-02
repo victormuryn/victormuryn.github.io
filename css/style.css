@@ -203,7 +203,7 @@ footer {
 	flex-basis: 360px;
 }
 
-.inProcessDiv img:nth-child(2) {
+.inProcessDiv img {
 	opacity: .7;
 }
 
