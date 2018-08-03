@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Pink | Конкурс</title>
+</head>
+
+<body>
+	<header class="page-header">
+		<img src="http://placehold.it/150x100" alt="Pink" class="logo page-header__logo page-header__logo--top">
+		<button class="page-header__menu-button">
+			<span class="visully-hidden">Закрыть</span>
+		</button>
+		<button class="page-header__button">
+			<span class="visully-hidden">Открыть</span>
+		</button>
+		<nav class="page-nav page_header__nav">
+			<ul class="page-nav__list">
+				<li class="page-nav__item">
+					<a href="index.html">Главная</a>
+				</li>
+				<li class="page-nav__item">
+					<a href="photo.html">Фотографии</a>
+				</li>
+				<li class="page-nav__item">
+					<a>Конкурс</a>
+				</li>
+				<li class="page-nav__item">
+					<a href="#">HTML Academy</a>
+				</li>
+			</ul>
+		</nav>
+	</header>
+	<main class="page-main">
+		<section class="competition">
+			<h2 class="competition__title page-title">Конкурс на самое безбашенное путешествие с Пинк</h2>
+		</section>
+		<section class="page-form">
+			<h2 class="page-form__title">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! Пожалуйста, заполните форму ниже:</h2>
+			<form action="#" method="post" class="page-form__form">
+				<div class="page-form__form-group">
+					<label for="surname">Фамилия:</label>
+					<input type="text" id="surname" placeholder="Укажите фамилию *">
+					<label for="name">Имя:</label>
+					<input type="text" id="name" placeholder="Введите ваше имя *">
+					<label for="middle-name">Отчество:</label>
+					<input type="text" id="middle-name" placeholder="Ну и отчество тоже">
+				</div>
+				<div class="page-form__form-group page-form__form-group--grey">
+					<fieldset class="page-form__fieldset">
+						<legend class="page-form__legend">Ваши безбашенные достижения в путешествии</legend>
+						<input type="checkbox" id="achievement1">
+						<label for="achievement1">Сделал селфи с акулой</label>
+						<input type="checkbox" id="achievement2">
+						<label for="achievement2">Обгорел на пляже</label>
+						<input type="checkbox" id="achievement3">
+						<label for="achievement3">Видел Чака Норриса</label>
+						<input type="checkbox" id="achievement4">
+						<label for="achievement4">Накупил сувениров</label>
+						<input type="checkbox" id="achievement5">
+						<label for="achievement5">Удержал башню</label>
+						<input type="checkbox" id="achievement6">
+						<label for="achievement6">Разгромил отель</label>
+					</fieldset>
+				</div>
+				<div class="page-form__form-group">
+					<fieldset class="page-form__fieldset">
+						<legend class="page-form__legend">Контактная информация</legend>
+						<label for="phone-number">Номер телефона</label>
+						<input type="tel" id="phone-number" placeholder="Номер, пожалуйста">
+						<label for="address">Адрес почты</label>
+						<input type="text" id="address" placeholder="Введите почту *">
+					</fieldset>
+				</div>
+				<div class="page-form__form-group">
+					<fieldset class="page-form__fieldset page-form__fieldset--grey">
+						<legend class="page-form__legend">С каким приложением путешествовали?</legend>
+						<input type="radio" name="platform" id="ios">
+						<label for="ios">Pink для iOS</label>
+						<input type="radio" name="platform" id="android">
+						<label for="android">Pink на Android</label>
+						<input type="radio" name="platform" id="windows-phone">
+						<label for="windows-phone">Windows Phone</label>
+					</fieldset>
+				</div>
+				<div class="page-form__form-group">
+					<fieldset class="page-form__fieldset">
+						<legend class="page-form__legend">Опишите свои эмоции</legend>
+						<textarea name="text" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+					</fieldset>
+				</div>
+				<button type="submit" class="button">Отправить форму</button>
+				<p><sup>*</sup> — обязательные поля</p>
+			</form>
+		</section>
+	</main>
+	<footer class="page-footer">
+		<img src="http://placehold.it/150x100" alt="Pink" class="logo page-footer__logo">
+		<ul class="page-footer__social-list">
+			<li class="page-footer__social-item">
+				<span class="visually-hidden">Наш Twitter</span>
+			</li>
+			<li class="page-footer__social-item">
+				<span class="visually-hidden">Наш Facebook</span>
+			</li>
+			<li class="page-footer__social-item">
+				<span class="visually-hidden">Наш YouTube</span>
+			</li>
+		</ul>
+		<div class="page-footer__author">
+			<p class="page-footer__author-text">Разработано</p>
+			<img class="page-footer__author-image" src="http://placehold.it/150x100" alt="HTML Academy">
+		</div>
+	</footer>
+	<section class="succes-pop-up pop-up">
+		<h2 class="pop-up__title">Ваша заявка отправлена</h2>
+		<p class="pop-up__text">Спасибо за ваше участие, ваша заявка уже поступила к нам. В ближайшее время мы рассмотрим ее и оповестим вас.</p>
+		<div class="pop-up__button-wrapper">
+			<button class="pop-up__button button">Закрыть окно</button>
+		</div>
+	</section>
+	<section class="failure-pop-up pop-up">
+		<h2 class="pop-up__title">Что-то пошло не так!</h2>
+		<p class="pop-up__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+		<div class="pop-up__button-wrapper">
+			<button class="pop-up__button button">Oк</button>
+		</div>
+	</section>
+</body>
+
+</html>
