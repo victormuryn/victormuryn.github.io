@@ -1,0 +1,30 @@
+.intro__background {
+	min-height: 400px;
+	display: flex;
+	align-items: flex-end;
+}
+
+.intro__hand {
+	width: 100%;
+	min-height: 289px;
+}
+
+.intro__about-wrapper {
+	min-height: 270px;
+}
+
+@media (min-width: $tablet) {
+	.intro__background {
+		display: none;
+	}
+	.intro__about-wrapper {
+		min-height: 620px;
+		width: 100%;
+	}
+}
+@media (min-width: $desctop) {
+	.intro__about-wrapper {
+		min-height: 745px;
+	}
+}
+

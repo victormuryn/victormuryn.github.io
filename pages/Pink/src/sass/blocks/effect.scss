@@ -1,0 +1,39 @@
+.effect {
+	display: none;
+	justify-content: center;
+}
+
+.container--effect {
+	display: flex;
+}
+
+@media (min-width: $tablet) {
+	.effect {
+		display: flex;
+		min-height: 370px;
+	}
+	.intro__diagram {
+		min-width: 240px;
+		margin-right: 70px;
+	}
+	.effect__wrapper {
+		min-width: 295px;
+	}
+	.container--effect {
+		display: flex;
+		min-width: 620px;
+	}
+}
+
+@media (min-width: $desctop) {
+	.effect {
+		min-height: 435px;
+	}
+	.intro__diagram {
+		min-width: 298px;
+		margin-right: 70px;
+	}
+	.effect__wrapper {
+		min-width: 525px;
+	}
+}

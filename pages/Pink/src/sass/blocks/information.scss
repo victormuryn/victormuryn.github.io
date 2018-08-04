@@ -1,0 +1,29 @@
+.information__title-wrapper {
+	min-height: 210px;
+}
+
+.information__list {
+	height: 790px;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: flex;
+}
+
+@media (min-width: $tablet) {
+	.information__title-wrapper {
+		min-height: 240px;
+	}
+	.information__list {
+		height: 485px;
+	}
+}
+
+@media (min-width: $desctop) {
+	.information__title-wrapper {
+		min-height: 320px;
+	}
+	.information__list {
+		height: 600px;
+	}
+}

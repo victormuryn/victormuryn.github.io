@@ -1,0 +1,30 @@
+@import "logo.scss";
+
+.page-header__nav {
+	min-height: 255px;
+}
+.header_logo-wrapper {
+	min-height: 69px;
+}
+@media (min-width: $tablet) {
+	.header_logo-wrapper {
+		min-height: 109px;
+	}
+}
+@media (min-width: $desctop) {
+	.header-container {
+		display: flex;
+		justify-content: space-between;
+		min-height: 110px;
+	}
+	.container {
+		width: 940px;
+		margin: 0 auto;
+	}
+	.header_logo-wrapper {
+		width: 147px;
+	}
+}
+
+@import "page-nav.scss";
+@import "intro.scss";

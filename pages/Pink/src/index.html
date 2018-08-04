@@ -3,83 +3,121 @@
 
 <head>
 	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Pink | Главная</title>
-	<link rel="stylesheet" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body>
 	<header class="page-header">
-		<img src="http://placehold.it/150x100" alt="Pink" class="logo page-header__logo page-header__logo--top">
-		<button class="page-header__menu-button">
-			<span class="visully-hidden">Закрыть</span>
-		</button>
-		<button class="page-header__button">
-			<span class="visully-hidden">Открыть</span>
-		</button>
-		<nav class="page-nav page_header__nav">
-			<ul class="page-nav__list">
-				<li class="page-nav__item">
-					<a>Главная</a>
-				</li>
-				<li class="page-nav__item">
-					<a href="photo.html">Фотографии</a>
-				</li>
-				<li class="page-nav__item">
-					<a href="form.html">Конкурс</a>
-				</li>
-				<li class="page-nav__item">
-					<a href="#">HTML Academy</a>
-				</li>
-			</ul>
-		</nav>
-	</header>
-	<main class="page-main">
+		<div class="container header-container">
+			<div class="header_logo-wrapper">
+				<img src="img/svg/logotype-mobile.svg" alt="Pink" class="logo page-header__logo">
+				<button class="page-header__menu-button page-header__menu-button--close">
+					<span class="visually-hidden">Закрыть</span>
+				</button>
+				<button class="page-header__menu-button page-header__menu-button--open">
+					<span class="visually-hidden">Открыть</span>
+				</button>
+			</div>
+			<nav class="page-nav page-header__nav">
+				<ul class="page-nav__list">
+					<li class="page-nav__item">
+						<a class="page-nav__link">Главная</a>
+					</li>
+					<li class="page-nav__item">
+						<a class="page-nav__link" href="photo.html">Фотографии</a>
+					</li>
+					<li class="page-nav__item">
+						<a class="page-nav__link" href="form.html">Конкурс</a>
+					</li>
+					<li class="page-nav__item">
+						<a class="page-nav__link" href="#">HTML Academy</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
 		<section class="intro">
 			<h2 class="visually-hidden">Скачай приложение</h2>
-			<button class="intro__button">Скачать приложение</button>
-			<div class="intro__icons-wrapper">
-				<span class="intro__icon intro__icon--apple">iPhone, iPad</span>
-				<span class="intro__icon intro__icon--adnroid">Android</span>
-				<span class="intro__icon intro__icon--windows">Windows</span>
+			<div class="intro__background">
+				<div class="intro__hand"></div>
 			</div>
-			<p class="intro__text">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+			<div class="intro__about-wrapper">
+				<button class="intro__button">Скачать приложение</button>
+				<div class="intro__icons-wrapper">
+					<span class="intro__icon intro__icon--apple">iPhone, iPad</span>
+					<span class="intro__icon intro__icon--adnroid">Android</span>
+					<span class="intro__icon intro__icon--windows">Windows</span>
+				</div>
+				<p class="intro__text">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+			</div>
 		</section>
+	</header>
+	<main class="page-main">
 		<section class="information">
-			<h2 class="information__title">Устали от серости мегаполиса?</h2>
-			<h2 class="information__title">Нам есть, что вам предложить!</h2>
+			<div class="information__title-wrapper">
+				<h2 class="information__title">Устали от серости мегаполиса?</h2>
+				<h2 class="information__title">Нам есть, что вам предложить!</h2>
+			</div>
 			<ul class="information__list">
 				<li class="information__item">
-					<img class="information__image" src="http://placehold.it/150x100" alt="Оригинал картинки">
+					<img class="information__image" src="img/phones/phone1.png" alt="Оригинал картинки">
 					<h3 class="information__item-title">Поднимает настроение</h3>
-					<p class="information__item-description">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
+					<p class="information__item-description">
+						Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!
+					</p>
 				</li>
 				<li class="information__item">
-					<img class="information__image" src="http://placehold.it/150x100" alt="Добавлен розовый цвет">
+					<img class="information__image" src="img/phones/phone2.png" alt="Добавлен розовый цвет">
 					<h3 class="information__item-title">Меняет мир вокруг</h3>
-					<p class="information__item-description">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+					<p class="information__item-description">
+						Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект
+					</p>
 				</li>
 				<li class="information__item">
-					<img class="information__image" src="http://placehold.it/150x100" alt="Добавлен смайлик :)">
+					<img class="information__image" src="img/phones/phone3.png" alt="Добавлен смайлик :)">
 					<h3 class="information__item-title">Заводит новых друзей</h3>
-					<p class="information__item-description">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
+					<p class="information__item-description">
+						Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых
+					</p>
 				</li>
 			</ul>
 		</section>
-		<section class="reviews slider">
-			<button class="reviews__controls slider__controls slider__controls--prev">Прошлый отзыв</button>
-			<button class="reviews__controls slider__controls slider__controls--next">Следуйщий отзыв</button>
+		<section class="effect">
+			<div class="container container--effect">
+				<div class="intro__diagram">
+					<img src="img/svg/time.svg" alt="Таймер">
+					<span class="effect__diagram-text">24</span>
+				</div>
+				<div class="effect__wrapper">
+					<h2>Эффект на 24 часа!</h2>
+					<p>Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!</p>
+					<a href="javascript://0">Узнать больше об исследовании</a>
+				</div>
+			</div>
+		</section>
+		<section class="reviews container slider">
+			<button class="reviews__controls slider__controls slider__controls--prev">
+				<span class="visually-hidden">Прошлый отзыв</span>
+			</button>
 			<ul class="reviews__list slider__list">
 				<li class="reviews__item">
 					<small class="reviews__about">25 лет, водитель трамвая</small>
 					<p class="reviews__name">Николай Петров</p>
-					<p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+					<p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложеннойфотографии!»</p>
 				</li>
 			</ul>
+			<button class="reviews__controls slider__controls slider__controls--next">
+				<span class="visually-hidden">Следуйщий отзыв</span>
+			</button>
 			<div class="rewiews__dots slider__dots">
 				<ul class="slider__dots-list">
-					<li class="slider_dots-item">1</li>
-					<li class="slider_dots-item">2</li>
-					<li class="slider_dots-item">3</li>
+					<li class="slider_dots-item"><span class="visually-hidden">1</span></li>
+					<li class="slider_dots-item"><span class="visually-hidden">2</span></li>
+					<li class="slider_dots-item"><span class="visually-hidden">3</span></li>
 				</ul>
 			</div>
 		</section>
@@ -87,69 +125,100 @@
 			<table class="price__table">
 				<tr>
 					<th class="price__table-head">
-						<h4 class="price__table-title">База</h4>
-						<p class="price__table-price">1,99 USD</p>
+						<h4 class="price__table-title"><!-- База --></h4>
+						<p class="price__table-price">
+							<!-- 1,99 USD -->
+						</p>
 					</th>
 					<th class="price__table-head price__table-head--hit">
-						<h4 class="price__table-title">Стандарт</h4>
-						<p class="price__table-price">3,99 USD</p>
+						<h4 class="price__table-title"><!-- Стандарт --></h4>
+						<p class="price__table-price">
+							<!-- 3,99 USD -->
+						</p>
 					</th>
 					<th class="price__table-head">
-						<h4 class="price__table-title">Анлим</h4>
-						<p class="price__table-price">9,99 USD</p>
+						<h4 class="price__table-title"><!-- Анлим --></h4>
+						<p class="price__table-price">
+							<!-- 9,99 USD -->
+						</p>
 					</th>
 				</tr>
 				<tr>
 					<td class="price__table-data">
-						<p class="price__row-title">Розовый фильтр</p>
+						<p class="price__row-title">
+							<!-- Розовый фильтр -->
+						</p>
 					</td>
 					<td class="price__table-data">
-						<p class="price__icon price__icon--true">Есть</p>
+						<p class="price__icon price__icon--true">
+							<!-- Есть -->
+						</p>
 					</td>
 					<td class="price__table-data">
-						<p class="price__icon price__icon--true">Есть</p>
+						<p class="price__icon price__icon--true">
+							<!-- Есть -->
+						</p>
 					</td>
 					<td class="price__table-data">
-						<p class="price__icon price__icon--true">Есть</p>
-					</td>
-				</tr>
-				<tr>
-					<td class="price__table-data">
-						<p class="price__row-title">Смайлики</p>
-					</td>
-					<td class="price__table-data">
-						<p class="price__icon price__icon--false">Нет</p>
-					</td>
-					<td class="price__table-data">
-						<p class="price__icon price__icon--true">Есть</p>
-					</td>
-					<td class="price__table-data">
-						<p class="price__icon price__icon--true">Есть</p>
+						<p class="price__icon price__icon--true">
+							<!-- Есть -->
+						</p>
 					</td>
 				</tr>
 				<tr>
 					<td class="price__table-data">
-						<p class="price__row-title">Комментарии</p>
+						<p class="price__row-title">
+							<!-- Смайлики -->
+						</p>
 					</td>
 					<td class="price__table-data">
-						<p class="price__icon price__icon--false">Нет</p>
+						<p class="price__icon price__icon--false">
+							<!-- Нет -->
+						</p>
 					</td>
 					<td class="price__table-data">
-						<p class="price__icon price__icon--false">Нет</p>
+						<p class="price__icon price__icon--true">
+							<!-- Есть -->
+						</p>
 					</td>
 					<td class="price__table-data">
-						<p class="price__icon price__icon--true">Есть</p>
+						<p class="price__icon price__icon--true">
+							<!-- Есть -->
+						</p>
+					</td>
+				</tr>
+				<tr>
+					<td class="price__table-data">
+						<p class="price__row-title">
+							<!-- Комментарии -->
+						</p>
+					</td>
+					<td class="price__table-data">
+						<p class="price__icon price__icon--false">
+							<!-- Нет -->
+						</p>
+					</td>
+					<td class="price__table-data">
+						<p class="price__icon price__icon--false">
+							<!-- Нет -->
+						</p>
+					</td>
+					<td class="price__table-data">
+						<p class="price__icon price__icon--true">
+							<!-- Есть -->
+						</p>
 					</td>
 				</tr>
 			</table>
-			<div class="rewiews__dots slider__dots">
+			<div class="price__dots slider__dots">
 				<ul class="slider__dots-list">
-					<li class="slider_dots-item">1</li>
-					<li class="slider_dots-item">2</li>
-					<li class="slider_dots-item">3</li>
+					<li class="slider_dots-item"><span class="visually-hidden">1</span></li>
+					<li class="slider_dots-item"><span class="visually-hidden">2</span></li>
+					<li class="slider_dots-item"><span class="visually-hidden">3</span></li>
 				</ul>
 			</div>
 		</section>
+		<!--
 		<section class="contacts">
 			<h2 class="contacts__title">Остались вопросы? Свяжитесь с нами!</h2>
 			<ul class="contacts__list">
@@ -169,9 +238,9 @@
 		</section>
 		<section class="map">
 			<img src="http://placehold.it/150x100" alt="Карта">
-		</section>
+		</section> -->
 	</main>
-	<footer class="page-footer">
+	<!-- <footer class="page-footer">
 		<img src="http://placehold.it/150x100" alt="Pink" class="logo page-footer__logo">
 		<ul class="page-footer__social-list">
 			<li class="page-footer__social-item">
@@ -188,7 +257,7 @@
 			<p class="page-footer__author-text">Разработано</p>
 			<img class="page-footer__author-image" src="http://placehold.it/150x100" alt="HTML Academy">
 		</div>
-	</footer>
+	</footer> -->
 </body>
 
 </html>
