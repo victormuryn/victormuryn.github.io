@@ -1,6 +1,6 @@
 body {
 	background: url("../preview/pink-index-mobile.jpg") no-repeat 50% 0;
-	min-height: 3423px;
+	min-height: 4218px;
 }
 
 @media (min-width: $tablet) {
@@ -55,4 +55,28 @@ body {
 }
 .rewiews__dots {
 	border: 2px solid #D35400;
+}
+.price {
+	border: 2px solid #ff0;
+}
+.price__table {
+	border: 2px solid #7647ad;
+}
+.price__table-head {
+	border: 2px solid #0f0;
+}
+.price__table-data {
+	border: 2px solid #ac2fd5;
+}
+.contacts {
+	border: 2px solid #000;
+}
+.contacts__title {
+	border: 2px dashed #facbda;
+}
+.contacts__list {
+	border: 2px solid aqua;
+}
+.contacts__item {
+	border: 2px dotted blue;
 }

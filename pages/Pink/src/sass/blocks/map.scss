@@ -1,0 +1,16 @@
+.map__map {
+	width: 100%;
+	height: 500px;
+	border: 0;
+}
+
+@media (min-height: $tablet) {
+	.map__map {
+		height: 368px;
+	}
+}
+@media (min-height: $tablet) {
+	.map__map {
+		height: 502px;
+	}
+}
