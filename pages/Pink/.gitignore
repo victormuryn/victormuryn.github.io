@@ -1,0 +1,5 @@
+*.ai
+*.pdf
+*.psd
+*.sublime*
+node_modules/
