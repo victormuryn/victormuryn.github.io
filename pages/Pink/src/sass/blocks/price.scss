@@ -1,7 +1,6 @@
 .price {
 	min-height: 470px;
 	width: 100%;
-	padding: 50px 0 60px;
 }
 
 .price__table {
@@ -12,18 +11,14 @@
 	min-width: 277px;
 	height: 100px;
 	margin-right: 2px;
-	&--none {
-		display: none;
-	}
-}
-
-.price__table-data--first {
-	display: none;
 }
 
 .price__table-data {
 	min-width: 277px;
 	height: 59px;
+	&--first {
+		display: none;
+	}
 }
 
 .price__slides-container {
@@ -51,13 +46,13 @@
 	}
 	.price__table-data {
 		height: 45px;
+		&--first {
+			display: table-cell;
+		}
 	}
 	.price__table-head,
 	.price__table-data {
 		min-width: 152px;
-	}
-	.price__table-data--first {
-		display: table-cell;
 	}
 }
 

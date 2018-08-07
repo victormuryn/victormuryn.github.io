@@ -1,82 +1,25 @@
 body {
-	background: url("../preview/pink-index-mobile.jpg") no-repeat 50% 0;
+	background: url("../preview/pink-photo-mobile.jpg") no-repeat 50% 0;
 	min-height: 4218px;
 }
 
 @media (min-width: $tablet) {
 	body {
-		background: url("../preview/pink-index-tablet.jpg") no-repeat 50% 0;
+		background: url("../preview/pink-photo-tablet.jpg") no-repeat 50% 0;
 	}
 }
 
 @media (min-width: $desctop) {
 	body {
-		background: url("../preview/pink-index-desktop.jpg") no-repeat 50% 0;
+		background: url("../preview/pink-photo-desktop.jpg") no-repeat 50% 0;
 	}
 }
-.intro__about-wrapper {
-	border: 2px solid #5e5
-}
-.intro__background {
-	border: 2px solid #7f7;
-}
-.header_logo-wrapper {
-	border: 2px dashed #9fb;
-}
-.page-header__nav {
-	border: 2px dotted #ff0;
-}
-.information {
-	border: 2px solid #850;
-}
-.information__title-wrapper {
-	border: 2px solid #fa2;
-}
-.information__list {
-	border: 2px solid green;
-}
-.effect {
-	border: 2px solid #880;
-}
-.intro__diagram {
-	border: 2px dotted #0f0;
-}
-.effect__wrapper {
-	border: 2px dotted #f00;
-}
-.reviews {
-	border: 2px solid #7D3C98;
-}
-.reviews__list {
-	border: 2px dotted #0B5345;
-}
-.reviews > button {
-	border: 2px dotted  #34495E;
-}
-.rewiews__dots {
-	border: 2px solid #D35400;
-}
-.price {
+.page-header--photos {
 	border: 2px solid #ff0;
 }
-.price__table {
-	border: 2px solid #7647ad;
+.page-header__nav {
+	border: 2px dotted #f0f;
 }
-.price__table-head {
-	border: 2px solid #0f0;
-}
-.price__table-data {
-	border: 2px solid #ac2fd5;
-}
-.contacts {
-	border: 2px solid #000;
-}
-.contacts__title {
-	border: 2px dashed #facbda;
-}
-.contacts__list {
-	border: 2px solid aqua;
-}
-.contacts__item {
-	border: 2px dotted blue;
+.photos {
+	border: 2px solid #8ff;
 }

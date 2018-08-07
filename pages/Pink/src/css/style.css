@@ -34,9 +34,14 @@ button {
 .header_logo-wrapper {
   min-height: 69px; }
 
+.page-header--photos {
+  min-height: 500px; }
+
 @media (min-width: 660px) {
   .header_logo-wrapper {
-    min-height: 109px; } }
+    min-height: 109px; }
+  .page-header--photos {
+    min-height: 700px; } }
 
 @media (min-width: 1200px) {
   .header-container {
@@ -51,7 +56,9 @@ button {
     width: 940px;
     margin: 0 auto; }
   .header_logo-wrapper {
-    width: 147px; } }
+    width: 147px; }
+  .page-header--photos {
+    min-height: 400px; } }
 
 @media (min-width: 1200px) {
   .page-header__nav {
@@ -203,8 +210,7 @@ button {
 
 .price {
   min-height: 470px;
-  width: 100%;
-  padding: 50px 0 60px; }
+  width: 100%; }
 
 .price__table {
   width: 100%; }
@@ -213,15 +219,12 @@ button {
   min-width: 277px;
   height: 100px;
   margin-right: 2px; }
-  .price__table-head--none {
-    display: none; }
-
-.price__table-data--first {
-  display: none; }
 
 .price__table-data {
   min-width: 277px;
   height: 59px; }
+  .price__table-data--first {
+    display: none; }
 
 .price__slides-container {
   overflow: hidden;
@@ -251,11 +254,11 @@ button {
     height: 75px; }
   .price__table-data {
     height: 45px; }
+    .price__table-data--first {
+      display: table-cell; }
   .price__table-head,
   .price__table-data {
-    min-width: 152px; }
-  .price__table-data--first {
-    display: table-cell; } }
+    min-width: 152px; } }
 
 @media (min-width: 1200px) {
   .price {
@@ -402,7 +405,7 @@ button {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center; }
-  .page-footer__social-item::last-of-type {
+  .page-footer__social-item:last-of-type {
     margin-right: 0; }
   .page-footer__social-link {
     width: 46px;
@@ -434,80 +437,39 @@ button {
   .page-footer {
     padding-top: 45px; } }
 
+.photos__title {
+  text-align: center;
+  color: #283645;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 30px;
+  margin: 40px auto 48px;
+  max-width: 241px; }
+
+.main-photo__wrapper {
+  max-width: 100vw; }
+
+.main-photo__image {
+  height: 137px;
+  width: 100%; }
+
 body {
-  background: url("../preview/pink-index-mobile.jpg") no-repeat 50% 0;
+  background: url("../preview/pink-photo-mobile.jpg") no-repeat 50% 0;
   min-height: 4218px; }
 
 @media (min-width: 660px) {
   body {
-    background: url("../preview/pink-index-tablet.jpg") no-repeat 50% 0; } }
+    background: url("../preview/pink-photo-tablet.jpg") no-repeat 50% 0; } }
 
 @media (min-width: 1200px) {
   body {
-    background: url("../preview/pink-index-desktop.jpg") no-repeat 50% 0; } }
+    background: url("../preview/pink-photo-desktop.jpg") no-repeat 50% 0; } }
 
-.intro__about-wrapper {
-  border: 2px solid #5e5; }
-
-.intro__background {
-  border: 2px solid #7f7; }
-
-.header_logo-wrapper {
-  border: 2px dashed #9fb; }
-
-.page-header__nav {
-  border: 2px dotted #ff0; }
-
-.information {
-  border: 2px solid #850; }
-
-.information__title-wrapper {
-  border: 2px solid #fa2; }
-
-.information__list {
-  border: 2px solid green; }
-
-.effect {
-  border: 2px solid #880; }
-
-.intro__diagram {
-  border: 2px dotted #0f0; }
-
-.effect__wrapper {
-  border: 2px dotted #f00; }
-
-.reviews {
-  border: 2px solid #7D3C98; }
-
-.reviews__list {
-  border: 2px dotted #0B5345; }
-
-.reviews > button {
-  border: 2px dotted  #34495E; }
-
-.rewiews__dots {
-  border: 2px solid #D35400; }
-
-.price {
+.page-header--photos {
   border: 2px solid #ff0; }
 
-.price__table {
-  border: 2px solid #7647ad; }
+.page-header__nav {
+  border: 2px dotted #f0f; }
 
-.price__table-head {
-  border: 2px solid #0f0; }
-
-.price__table-data {
-  border: 2px solid #ac2fd5; }
-
-.contacts {
-  border: 2px solid #000; }
-
-.contacts__title {
-  border: 2px dashed #facbda; }
-
-.contacts__list {
-  border: 2px solid aqua; }
-
-.contacts__item {
-  border: 2px dotted blue; }
+.photos {
+  border: 2px solid #8ff; }

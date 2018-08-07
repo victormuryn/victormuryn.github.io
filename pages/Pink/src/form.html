@@ -10,13 +10,15 @@
 
 <body>
 	<header class="page-header">
-		<img src="http://placehold.it/150x100" alt="Pink" class="logo page-header__logo page-header__logo--top">
-		<button class="page-header__menu-button">
-			<span class="visully-hidden">Закрыть</span>
-		</button>
-		<button class="page-header__button">
-			<span class="visully-hidden">Открыть</span>
-		</button>
+		<div class="header_logo-wrapper">
+			<img src="img/svg/logotype-mobile.svg" alt="Pink" class="logo page-header__logo">
+			<button class="page-header__menu-button page-header__menu-button--close">
+				<span class="visually-hidden">Закрыть</span>
+			</button>
+			<button class="page-header__menu-button page-header__menu-button--open">
+				<span class="visually-hidden">Открыть</span>
+			</button>
+		</div>
 		<nav class="page-nav page_header__nav">
 			<ul class="page-nav__list">
 				<li class="page-nav__item">
@@ -101,18 +103,26 @@
 		<img src="http://placehold.it/150x100" alt="Pink" class="logo page-footer__logo">
 		<ul class="page-footer__social-list">
 			<li class="page-footer__social-item">
-				<span class="visually-hidden">Наш Twitter</span>
+				<a href="javascript://0" class="page-footer__social-link">
+					<img src="img/social/twitter.png" alt="Twitter">
+					<span class="visually-hidden">Наш Twitter</span>
+				</a>
 			</li>
 			<li class="page-footer__social-item">
-				<span class="visually-hidden">Наш Facebook</span>
+				<a href="javascript://0" class="page-footer__social-link">
+					<img src="img/social/facebook.png" alt="Facebook">
+					<span class="visually-hidden">Наш Facebook</span>
+				</a>
 			</li>
 			<li class="page-footer__social-item">
-				<span class="visually-hidden">Наш YouTube</span>
+				<a href="javascript://0" class="page-footer__social-link">
+					<img src="img/social/youtube.png" alt="YouTube">
+					<span class="visually-hidden">Наш YouTube</span>
+				</a>
 			</li>
 		</ul>
 		<div class="page-footer__author">
-			<p class="page-footer__author-text">Разработано</p>
-			<img class="page-footer__author-image" src="http://placehold.it/150x100" alt="HTML Academy">
+			<p class="page-footer__author-text">Разработано <a href="javascript://0" class="page-footer__author-link">muryn.official</a></p>
 		</div>
 	</footer>
 	<section class="succes-pop-up pop-up">
