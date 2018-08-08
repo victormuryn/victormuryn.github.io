@@ -3,4 +3,5 @@
 *.psd
 *.sublime*
 node_modules/
+notCommit/
 package-lock.json
