@@ -5,13 +5,13 @@
 	// name = product name,
 	// description = product description,
 	// img = source to product img
-	// folder = source to site,
+	// folder = folder with index file,
 	// type = project type (new, inProcess, updated, normal)
 	let pages = [{
 			name: "Pink",
 			description: "Приложения позволит вам победить осеннюю хандру  и депресию буквально в несколько кликов!",
 			img: "img/templates/pink.jpg",
-			folder: "Pink",
+			folder: "Pink/src/",
 			type: "inProcess"
 		},
 		{
