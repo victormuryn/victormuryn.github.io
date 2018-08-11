@@ -1,3 +1,39 @@
+.page-header {
+	background-color:  #283645;
+}
+.page-nav__list {
+	padding: 0;
+	padding-top: 69px;
+	margin: 0;
+	list-style: none;
+	display: none;
+	&--no-js {
+		display: block;
+	}
+	&--active {
+		display: block;
+	}
+}
+.page-nav__item {
+	text-align: center;
+ box-shadow: 0 1px 0 #000, inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+.page-nav__link {
+	line-height: 63px;
+	display: block;
+	color: #fff;
+	font-family: "Open Sans";
+	font-size: 18px;
+	font-weight: 700;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+
+
+
+
+
+
 @media (min-width: $desctop) {
 	.page-header__nav {
 		width: 622px;

@@ -1,16 +1,54 @@
 	@import "logo.scss";
 
-	.page-header__nav {
-		min-height: 255px;
+	.header__logo-wrapper {
+		display: flex;
+		justify-content: space-between;
+		position: absolute;
+		width: 100%;
+		align-items: center;
+		padding: 0 20px;
+		line-height: 69px;
+		box-shadow: 0 1px 0 #000, inset 0 1px 0 rgba(255, 255, 255, 0.15);
+		&--close {
+			box-shadow: none;
+			background-color: rgba(#000, .3);
+		}
 	}
-
-	.header_logo-wrapper {
-		min-height: 69px;
-	}
-
-	.page-header {
-		&--photos {
-			min-height: 500px;
+.page-nav.page-header__nav {
+	background-color: #283645;
+}
+	.page-header__menu-button {
+		border: 0;
+		background-color: transparent;
+		padding: 0;
+		height: 24px;
+		font-size: 0;
+		&--open {
+			background-image: linear-gradient(to bottom, #fff 0px, #fff 4px, transparent 4px, transparent 10px, #fff 10px, #fff 14px, transparent 14px, transparent 20px, #fff 20px, #fff 24px);
+			width: 50px;
+		}
+		&--close {
+			background-image: none;
+			width: 24px;
+			height: auto;
+			position: relative;
+			&::before,
+			&::after {
+				content: "";
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 30px;
+				height: 5px;
+				display: block;
+				background-color: #fff;
+			}
+			&::before {
+				transform: rotate(45deg);
+			}
+			&::after {
+				transform: rotate(-45deg);
+			}
 		}
 	}
 
@@ -19,9 +57,8 @@
 			min-height: 109px;
 		}
 		.page-header {
-			&--photos {
-				min-height: 700px;
-			}
+			background: url(../img/background/back-tablet.jpg) no-repeat center center;
+			background-size: cover;
 		}
 	}
 

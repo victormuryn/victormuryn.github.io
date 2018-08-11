@@ -3,6 +3,7 @@ var
 	livereload   = require("gulp-livereload"),
 	sass         = require("gulp-sass"),
 	autoprefixer = require("gulp-autoprefixer"),
+	csscomb      = require("gulp-csscomb");
 	cleancss     = require("gulp-clean-css"),
 	rename       = require("gulp-rename");
 
@@ -13,6 +14,7 @@ gulp.task("reload-css", function() {
 			browsers: ["last 3 version"],
 			cascade: false
 		}))
+		.pipe(csscomb())
 		.pipe(gulp.dest("./src/css/"))
 		.pipe(cleancss({ compatibility: "ie8" }))
 		.pipe(rename({ suffix: ".min" }))
@@ -24,14 +26,14 @@ gulp.task("reload-html", function() {
 	gulp.src('./src/*.html').pipe(livereload());
 });
 
-//gulp.task("reload-js", function() {
-//gulp.src('./src/js/*.js').pipe(livereload());
-//});
+gulp.task("reload-js", function() {
+gulp.src('./src/js/*.js').pipe(livereload());
+});
 
 gulp.task("default", function() {
 	livereload.listen();
 	gulp.watch('./src/sass/*.scss', ['reload-css']);
 	gulp.watch('./src/sass/blocks/*.scss', ['reload-css']);
 	gulp.watch('./src/*.html', ['reload-html']);
-	//gulp.watch('./src/js/*.js', ['reload-js']);
+	gulp.watch('./src/js/*.js', ['reload-js']);
 });﻿

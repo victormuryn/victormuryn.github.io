@@ -9,19 +9,43 @@
 
 @media (min-width: $tablet) {
 	.effect {
-		display: flex;
-		min-height: 370px;
-	}
-	.intro__diagram {
-		min-width: 240px;
-		margin-right: 70px;
-	}
-	.effect__wrapper {
-		min-width: 295px;
+		display: block;
+		padding: 58px 21px 0;
 	}
 	.container--effect {
 		display: flex;
-		min-width: 620px;
+		align-items: center;
+	}
+	.effect__diagram {
+		position: relative;
+		min-width: 238px;
+		margin-right: 90px;
+	}
+	.effect__diagram-text {
+		position: absolute;
+		top: 55%;
+		display: block;
+		text-align: center;
+		width: 100%;
+		transform: translateY(-50%);
+		color: $link-color;
+		font-size: 96px;
+		font-weight: 700;
+	}
+	.effect__title {
+		margin: 0;
+		font-size: 30px;
+		font-weight: 700;
+		line-height: 36px;
+	}
+	.effect__text {
+		margin: 15px 0;
+		font-size: 18px;
+		line-height: 24px;
+	}
+	.effect__link {
+		color: $link-color;
+		line-height: 24px;
 	}
 }
 
