@@ -13,47 +13,49 @@
 
 <body>
 	<header class="page-header">
-		<div class="container header-container">
-			<div class="header__logo-wrapper header__logo-wrapper--close">
-				<a class="header__logo logo">Pink</a>
-				<button class="page-header__menu-button page-header__menu-button--open">
-					<span class="visually-hidden">Открыть</span>
-				</button>
-			</div>
-			<nav class="page-nav page-header__nav">
-				<ul class="page-nav__list page-nav__list--no-js">
-					<li class="page-nav__item">
-						<a class="page-nav__link">Главная</a>
-					</li>
-					<li class="page-nav__item">
-						<a class="page-nav__link" href="photo.html">Фотографии</a>
-					</li>
-					<li class="page-nav__item">
-						<a class="page-nav__link" href="form.html">Конкурс</a>
-					</li>
-					<li class="page-nav__item">
-						<a class="page-nav__link" href="https://murynofficial.github.io/">muryn.official</a>
-					</li>
-				</ul>
-			</nav>
-		</div>
-		<section class="intro">
-			<h2 class="visually-hidden">Скачай приложение</h2>
-			<div class="intro__background">
-				<div class="intro__hand"></div>
-			</div>
-			<div class="intro__hand intro__hand--tablet"></div>
-			<div class="intro__about-wrapper">
-				<h2 class="intro__title">Взгляните<br>на жизнь<br>иначе!</h2>
-				<button class="intro__button">Скачать приложение</button>
-				<div class="intro__icons-wrapper">
-					<span class="intro__icon intro__icon--apple">iPhone, iPad</span>
-					<span class="intro__icon intro__icon--android">Android</span>
-					<span class="intro__icon intro__icon--windows">Windows</span>
+		<div class="header__nav-container">
+			<div class="container header-container">
+				<div class="header__logo-wrapper header__logo-wrapper--close">
+					<a class="header__logo logo">Pink</a>
+					<button class="page-header__menu-button page-header__menu-button--open">
+						<span class="visually-hidden">Открыть</span>
+					</button>
 				</div>
-				<p class="intro__text">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+				<nav class="page-nav page-header__nav">
+					<ul class="page-nav__list page-nav__list--no-js">
+						<li class="page-nav__item page-nav__item--active">
+							<a class="page-nav__link" href="index.html">Главная</a>
+						</li>
+						<li class="page-nav__item">
+							<a class="page-nav__link" href="photo.html">Фотографии</a>
+						</li>
+						<li class="page-nav__item">
+							<a class="page-nav__link" href="form.html">Конкурс</a>
+						</li>
+						<li class="page-nav__item">
+							<a class="page-nav__link" target="_blank" href="https://murynofficial.github.io/">muryn.official</a>
+						</li>
+					</ul>
+				</nav>
 			</div>
-		</section>
+		</div>
+		<div class="container">
+			<section class="intro">
+				<h2 class="visually-hidden">Скачай приложение</h2>
+				<div class="intro__background">
+				</div>
+				<div class="intro__about-wrapper">
+					<h2 class="intro__title">Взгляните<br>на жизнь<br>иначе!</h2>
+					<button class="intro__button">Скачать приложение</button>
+					<div class="intro__icons-wrapper">
+						<span class="intro__icon intro__icon--apple">iPhone, iPad</span>
+						<span class="intro__icon intro__icon--android">Android</span>
+						<span class="intro__icon intro__icon--windows">Windows</span>
+					</div>
+					<p class="intro__text">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+				</div>
+			</section>
+		</div>
 	</header>
 	<main class="page-main">
 		<section class="information">
@@ -61,29 +63,39 @@
 				<h2 class="information__title">Устали от серости мегаполиса?</h2>
 				<h2 class="information__title">Нам есть, что вам предложить!</h2>
 			</div>
-			<ul class="information__list">
-				<li class="information__item">
-					<img class="information__image" src="img/phones/phone1.png" alt="Оригинал картинки">
-					<h3 class="information__item-title">Поднимает настроение</h3>
-					<p class="information__item-description">
-						Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!
-					</p>
-				</li>
-				<li class="information__item">
-					<img class="information__image" src="img/phones/phone2.png" alt="Добавлен розовый цвет">
-					<h3 class="information__item-title">Меняет мир вокруг</h3>
-					<p class="information__item-description">
-						Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект
-					</p>
-				</li>
-				<li class="information__item">
-					<img class="information__image" src="img/phones/phone3.png" alt="Добавлен смайлик :)">
-					<h3 class="information__item-title">Заводит новых друзей</h3>
-					<p class="information__item-description">
-						Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых
-					</p>
-				</li>
-			</ul>
+			<div class="information__wrapper">
+				<div class="container">
+					<ul class="information__list">
+						<li class="information__item">
+							<div class="information__img-wrapper">
+								<img class="information__image" src="img/phones/phone1.png" alt="Оригинал картинки">
+							</div>
+							<h3 class="information__item-title">Поднимает настроение</h3>
+							<p class="information__item-description">
+								Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!
+							</p>
+						</li>
+						<li class="information__item">
+							<div class="information__img-wrapper">
+								<img class="information__image" src="img/phones/phone2.png" alt="Добавлен розовый цвет">
+							</div>
+							<h3 class="information__item-title">Меняет мир вокруг</h3>
+							<p class="information__item-description">
+								Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект
+							</p>
+						</li>
+						<li class="information__item">
+							<div class="information__img-wrapper">
+								<img class="information__image" src="img/phones/phone3.png" alt="Добавлен смайлик :)">
+							</div>
+							<h3 class="information__item-title">Заводит новых друзей</h3>
+							<p class="information__item-description">
+								Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых
+							</p>
+						</li>
+					</ul>
+				</div>
+			</div>
 		</section>
 		<section class="effect">
 			<div class="container container--effect">
@@ -101,37 +113,41 @@
 		<section class="reviews slider">
 			<!-- container -->
 			<h2 class="visually-hidden">Отзывы</h2>
-			<button class="reviews__controls slider__controls slider__controls--prev">
-				<span class="visually-hidden">Прошлый отзыв</span>
-			</button>
-			<ul class="reviews__list slider__list">
-				<li class="reviews__item">
-					<small class="reviews__about">25 лет, водитель трамвая</small>
-					<p class="reviews__name">Николай Петров</p>
-					<p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложеннойфотографии!»</p>
-				</li>
-			</ul>
-			<button class="reviews__controls slider__controls slider__controls--next">
-				<span class="visually-hidden">Следуйщий отзыв</span>
-			</button>
-			<div class="reviews__dots slider__dots">
-				<ul class="reviews__dots-list">
-					<li class="reviews__dots-item">
-						<button class="reviews__dots-button reviews__dots-button--active">
-							<span class="visually-hidden">1</span>
-						</button>
-					</li>
-					<li class="reviews__dots-item">
-						<button class="reviews__dots-button">
-							<span class="visually-hidden">2</span>
-						</button>
-					</li>
-					<li class="reviews__dots-item">
-						<button class="reviews__dots-button">
-							<span class="visually-hidden">3</span>
-						</button>
+			<div class="container reviews__container">
+				<button class="reviews__controls reviews__controls--prev">
+					<span class="visually-hidden">Прошлый отзыв</span>
+					<img src="img/svg/arrow.svg" alt="Прошлый отзыв">
+				</button>
+				<ul class="reviews__list slider__list">
+					<li class="reviews__item">
+						<small class="reviews__about">25 лет, водитель трамвая</small>
+						<p class="reviews__name">Николай Петров</p>
+						<p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложеннойфотографии!»</p>
 					</li>
 				</ul>
+				<button class="reviews__controls reviews__controls--next">
+					<span class="visually-hidden">Следуйщий отзыв</span>
+					<img src="img/svg/arrow.svg" alt="Следуйщий отзыв">
+				</button>
+				<div class="reviews__dots">
+					<ul class="reviews__dots-list">
+						<li class="reviews__dots-item">
+							<button class="reviews__dots-button reviews__dots-button--active">
+								<span class="visually-hidden">1</span>
+							</button>
+						</li>
+						<li class="reviews__dots-item">
+							<button class="reviews__dots-button">
+								<span class="visually-hidden">2</span>
+							</button>
+						</li>
+						<li class="reviews__dots-item">
+							<button class="reviews__dots-button">
+								<span class="visually-hidden">3</span>
+							</button>
+						</li>
+					</ul>
+				</div>
 			</div>
 		</section>
 		<section class="price">
@@ -252,7 +268,7 @@
 				</li>
 				<li class="contacts__item">
 					<p class="contacts__item-title">Пишите:</p>
-					<a class="contacts__item-link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+					<a class="contacts__item-link contacts__item-link--mail" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
 				</li>
 				<li class="contacts__item">
 					<p class="contacts__item-title">Приезжайте в гости:</p>
@@ -266,32 +282,34 @@
 		</section>
 	</main>
 	<footer class="page-footer">
-		<a class="footer__logo logo">Pink</a>
-		<ul class="page-footer__social-list">
-			<li class="page-footer__social-item">
-				<a href="javascript://0" class="page-footer__social-link">
-					<img src="img/svg/twitter.svg" alt="Twitter">
-					<span class="visually-hidden">Наш Twitter</span>
-				</a>
-			</li>
-			<li class="page-footer__social-item">
-				<a href="javascript://0" class="page-footer__social-link">
-					<img src="img/svg/facebook.svg" alt="Facebook">
-					<span class="visually-hidden">Наш Facebook</span>
-				</a>
-			</li>
-			<li class="page-footer__social-item">
-				<a href="javascript://0" class="page-footer__social-link">
-					<img src="img/svg/youtube.svg" alt="YouTube">
-					<span class="visually-hidden">Наш YouTube</span>
-				</a>
-			</li>
-		</ul>
-		<div class="page-footer__author">
-			<p class="page-footer__author-text">Разработано <a href="javascript://0" class="page-footer__author-link">muryn.official</a></p>
+		<div class="container footer-container">
+			<a class="footer__logo logo">Pink</a>
+			<ul class="page-footer__social-list">
+				<li class="page-footer__social-item">
+					<a href="javascript://0" class="page-footer__social-link">
+						<img src="img/svg/twitter.svg" alt="Twitter">
+						<span class="visually-hidden">Наш Twitter</span>
+					</a>
+				</li>
+				<li class="page-footer__social-item">
+					<a href="javascript://0" class="page-footer__social-link">
+						<img src="img/svg/facebook.svg" alt="Facebook">
+						<span class="visually-hidden">Наш Facebook</span>
+					</a>
+				</li>
+				<li class="page-footer__social-item">
+					<a href="javascript://0" class="page-footer__social-link">
+						<img src="img/svg/youtube.svg" alt="YouTube">
+						<span class="visually-hidden">Наш YouTube</span>
+					</a>
+				</li>
+			</ul>
+			<div class="page-footer__author">
+				<p class="page-footer__author-text">Разработано <a target="_blank" href="https://murynofficial.github.io/" class="page-footer__author-link">muryn.official</a></p>
+			</div>
 		</div>
-		<script src="js/script.js"></script>
 	</footer>
+	<script src="js/script.js"></script>
 </body>
 
 </html>

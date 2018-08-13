@@ -52,6 +52,7 @@
 @media (min-width: $desctop) {
 	.effect {
 		min-height: 435px;
+		background-color: #f2f2f2;
 	}
 	.intro__diagram {
 		min-width: 298px;
@@ -59,5 +60,11 @@
 	}
 	.effect__wrapper {
 		min-width: 525px;
+	}
+	.effect__title {
+		line-height: 30px;
+	}
+	.effect__text {
+		margin-bottom: 30px;
 	}
 }

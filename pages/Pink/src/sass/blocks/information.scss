@@ -21,11 +21,15 @@
 	text-align: center;
 }
 
+.information__img-wrapper {
+	display: none;
+}
+
 .information__item {
 	display: flex;
 	flex-direction: column;
 	&:last-of-type {
-		.information__image {
+		.information__img-wrapper {
 			display: block;
 		}
 	}
@@ -46,11 +50,13 @@
 }
 
 .information__image {
-	display: none;
-	order: 1;
 	width: 157px;
 	height: 277px;
 	margin: 0 auto;
+}
+
+.information__img-wrapper {
+	order: 1;
 }
 
 @media (min-width: $tablet) {
@@ -59,7 +65,6 @@
 	}
 	.information__title {
 		font-size: 40px;
-		font-family: "Open Sans";
 		font-weight: 300;
 		position: relative;
 		z-index: 2;
@@ -84,13 +89,15 @@
 	.information__item {
 		width: 100%;
 		&:last-of-type {
-			.information__image {
+			.information__img-wrapper {
 				position: absolute;
 				left: 20px;
 				bottom: 0;
-				height: 500px;
-				width: auto;
 				z-index: 1;
+				img {
+					width: 290px;
+					height: 500px;
+				}
 			}
 		}
 	}
@@ -98,9 +105,71 @@
 
 @media (min-width: $desctop) {
 	.information__title-wrapper {
-		min-height: 320px;
+		margin-bottom: 75px;
 	}
 	.information__list {
-		height: 600px;
+		text-align: center;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: flex-start;
+		padding: 0;
+		background-image: none;
+	}
+	.information__item {
+		flex-grow: 1;
+		&:last-of-type {
+			.information__img-wrapper {
+				position: relative;
+				img {
+					width: 186px;
+					height: auto;
+				}
+			}
+		}
+	}
+	.information__img-wrapper {
+		order: 0;
+		display: block;
+		height: auto;
+		margin-bottom: 51px;
+		img {
+			width: 186px;
+					height: auto;
+		}
+	}
+	.information__img-wrapper {
+		position: relative;
+		order: 0;
+		&::after {
+			position: absolute;
+			left: 50%;
+			bottom: -5px;
+			transform: translateX(-50%);
+			content: "";
+			width: 294px;
+			height: 17px;
+			background: url(../img/shadow.png) no-repeat center center;
+		}
+	}
+	.information__title {
+		font-size: 50px;
+	}
+	.information__item-title {
+		font-size: 30px;
+		font-weight: 700;
+		line-height: 30px;
+		margin-bottom: 25px;
+		max-width: 236px;
+		margin: 0 auto;
+	}
+	.information__item-description {
+		font-size: 18px;
+		font-weight: 400;
+		line-height: 30px;
+		margin: 0 10px 50px;
+	}
+
+	.information__wrapper {
+		background-image: linear-gradient(179deg, transparent 0%, transparent 45px, #f2f2f2 45px, #f2f2f2 100%);
 	}
 }

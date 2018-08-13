@@ -4,10 +4,13 @@
 
 @media (min-width: $tablet) {
 	.page-footer {
+		display: block;
+		padding: 30px 20px;
+	}
+	.footer-container {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		padding: 30px 20px;
 	}
 	.footer__logo {
 		color: #000;
@@ -28,6 +31,14 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		outline: 0;
+		&:hover,
+		&:focus {
+			border: 3px solid $main-blue;
+		}
+		&:active {
+			opacity: .1;
+		}
 	}
 	.page-footer__social-item:last-of-type {
 		margin-right: 0;
@@ -43,7 +54,6 @@
 	}
 	.page-footer__author {
 		color: $main-blue;
-		font-family: "Open Sans";
 		font-size: 14px;
 		line-height: 20px;
 		text-align: center;
@@ -53,11 +63,19 @@
 		text-decoration: none;
 		display: block;
 		font-weight: 600;
+		outline: 0;
+		&:hover,
+		&:focus {
+			color: $main-blue;
+		}
+		&:active {
+			opacity: .3;
+		}
 	}
 }
+
 @media (min-width: $tablet) {
 	.page-footer {
 		padding-top: 45px;
 	}
 }
-

@@ -1,83 +1,111 @@
 	@import "logo.scss";
 
-	.header__logo-wrapper {
-		display: flex;
-		justify-content: space-between;
-		position: absolute;
-		width: 100%;
-		align-items: center;
-		padding: 0 20px;
-		line-height: 69px;
-		box-shadow: 0 1px 0 #000, inset 0 1px 0 rgba(255, 255, 255, 0.15);
-		&--close {
-			box-shadow: none;
-			background-color: rgba(#000, .3);
-		}
+.header__logo-wrapper {
+	display: flex;
+	justify-content: space-between;
+	position: absolute;
+	width: 100%;
+	align-items: center;
+	padding: 0 20px;
+	line-height: 69px;
+	box-shadow: 0 1px 0 #000, inset 0 1px 0 rgba(255, 255, 255, 0.15);
+	&--close {
+		box-shadow: none;
+		background-color: rgba(#000, .3);
 	}
-.page-nav.page-header__nav {
+}
+
+.page-header__nav {
 	background-color: #283645;
 }
-	.page-header__menu-button {
-		border: 0;
-		background-color: transparent;
-		padding: 0;
-		height: 24px;
-		font-size: 0;
-		&--open {
-			background-image: linear-gradient(to bottom, #fff 0px, #fff 4px, transparent 4px, transparent 10px, #fff 10px, #fff 14px, transparent 14px, transparent 20px, #fff 20px, #fff 24px);
-			width: 50px;
+
+.page-header__menu-button {
+	border: 0;
+	background-color: transparent;
+	padding: 0;
+	height: 24px;
+	font-size: 0;
+	&--open {
+		background-image: linear-gradient(to bottom, #fff 0px, #fff 4px, transparent 4px, transparent 10px, #fff 10px, #fff 14px, transparent 14px, transparent 20px, #fff 20px, #fff 24px);
+		width: 50px;
+		&:hover,
+		&:focus {
+			background-image: linear-gradient(to bottom, $link-color 0px, $link-color 4px, transparent 4px, transparent 10px, $link-color 10px, $link-color 14px, transparent 14px, transparent 20px, $link-color 20px, $link-color 24px);
 		}
-		&--close {
-			background-image: none;
-			width: 24px;
-			height: auto;
-			position: relative;
+		&:active {
+			opacity: .3;
+		}
+	}
+	&--close {
+		background-image: none;
+		width: 24px;
+		height: auto;
+		position: relative;
+		&::before,
+		&::after {
+			content: "";
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 30px;
+			height: 5px;
+			display: block;
+			background-color: #fff;
+		}
+		&::before {
+			transform: rotate(45deg);
+		}
+		&::after {
+			transform: rotate(-45deg);
+		}
+		&:hover,
+		&:focus {
 			&::before,
 			&::after {
-				content: "";
-				position: absolute;
-				left: 0;
-				top: 0;
-				width: 30px;
-				height: 5px;
-				display: block;
-				background-color: #fff;
+				background-color: $link-color;
 			}
-			&::before {
-				transform: rotate(45deg);
-			}
-			&::after {
-				transform: rotate(-45deg);
+			&:active {
+				&::before,
+				&::after {
+					opacity: .3;
+				}
 			}
 		}
 	}
-
+}
 	@media (min-width: $tablet) {
-		.header_logo-wrapper {
-			min-height: 109px;
-		}
 		.page-header {
-			background: url(../img/background/back-tablet.jpg) no-repeat center center;
-			background-size: cover;
+			background: url(../img/phone-hand/hand.png) no-repeat right 10% bottom 0,
+			url(../img/background/back-tablet.jpg) no-repeat center center;
+			background-size: 450px, cover;
 		}
 	}
 
 	@media (min-width: $desctop) {
+		.page-header {
+			background: url(../img/phone-hand/hand.png) no-repeat right 30% bottom 0,
+			url(../img/background/back-desctop.jpg) no-repeat center center;
+			background-size: 550px, cover;
+		}
+		.header__nav-container {
+			background-color: rgba(#000, .3);
+		}
+		.page-header__nav {
+			background: none;
+		}
 		.header-container {
 			display: flex;
 			justify-content: space-between;
-			min-height: 110px;
+			align-items: center;
 		}
-		.container {
-			width: 940px;
-			margin: 0 auto;
+		.page-header__menu-button {
+			display: none;
 		}
-		.header_logo-wrapper {
+		.header__logo-wrapper {
 			width: 147px;
-		}
-		.page-header {
-			&--photos {
-				min-height: 400px;
+			position: static;
+			&--close {
+				background: none;
 			}
 		}
 	}

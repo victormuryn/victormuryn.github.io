@@ -56,13 +56,29 @@
 	height: 7px;
 	border: 0;
 	background-color: rgba($main-blue, .3);
+	outline: 0;
+	&:hover,
+	&:focus {
+		background-color: rgba($main-blue, .6);
+	}
+	&:active {
+		background-color: rgba($main-blue, .1);
+	}
 	&--active {
 		width: 10px;
 		height: 10px;
 		border: 3px solid $main-blue;
 		background-color: transparent;
+		&:hover,
+		&:focus {
+			background-color: transparent;
+		}
+		&:active {
+			background-color: transparent;
+		}
 	}
 }
+
 @media (min-width: $tablet) {
 	.reviews__list {
 		margin: 106px 0 8px;
@@ -93,17 +109,35 @@
 }
 
 @media (min-width: $desctop) {
-	.rewiews__dots {
+	.reviews__dots {
 		display: none;
 	}
 	.reviews__controls {
 		display: block;
-		width: 22px;
-		height: 41px;
 		background-color: transparent;
 		border: 0;
 		align-self: center;
-		margin-top: 52px;
+		position: absolute;
+		opacity: 0.3;
+		outline: 0;
+		&:hover,
+		&:focus {
+			opacity: .6;
+		}
+		&:active {
+			opacity: .1
+		}
+		img {
+			width: 22px;
+			height: 41px;
+		}
+		&--prev {
+			left: -106px;
+		}
+		&--next {
+			transform: rotate(180deg);
+			right: -106px;
+		}
 	}
 	.reviews {
 		display: flex;
@@ -112,6 +146,32 @@
 	}
 	.reviews__list {
 		margin-bottom: 8px;
-		width: 700px;
+	}
+	.reviews__text {
+		max-width: 700px;
+		margin: 0;
+		margin-bottom: 44px;
+	}
+	.reviews__name {
+		font-size: 24px;
+		font-weight: 700;
+	}
+	.reviews__about {
+		font-size: 18px;
+	}
+	.reviews__container {
+		position: relative;
+		display: flex;
+		padding-top: 121px;
+		&::before {
+			content: "";
+			position: absolute;
+			width: 79px;
+			height: 63px;
+			background: url(../img/svg/quotes.svg) no-repeat center center;
+			background-size: contain;
+			left: 50%;
+			transform: translateX(-50%);
+		}
 	}
 }

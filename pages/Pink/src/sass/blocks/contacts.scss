@@ -6,7 +6,6 @@
 	margin: 0;
 	text-align: center;
 	color: $main-blue;
-	font-family: "Open Sans";
 	font-size: 24px;
 	font-weight: 300;
 	margin-top: 38.5px;
@@ -30,17 +29,27 @@
 	margin: 0;
 	margin-top: 32px;
 	color: $main-blue;
-	font-family: "Open Sans";
 	font-size: 18px;
 	font-weight: 700;
 }
 
 .contacts__item-link {
 	color: $link-color;
-	font-family: "Open Sans";
 	font-size: 24px;
 	font-weight: 300;
 	text-decoration: none;
+	&--mail {
+		outline: 0;
+		&:hover,
+		&:focus {
+			color: $main-blue;
+			text-decoration: underline;
+		}
+		&:active {
+			text-decoration: none;
+			color: rgba($main-blue, .3);
+		}
+	}
 }
 
 @media (min-width: $tablet) {
