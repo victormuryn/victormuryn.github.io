@@ -54,6 +54,48 @@ button
     }
 }
 
+.logotype
+{
+    display: none;
+
+    color: #fff;
+
+    fill: #fff;
+}
+.logotype:hover,
+.logotype:focus
+{
+    color: #d22856;
+
+    fill: #d22856;
+}
+.logotype:active
+{
+    color: rgba(255, 255, 255, .3);
+
+    fill: rgba(255, 255, 255, .3);
+}
+
+.footer__logo
+{
+    color: #000;
+
+    fill: #000;
+}
+.footer__logo:hover,
+.footer__logo:focus
+{
+    color: #d22856;
+
+    fill: #d22856;
+}
+.footer__logo:active
+{
+    color: rgba(0, 0, 0, .3);
+
+    fill: rgba(0, 0, 0, .3);
+}
+
 .logo
 {
     font-size: 30px;
@@ -61,9 +103,94 @@ button
 
     margin: 0;
 
-    text-transform: uppercase; 
+    text-decoration: none; 
+    text-transform: uppercase;
+}
+.logo--mobile
+{
+    display: block;
+}
 
-    color: #fff;
+@media (min-width: 660px) and (max-width: 1199px)
+{
+    .logotype
+    {
+        display: none;
+    }
+    .logo--tablet
+    {
+        display: block;
+    }
+    .footer__svg--red
+    {
+        fill: #d22856;
+    }
+    .footer__logo
+    {
+        color: #000;
+
+        fill: #000;
+    }
+    .footer__logo:hover,
+    .footer__logo:focus
+    {
+        color: #d22856;
+
+        fill: #d22856;
+    }
+    .footer__logo:active
+    {
+        color: rgba(0, 0, 0, .3);
+
+        fill: rgba(0, 0, 0, .3);
+    }
+    .footer__logo:active .footer__svg--red
+    {
+        color: rgba(0, 0, 0, .3);
+
+        fill: rgba(0, 0, 0, .3);
+    }
+}
+
+@media (min-width: 1200px)
+{
+    .logotype
+    {
+        display: none;
+    }
+    .logo--desctop
+    {
+        display: block;
+    }
+    .footer__svg--red
+    {
+        fill: #d22856;
+    }
+    .footer__logo
+    {
+        color: #000;
+
+        fill: #000;
+    }
+    .footer__logo:hover,
+    .footer__logo:focus
+    {
+        color: #d22856;
+
+        fill: #d22856;
+    }
+    .footer__logo:active
+    {
+        color: rgba(0, 0, 0, .3);
+
+        fill: rgba(0, 0, 0, .3);
+    }
+    .footer__logo:active .footer__svg--red
+    {
+        color: rgba(0, 0, 0, .3);
+
+        fill: rgba(0, 0, 0, .3);
+    }
 }
 
 .header__logo-wrapper
@@ -182,6 +309,10 @@ button
 
 @media (min-width: 660px)
 {
+    .header__logo-wrapper
+    {
+        height: 110px;
+    }
     .page-header
     {
         background: url(../img/phone-hand/hand.png) no-repeat right 10% bottom 0, url(../img/background/back-tablet.jpg) no-repeat center center;
@@ -286,6 +417,14 @@ button
 .page-nav__link:active
 {
     color: rgba(210, 40, 86, .3);
+}
+
+@media (min-width: 660px)
+{
+    .page-nav__list
+    {
+        padding-top: 110px;
+    }
 }
 
 @media (min-width: 1200px)
@@ -497,21 +636,16 @@ button
 
 @media (min-width: 660px)
 {
-    .page-header
-    {
-        position: relative;
-    }
     .intro__background
     {
         display: none;
     }
     .intro__about-wrapper
     {
-        position: relative;
         z-index: 2; 
 
         width: 350px;
-        padding-top: 103px;
+        padding-top: 153px;
         padding-bottom: 100px;
     }
     .intro__title

@@ -31,10 +31,16 @@
 	text-decoration: none;
 	&:hover,
 	&:focus {
-color: $link-color;
+		color: $link-color;
 	}
 	&:active {
 		color: rgba($link-color, .3)
+	}
+}
+
+@media (min-width: $tablet) {
+	.page-nav__list {
+		padding-top: 110px;
 	}
 }
 

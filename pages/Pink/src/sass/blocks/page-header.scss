@@ -74,6 +74,9 @@
 	}
 }
 	@media (min-width: $tablet) {
+		.header__logo-wrapper {
+			height: 110px;
+		}
 		.page-header {
 			background: url(../img/phone-hand/hand.png) no-repeat right 10% bottom 0,
 			url(../img/background/back-tablet.jpg) no-repeat center center;

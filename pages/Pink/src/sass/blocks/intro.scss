@@ -85,15 +85,13 @@
 
 @media (min-width: $tablet) {
 	.page-header {
-		position: relative;
 	}
 	.intro__background {
 		display: none;
 	}
 	.intro__about-wrapper {
-		position: relative;
 		width: 350px;
-		padding-top: 103px;
+		padding-top: 153px;
 		padding-bottom: 100px;
 		z-index: 2;
 	}
