@@ -16,17 +16,9 @@ const
 	posthtml     = require("gulp-posthtml"),
 	svgstore     = require("gulp-svgstore"),
 	imagemin     = require("gulp-imagemin"),
-	imgRetina    = require("gulp-img-retina"),
 	include      = require("posthtml-include"),
 	resizer      = require("gulp-images-resizer"),
 	server       = require("browser-sync").create();
-
-/***************************************************\
-|                Plugins settings                   |
-\***************************************************/
-const retinaOpts = {
-	suffix: { 2: '@2x', 3: '@3x' }
-};
 
 /***************************************************\
 |                    Gulp style                     |
@@ -52,8 +44,8 @@ gulp.task("html", function() {
 		.pipe(posthtml([
 			include()
 		]))
-		.pipe(imgRetina(retinaOpts))
-		.pipe(gulp.dest("build"));
+		.pipe(gulp.dest("build"))
+		.pipe(server.stream());;
 });
 
 /***************************************************\
@@ -164,7 +156,7 @@ gulp.task("clean", function() {
 |                    Gulp BUILD                     |
 \***************************************************/
 gulp.task("build", function(done) {
-	run(
+	run (
 		"clean",
 		"copy",
 		"style",

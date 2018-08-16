@@ -7,11 +7,13 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Pink | Главная</title>
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
-	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body>
+	<div style="display: none">
+		<include src="build/img/sprite.svg"></include>
+	</div>
 	<header class="page-header">
 		<div class="header__nav-container">
 			<div class="container header-container">
@@ -72,7 +74,12 @@
 					<ul class="information__list">
 						<li class="information__item">
 							<div class="information__img-wrapper">
-								<img class="information__image" src="img/phones/phone1.png" alt="Оригинал картинки">
+								<picture class="information__image">
+									<source type="image/webp" srcset="img/phones/phone1.webp 1x, img/phones/phone1@2x.webp 2x, img/phones/phone1@3x.webp 3x">
+
+									<source type="image/jpeg" srcset="img/phones/phone1@2x.png 2x, img/phones/phone1@3x.png 3x">
+										<img srcset="img/phones/phone1.png 1x" alt="Оригинал картинки">
+								</picture>
 							</div>
 							<h3 class="information__item-title">Поднимает настроение</h3>
 							<p class="information__item-description">
@@ -81,7 +88,12 @@
 						</li>
 						<li class="information__item">
 							<div class="information__img-wrapper">
-								<img class="information__image" src="img/phones/phone2.png" alt="Добавлен розовый цвет">
+								<picture class="information__image">
+									<source type="image/webp" srcset="img/phones/phone2.webp 1x, img/phones/phone2@2x.webp 2x, img/phones/phone2@3x.webp 3x">
+
+									<source type="image/jpeg" srcset="img/phones/phone2@2x.png 2x, img/phones/phone2@3x.png 3x">
+										<img srcset="img/phones/phone2.png 1x" alt="Добавлен розовый цвет">
+								</picture>
 							</div>
 							<h3 class="information__item-title">Меняет мир вокруг</h3>
 							<p class="information__item-description">
@@ -90,7 +102,12 @@
 						</li>
 						<li class="information__item">
 							<div class="information__img-wrapper">
-								<img class="information__image" src="img/phones/phone3.png" alt="Добавлен смайлик :)">
+								<picture>
+									<source type="image/webp" srcset="img/phones/phone3.webp 1x, img/phones/phone3.webp 2x, img/phones/phone3.webp 3x">
+
+									<source type="image/jpeg" srcset="img/phones/phone3.png 2x, img/phones/phone3.png 3x">
+									<img srcset="img/phones/phone3.png 1x" alt="Добавлен смайлик :)">
+								</picture>
 							</div>
 							<h3 class="information__item-title">Заводит новых друзей</h3>
 							<p class="information__item-description">
@@ -104,7 +121,12 @@
 		<section class="effect">
 			<div class="container container--effect">
 				<div class="effect__diagram">
-					<img class="effect__diagram-img" src="img/svg/diagram-fill.png" alt="Таймер">
+					<picture >
+						<source type="image/webp" srcset="img/svg/diagram-fill.webp 1x, img/svg/diagram-fill.webp 2x, img/svg/diagram-fill.webp 3x">
+
+						<source type="image/jpeg" srcset="img/svg/diagram-fill.png 2x, img/svg/diagram-fill.png 3x">
+						<img class="effect__diagram-img" srcset="img/svg/diagram-fill.png 1x" alt="Таймер">
+					</picture>
 					<span class="effect__diagram-text">24</span>
 				</div>
 				<div class="effect__wrapper">
@@ -120,7 +142,9 @@
 			<div class="container reviews__container">
 				<button class="reviews__controls reviews__controls--prev">
 					<span class="visually-hidden">Прошлый отзыв</span>
-					<img src="img/svg/arrow.svg" alt="Прошлый отзыв">
+					<svg height="55" width="28" viewBox="0 0 28 55">
+						<use xlink:href="#icon-arrow">
+					</svg>
 				</button>
 				<ul class="reviews__list slider__list">
 					<li class="reviews__item">
@@ -131,7 +155,9 @@
 				</ul>
 				<button class="reviews__controls reviews__controls--next">
 					<span class="visually-hidden">Следуйщий отзыв</span>
-					<img src="img/svg/arrow.svg" alt="Следуйщий отзыв">
+					<svg height="55" width="28" viewBox="0 0 28 55">
+						<use xlink:href="#icon-arrow">
+					</svg>
 				</button>
 				<div class="reviews__dots">
 					<ul class="reviews__dots-list">
