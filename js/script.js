@@ -14,7 +14,7 @@ let pages = [{
 	name: "Pink",
 	description: "Приложения позволит вам победить осеннюю хандру  и депресию буквально в несколько кликов!",
 	img: "pink.jpg",
-	folder: "Pink/src/",
+	folder: "Pink/build/",
 	type: "inProcess"
 }, {
 	name: "Device",

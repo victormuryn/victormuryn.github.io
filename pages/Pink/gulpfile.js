@@ -1,27 +1,36 @@
+/***************************************************\
+|              Required all plugins                 |
+\***************************************************/
 const
-	gulp = require("gulp"),
-	del = require("del"),
-	webp = require("gulp-webp"),
-	minify = require("gulp-csso"),
-	sass = require("gulp-sass"),
-	run = require("run-sequence"),
-	rename = require("gulp-rename"),
-	plumber = require("gulp-plumber"),
-	postcss = require("gulp-postcss"),
-	csscomb = require("gulp-csscomb"),
+	del          = require("del"),
+	gulp         = require("gulp"),
+	webp         = require("gulp-webp"),
+	minify       = require("gulp-csso"),
+	sass         = require("gulp-sass"),
+	rename       = require("gulp-rename"),
+	run          = require("run-sequence"),
+	plumber      = require("gulp-plumber"),
+	postcss      = require("gulp-postcss"),
+	csscomb      = require("gulp-csscomb"),
 	autoprefixer = require("autoprefixer"),
-	posthtml = require("gulp-posthtml"),
-	imagemin = require("gulp-imagemin"),
-	resizer = require("gulp-images-resizer"),
-	imgRetina = require("gulp-img-retina"),
-	svgstore = require("gulp-svgstore"),
-	include = require("posthtml-include"),
-	server = require("browser-sync").create();
+	posthtml     = require("gulp-posthtml"),
+	svgstore     = require("gulp-svgstore"),
+	imagemin     = require("gulp-imagemin"),
+	imgRetina    = require("gulp-img-retina"),
+	include      = require("posthtml-include"),
+	resizer      = require("gulp-images-resizer"),
+	server       = require("browser-sync").create();
 
+/***************************************************\
+|                Plugins settings                   |
+\***************************************************/
 const retinaOpts = {
 	suffix: { 2: '@2x', 3: '@3x' }
 };
 
+/***************************************************\
+|                    Gulp style                     |
+\***************************************************/
 gulp.task("style", function() {
 	gulp.src("src/sass/style.scss")
 		.pipe(plumber())
@@ -35,15 +44,9 @@ gulp.task("style", function() {
 		.pipe(server.stream());
 });
 
-gulp.task("sprite", function() {
-	return gulp.src("src/img/svg/icon-*.svg")
-		.pipe(svgstore({
-			inlineSvg: true
-		}))
-		.pipe(rename("sprite.svg"))
-		.pipe(gulp.dest("build/img"));
-});
-
+/***************************************************\
+|                    Gulp html                      |
+\***************************************************/
 gulp.task("html", function() {
 	return gulp.src("src/*.html")
 		.pipe(posthtml([
@@ -53,15 +56,21 @@ gulp.task("html", function() {
 		.pipe(gulp.dest("build"));
 });
 
-gulp.task("images", function() {
-	return gulp.src("src/img/**/*.{png,jpg,svg}")
-		.pipe(imagemin([imagemin.optipng({ optimizationLevel: 3 }),
-			imagemin.jpegtran({ progressive: true }),
-			imagemin.svgo()
-		]))
-		.pipe(gulp.dest("src/img"))
+/***************************************************\
+|                    Gulp sprite                     |
+\***************************************************/
+gulp.task("sprite", function() {
+	return gulp.src("src/img/svg/icon-*.svg")
+		.pipe(svgstore({
+			inlineSvg: true
+		}))
+		.pipe(rename("sprite.svg"))
+		.pipe(gulp.dest("build/img"));
 });
 
+/***************************************************\
+|               Gulp retina @2x                     |
+\***************************************************/
 gulp.task("retina@2x", function() {
 	return gulp.src("src/img/**/*.{png,jpg,jpeg}")
 		.pipe(gulp.dest("build/img"))
@@ -72,6 +81,9 @@ gulp.task("retina@2x", function() {
 		.pipe(gulp.dest("build/img"))
 });
 
+/***************************************************\
+|               Gulp retina @3x                     |
+\***************************************************/
 gulp.task("retina@3x", function() {
 	return gulp.src("src/img/**/*.{png,jpg,jpeg}")
 		.pipe(gulp.dest("build/img"))
@@ -82,6 +94,9 @@ gulp.task("retina@3x", function() {
 		.pipe(gulp.dest("build/img"))
 });
 
+/***************************************************\
+|               Gulp retina FULL                    |
+\***************************************************/
 gulp.task("retina", function(done) {
 	run (
 		"retina@2x",
@@ -90,16 +105,43 @@ gulp.task("retina", function(done) {
 	)
 });
 
+/***************************************************\
+|               Gulp convert .webp                  |
+\***************************************************/
 gulp.task("webp", function() {
 	return gulp.src("build/img/**/*.{png,jpg}")
 		.pipe(webp({ quality: 90 }))
 		.pipe(gulp.dest("build/img"))
 });
 
-gulp.task("clean", function() {
-	return del("build");
+/***************************************************\
+|              Gulp minify img                      |
+\***************************************************/
+gulp.task("images", function() {
+	return gulp.src("src/img/**/*.{png,jpg,svg}")
+		.pipe(imagemin([imagemin.optipng({ optimizationLevel: 3 }),
+			imagemin.jpegtran({ progressive: true }),
+			imagemin.svgo()
+		]))
+		.pipe(gulp.dest("src/img"))
 });
 
+/***************************************************\
+|           Gulp imageFullCycle                     |
+\***************************************************/
+gulp.task("imageFullCycle", function(done) {
+	run (
+		"sprite",
+		"retina",
+		"webp",
+		"images",
+		done
+	)
+});
+
+/***************************************************\
+|           Gulp copy all to build                  |
+\***************************************************/
 gulp.task("copy", function() {
 	return gulp.src([
 			"src/fonts/**/*.{woff,woff2}",
@@ -111,16 +153,16 @@ gulp.task("copy", function() {
 		.pipe(gulp.dest("build"));
 });
 
-gulp.task("imageFullCycle", function(done) {
-	run (
-		"sprite",
-		"retina",
-		"webp",
-		"images",
-		done
-	)
+/***************************************************\
+|                 Gulp clean build                  |
+\***************************************************/
+gulp.task("clean", function() {
+	return del("build");
 });
 
+/***************************************************\
+|                    Gulp BUILD                     |
+\***************************************************/
 gulp.task("build", function(done) {
 	run(
 		"clean",
@@ -132,6 +174,9 @@ gulp.task("build", function(done) {
 	);
 });
 
+/***************************************************\
+|                    Gulp SERVER                     |
+\***************************************************/
 gulp.task("serve", function() {
 	server.init({
 		server: "build/"
