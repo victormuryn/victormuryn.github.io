@@ -3,9 +3,7 @@
   "version": "1.0.0",
   "description": "pink",
   "main": "gulpfile.js",
-  "dependencies": {
-    "gulp-image-resize": "^0.13.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "autoprefixer": "^9.1.1",
     "browser-sync": "^2.24.6",

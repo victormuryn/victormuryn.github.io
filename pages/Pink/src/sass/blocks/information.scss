@@ -134,7 +134,7 @@
 		margin-bottom: 51px;
 		img {
 			width: 186px;
-					height: auto;
+			height: auto;
 		}
 	}
 	.information__img-wrapper {
@@ -148,7 +148,7 @@
 			content: "";
 			width: 294px;
 			height: 17px;
-			background: url(../img/shadow.png) no-repeat center center;
+			background: url(../img/background/shadow.png) no-repeat center center;
 		}
 	}
 	.information__title {
@@ -171,5 +171,27 @@
 
 	.information__wrapper {
 		background-image: linear-gradient(179deg, transparent 0%, transparent 45px, #f2f2f2 45px, #f2f2f2 100%);
+	}
+}
+
+@media
+	(min-width: $desctop) and (min-resolution: 144dpi),
+	(min-width: $desctop) and (min-resolution: 2ddpx) {
+	.information__img-wrapper {
+		&::after {
+			background: url(../img/background/shadow@2x.png);
+			background-size: cover;
+		}
+	}
+}
+
+@media
+	(min-width: $desctop) and (min-resolution: 240dpi),
+	(min-width: $desctop) and (min-resolution: 3ddpx) {
+	.information__img-wrapper {
+		&::after {
+			background: url(../img/background/shadow@3x.png);
+			background-size: cover;
+		}
 	}
 }

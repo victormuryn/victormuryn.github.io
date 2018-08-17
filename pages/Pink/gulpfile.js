@@ -19,7 +19,11 @@ const
 	include      = require("posthtml-include"),
 	resizer      = require("gulp-images-resizer"),
 	server       = require("browser-sync").create();
+/***************************************************\
+|                    Gulp style                     |
+\***************************************************/
 
+const retinaOpts = {};
 /***************************************************\
 |                    Gulp style                     |
 \***************************************************/
@@ -101,7 +105,7 @@ gulp.task("retina", function(done) {
 |               Gulp convert .webp                  |
 \***************************************************/
 gulp.task("webp", function() {
-	return gulp.src("build/img/**/*.{png,jpg}")
+	return gulp.src(["!build/img/background/*.{png,jpg,jpeg}", "build/img/**/*.{png,jpg,jpeg}"])
 		.pipe(webp({ quality: 90 }))
 		.pipe(gulp.dest("build/img"))
 });
@@ -110,7 +114,7 @@ gulp.task("webp", function() {
 |              Gulp minify img                      |
 \***************************************************/
 gulp.task("images", function() {
-	return gulp.src("src/img/**/*.{png,jpg,svg}")
+	return gulp.src("src/img/**/*.{png,jpg,jpeg,svg}")
 		.pipe(imagemin([imagemin.optipng({ optimizationLevel: 3 }),
 			imagemin.jpegtran({ progressive: true }),
 			imagemin.svgo()

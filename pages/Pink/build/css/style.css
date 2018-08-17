@@ -724,6 +724,42 @@ template
     }
 }
 
+@media (min-width: 660px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 660px) and (min-resolution: 144dpi), (min-width: 660px) and (min-resolution: 2ddpx)
+{
+    .page-header
+    {
+        background: url(../img/phone-hand/hand@2x.png) no-repeat right 10% bottom 0, url(../img/background/back-tablet@2x.jpg) no-repeat center center;
+        background-size: 450px, cover;
+    }
+}
+
+@media (min-width: 660px) and (-webkit-min-device-pixel-ratio: 2.5), (min-width: 660px) and (min-resolution: 240dpi), (min-width: 660px) and (min-resolution: 3ddpx)
+{
+    .page-header
+    {
+        background: url(../img/phone-hand/hand@3x.png) no-repeat right 10% bottom 0, url(../img/background/back-tablet@3x.jpg) no-repeat center center;
+        background-size: 450px, cover;
+    }
+}
+
+@media (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 1200px) and (min-resolution: 144dpi), (min-width: 1200px) and (min-resolution: 2ddpx)
+{
+    .page-header
+    {
+        background: url(../img/phone-hand/hand@2x.png) no-repeat right 10% bottom 0, url(../img/background/back-desctop@2x.jpg) no-repeat center center;
+        background-size: 450px, cover;
+    }
+}
+
+@media (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2.5), (min-width: 1200px) and (min-resolution: 240dpi), (min-width: 1200px) and (min-resolution: 3ddpx)
+{
+    .page-header
+    {
+        background: url(../img/phone-hand/hand@3x.png) no-repeat right 10% bottom 0, url(../img/background/back-desctop@3x.jpg) no-repeat center center;
+        background-size: 450px, cover;
+    }
+}
+
 .page-header
 {
     background-color: #283645;
@@ -1022,6 +1058,24 @@ template
     }
 }
 
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 2ddpx)
+{
+    .intro__background
+    {
+        background: url(../img/phone-hand/hand@2x.png) no-repeat 10% bottom, url(../img/background/back-mobile@2x.jpg) no-repeat center center;
+        background-size: 320px, cover;
+    }
+}
+
+@media (-webkit-min-device-pixel-ratio: 2.5), (min-resolution: 240dpi), (min-resolution: 3ddpx)
+{
+    .intro__background
+    {
+        background: url(../img/phone-hand/hand@3x.png) no-repeat 10% bottom, url(../img/background/back-mobile@3x.jpg) no-repeat center center;
+        background-size: 320px, cover;
+    }
+}
+
 .information__title
 {
     font-size: 24px;
@@ -1224,7 +1278,7 @@ template
         -webkit-transform: translateX(-50%);
                 transform: translateX(-50%);
 
-        background: url(../img/shadow.png) no-repeat center center;
+        background: url(../img/background/shadow.png) no-repeat center center;
     }
     .information__title
     {
@@ -1251,6 +1305,24 @@ template
     .information__wrapper
     {
         background-image: linear-gradient(179deg, transparent 0%, transparent 45px, #f2f2f2 45px, #f2f2f2 100%);
+    }
+}
+
+@media (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 1200px) and (min-resolution: 144dpi), (min-width: 1200px) and (min-resolution: 2ddpx)
+{
+    .information__img-wrapper::after
+    {
+        background: url(../img/background/shadow@2x.png);
+        background-size: cover;
+    }
+}
+
+@media (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2.5), (min-width: 1200px) and (min-resolution: 240dpi), (min-width: 1200px) and (min-resolution: 3ddpx)
+{
+    .information__img-wrapper::after
+    {
+        background: url(../img/background/shadow@3x.png);
+        background-size: cover;
     }
 }
 

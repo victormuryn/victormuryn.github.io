@@ -1,4 +1,4 @@
-	@import "logo.scss";
+@import "logo.scss";
 
 .header__logo-wrapper {
 	display: flex;
@@ -73,45 +73,82 @@
 		}
 	}
 }
-	@media (min-width: $tablet) {
-		.header__logo-wrapper {
-			height: 110px;
-		}
-		.page-header {
-			background: url(../img/phone-hand/hand.png) no-repeat right 10% bottom 0,
-			url(../img/background/back-tablet.jpg) no-repeat center center;
-			background-size: 450px, cover;
-		}
-	}
 
-	@media (min-width: $desctop) {
-		.page-header {
-			background: url(../img/phone-hand/hand.png) no-repeat right 30% bottom 0,
-			url(../img/background/back-desctop.jpg) no-repeat center center;
-			background-size: 550px, cover;
-		}
-		.header__nav-container {
-			background-color: rgba(#000, .3);
-		}
-		.page-header__nav {
+@media (min-width: $tablet) {
+	.header__logo-wrapper {
+		height: 110px;
+	}
+	.page-header {
+		background: url(../img/phone-hand/hand.png) no-repeat right 10% bottom 0,
+		url(../img/background/back-tablet.jpg) no-repeat center center;
+		background-size: 450px, cover;
+	}
+}
+
+@media (min-width: $desctop) {
+	.page-header {
+		background: url(../img/phone-hand/hand.png) no-repeat right 30% bottom 0,
+		url(../img/background/back-desctop.jpg) no-repeat center center;
+		background-size: 550px, cover;
+	}
+	.header__nav-container {
+		background-color: rgba(#000, .3);
+	}
+	.page-header__nav {
+		background: none;
+	}
+	.header-container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	.page-header__menu-button {
+		display: none;
+	}
+	.header__logo-wrapper {
+		width: 147px;
+		position: static;
+		&--close {
 			background: none;
 		}
-		.header-container {
-			display: flex;
-			justify-content: space-between;
-			align-items: center;
-		}
-		.page-header__menu-button {
-			display: none;
-		}
-		.header__logo-wrapper {
-			width: 147px;
-			position: static;
-			&--close {
-				background: none;
-			}
-		}
 	}
+}
 
-	@import "page-nav.scss";
-	@import "intro.scss";
+@media (min-width: $tablet) and (min-resolution: 144dpi),
+(min-width: $tablet) and (min-resolution: 2ddpx) {
+	.page-header {
+		background: url(../img/phone-hand/hand@2x.png) no-repeat right 10% bottom 0,
+		url(../img/background/back-tablet@2x.jpg) no-repeat center center;
+		background-size: 450px, cover;
+	}
+}
+
+@media (min-width: $tablet) and (min-resolution: 240dpi),
+(min-width: $tablet) and (min-resolution: 3ddpx) {
+	.page-header {
+		background: url(../img/phone-hand/hand@3x.png) no-repeat right 10% bottom 0,
+		url(../img/background/back-tablet@3x.jpg) no-repeat center center;
+		background-size: 450px, cover;
+	}
+}
+
+@media (min-width: $desctop) and (min-resolution: 144dpi),
+(min-width: $desctop) and (min-resolution: 2ddpx) {
+	.page-header {
+		background: url(../img/phone-hand/hand@2x.png) no-repeat right 10% bottom 0,
+		url(../img/background/back-desctop@2x.jpg) no-repeat center center;
+		background-size: 450px, cover;
+	}
+}
+
+@media (min-width: $desctop) and (min-resolution: 240dpi),
+(min-width: $desctop) and (min-resolution: 3ddpx) {
+	.page-header {
+		background: url(../img/phone-hand/hand@3x.png) no-repeat right 10% bottom 0,
+		url(../img/background/back-desctop@3x.jpg) no-repeat center center;
+		background-size: 450px, cover;
+	}
+}
+
+@import "page-nav.scss";
+@import "intro.scss";
