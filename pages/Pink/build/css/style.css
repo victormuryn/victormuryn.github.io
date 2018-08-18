@@ -600,26 +600,62 @@ template
 
 .page-header__menu-button
 {
-    font-size: 0; 
+    font-size: 0;
 
     height: 24px;
     padding: 0;
 
     border: 0;
+    outline: 0; 
     background-color: transparent;
 }
 .page-header__menu-button--open
 {
-    width: 50px; 
+    position: relative;
 
-    background-image: linear-gradient(to bottom, #fff 0px, #fff 4px, transparent 4px, transparent 10px, #fff 10px, #fff 14px, transparent 14px, transparent 20px, #fff 20px, #fff 24px);
+    box-sizing: content-box;
+    width: 50px;
+    height: 4px;
+    padding: 6px 0;
+
+    background-color: #fff;
+    background-image: linear-gradient(to bottom, #fff 0px, #fff 4px, transparent 4px, transparent 10px, #fff 10px, #fff 14px, transparent 14px, transparent 20px, #fff 20px, #fff 24px); 
+    background-clip: content-box;
+}
+.page-header__menu-button--open::before,
+.page-header__menu-button--open::after
+{
+    position: absolute; 
+    left: 0;
+
+    width: 100%;
+    height: 4px;
+
+    content: '';
+
+    background-color: #fff;
+}
+.page-header__menu-button--open::before
+{
+    top: -3px;
+}
+.page-header__menu-button--open::after
+{
+    bottom: -3px;
 }
 .page-header__menu-button--open:hover,
 .page-header__menu-button--open:focus
 {
-    background-image: linear-gradient(to bottom, #d22856 0px, #d22856 4px, transparent 4px, transparent 10px, #d22856 10px, #d22856 14px, transparent 14px, transparent 20px, #d22856 20px, #d22856 24px);
+    background-color: #d22856;
 }
-.page-header__menu-button--open:active
+.page-header__menu-button--open:hover::before,
+.page-header__menu-button--open:hover::after,
+.page-header__menu-button--open:focus::before,
+.page-header__menu-button--open:focus::after
+{
+    background-color: #d22856;
+}
+.page-header__menu-button:active
 {
     opacity: .3;
 }
@@ -897,15 +933,35 @@ template
 
 .intro__background
 {
-    display: flex;
-
     width: 100%;
     min-height: 528px;
 
     background: url(../img/phone-hand/hand.png) no-repeat 10% bottom, url(../img/background/back-mobile.jpg) no-repeat center center;
-    background-size: 320px, cover; 
+    background-size: 320px, cover;
+}
+.intro__background--photo
+{
+    display: flex;
 
-    align-items: flex-end;
+    min-height: 237px;
+
+    background: url(../img/background/back-tablet.jpg) no-repeat top center;
+    background-size: 800px auto;
+
+    align-items: center;
+}
+.intro__background--photo h2
+{
+    font-family: 'Open Sans';
+    font-size: 24px;
+    font-weight: 300;
+
+    width: 100%;
+    margin: 0;
+
+    text-align: center; 
+
+    color: #fff;
 }
 
 .intro__title
@@ -2256,4 +2312,213 @@ template
     {
         padding-top: 45px;
     }
+}
+
+.photos__title
+{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 30px;
+
+    margin: 50px 0; 
+
+    text-align: center;
+
+    color: #283645;
+}
+
+.main-photo__wrapper
+{
+    position: relative;
+
+    width: 100%;
+    height: auto;
+}
+
+.main-photo__image
+{
+    width: 100%;
+    height: auto;
+}
+
+.main-photo__text-wrapper
+{
+    position: absolute;
+    top: 0;
+    right: 20px;
+
+    display: flex;
+
+    width: 140px;
+    height: 36px;
+
+    background-color: #d22856;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.main-photo__text
+{
+    font-size: 12px;
+    font-weight: 700;
+
+    text-align: center; 
+    text-transform: uppercase;
+
+    color: #fff;
+}
+
+.photo__description
+{
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 24px; 
+
+    width: 280px;
+    margin-bottom: 20px;
+    padding: 25px 20px;
+
+    color: #283645;
+    background-color: #f2f2f2;
+}
+.photo__description--main-photo
+{
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.photo__name
+{
+    font-weight: 700; 
+
+    margin: 0;
+}
+
+.photo__time
+{
+    font-size: 12px;
+    font-weight: 300; 
+
+    text-transform: uppercase;
+}
+
+.photo__text
+{
+    margin: 0;
+    margin-bottom: 15px;
+}
+
+.photo__followers
+{
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 24px;
+
+    position: relative; 
+
+    padding-left: 32px;
+
+    text-decoration: none;
+    text-transform: uppercase;
+
+    color: #d22856;
+}
+.photo__followers::before
+{
+    position: absolute;
+    top: 50%;
+    left: 0;
+
+    width: 13px;
+    height: 12px;
+
+    content: '';
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%); 
+
+    background: url(../img/background/heart.png) no-repeat center center;
+}
+
+.photos__photos-list
+{
+    display: block;
+
+    width: 100%; 
+    margin: 0;
+    padding: 0 20px;
+
+    list-style: none;
+
+    flex-wrap: wrap;
+}
+
+.photos__item
+{
+    width: 280px;
+    margin: 0 auto;
+}
+
+.photos__img
+{
+    display: block;
+
+    width: 100%;
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 2ddpx)
+{
+    .photo__followers::before
+    {
+        background: url(../img/background/heart@2x.png);
+        background-size: cover;
+    }
+}
+
+@media (-webkit-min-device-pixel-ratio: 2.5), (min-resolution: 240dpi), (min-resolution: 3ddpx)
+{
+    .photo__followers::before
+    {
+        background: url(../img/background/heart@3x.png);
+        background-size: cover;
+    }
+}
+
+.upload
+{
+    margin-top: 30px;
+}
+
+.upload__title
+{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 30px;
+
+    margin: 0;
+    margin-bottom: 48px; 
+
+    text-align: center;
+
+    color: #283645;
+}
+
+.upload__wrapper
+{
+    padding: 20px 20px 25px; 
+
+    background-color: #f2f2f2;
+}
+
+.upload__filters-wrapper
+{
+    max-width: 280px;
+    margin: 0 auto;
+}
+
+.upload__img
+{
+    display: block;
+
+    margin: 0 auto;
 }

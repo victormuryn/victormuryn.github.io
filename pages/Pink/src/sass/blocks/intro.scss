@@ -1,11 +1,27 @@
 .intro__background {
 	min-height: 528px;
 	width: 100%;
-	display: flex;
-	align-items: flex-end;
 	background: url(../img/phone-hand/hand.png) no-repeat 10% bottom,
 	url(../img/background/back-mobile.jpg) no-repeat center center;
 	background-size: 320px, cover;
+	&--photo {
+
+		background: url(../img/background/back-tablet.jpg) no-repeat top center;
+		background-size: 800px auto;
+
+		min-height: 237px;
+		display: flex;
+		align-items: center;
+		h2 {
+			margin: 0;
+			color: #ffffff;
+			font-family: "Open Sans";
+			width: 100%;
+			font-size: 24px;
+			font-weight: 300;
+			text-align: center;
+		}
+	}
 }
 
 .intro__title {
@@ -124,7 +140,8 @@
 	}
 }
 
-@media (min-resolution: 144dpi), (min-resolution: 2ddpx) {
+@media (min-resolution: 144dpi),
+(min-resolution: 2ddpx) {
 	.intro__background {
 		background: url(../img/phone-hand/hand@2x.png) no-repeat 10% bottom,
 		url(../img/background/back-mobile@2x.jpg) no-repeat center center;
@@ -132,7 +149,8 @@
 	}
 }
 
-@media (min-resolution: 240dpi), (min-resolution: 3ddpx) {
+@media (min-resolution: 240dpi),
+(min-resolution: 3ddpx) {
 	.intro__background {
 		background: url(../img/phone-hand/hand@3x.png) no-repeat 10% bottom,
 		url(../img/background/back-mobile@3x.jpg) no-repeat center center;

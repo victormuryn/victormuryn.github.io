@@ -1,0 +1,125 @@
+.photos__title {
+	color: $main-blue;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 30px;
+	text-align: center;
+	margin: 50px 0;
+}
+.main-photo__wrapper {
+	position: relative;
+	width: 100%;
+	height: auto;
+}
+
+.main-photo__image {
+	width: 100%;
+	height: auto;
+}
+
+.main-photo__text-wrapper {
+	position: absolute;
+	top: 0;
+	right: 20px;
+	width: 140px;
+	height: 36px;
+	background-color: $link-color;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.main-photo__text {
+	color: #fff;
+	font-size: 12px;
+	font-weight: 700;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+.photo__description {
+	margin-bottom: 20px;
+	width: 280px;
+	background-color: #f2f2f2;
+	padding: 25px 20px;
+	font-weight: 300;
+	color: $main-blue;
+	font-size: 14px;
+	line-height: 24px;
+	&--main-photo {
+		margin: 0 auto;
+		margin-bottom: 20px;
+	}
+}
+
+.photo__name {
+	margin: 0;
+	font-weight: 700;
+}
+
+.photo__time {
+	font-size: 12px;
+	text-transform: uppercase;
+	font-weight: 300;
+}
+
+.photo__text {
+	margin: 0;
+	margin-bottom: 15px;
+}
+
+.photo__followers {
+	color: $link-color;
+	font-size: 12px;
+	font-weight: 400;
+	line-height: 24px;
+	text-transform: uppercase;
+	text-decoration: none;
+	padding-left: 32px;
+	position: relative;
+	&::before {
+		content: "";
+		position: absolute;
+		width: 13px;
+		height: 12px;
+		background: url(../img/background/heart.png) no-repeat center center;
+		top: 50%;
+		left: 0;
+		transform: translateY(-50%);
+	}
+}
+.photos__photos-list {
+	// display: flex;
+	display: block;
+	flex-wrap: wrap;
+	padding: 0 20px;
+	margin: 0;
+	list-style: none;
+	width: 100%;
+}
+.photos__item {
+	width: 280px;
+	margin: 0 auto;
+}
+.photos__img {
+	display: block;
+	width: 100%;
+	// height: 180px;
+}
+@media (min-resolution: 144dpi),(min-resolution: 2ddpx) {
+	.photo__followers {
+		&::before {
+			background: url(../img/background/heart@2x.png);
+			background-size: cover;
+		}
+	}
+}
+
+@media (min-resolution: 240dpi),(min-resolution: 3ddpx) {
+	.photo__followers {
+		&::before {
+			background: url(../img/background/heart@3x.png);
+			background-size: cover;
+		}
+	}
+}

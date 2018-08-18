@@ -25,16 +25,42 @@
 	padding: 0;
 	height: 24px;
 	font-size: 0;
+	outline: 0;
 	&--open {
-		background-image: linear-gradient(to bottom, #fff 0px, #fff 4px, transparent 4px, transparent 10px, #fff 10px, #fff 14px, transparent 14px, transparent 20px, #fff 20px, #fff 24px);
+		height: 4px;
 		width: 50px;
+		box-sizing: content-box;
+		padding: 6px 0;
+		background-color: #fff;
+		background-clip: content-box;
+		position: relative;
+		background-image: linear-gradient(to bottom, #fff 0px, #fff 4px, transparent 4px, transparent 10px, #fff 10px, #fff 14px, transparent 14px, transparent 20px, #fff 20px, #fff 24px);
+		&::before,
+		&::after {
+			content: "";
+			height: 4px;
+			width: 100%;
+			left: 0;
+			background-color: #fff;
+			position: absolute;
+		}
+		&::before {
+			top: -3px;
+		}
+		&::after {
+			bottom: -3px;
+		}
 		&:hover,
 		&:focus {
-			background-image: linear-gradient(to bottom, $link-color 0px, $link-color 4px, transparent 4px, transparent 10px, $link-color 10px, $link-color 14px, transparent 14px, transparent 20px, $link-color 20px, $link-color 24px);
+			&::before,
+			&::after {
+				background-color: $link-color;
+			}
+			background-color: $link-color;
 		}
-		&:active {
-			opacity: .3;
-		}
+	}
+	&:active {
+		opacity: .3;
 	}
 	&--close {
 		background-image: none;
@@ -74,10 +100,16 @@
 	}
 }
 
+
+.page-header {
+	&--photo {}
+}
+
 @media (min-width: $tablet) {
 	.header__logo-wrapper {
 		height: 110px;
 	}
+
 	.page-header {
 		background: url(../img/phone-hand/hand.png) no-repeat right 10% bottom 0,
 		url(../img/background/back-tablet.jpg) no-repeat center center;
@@ -91,20 +123,25 @@
 		url(../img/background/back-desctop.jpg) no-repeat center center;
 		background-size: 550px, cover;
 	}
+
 	.header__nav-container {
 		background-color: rgba(#000, .3);
 	}
+
 	.page-header__nav {
 		background: none;
 	}
+
 	.header-container {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 	}
+
 	.page-header__menu-button {
 		display: none;
 	}
+
 	.header__logo-wrapper {
 		width: 147px;
 		position: static;

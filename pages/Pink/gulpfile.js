@@ -19,11 +19,12 @@ const
 	include      = require("posthtml-include"),
 	resizer      = require("gulp-images-resizer"),
 	server       = require("browser-sync").create();
+
 /***************************************************\
 |                    Gulp style                     |
 \***************************************************/
-
 const retinaOpts = {};
+
 /***************************************************\
 |                    Gulp style                     |
 \***************************************************/
