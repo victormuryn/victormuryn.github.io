@@ -753,7 +753,7 @@ template
         background: url(../img/phone-hand/hand.png) no-repeat right 10% bottom 0, url(../img/background/back-tablet.jpg) no-repeat center center;
         background-size: 450px, cover;
     }
-    .page-header--photo
+    .page-header--inner
     {
         min-height: 440px; 
 
@@ -769,7 +769,7 @@ template
         background: url(../img/phone-hand/hand.png) no-repeat right 30% bottom 0, url(../img/background/back-desctop.jpg) no-repeat center center;
         background-size: 550px, cover;
     }
-    .page-header--photo
+    .page-header--inner
     {
         background: url(../img/background/back-desctop.jpg) no-repeat top center;
         background-size: 2560px;
@@ -812,7 +812,7 @@ template
         background: url(../img/phone-hand/hand@2x.png) no-repeat right 10% bottom 0, url(../img/background/back-tablet@2x.jpg) no-repeat center center;
         background-size: 450px, cover;
     }
-    .page-header--photo
+    .page-header--inner
     {
         background: url(../img/background/back-tablet@2x.jpg) no-repeat center 7%;
         background-size: 1199px auto;
@@ -826,7 +826,7 @@ template
         background: url(../img/phone-hand/hand@3x.png) no-repeat right 10% bottom 0, url(../img/background/back-tablet@3x.jpg) no-repeat center center;
         background-size: 450px, cover;
     }
-    .page-header--photo
+    .page-header--inner
     {
         background: url(../img/background/back-tablet@3x.jpg) no-repeat center 7%;
         background-size: 1199px auto;
@@ -840,7 +840,7 @@ template
         background: url(../img/phone-hand/hand@2x.png) no-repeat right 10% bottom 0, url(../img/background/back-desctop@2x.jpg) no-repeat center center;
         background-size: 450px, cover;
     }
-    .page-header--photo
+    .page-header--inner
     {
         background: url(../img/background/back-desctop@2x.jpg) no-repeat top center;
         background-size: 2560px;
@@ -854,7 +854,7 @@ template
         background: url(../img/phone-hand/hand@3x.png) no-repeat right 10% bottom 0, url(../img/background/back-desctop@3x.jpg) no-repeat center center;
         background-size: 450px, cover;
     }
-    .page-header--photo
+    .page-header--inner
     {
         background: url(../img/background/back-desctop@3x.jpg) no-repeat top center;
         background-size: 2560px;
@@ -1003,7 +1003,7 @@ template
     background: url(../img/phone-hand/hand.png) no-repeat 10% bottom, url(../img/background/back-mobile.jpg) no-repeat center center;
     background-size: 320px, cover;
 }
-.intro__background--photo
+.intro__background--inner
 {
     display: flex;
 
@@ -1017,13 +1017,13 @@ template
 
     align-items: center;
 }
-.intro__background--photo h2
+.intro__background--inner h2
 {
     font-size: 24px;
     font-weight: 300;
 
     width: 100%;
-    margin: 0;
+    margin: 0 5px;
 
     text-align: center; 
 
@@ -1163,7 +1163,7 @@ template
         margin: 0;
         margin-top: 45px;
     }
-    .intro__background--photo
+    .intro__background--inner
     {
         display: flex;
 
@@ -1173,7 +1173,7 @@ template
 
         align-items: center;
     }
-    .intro__background--photo h2
+    .intro__background--inner h2
     {
         font-size: 50px;
         font-weight: 300;
@@ -1204,7 +1204,7 @@ template
         background: url(../img/phone-hand/hand@2x.png) no-repeat 10% bottom, url(../img/background/back-mobile@2x.jpg) no-repeat center center;
         background-size: 320px, cover;
     }
-    .intro__background--photo
+    .intro__background--inner
     {
         background: url(../img/background/back-tablet@2x.jpg) no-repeat top center;
         background-size: 800px auto;
@@ -1218,7 +1218,7 @@ template
         background: url(../img/phone-hand/hand@3x.png) no-repeat 10% bottom, url(../img/background/back-mobile@2x.jpg) no-repeat center center;
         background-size: 320px, cover;
     }
-    .intro__background--photo
+    .intro__background--inner
     {
         background: url(../img/background/back-tablet@3x.jpg) no-repeat top center;
         background-size: 800px auto;
@@ -1231,7 +1231,7 @@ template
     {
         background: none;
     }
-    .intro__background--photo
+    .intro__background--inner
     {
         background-image: none;
     }
@@ -2305,7 +2305,7 @@ template
 {
     display: none;
 }
-.page-footer--photos
+.page-footer--inner
 {
     display: flex;
 
@@ -2317,7 +2317,7 @@ template
     fill: #d22856;
 }
 
-.page-footer--photos .footer-container
+.page-footer--inner .footer-container
 {
     display: flex;
     flex-direction: column;
@@ -2328,12 +2328,12 @@ template
     align-items: center;
 }
 
-.page-footer--photos .logotype
+.page-footer--inner .logotype
 {
     display: none;
 }
 
-.page-footer--photos .logo--tablet
+.page-footer--inner .logo--tablet
 {
     display: block;
 
@@ -2428,7 +2428,7 @@ template
 
 @media (min-width: 660px)
 {
-    .page-footer--photos .footer-container
+    .page-footer--inner .footer-container
     {
         flex-direction: row; 
 
@@ -2478,9 +2478,10 @@ template
 .photos__title
 {
     font-size: 14px;
+    font-weight: 400; 
     line-height: 30px;
 
-    margin: 50px 10px; 
+    margin: 50px 10px;
 
     text-align: center;
 
@@ -2497,6 +2498,8 @@ template
 
 .main-photo__image
 {
+    display: block;
+
     width: 100%;
     height: auto;
 }
@@ -2725,10 +2728,11 @@ template
 .upload__title
 {
     font-size: 14px;
+    font-weight: 400; 
     line-height: 30px;
 
     margin: 0 5px;
-    margin-bottom: 48px; 
+    margin-bottom: 48px;
 
     text-align: center;
 
@@ -3036,4 +3040,21 @@ template
         width: 32px;
         height: 32px;
     }
+}
+
+.page-form__title
+{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 30px;
+
+    margin: 50px 0 45px; 
+
+    text-align: center;
+
+    color: #283645;
+}
+.page-form__title--tablet
+{
+    display: none;
 }

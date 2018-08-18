@@ -1,6 +1,6 @@
 .page-footer {
 	display: none;
-	&--photos {
+	&--inner {
 		display: flex;
 		padding: 40px 0;
 	}
@@ -12,7 +12,7 @@
 	}
 }
 
-.page-footer--photos .footer-container {
+.page-footer--inner .footer-container {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -20,11 +20,11 @@
 	width: 100%;
 }
 
-.page-footer--photos .logotype {
+.page-footer--inner .logotype {
 	display: none;
 }
 
-.page-footer--photos .logo--tablet {
+.page-footer--inner .logo--tablet {
 	display: block;
 	margin-bottom: 40px;
 }
@@ -94,7 +94,7 @@
 }
 
 @media (min-width: $tablet) {
-	.page-footer--photos .footer-container {
+	.page-footer--inner .footer-container {
 		justify-content: space-between;
 		align-items: center;
 		flex-direction: row;

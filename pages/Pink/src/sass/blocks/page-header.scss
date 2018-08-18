@@ -108,7 +108,7 @@
 		url(../img/background/back-tablet.jpg) no-repeat center center;
 		background-size: 450px, cover;
 	}
-	.page-header--photo {
+	.page-header--inner {
 		background: url(../img/background/back-tablet.jpg) no-repeat center 7%;
 		background-size: 1199px auto;
 		min-height: 440px;
@@ -120,7 +120,7 @@
 		background: url(../img/phone-hand/hand.png) no-repeat right 30% bottom 0,
 		url(../img/background/back-desctop.jpg) no-repeat center center;
 		background-size: 550px, cover;
-		&--photo {
+		&--inner {
 			background: url(../img/background/back-desctop.jpg) no-repeat top center;
 			background-size: 2560px;
 		}
@@ -159,7 +159,7 @@
 		background: url(../img/phone-hand/hand@2x.png) no-repeat right 10% bottom 0,
 		url(../img/background/back-tablet@2x.jpg) no-repeat center center;
 		background-size: 450px, cover;
-		&--photo {
+		&--inner {
 			background: url(../img/background/back-tablet@2x.jpg) no-repeat center 7%;
 			background-size: 1199px auto;
 		}
@@ -172,7 +172,7 @@
 		background: url(../img/phone-hand/hand@3x.png) no-repeat right 10% bottom 0,
 		url(../img/background/back-tablet@3x.jpg) no-repeat center center;
 		background-size: 450px, cover;
-		&--photo {
+		&--inner {
 			background: url(../img/background/back-tablet@3x.jpg) no-repeat center 7%;
 			background-size: 1199px auto;
 		}
@@ -185,7 +185,7 @@
 		background: url(../img/phone-hand/hand@2x.png) no-repeat right 10% bottom 0,
 		url(../img/background/back-desctop@2x.jpg) no-repeat center center;
 		background-size: 450px, cover;
-		&--photo {
+		&--inner {
 			background: url(../img/background/back-desctop@2x.jpg) no-repeat top center;
 			background-size: 2560px;
 		}
@@ -198,7 +198,7 @@
 		background: url(../img/phone-hand/hand@3x.png) no-repeat right 10% bottom 0,
 		url(../img/background/back-desctop@3x.jpg) no-repeat center center;
 		background-size: 450px, cover;
-		&--photo {
+		&--inner {
 			background: url(../img/background/back-desctop@3x.jpg) no-repeat top center;
 			background-size: 2560px;
 		}

@@ -4,18 +4,17 @@
 	background: url(../img/phone-hand/hand.png) no-repeat 10% bottom,
 	url(../img/background/back-mobile.jpg) no-repeat center center;
 	background-size: 320px, cover;
-	&--photo {
+	&--inner {
 		background-image: none;
 		background-image: url(../img/background/back-tablet.jpg);
 		background-repeat: no-repeat;
 		background-position: top center;
 		background-size: 800px auto;
-
 		min-height: 237px;
 		display: flex;
 		align-items: center;
 		h2 {
-			margin: 0;
+			margin: 0 5px;
 			color: #ffffff;
 			width: 100%;
 			font-size: 24px;
@@ -126,7 +125,7 @@
 		margin-top: 45px;
 	}
 	.intro__background {
-		&--photo {
+		&--inner {
 			background: none;
 			display: flex;
 			align-items: center;
@@ -159,7 +158,7 @@
 		background: url(../img/phone-hand/hand@2x.png) no-repeat 10% bottom,
 		url(../img/background/back-mobile@2x.jpg) no-repeat center center;
 		background-size: 320px, cover;
-		&--photo {
+		&--inner {
 			background: url(../img/background/back-tablet@2x.jpg) no-repeat top center;
 			background-size: 800px auto;
 		}
@@ -172,7 +171,7 @@
 		background: url(../img/phone-hand/hand@3x.png) no-repeat 10% bottom,
 		url(../img/background/back-mobile@2x.jpg) no-repeat center center;
 		background-size: 320px, cover;
-		&--photo {
+		&--inner {
 			background: url(../img/background/back-tablet@3x.jpg) no-repeat top center;
 			background-size: 800px auto;
 		}
@@ -181,7 +180,7 @@
 @media (min-width: $tablet) {
 	.intro__background {
 		background: none;
-		&--photo {
+		&--inner {
 			background-image: none;
 		}
 	}
