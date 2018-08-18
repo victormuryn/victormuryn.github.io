@@ -115,12 +115,12 @@ gulp.task("webp", function() {
 |              Gulp minify img                      |
 \***************************************************/
 gulp.task("images", function() {
-	return gulp.src("src/img/**/*.{png,jpg,jpeg,svg}")
+	return gulp.src("build/img/**/*.{png,jpg,jpeg,svg}")
 		.pipe(imagemin([imagemin.optipng({ optimizationLevel: 3 }),
 			imagemin.jpegtran({ progressive: true }),
 			imagemin.svgo()
 		]))
-		.pipe(gulp.dest("src/img"))
+		.pipe(gulp.dest("build/img"))
 });
 
 /***************************************************\
@@ -128,10 +128,10 @@ gulp.task("images", function() {
 \***************************************************/
 gulp.task("imageFullCycle", function(done) {
 	run (
-		"sprite",
 		"retina",
 		"webp",
 		"images",
+		"sprite",
 		done
 	)
 });

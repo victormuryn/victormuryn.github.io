@@ -1,5 +1,96 @@
 .page-footer {
 	display: none;
+	&--photos {
+		display: flex;
+		padding: 40px 0;
+	}
+}
+
+.footer__svg {
+	&--red {
+		fill: $link-color;
+	}
+}
+
+.page-footer--photos .footer-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+}
+
+.page-footer--photos .logotype {
+	display: none;
+}
+
+.page-footer--photos .logo--tablet {
+	display: block;
+	margin-bottom: 40px;
+}
+
+.page-footer__social-list {
+	display: flex;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.page-footer__social-item {
+	margin-right: 17px;
+	width: 46px;
+	height: 46px;
+	border: 3px solid rgba($main-blue, .1);
+	border-radius: 50%;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	outline: 0;
+	&:hover,
+	&:focus {
+		border: 3px solid $main-blue;
+	}
+	&:active {
+		opacity: .1;
+	}
+}
+
+.page-footer__social-item:last-of-type {
+	margin-right: 0;
+}
+
+.page-footer__social-link {
+	width: 46px;
+	height: 46px;
+	line-height: 46px;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.page-footer__author {
+	color: $main-blue;
+	font-size: 14px;
+	line-height: 20px;
+	text-align: center;
+	// margin: 0;
+	margin-top: 40px;
+}
+
+.page-footer__author-link {
+	color: $link-color;
+	text-decoration: none;;
+	font-weight: 600;
+	outline: 0;
+	&:hover,
+	&:focus {
+		color: $main-blue;
+	}
+	&:active {
+		opacity: .3;
+	}
 }
 
 @media (min-width: $tablet) {
@@ -11,66 +102,13 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		flex-direction: row;
 	}
 	.footer__logo {
 		color: #000;
 	}
-	.page-footer__social-list {
-		display: flex;
-		margin: 0;
-		padding: 0;
-		list-style: none;
-	}
-	.page-footer__social-item {
-		margin-right: 17px;
-		width: 46px;
-		height: 46px;
-		border: 3px solid rgba($main-blue, .1);
-		border-radius: 50%;
-		overflow: hidden;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		outline: 0;
-		&:hover,
-		&:focus {
-			border: 3px solid $main-blue;
-		}
-		&:active {
-			opacity: .1;
-		}
-	}
-	.page-footer__social-item:last-of-type {
-		margin-right: 0;
-	}
-	.page-footer__social-link {
-		width: 46px;
-		height: 46px;
-		line-height: 46px;
-		overflow: hidden;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-	}
-	.page-footer__author {
-		color: $main-blue;
-		font-size: 14px;
-		line-height: 20px;
-		text-align: center;
-	}
 	.page-footer__author-link {
-		color: $link-color;
-		text-decoration: none;
 		display: block;
-		font-weight: 600;
-		outline: 0;
-		&:hover,
-		&:focus {
-			color: $main-blue;
-		}
-		&:active {
-			opacity: .3;
-		}
 	}
 }
 
