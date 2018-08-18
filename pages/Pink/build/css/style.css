@@ -1,8 +1,45 @@
 @charset 'UTF-8';
+@font-face
+{
+    font-family: 'Open Sans';
+    font-weight: 300;
+    font-style: normal;
+
+    src: local('Open Sans Light'), local('OpenSans-Light'), url('../fonts/woff2/OpenSans-Light.woff2') format('woff2'), url('../fonts/woff/OpenSans-Light.woff') format('woff');
+}
+
+@font-face
+{
+    font-family: 'Open Sans';
+    font-weight: 400;
+    font-style: normal;
+
+    src: local('Open Sans Regular'), local('OpenSans-Regular'), url('../fonts/woff2/OpenSans-Regular.woff2') format('woff2'), url('../fonts/woff/OpenSans-Regular.woff') format('woff');
+}
+
+@font-face
+{
+    font-family: 'Open Sans';
+    font-weight: 600;
+    font-style: normal;
+
+    src: local('Open Sans SemiBold'), local('OpenSans-SemiBold'), url('../fonts/woff2/OpenSans-SemiBold.woff2') format('woff2'), url('../fonts/woff/OpenSans-SemiBold.woff') format('woff');
+}
+
+@font-face
+{
+    font-family: 'Open Sans';
+    font-weight: 700;
+    font-style: normal;
+
+    src: local('Open Sans Bold'), local('OpenSans-Bold'), url('../fonts/woff2/OpenSans-Bold.woff2') format('woff2'), url('../fonts/woff/OpenSans-Bold.woff') format('woff');
+}
+
 html,
 body
 {
-    font-family: 'Open Sans', Arial, sans-serif;
+    font-family: 'Open Sans', Tahoma, Arial, Verdana, sans-serif;
+    font-weight: 400;
 
     box-sizing: border-box; 
     margin: 0;
@@ -52,7 +89,7 @@ button
     }
 }
 
-/*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
+/* normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
 /**
@@ -477,7 +514,6 @@ template
 .logo
 {
     font-size: 30px;
-    font-weight: 400;
 
     margin: 0;
 
@@ -936,7 +972,6 @@ template
     .page-nav__link
     {
         font-size: 18px;
-        font-weight: 400;
         line-height: 18px;
 
         text-transform: none;
@@ -984,7 +1019,6 @@ template
 }
 .intro__background--photo h2
 {
-    font-family: 'Open Sans';
     font-size: 24px;
     font-weight: 300;
 
@@ -1424,7 +1458,6 @@ template
     .information__item-description
     {
         font-size: 18px;
-        font-weight: 400;
         line-height: 30px;
 
         margin: 0 10px 50px;
@@ -1591,7 +1624,6 @@ template
 .reviews__text
 {
     font-size: 14px;
-    font-weight: 400;
     line-height: 30px; 
 
     margin: 0 10% 41px;
@@ -1674,7 +1706,6 @@ template
     .reviews__about
     {
         font-size: 14px;
-        font-weight: 400;
         line-height: 30px;
 
         display: block;
@@ -1698,7 +1729,6 @@ template
     .reviews__text
     {
         font-size: 18px;
-        font-weight: 400;
         line-height: 30px; 
 
         color: #283645;
@@ -2448,7 +2478,6 @@ template
 .photos__title
 {
     font-size: 14px;
-    font-weight: 400;
     line-height: 30px;
 
     margin: 50px 10px; 
@@ -2546,7 +2575,6 @@ template
 .photo__followers
 {
     font-size: 12px;
-    font-weight: 400;
     line-height: 24px;
 
     position: absolute;
@@ -2610,7 +2638,6 @@ template
     .photos__title
     {
         font-size: 18px;
-        font-weight: 400;
         line-height: 30px;
     }
     .photos__photos-list
@@ -2698,7 +2725,6 @@ template
 .upload__title
 {
     font-size: 14px;
-    font-weight: 400;
     line-height: 30px;
 
     margin: 0 5px;
@@ -2869,7 +2895,6 @@ template
     .upload__title
     {
         font-size: 18px;
-        font-weight: 400;
         line-height: 30px;
     }
     .upload__wrapper
