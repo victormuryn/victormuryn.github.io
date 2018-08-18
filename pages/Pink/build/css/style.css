@@ -664,8 +664,6 @@ template
 
     width: 24px;
     height: auto;
-
-    background-image: none;
 }
 .page-header__menu-button--close::before,
 .page-header__menu-button--close::after
