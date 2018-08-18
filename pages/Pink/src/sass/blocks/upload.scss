@@ -207,3 +207,54 @@
 		width: 300px;
 	}
 }
+
+@media (min-width: $desctop) {
+	.upload {
+		margin-top: 14px;
+	}
+
+	.upload__title {
+		margin-bottom: 68px;
+	}
+	.upload__wrapper {
+		padding: 57px 80px;
+	}
+	.upload__button-wrapper {
+		display: flex;
+		justify-content: space-between;
+	}
+	.upload__button {
+		width: 183px;
+		height: 55px;
+		margin-right: 44px;
+		&:last-of-type {
+			margin-right: 0;
+		}
+	}
+	.upload__filters-wrapper {
+		margin-left: 0;
+		width: 100%;
+		max-width: none;
+	}
+	.upload__input-image {
+		width: 100%;
+		padding-bottom: 9px;
+	}
+	.upload__input {
+		width: 288px;
+	}
+	.upload__input-image--crop svg {
+		width: 44px;
+		height: 44px;
+	}
+
+	.upload__input-image-fill svg {
+		width: 48px;
+		height: 43px;
+	}
+
+	.upload__input-image--contrast svg {
+		width: 32px;
+		height: 32px;
+	}
+}

@@ -5,8 +5,10 @@
 	url(../img/background/back-mobile.jpg) no-repeat center center;
 	background-size: 320px, cover;
 	&--photo {
-
-		background: url(../img/background/back-tablet.jpg) no-repeat top center;
+		background-image: none;
+		background-image: url(../img/background/back-tablet.jpg);
+		background-repeat: no-repeat;
+		background-position: top center;
 		background-size: 800px auto;
 
 		min-height: 237px;
@@ -100,6 +102,7 @@
 @media (min-width: $tablet) {
 	.intro__background {
 		display: none;
+		background: none;
 	}
 	.intro__about-wrapper {
 		width: 350px;
@@ -151,20 +154,36 @@
 	}
 }
 
-@media (min-resolution: 144dpi),
-(min-resolution: 2ddpx) {
+@media (min-width: $mobile) and (min-resolution: 144dpi),
+(min-width: $mobile) and (min-resolution: 2ddpx) {
 	.intro__background {
 		background: url(../img/phone-hand/hand@2x.png) no-repeat 10% bottom,
 		url(../img/background/back-mobile@2x.jpg) no-repeat center center;
 		background-size: 320px, cover;
+		&--photo {
+			background: url(../img/background/back-tablet@2x.jpg) no-repeat top center;
+			background-size: 800px auto;
+		}
 	}
 }
 
-@media (min-resolution: 240dpi),
-(min-resolution: 3ddpx) {
+@media (min-width: $mobile) and (min-resolution: 240dpi),
+(min-width: $mobile) and (min-resolution: 3ddpx) {
 	.intro__background {
 		background: url(../img/phone-hand/hand@3x.png) no-repeat 10% bottom,
-		url(../img/background/back-mobile@3x.jpg) no-repeat center center;
+		url(../img/background/back-mobile@2x.jpg) no-repeat center center;
 		background-size: 320px, cover;
+		&--photo {
+			background: url(../img/background/back-tablet@3x.jpg) no-repeat top center;
+			background-size: 800px auto;
+		}
+	}
+}
+@media (min-width: $tablet) {
+	.intro__background {
+		background: none;
+		&--photo {
+			background-image: none;
+		}
 	}
 }

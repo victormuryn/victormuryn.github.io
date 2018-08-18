@@ -735,6 +735,11 @@ template
         background: url(../img/phone-hand/hand.png) no-repeat right 30% bottom 0, url(../img/background/back-desctop.jpg) no-repeat center center;
         background-size: 550px, cover;
     }
+    .page-header--photo
+    {
+        background: url(../img/background/back-desctop.jpg) no-repeat top center;
+        background-size: 2560px;
+    }
     .header__nav-container
     {
         background-color: rgba(0, 0, 0, .3);
@@ -773,6 +778,11 @@ template
         background: url(../img/phone-hand/hand@2x.png) no-repeat right 10% bottom 0, url(../img/background/back-tablet@2x.jpg) no-repeat center center;
         background-size: 450px, cover;
     }
+    .page-header--photo
+    {
+        background: url(../img/background/back-tablet@2x.jpg) no-repeat center 7%;
+        background-size: 1199px auto;
+    }
 }
 
 @media (min-width: 660px) and (-webkit-min-device-pixel-ratio: 2.5), (min-width: 660px) and (min-resolution: 240dpi), (min-width: 660px) and (min-resolution: 3ddpx)
@@ -781,6 +791,11 @@ template
     {
         background: url(../img/phone-hand/hand@3x.png) no-repeat right 10% bottom 0, url(../img/background/back-tablet@3x.jpg) no-repeat center center;
         background-size: 450px, cover;
+    }
+    .page-header--photo
+    {
+        background: url(../img/background/back-tablet@3x.jpg) no-repeat center 7%;
+        background-size: 1199px auto;
     }
 }
 
@@ -791,6 +806,11 @@ template
         background: url(../img/phone-hand/hand@2x.png) no-repeat right 10% bottom 0, url(../img/background/back-desctop@2x.jpg) no-repeat center center;
         background-size: 450px, cover;
     }
+    .page-header--photo
+    {
+        background: url(../img/background/back-desctop@2x.jpg) no-repeat top center;
+        background-size: 2560px;
+    }
 }
 
 @media (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2.5), (min-width: 1200px) and (min-resolution: 240dpi), (min-width: 1200px) and (min-resolution: 3ddpx)
@@ -799,6 +819,11 @@ template
     {
         background: url(../img/phone-hand/hand@3x.png) no-repeat right 10% bottom 0, url(../img/background/back-desctop@3x.jpg) no-repeat center center;
         background-size: 450px, cover;
+    }
+    .page-header--photo
+    {
+        background: url(../img/background/back-desctop@3x.jpg) no-repeat top center;
+        background-size: 2560px;
     }
 }
 
@@ -951,7 +976,10 @@ template
 
     min-height: 237px;
 
-    background: url(../img/background/back-tablet.jpg) no-repeat top center;
+    background-image: none;
+    background-image: url(../img/background/back-tablet.jpg);
+    background-repeat: no-repeat;
+    background-position: top center;
     background-size: 800px auto;
 
     align-items: center;
@@ -1070,6 +1098,8 @@ template
     .intro__background
     {
         display: none;
+
+        background: none;
     }
     .intro__about-wrapper
     {
@@ -1135,21 +1165,43 @@ template
     }
 }
 
-@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 2ddpx)
+@media (min-width: 320px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 320px) and (min-resolution: 144dpi), (min-width: 320px) and (min-resolution: 2ddpx)
 {
     .intro__background
     {
         background: url(../img/phone-hand/hand@2x.png) no-repeat 10% bottom, url(../img/background/back-mobile@2x.jpg) no-repeat center center;
         background-size: 320px, cover;
     }
+    .intro__background--photo
+    {
+        background: url(../img/background/back-tablet@2x.jpg) no-repeat top center;
+        background-size: 800px auto;
+    }
 }
 
-@media (-webkit-min-device-pixel-ratio: 2.5), (min-resolution: 240dpi), (min-resolution: 3ddpx)
+@media (min-width: 320px) and (-webkit-min-device-pixel-ratio: 2.5), (min-width: 320px) and (min-resolution: 240dpi), (min-width: 320px) and (min-resolution: 3ddpx)
 {
     .intro__background
     {
-        background: url(../img/phone-hand/hand@3x.png) no-repeat 10% bottom, url(../img/background/back-mobile@3x.jpg) no-repeat center center;
+        background: url(../img/phone-hand/hand@3x.png) no-repeat 10% bottom, url(../img/background/back-mobile@2x.jpg) no-repeat center center;
         background-size: 320px, cover;
+    }
+    .intro__background--photo
+    {
+        background: url(../img/background/back-tablet@3x.jpg) no-repeat top center;
+        background-size: 800px auto;
+    }
+}
+
+@media (min-width: 660px)
+{
+    .intro__background
+    {
+        background: none;
+    }
+    .intro__background--photo
+    {
+        background-image: none;
     }
 }
 
@@ -2456,6 +2508,8 @@ template
     font-weight: 300;
     line-height: 24px; 
 
+    position: relative;
+
     width: 100%;
     margin-bottom: 20px;
     padding: 25px 20px;
@@ -2497,7 +2551,8 @@ template
     font-weight: 400;
     line-height: 24px;
 
-    position: relative; 
+    position: absolute;
+    bottom: 25px; 
 
     padding-left: 32px;
 
@@ -2550,6 +2605,10 @@ template
 
 @media (min-width: 660px)
 {
+    .main-photo__text-wrapper
+    {
+        top: 57px;
+    }
     .photos__title
     {
         font-size: 18px;
@@ -2565,10 +2624,53 @@ template
     .photos__item
     {
         width: 300px;
+        height: 555px;
     }
     .photo__description
     {
         height: 155px;
+    }
+}
+
+@media (min-width: 1200px)
+{
+    .main-photo__text-wrapper
+    {
+        top: 57px;
+        right: calc((100vw - 960px) / 2);
+    }
+    .photos__title
+    {
+        margin: 95px 0;
+    }
+    .photos__photos-list
+    {
+        display: flex; 
+
+        justify-content: space-between;
+    }
+    .photos__item
+    {
+        width: 300px;
+    }
+    .photo__description
+    {
+        height: 155px;
+    }
+    .photo__description--main-photo
+    {
+        width: auto; 
+        margin: 0 auto;
+    }
+    .photos__photos-list
+    {
+        margin-top: 50px; 
+        padding: 0;
+    }
+    .photos__item
+    {
+        margin: 0;
+        margin-bottom: 54px;
     }
 }
 
@@ -2848,5 +2950,67 @@ template
     .upload__img
     {
         width: 300px;
+    }
+}
+
+@media (min-width: 1200px)
+{
+    .upload
+    {
+        margin-top: 14px;
+    }
+    .upload__title
+    {
+        margin-bottom: 68px;
+    }
+    .upload__wrapper
+    {
+        padding: 57px 80px;
+    }
+    .upload__button-wrapper
+    {
+        display: flex;
+
+        justify-content: space-between;
+    }
+    .upload__button
+    {
+        width: 183px;
+        height: 55px;
+        margin-right: 44px;
+    }
+    .upload__button:last-of-type
+    {
+        margin-right: 0;
+    }
+    .upload__filters-wrapper
+    {
+        width: 100%;
+        max-width: none; 
+        margin-left: 0;
+    }
+    .upload__input-image
+    {
+        width: 100%;
+        padding-bottom: 9px;
+    }
+    .upload__input
+    {
+        width: 288px;
+    }
+    .upload__input-image--crop svg
+    {
+        width: 44px;
+        height: 44px;
+    }
+    .upload__input-image-fill svg
+    {
+        width: 48px;
+        height: 43px;
+    }
+    .upload__input-image--contrast svg
+    {
+        width: 32px;
+        height: 32px;
     }
 }
