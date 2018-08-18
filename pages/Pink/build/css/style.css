@@ -2349,6 +2349,10 @@ template
     {
         display: block;
     }
+    .page-footer__author
+    {
+        margin-top: 0;
+    }
 }
 
 @media (min-width: 660px)

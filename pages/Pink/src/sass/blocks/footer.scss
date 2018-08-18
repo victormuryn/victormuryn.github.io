@@ -75,7 +75,6 @@
 	font-size: 14px;
 	line-height: 20px;
 	text-align: center;
-	// margin: 0;
 	margin-top: 40px;
 }
 
@@ -109,6 +108,9 @@
 	}
 	.page-footer__author-link {
 		display: block;
+	}
+	.page-footer__author {
+		margin-top: 0;
 	}
 }
 
