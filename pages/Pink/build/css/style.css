@@ -611,7 +611,7 @@ template
 }
 .page-header__menu-button--open
 {
-    position: relative;
+    position: relative; 
 
     box-sizing: content-box;
     width: 50px;
@@ -619,7 +619,6 @@ template
     padding: 6px 0;
 
     background-color: #fff;
-    background-image: linear-gradient(to bottom, #fff 0px, #fff 4px, transparent 4px, transparent 10px, #fff 10px, #fff 14px, transparent 14px, transparent 20px, #fff 20px, #fff 24px); 
     background-clip: content-box;
 }
 .page-header__menu-button--open::before,
@@ -719,6 +718,13 @@ template
     {
         background: url(../img/phone-hand/hand.png) no-repeat right 10% bottom 0, url(../img/background/back-tablet.jpg) no-repeat center center;
         background-size: 450px, cover;
+    }
+    .page-header--photo
+    {
+        min-height: 440px; 
+
+        background: url(../img/background/back-tablet.jpg) no-repeat center 7%;
+        background-size: 1199px auto;
     }
 }
 
@@ -1094,6 +1100,21 @@ template
 
         margin: 0;
         margin-top: 45px;
+    }
+    .intro__background--photo
+    {
+        display: flex;
+
+        height: 440px; 
+
+        background: none;
+
+        align-items: center;
+    }
+    .intro__background--photo h2
+    {
+        font-size: 50px;
+        font-weight: 300;
     }
 }
 
@@ -2327,6 +2348,17 @@ template
 
 @media (min-width: 660px)
 {
+    .page-footer--photos .footer-container
+    {
+        flex-direction: row; 
+
+        justify-content: space-between;
+        align-items: center;
+    }
+    .logo--tablet
+    {
+        margin-bottom: 0;
+    }
     .page-footer
     {
         display: block;
@@ -2424,7 +2456,7 @@ template
     font-weight: 300;
     line-height: 24px; 
 
-    width: 280px;
+    width: 100%;
     margin-bottom: 20px;
     padding: 25px 20px;
 
@@ -2433,7 +2465,8 @@ template
 }
 .photo__description--main-photo
 {
-    margin: 0 auto;
+    width: auto; 
+    margin: 0 20px;
     margin-bottom: 20px;
 }
 
@@ -2515,6 +2548,30 @@ template
     width: 100%;
 }
 
+@media (min-width: 660px)
+{
+    .photos__title
+    {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 30px;
+    }
+    .photos__photos-list
+    {
+        display: flex; 
+
+        justify-content: space-between;
+    }
+    .photos__item
+    {
+        width: 300px;
+    }
+    .photo__description
+    {
+        height: 155px;
+    }
+}
+
 @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 2ddpx)
 {
     .photo__followers::before
@@ -2550,6 +2607,24 @@ template
     text-align: center;
 
     color: #283645;
+}
+
+.upload__input-image--crop svg
+{
+    width: 44px;
+    height: 44px;
+}
+
+.upload__input-image-fill svg
+{
+    width: 48px;
+    height: 43px;
+}
+
+.upload__input-image--contrast svg
+{
+    width: 32px;
+    height: 32px;
 }
 
 .upload__wrapper
@@ -2687,4 +2762,91 @@ template
 
     margin: 0 auto;
     margin-bottom: 45px;
+}
+
+@media (min-width: 660px)
+{
+    .upload__title
+    {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 30px;
+    }
+    .upload__wrapper
+    {
+        display: flex;
+
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .upload__input-image
+    {
+        display: flex;
+
+        margin: 25px 0;
+        margin-right: 20px;
+
+        border-bottom: 1px solid rgba(0, 0, 0, .1); 
+
+        align-items: center;
+        justify-content: space-between;
+    }
+    .upload__input-image:first-of-type
+    {
+        margin-top: 0;
+    }
+    .upload__input-image:last-of-type
+    {
+        margin-bottom: 67px;
+    }
+    .upload__input
+    {
+        position: relative;
+        top: auto;
+        left: auto;
+
+        display: block;
+
+        width: 202px; 
+        margin-top: 47px;
+    }
+    .upload__input-image:nth-of-type(2) .upload__input::after
+    {
+        left: 25%;
+    }
+    .upload__input-image:nth-of-type(3) .upload__input::after
+    {
+        left: 60%;
+    }
+    .upload__filters-wrapper
+    {
+        display: block;
+
+        padding: 0;
+    }
+    .upload__input-icon
+    {
+        margin-right: 30px; 
+
+        fill: #d22856;
+    }
+    .upload__input-image--crop svg
+    {
+        width: 22px;
+        height: 22px;
+    }
+    .upload__input-image-fill svg
+    {
+        width: 24px;
+        height: 22px;
+    }
+    .upload__input-image--contrast svg
+    {
+        width: 16px;
+        height: 16px;
+    }
+    .upload__img
+    {
+        width: 300px;
+    }
 }

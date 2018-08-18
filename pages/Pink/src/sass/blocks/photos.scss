@@ -6,6 +6,7 @@
 	text-align: center;
 	margin: 50px 10px;
 }
+
 .main-photo__wrapper {
 	position: relative;
 	width: 100%;
@@ -39,7 +40,7 @@
 
 .photo__description {
 	margin-bottom: 20px;
-	width: 280px;
+	width: 100%;
 	background-color: #f2f2f2;
 	padding: 25px 20px;
 	font-weight: 300;
@@ -47,8 +48,9 @@
 	font-size: 14px;
 	line-height: 24px;
 	&--main-photo {
-		margin: 0 auto;
+		margin: 0 20px;
 		margin-bottom: 20px;
+		width: auto;
 	}
 }
 
@@ -88,8 +90,8 @@
 		transform: translateY(-50%);
 	}
 }
+
 .photos__photos-list {
-	// display: flex;
 	display: block;
 	flex-wrap: wrap;
 	padding: 0 20px;
@@ -97,16 +99,37 @@
 	list-style: none;
 	width: 100%;
 }
+
 .photos__item {
 	width: 280px;
 	margin: 0 auto;
 }
+
 .photos__img {
 	display: block;
 	width: 100%;
-	// height: 180px;
 }
-@media (min-resolution: 144dpi),(min-resolution: 2ddpx) {
+
+@media (min-width: $tablet) {
+	.photos__title {
+		font-size: 18px;
+		font-weight: 400;
+		line-height: 30px;
+	}
+	.photos__photos-list {
+		justify-content: space-between;
+		display: flex;
+	}
+	.photos__item {
+		width: 300px;
+	}
+	.photo__description {
+		height: 155px;
+	}
+}
+
+@media (min-resolution: 144dpi),
+(min-resolution: 2ddpx) {
 	.photo__followers {
 		&::before {
 			background: url(../img/background/heart@2x.png);
@@ -115,7 +138,8 @@
 	}
 }
 
-@media (min-resolution: 240dpi),(min-resolution: 3ddpx) {
+@media (min-resolution: 240dpi),
+(min-resolution: 3ddpx) {
 	.photo__followers {
 		&::before {
 			background: url(../img/background/heart@3x.png);

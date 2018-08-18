@@ -80,7 +80,8 @@
 
 .page-footer__author-link {
 	color: $link-color;
-	text-decoration: none;;
+	text-decoration: none;
+	;
 	font-weight: 600;
 	outline: 0;
 	&:hover,
@@ -93,6 +94,14 @@
 }
 
 @media (min-width: $tablet) {
+	.page-footer--photos .footer-container {
+		justify-content: space-between;
+		align-items: center;
+		flex-direction: row;
+	}
+	.logo--tablet {
+		margin-bottom: 0;
+	}
 	.page-footer {
 		display: block;
 		padding: 30px 20px;

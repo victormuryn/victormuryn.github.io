@@ -34,7 +34,6 @@
 		background-color: #fff;
 		background-clip: content-box;
 		position: relative;
-		background-image: linear-gradient(to bottom, #fff 0px, #fff 4px, transparent 4px, transparent 10px, #fff 10px, #fff 14px, transparent 14px, transparent 20px, #fff 20px, #fff 24px);
 		&::before,
 		&::after {
 			content: "";
@@ -100,11 +99,6 @@
 	}
 }
 
-
-.page-header {
-	&--photo {}
-}
-
 @media (min-width: $tablet) {
 	.header__logo-wrapper {
 		height: 110px;
@@ -114,6 +108,11 @@
 		background: url(../img/phone-hand/hand.png) no-repeat right 10% bottom 0,
 		url(../img/background/back-tablet.jpg) no-repeat center center;
 		background-size: 450px, cover;
+	}
+	.page-header--photo {
+		background: url(../img/background/back-tablet.jpg) no-repeat center 7%;
+		background-size: 1199px auto;
+		min-height: 440px;
 	}
 }
 

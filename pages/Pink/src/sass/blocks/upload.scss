@@ -12,6 +12,21 @@
 	margin-bottom: 48px;
 }
 
+.upload__input-image--crop svg {
+	width: 44px;
+	height: 44px;
+}
+
+.upload__input-image-fill svg {
+	width: 48px;
+	height: 43px;
+}
+
+.upload__input-image--contrast svg {
+	width: 32px;
+	height: 32px;
+}
+
 .upload__wrapper {
 	background-color: #f2f2f2;
 	padding: 20px 20px 25px;
@@ -114,4 +129,81 @@
 	display: block;
 	margin: 0 auto;
 	margin-bottom: 45px;
+}
+
+@media (min-width: $tablet) {
+	.upload__title {
+		font-size: 18px;
+		font-weight: 400;
+		line-height: 30px;
+	}
+	.upload__wrapper {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+	}
+	.upload__input-image {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin: 25px 0;
+		margin-right: 20px;
+		border-bottom: 1px solid rgba(#000, .1);
+		&:first-of-type {
+			margin-top: 0;
+		}
+		&:last-of-type {
+			margin-bottom: 67px;
+		}
+	}
+	.upload__input {
+		display: block;
+		position: relative;
+		margin-top: 47px;
+		left: auto;
+		top: auto;
+		width: 202px;
+	}
+	.upload__input-image:nth-of-type(2) {
+		.upload__input {
+			&::after {
+				left: 25%;
+			}
+		}
+	}
+
+	.upload__input-image:nth-of-type(3) {
+		.upload__input {
+			&::after {
+				left: 60%;
+			}
+		}
+	}
+
+	.upload__filters-wrapper {
+		display: block;
+		padding: 0;
+	}
+	.upload__input-icon {
+		fill: $link-color;
+		margin-right: 30px;
+	}
+
+	.upload__input-image--crop svg {
+		width: 22px;
+		height: 22px;
+	}
+
+	.upload__input-image-fill svg {
+		width: 24px;
+		height: 22px;
+	}
+
+	.upload__input-image--contrast svg {
+		width: 16px;
+		height: 16px;
+	}
+	.upload__img {
+		width: 300px;
+	}
 }
