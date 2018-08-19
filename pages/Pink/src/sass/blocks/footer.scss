@@ -121,10 +121,31 @@
 	.page-footer__author {
 		margin-top: 0;
 	}
+
+	.logotype {
+		display: none;
+		margin-bottom: 0;
+	}
+	.page-footer--inner .logotype.logo--tablet {
+		margin: 0;
+	}
+	.logo {
+		&--tablet {
+			display: block;
+		}
+	}
 }
 
-@media (min-width: $tablet) {
+@media (min-width: $desctop) {
 	.page-footer {
 		padding-top: 45px;
+	}
+	.logotype.logo {
+		&--tablet {
+			display: none;
+		}
+		&--desctop {
+			display: block;
+		}
 	}
 }
