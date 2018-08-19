@@ -15,7 +15,7 @@ let pages = [{
 	description: "Приложения позволит вам победить осеннюю хандру  и депресию буквально в несколько кликов!",
 	img: "pink.jpg",
 	folder: "Pink/build",
-	type: "new"
+	type: "updated"
 }, {
 	name: "Device",
 	description: "Величезний вибір гаджетів не залишить байдужим geek'a, який є в кожному з нас.",

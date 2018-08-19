@@ -189,6 +189,19 @@
 	font-weight: 700;
 	line-height: 30px;
 	text-transform: uppercase;
+	outline: 0;
+	&:hover,
+	&:focus {
+		background-color: #1c9b5e;
+		border-color: #1c9b5e;
+	}
+	&:active {
+		color: rgba(#fff, .3);
+	}
+	&[disabled] {
+		border: 2px solid #e5e5e5;
+		background-color: #e5e5e5;
+	}
 }
 
 .page-form__main-legend {

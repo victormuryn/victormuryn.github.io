@@ -57,10 +57,10 @@
 	}
 	&:hover,
 	&:focus {
-		fill: $link-color;
+		fill: rgba($main-blue, .5);
 	}
 	&:active {
-		fill: rgba($main-blue, .3);
+		fill: $link-color;
 	}
 }
 
@@ -72,18 +72,33 @@
 	width: 100%;
 	height: 2px;
 	background-color: $main-blue;
-	&::after {
-		content: "";
-		width: 14px;
-		height: 14px;
-		border: 2px solid $link-color;
-		border-radius: 50%;
-		background-color: #fff;
-		position: absolute;
-		top: 50%;
-		left: 85%;
-		transform: translate(-50%, -50%);
-		cursor: pointer;
+}
+
+.upload__input-circle {
+	width: 14px;
+	height: 14px;
+	border: 2px solid $link-color;
+	border-radius: 50%;
+	background-color: #fff;
+	position: absolute;
+	top: 50%;
+	left: 85%;
+	transform: translate(-50%, -50%);
+	display: block;
+	&:hover {
+		background-color: $link-color;
+	}
+}
+
+.upload__input-image:nth-of-type(2) {
+	.upload__input-circle {
+		left: 25%;
+	}
+}
+
+.upload__input-image:nth-of-type(3) {
+	.upload__input-circle {
+		left: 60%;
 	}
 }
 
@@ -105,18 +120,28 @@
 	&:last-of-type {
 		margin-bottom: 41px;
 	}
-	&--disabled {
-		border: 3px solid rgba($main-blue, .1);
-		color: rgba($main-blue, .1);
-	}
 	&:hover,
 	&:focus {
-		color: $link-color;
-		border: 3px solid $link-color;
+		color: #fff;
+		background-color: $link-color;
 	}
 	&:active {
-		border: 3px solid rgba($main-blue, .3);
-		color: rgba($main-blue, .3);
+		color: rgba(#fff, .3);
+	}
+	&--cancel {
+		border: 3px solid rgba($main-blue, .1);
+		color: rgba($main-blue, .1);
+		&:hover,
+		&:focus {
+			border: 3px solid rgba($main-blue, .3);
+			color: rgba($main-blue, .3);
+			background-color: transparent;
+		}
+		&:active {
+			border: none;
+			background-color: rgba($main-blue, .3);
+			color: rgba(#fff, .3)
+		}
 	}
 }
 
@@ -162,21 +187,6 @@
 		left: auto;
 		top: auto;
 		width: 202px;
-	}
-	.upload__input-image:nth-of-type(2) {
-		.upload__input {
-			&::after {
-				left: 25%;
-			}
-		}
-	}
-
-	.upload__input-image:nth-of-type(3) {
-		.upload__input {
-			&::after {
-				left: 60%;
-			}
-		}
 	}
 
 	.upload__filters-wrapper {

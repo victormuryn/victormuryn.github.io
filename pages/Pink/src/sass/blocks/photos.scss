@@ -41,7 +41,6 @@
 
 .photo__description {
 	position: relative;
-	margin-bottom: 20px;
 	width: 100%;
 	background-color: #f2f2f2;
 	padding: 25px 20px;
@@ -75,7 +74,7 @@
 .photo__followers {
 	color: $link-color;
 	font-size: 12px;
-	line-height: 24px;
+	line-height: 0;
 	text-transform: uppercase;
 	text-decoration: none;
 	padding-left: 32px;
@@ -86,7 +85,7 @@
 		position: absolute;
 		width: 13px;
 		height: 12px;
-		background: url(../img/background/heart.png) no-repeat center center;
+		background: url(../img/svg/heart.svg) no-repeat center center;
 		top: 50%;
 		left: 0;
 		transform: translateY(-50%);
@@ -105,6 +104,7 @@
 .photos__item {
 	width: 280px;
 	margin: 0 auto;
+	margin-bottom: 20px;
 }
 
 .photos__img {
@@ -115,6 +115,29 @@
 @media (min-width: $tablet) {
 	.main-photo__text-wrapper {
 		top: 57px;
+	}
+	.photo__followers {
+		padding-left: 0;
+		display: inline-block;
+		width: 260px;
+		&--main {
+			width: auto;
+			right: 62px;
+			top: 25px;
+			left: auto;
+			bottom: auto;
+			bottom: auto;
+			padding-left: 0;
+			padding-right: 31px;
+			&::before {
+				right: 0;
+				left: auto;
+			}
+		}
+		&::before {
+			right: 0;
+			left: auto;
+		}
 	}
 
 	.photos__title {
@@ -139,6 +162,25 @@
 		top: 57px;
 		right: calc((100vw - 960px) / 2);
 	}
+	.photo__followers {
+		position: absolute;
+		bottom: 26px;
+		left: 20px;
+		&--main {
+			width: auto;
+			right: 62px;
+			top: 25px;
+			left: auto;
+			bottom: auto;
+			bottom: auto;
+			padding-left: 0;
+			padding-right: 31px;
+			&::before {
+				right: 0;
+				left: auto;
+			}
+		}
+	}
 	.photos__title {
 		margin: 95px 0;
 	}
@@ -151,6 +193,9 @@
 	}
 	.photo__description {
 		height: 155px;
+		&--main-photo {
+			height: auto;
+		}
 	}
 
 
@@ -167,25 +212,5 @@
 	.photos__item {
 		margin: 0;
 		margin-bottom: 54px;
-	}
-}
-
-@media (min-resolution: 144dpi),
-(min-resolution: 2ddpx) {
-	.photo__followers {
-		&::before {
-			background: url(../img/background/heart@2x.png);
-			background-size: cover;
-		}
-	}
-}
-
-@media (min-resolution: 240dpi),
-(min-resolution: 3ddpx) {
-	.photo__followers {
-		&::before {
-			background: url(../img/background/heart@3x.png);
-			background-size: cover;
-		}
 	}
 }

@@ -90,7 +90,7 @@
 							<a class="page-nav__link page-nav__item--active" href="photo.html">Фотографии</a>
 						</li>
 						<li class="page-nav__item">
-							<a class="page-nav__link" href="javascript://0">Конкурс</a>
+							<a class="page-nav__link" href="form.html">Конкурс</a>
 						</li>
 						<li class="page-nav__item">
 							<a class="page-nav__link" target="_blank" href="https://murynofficial.github.io/">muryn.official</a>
@@ -124,7 +124,7 @@
 				<div class="photo__description photo__description--main-photo container">
 					<p class="photo__name">Анна <span class="photo__time">(5 минут назад)</span></p>
 					<p class="photo__text">Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
-					<a class="photo__followers" href="javascript://0">Нравится: 215</a>
+					<a class="photo__followers photo__followers--main" href="javascript://0">Нравится: 215</a>
 				</div>
 			</div>
 			<div class="container">
@@ -220,7 +220,9 @@
 									<use xlink:href="#icon-crop"></use>
 								</svg>
 							</a>
-							<div class="upload__input"></div>
+							<div class="upload__input">
+								<a href="javascript://0" class="upload__input-circle"></a>
+							</div>
 							<span class="visually-hidden">Обрезать</span>
 						</li>
 						<li class="upload__input-image upload__input-image-fill">
@@ -230,7 +232,9 @@
 								</svg>
 							</a>
 							<span class="visually-hidden">Заливка</span>
-							<div class="upload__input"></div>
+							<div class="upload__input">
+								<a href="javascript://0" class="upload__input-circle"></a>
+							</div>
 						</li>
 						<li class="upload__input-image upload__input-image--contrast">
 							<a href="javascript://0" class="upload__input-icon-wrapper">
@@ -239,12 +243,14 @@
 								</svg>
 							</a>
 							<span class="visually-hidden">Контраст</span>
-							<div class="upload__input"></div>
+							<div class="upload__input">
+								<a href="javascript://0" class="upload__input-circle"></a>
+							</div>
 						</li>
 					</ul>
 					<div class="upload__button-wrapper">
-						<button class="upload__button upload__button--disabled">Запостить</button>
-						<button class="upload__button">Отмена</button>
+						<button class="upload__button">Запостить</button>
+						<button class="upload__button upload__button--cancel">Отмена</button>
 					</div>
 				</div>
 			</div>

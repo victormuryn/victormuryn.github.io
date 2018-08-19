@@ -5,11 +5,11 @@ let
 	headerLogoWrapper = document.querySelector(".header__logo-wrapper"),
 	form = document.querySelector(".page-form__form"),
 	failure = document.querySelector(".failure-pop-up"),
-	closeFailure = failure.querySelector(".pop-up__button--failure"),
+	closeFailure = document.querySelector(".pop-up__button--failure"),
 	succes = document.querySelector(".succes-pop-up"),
-	closeSucces = succes.querySelector(".pop-up__button--succes"),
-	required = form.querySelectorAll("input[required], textarea[required]"),
-	formSubmit = form.querySelector("button[type='submit']");
+	closeSucces = document.querySelector(".pop-up__button--succes"),
+	required = document.querySelectorAll("input[required], textarea[required]"),
+	formSubmit = document.querySelector("button[type='submit']");
 
 pageNavNoJs.classList.remove("page-nav__list--no-js");
 
