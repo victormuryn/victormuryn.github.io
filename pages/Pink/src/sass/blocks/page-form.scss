@@ -66,12 +66,31 @@
 		font-size: 18px;
 		line-height: 30px;
 		margin-bottom: 25px;
+		outline: 0;
+		cursor: pointer;
+		&:hover {
+			border: 2px solid $main-blue;
+		}
+		&:focus {
+			border: 2px solid $link-color;
+		}
 	}
 }
 
 .page-form__fieldset--achievement,
 .page-form__fieldset--app {
 	label {
+		&:hover,
+		&:focus {
+			&::before {
+				border: 2px solid $main-blue;
+			}
+		}
+		&:active {
+			&::before {
+				border: 2px solid $link-color;
+			}
+		}
 		display: inline-block;
 		padding-left: 60px;
 		margin: 32px 0;
@@ -146,6 +165,14 @@
 		line-height: 30px;
 		resize: none;
 		margin-top: 10px;
+		outline: 0;
+		cursor: pointer;
+		&:hover {
+			border: 2px solid $main-blue;
+		}
+		&:focus {
+			border: 2px solid $link-color;
+		}
 	}
 }
 
@@ -179,13 +206,26 @@
 }
 
 .pop-up {
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
 	text-align: center;
 	width: 100%;
-	height: 380px;
+	max-width: 460px;
 	box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
 	background-color: #fff;
 	margin: 0 auto;
-	padding: 46px 0 0; // display: none;
+	padding: 46px 0 0;
+	display: none;
+}
+
+.pop-up.open-pop-up {
+	display: block;
+}
+
+.failure-pop-up {
+	padding-bottom: 54px;
 }
 
 .pop-up__title {
@@ -194,6 +234,12 @@
 	margin-top: 0;
 	margin-bottom: 25px;
 	padding: 0 28px;
+}
+
+.failure-pop-up .pop-up__button-wrapper {
+	background-color: #fff;
+	padding: 0;
+	height: auto;
 }
 
 .pop-up__text {
@@ -281,6 +327,13 @@
 }
 
 @media (min-width: $tablet) {
+	.pop-up {
+		width: 460px;
+	}
+	.pop-up__button {
+		width: 296px;
+	}
+
 	.page-form__title {
 		&--tablet {
 			display: inline;
@@ -400,6 +453,40 @@
 }
 
 @media (min-width: $desctop) {
+	.failure-pop-up .pop-up__button-wrapper {
+		background-color: #f2f2f2;
+		height: 163px;
+	}
+	.pop-up__text,
+	.pop-up__title {
+		max-width: 452px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.pop-up__title {
+		color: #000;
+		font-size: 30px;
+		font-weight: 700;
+		line-height: 40px;
+	}
+	.pop-up__text {
+		font-size: 18px;
+		line-height: 26px;
+		margin-bottom: 55px;
+	}
+	.failure-pop-up {
+		padding-bottom: 0;
+		height: auto;
+	}
+
+	.pop-up {
+		width: 780px;
+		max-width: none;
+	}
+	.pop-up__button {
+		width: 296px;
+	}
+
 	.page-form__form-group {
 		padding-left: 0;
 		padding-right: 0;
@@ -457,14 +544,5 @@
 	.page-form__submit {
 		width: 296px;
 		margin-left: 0;
-	}
-
-	.pop-up {
-		position: fixed;
-		left: 50%;
-		top: 50%;
-		transform: translate(-50%, -50%);
-		width: 780px;
-		height: 377px; // display: none;
 	}
 }

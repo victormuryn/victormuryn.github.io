@@ -21,7 +21,7 @@ const
 	server       = require("browser-sync").create();
 
 /***************************************************\
-|                    Gulp style                     |
+|                 Gulp settings                     |
 \***************************************************/
 const retinaOpts = {};
 
@@ -38,6 +38,15 @@ gulp.task("style", function() {
 		.pipe(minify())
 		.pipe(rename("style.min.css"))
 		.pipe(gulp.dest("build/css"))
+		.pipe(server.stream());
+});
+
+/***************************************************\
+|                   Gulp script                     |
+\***************************************************/
+gulp.task("script", function() {
+	gulp.src("src/js/script.js")
+		.pipe(gulp.dest("build/js"))
 		.pipe(server.stream());
 });
 
@@ -143,7 +152,6 @@ gulp.task("copy", function() {
 	return gulp.src([
 			"src/fonts/**/*.{woff,woff2}",
 			"src/img/**",
-			"src/js/**"
 		], {
 			base: "src"
 		})
@@ -165,6 +173,7 @@ gulp.task("build", function(done) {
 		"clean",
 		"copy",
 		"style",
+		"script",
 		"imageFullCycle",
 		"html",
 		done
@@ -181,5 +190,5 @@ gulp.task("serve", function() {
 
 	gulp.watch("src/sass/**/*.scss", ["style"]);
 	gulp.watch("src/*.html", ["html"]);
-	gulp.watch("src/js/*.js").on("change", server.reload);
+	gulp.watch("src/js/**/*.js", ["script"]);
 });
