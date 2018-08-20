@@ -4,14 +4,18 @@
 	font-family: 'Gilroy - Extra Bold';
 	font-weight: 800;
 	font-style: normal;
-	src: local('Gilroy ExtraBold'), local('Gilroy-ExtraBold'), url(../fonts/gilroyextrabold.woff2) format('woff2'), url(../fonts/gilroyextrabold.woff) format('woff');
+	src: 
+		local('Gilroy ExtraBold'), 
+		local('Gilroy-ExtraBold'), 
+		url(../fonts/gilroyextrabold.woff2) format('woff2'), 
+		url(../fonts/gilroyextrabold.woff) format('woff');
 }
 
 
 /*================= BASIC SETTING =========================*/
 
 body {
-	font-family: "PT Sans", Roboto, Arial, sans-serif;
+	font-family: "Open Sans", Tahoma, Arial, Verdana, sans-serif;
 	margin: 0;
 	padding: 0;
 }
@@ -190,11 +194,12 @@ footer {
 	display: -ms-flex;
 	display: -o-flex;
 	display: flex;
-	max-width: 85vw;
+	width: 85vw;
 	margin: 0 auto;
 	padding: 80px 0 0;
 	justify-content: space-between;
 	flex-wrap: wrap;
+	max-width: 1200px;
 }
 
 .catalog>div {
