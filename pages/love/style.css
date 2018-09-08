@@ -1,6 +1,6 @@
 body, html {
-	height: 100%;
-	width: 100%;
+	min-width: 100%;
+	min-height: 100vh;
 	margin: 0;
 	background-color: #FF69B4;
 }
@@ -8,7 +8,7 @@ body, html {
 	margin: 0;
 	font-family: sans-serif;
 	width: 100%;
-	height: 100%;
+	height: 100vh;
 	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
@@ -19,11 +19,14 @@ body, html {
 	align-items: center;
 	justify-content: center;
 	font-size: 145px;
-	line-height: 1.5;
+	line-height: 1.25;
 }
 
 svg {
 	width: 200px;	
+	animation-name: animate;
+	animation-duration: 1s;
+	animation-iteration-count: infinite; 
 }
 
 .author {
@@ -31,4 +34,16 @@ svg {
 	right: 15px;
 	bottom: 15px;
 	color: #fff;
+}
+
+@keyframes animate {
+	0% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(1.25);
+	}
+	100% {
+		transform: scale(1);
+	}
 }
