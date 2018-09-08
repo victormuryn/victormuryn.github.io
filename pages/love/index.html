@@ -11,16 +11,14 @@
     <h1 class="wrapper">
         <span>I</span>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 57.947 57.947">
-        	<g>
-        		<path style="fill:#E64C3C;" d="M28.947,56.486c15.685-11.277,23.532-21.592,27.222-29.46c4.311-9.193,0.561-20.589-8.845-24.413
-        			C36.268-1.88,28.947,8.486,28.947,8.486S21.678-1.907,10.623,2.588C1.217,6.412-2.533,17.808,1.778,27.001
-        			C5.468,34.868,13.262,45.21,28.947,56.486z" />
-        	</g>
+            <g>
+                <path style="fill:#E64C3C;" d="M28.947,56.486c15.685-11.277,23.532-21.592,27.222-29.46c4.311-9.193,0.561-20.589-8.845-24.413
+                    C36.268-1.88,28.947,8.486,28.947,8.486S21.678-1.907,10.623,2.588C1.217,6.412-2.533,17.808,1.778,27.001
+                    C5.468,34.868,13.262,45.21,28.947,56.486z" />
+            </g>
         </svg>
         <span>You!</span>
     </h1>
-    <span class="author">by Victor Muryn</span>
-
     <style>
     body,
     html {
@@ -40,10 +38,22 @@
         display: -moz-flex;
         display: -ms-flex;
         display: -o-flex;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
         flex-direction: column;
         -ms-align-items: center;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
         align-items: center;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
         justify-content: center;
         font-size: 140px;
         line-height: 1.25;
@@ -51,28 +61,34 @@
 
     svg {
         width: 150px;
+        -webkit-animation-name: animate;
         animation-name: animate;
-        animation-duration: 1s;
+        -webkit-animation-duration: .9s;
+        animation-duration: .9s;
+        -webkit-animation-iteration-count: infinite;
         animation-iteration-count: infinite;
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
     }
 
-    .author {
-    	display: block;
-        position: fixed;
-        line-height: 16px;
-        right: 15px;
-        bottom: 15px;
-        color: #fff;
-    }
-
-    @keyframes animate {
-        0% {
-            transform: scale(1);
-        }
+    @-webkit-keyframes animate {
         50% {
+            -webkit-transform: scale(1.25);
             transform: scale(1.25);
         }
         100% {
+            -webkit-transform: scale(1);
+            transform: scale(1);
+        }
+    }
+
+    @keyframes animate {
+        50% {
+            -webkit-transform: scale(1.25);
+            transform: scale(1.25);
+        }
+        100% {
+            -webkit-transform: scale(1);
             transform: scale(1);
         }
     }

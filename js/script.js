@@ -20,7 +20,7 @@ let pages = [{
     name: "Pink",
     description: "Додаток дозволить вам перемогти осінню нудьгу і депресії буквально в кілька кліків!",
     img: "pink.jpg",
-    folder: "Pink/build",
+    folder: "Pink",
     type: "updated"
 }, {
     name: "Device",
