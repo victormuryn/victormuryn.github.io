@@ -18,12 +18,12 @@ body, html {
 	-ms-align-items: center;
 	align-items: center;
 	justify-content: center;
-	font-size: 145px;
+	font-size: 140px;
 	line-height: 1.25;
 }
 
 svg {
-	width: 200px;	
+	width: 150px;	
 	animation-name: animate;
 	animation-duration: 1s;
 	animation-iteration-count: infinite; 
