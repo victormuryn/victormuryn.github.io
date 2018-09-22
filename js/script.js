@@ -2,26 +2,28 @@ const
     productList = document.querySelector(".catalog"), // find catalog (wrapper)
     articlesOnPage = 6, // articles on page count
     pagesWrapper = document.querySelector(".pages"), // find button wrapper
-    totalPages = document.querySelector(".totalPages"), // find links wrapper
-    prevButton = document.querySelector(".prev"), // find prevPage button
-    nextButton = document.querySelector(".next"); // find nextPage button;       
+    totalPages = pagesWrapper.querySelector(".totalPages"), // find links wrapper
+    prevButton = pagesWrapper.querySelector(".prev"), // find prevPage button
+    nextButton = pagesWrapper.querySelector(".next"); // find nextPage button;       
 // name        = product name,
 // description = product description,
 // img         = img name
 // folder      = folder with index file,
 // type        = project type (new, inProcess, updated, normal)
-let pages = [{
-    name: "Mishka",
-    description: "Магазин милих штучок ручної роботи для будинку",
-    img: "mishka.jpg",
-    folder: "Mishka/build",
-    type: "inProcess"
-}, {
+let pages = [
+// {
+//     name: "Mishka",
+//     description: "Магазин милих штучок ручної роботи для будинку",
+//     img: "mishka.jpg",
+//     folder: "Mishka/build",
+//     type: "inProcess"
+// }, 
+{
     name: "Pink",
     description: "Додаток дозволить вам перемогти осінню нудьгу і депресії буквально в кілька кліків!",
     img: "pink.jpg",
     folder: "Pink",
-    type: "updated"
+    type: "normal"
 }, {
     name: "Device",
     description: "Величезний вибір гаджетів не залишить байдужим geek'a, який є в кожному з нас.",
@@ -138,7 +140,7 @@ if (articlesOnPage < pages.length) { // compares products count with articlesOnP
                 let newProduct = makeProduct(pages[j]);
                 productList.appendChild(newProduct);
             }
-        });
+        })
     }
     let activePageCount;
     prevButton.addEventListener("click", function(e) {
@@ -181,5 +183,5 @@ if (articlesOnPage < pages.length) { // compares products count with articlesOnP
     for (let i = 0; i < pages.length; i++) {
         let newProduct = makeProduct(pages[i]);
         productList.appendChild(newProduct);
-    };
+    }
 }
