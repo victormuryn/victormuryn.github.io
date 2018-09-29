@@ -5,8 +5,7 @@ let
 	toType = form.querySelector("#to"),
 	toNumber = form.querySelector("#toNumber");
 
-form.addEventListener("submit", function(e) {
-	e.preventDefault();
+function converte() {
 	let
 		number = Number(fromNumber.value),
 		type = fromType.options.selectedIndex + 1,
@@ -37,4 +36,14 @@ form.addEventListener("submit", function(e) {
 	}
 
 	toNumber.textContent = numberConverte;
+}
+
+form.addEventListener("submit", function(e) {
+	e.preventDefault();
+	converte();
+});
+
+fromNumber.addEventListener("change", function(e) {
+	e.preventDefault();
+	converte();
 });

@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "Best project",
   "main": "gulpfile.js",
-  "dependencies": {},
+  "dependencies": {
+    "npm": "^6.4.1"
+  },
   "devDependencies": {
     "autoprefixer": "^9.1.1",
     "browser-sync": "^2.24.6",

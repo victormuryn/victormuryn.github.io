@@ -465,18 +465,6 @@ header h1
     text-align: center;
 }
 
-header small
-{
-    font-size: 20px;
-    font-weight: 400;
-
-    display: block;
-
-    text-align: center;
-
-    color: #555;
-}
-
 footer
 {
     display: -moz-flex;

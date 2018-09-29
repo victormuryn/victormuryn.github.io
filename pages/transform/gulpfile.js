@@ -7,7 +7,6 @@ const
 	webp = require("gulp-webp"),
 	minify = require("gulp-csso"),
 	sass = require("gulp-sass"),
-	uglify = require('gulp-uglify'),
 	rename = require("gulp-rename"),
 	run = require("run-sequence"),
 	plumber = require("gulp-plumber"),
@@ -50,10 +49,6 @@ gulp.task("style", function() {
 \***************************************************/
 gulp.task("script", function() {
 	gulp.src("src/js/script.js")
-		.pipe(plumber())
-		.pipe(gulp.dest("build/js"))
-		//.pipe(uglify())
-		.pipe(rename("script.min.js"))
 		.pipe(gulp.dest("build/js"))
 		.pipe(server.stream());
 });

@@ -69,8 +69,7 @@ function makeElement(tagName, className, text) { // create function makeElement
 };
 
 function makePicture(pictureLink, productName) {
-	let picture = document.createElement("picture");
-	picture.classList.add("productImg");
+	let picture = makeElement("picture", "productImg");
 
 	let sourceWebp = document.createElement("source");
 	sourceWebp.type = "image/webp";
@@ -87,7 +86,7 @@ function makePicture(pictureLink, productName) {
 	img.alt = productName;
 	picture.appendChild(img);
 
-	return picture; // return element
+	return picture;
 };
 
 function makeProduct(data) { // create function makeProduct
@@ -101,19 +100,7 @@ function makeProduct(data) { // create function makeProduct
 		link.target = "_blank"; // add target to link
 	}
 
-	// <picture class="productImg">
-	// 	<source type="image/webp" srcset="img/template/.webp 1x, img/template/@2x.webp 2x, img/template/@3x.webp 3x">
-	// 	<source type="image/png" srcset="img/template/.png 1x, img/template/@2x.png 2x, img/template/@3x.png 3x">
-	// 	<img src="img/template/.png" alt="Оригинал фото">
-	// </picture>
-
-	//    let productPhoto = makeElement("img", "productImg"); // create product photo
-	//    productPhoto.src = "img/templates/" + ; // add src to photo
-	//    productPhoto.alt = data.name; // add alternative text to photo
-	//    link.appendChild(productPhoto); // add photo to link
-
-	let productPhoto = makePicture(data.img, data.name);
-	link.appendChild(productPhoto);
+	link.appendChild(makePicture(data.img, data.name));
 
 	if (data.type === "new") { // check type "new"
 		let newProduct = makeElement("div", "new"); // create strip container
