@@ -1,0 +1,40 @@
+{
+  "name": "cool-project",
+  "version": "1.0.0",
+  "description": "Best project",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "npm": "^6.4.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.1.1",
+    "browser-sync": "^2.24.6",
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-csscomb": "^3.0.8",
+    "gulp-csso": "^3.0.1",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-images-resizer": "0.0.5",
+    "gulp-img-retina": "0.0.4",
+    "gulp-plumber": "^1.2.0",
+    "gulp-postcss": "^8.0.0",
+    "gulp-posthtml": "^3.0.4",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.1",
+    "gulp-svgstore": "^6.1.1",
+    "gulp-ttf2woff": "^1.1.1",
+    "gulp-ttf2woff2": "^2.0.2",
+    "gulp-uglify": "^3.0.1",
+    "gulp-webp": "^3.0.0",
+    "posthtml-include": "^1.2.0",
+    "run-sequence": "^2.2.1"
+  },
+  "scripts": {
+    "test": "gulp style",
+    "build": "gulp build",
+    "start": "npm run build && gulp serve"
+  },
+  "author": "muryn.official",
+  "license": "ISC"
+}
