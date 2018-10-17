@@ -3,7 +3,8 @@ let
 	numbers = document.querySelectorAll(".number"),
 	clear = document.querySelector(".clear"),
 	operators = document.querySelectorAll(".operator"),
-	equally = document.querySelector(".equally");
+	equally = document.querySelector(".equally"),
+	timer;
 
 for (let i = 0; i < numbers.length; i++) {
 	numbers[i].addEventListener("click", function(e) {
@@ -42,7 +43,6 @@ for (let i = 0; i < operators.length; i++) {
 	});
 }
 
-let timer;
 clear.addEventListener("mousedown", function(e) {
 	e.preventDefault();
 	timer = setTimeout(function() {
