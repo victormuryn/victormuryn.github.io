@@ -11,13 +11,13 @@ const
 // folder      = folder with index file,
 // type        = project type (new, inProcess, updated, normal)
 let pages = [
-	 {
-	    name: "Mishka",
-	    description: "Магазин милих штучок ручної роботи для будинку",
-     img: "mishka.jpg",
-	    folder: "Mishka/build",
-	     type: "inProcess"
-	},
+	 // {
+	 //   name: "Mishka",
+	 //   description: "Магазин милих штучок ручної роботи для будинку",
+         //   img: "mishka.jpg",
+	 //   folder: "Mishka/build",
+	 //   type: "inProcess"
+	 // },
 	{
 		name: "Pink",
 		description: "Додаток дозволить вам перемогти осінню нудьгу і депресії буквально в кілька кліків!",
