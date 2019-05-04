@@ -1,0 +1,49 @@
+.reviews {
+	margin-top: 61px;
+	padding: 0 35px 45px 30px;
+	position: relative;
+
+	@include zigzag();
+}
+
+.reviews__title {
+	margin-bottom: 38px;
+}
+
+.reviews__text {
+	margin: 0 0 40px;
+	color: $grey;
+	font-size: 15px;
+	line-height: 30px;
+}
+
+.reviews__name {
+	margin: 0;
+	font-size: 17px;
+	font-weight: 700;
+	line-height: 24px;
+}
+
+.reviews__link {
+	margin: 0;
+	margin-top: 5px;
+	color: $grey;
+	line-height: 30px;
+}
+
+.reviews__buttons {
+	font-size: 0;
+	margin-top: 36px;
+	margin-bottom: 38px;
+}
+
+.reviews__button {
+	background-color: transparent;
+	border: 0;
+	width: 50%;
+	padding: 13px 0;
+	border: 1px solid #ececec;
+	&:first-of-type {
+		border-right: 0;
+	}
+}

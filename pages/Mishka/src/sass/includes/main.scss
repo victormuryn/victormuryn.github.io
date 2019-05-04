@@ -1,0 +1,51 @@
+.main__title {
+	height: 284px;
+	background: url("../img/background/hero-mobile.jpg") no-repeat center -20px;
+}
+
+.main__text {
+	margin: 0;
+	padding: 76px 38px 0;
+	text-align: center;
+	color: #010000;
+	font-size: 27px;
+	font-weight: 700;
+	line-height: 30px;
+}
+
+
+.main__button {
+	text-align: left;
+	padding-left: 29px;
+	color: #fff;
+	font-size: 19px;
+	font-weight: 700;
+	line-height: 24px;
+	width: 100%;
+	padding: 0;
+	height: 103px;
+	background-color: $green;
+	border: 0;
+	position: relative;
+
+	&::after {
+		content: "";
+		width: 40px;
+		height: 62px;
+		background: url("../img/svg/interior.svg.png") no-repeat center center;
+		position: absolute;
+		top: 50%;
+		right: 36px;
+		transform: translateY(-50%);
+	}
+
+	&--second {
+		background-color: #56c3b2;
+		&::after {
+			@include square(60px);
+			background: url("../img/svg/toy-svg.png") no-repeat center center;
+			right: 27px;
+		}
+	}
+}
+

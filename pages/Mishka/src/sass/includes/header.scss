@@ -1,0 +1,32 @@
+.header {
+	text-align: center;
+}
+
+.logo {
+	position: relative;
+}
+
+.logo__link {
+	display: inline-block;
+}
+
+.header__menu-toggle {
+	position: absolute;
+	top: 50%;
+	right: 30px;
+	transform: translateY(-50%);
+	background-color: #fff;
+	padding: 0;
+	font-size: 0;
+	border: 0;
+
+	&--hidden {
+		display: none;
+	}
+}
+
+.logo {
+	padding: 22px 0;
+	box-shadow: 0 1px 0 #ececec, inset 0 1px 0 #ececec;
+}
+

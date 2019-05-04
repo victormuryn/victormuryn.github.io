@@ -1,0 +1,65 @@
+.goods {
+	padding: 35px 30px;
+	position: relative;
+
+	@include zigzag();
+}
+
+.goods__title {
+	margin: 0;
+}
+
+.goods__top {
+	color: $green;
+	font-size: 17px;
+	font-weight: 700;
+	line-height: 20px;
+	text-transform: uppercase;
+	margin: 8px 0 30px;
+}
+
+.goods_description {
+	color: $grey;
+	font-size: 15px;
+	font-weight: 400;
+	line-height: 24px;
+	margin: 0;
+}
+
+.goods__params-list {
+	margin: 0;
+	margin-top: 33px;
+	color: $grey;
+	font-size: 15px;
+	line-height: 20px;
+
+	div {
+		border-bottom: 1px solid #ececec;
+	}
+}
+
+.goods__key {
+	width: 37.6%;
+	display: inline-block;
+	padding: 13px 0;
+}
+
+.goods__value {
+	margin: 0;
+	width: 62.4%;
+	display: inline-block;
+}
+
+.goods_price {
+	color: $grey;
+	font-size: 17px;
+	font-weight: 700;
+	line-height: 24px;
+	text-align: center;
+	margin: 29px 0;
+}
+
+.goods__image {
+	margin-top: 28px;
+}
+

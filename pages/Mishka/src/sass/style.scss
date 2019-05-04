@@ -1,0 +1,16 @@
+// Basic settings
+@import "variables.scss";
+@import "mixin.scss";
+@import "fonts.scss";
+@import "basic.scss";
+@import "normalize.scss";
+
+// Main page
+@import "includes/header.scss";
+@import "includes/navigation.scss";
+@import "includes/main.scss";
+@import "includes/goods.scss";
+@import "includes/aboutUs.scss";
+@import "includes/reviews.scss";
+@import "includes/contacts.scss";
+@import "includes/footer.scss";

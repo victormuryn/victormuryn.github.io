@@ -1,0 +1,55 @@
+html,
+body {
+	margin: 0;
+	padding: 0;
+	font-family: "Open Sans", Tahoma, Arial, Verdana, sans-serif;
+	font-weight: 400;
+	box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+.visually-hidden {
+	position: absolute !important;
+	clip: rect(1px 1px 1px 1px);
+	/* IE6, IE7 */
+	clip: rect(1px, 1px, 1px, 1px);
+	padding: 0 !important;
+	border: 0 !important;
+	height: 1px !important;
+	width: 1px !important;
+	overflow: hidden;
+}
+
+button {
+	cursor: pointer;
+}
+
+.section__title {
+	font-size: 25px;
+	font-weight: 700;
+	line-height: 30px;
+}
+
+.button {
+	display: inline-block;
+	border: 2px solid $grey;
+	text-align: center;
+	color: $grey;
+	font-size: 17px;
+	font-weight: 700;
+	line-height: 20px;
+	text-transform: uppercase;
+	text-decoration: none;
+	width: 100%;
+	padding: 20px 0;
+}

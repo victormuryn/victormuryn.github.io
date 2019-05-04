@@ -1,0 +1,16 @@
+@mixin square($width) {
+	width: $width;
+	height: $width;
+}
+
+@mixin zigzag() {
+	&::after {
+		content: "";
+		width: 100%;
+		height: 6px;
+		background: url('../img/svg/zigzag-line.svg.png') center center no-repeat;
+		position: absolute;
+		left: 0;
+		bottom: 0;
+	}
+}
