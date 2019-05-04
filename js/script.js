@@ -1,6 +1,6 @@
 const
 	productList = document.querySelector(".catalog"), // find catalog (wrapper)
-	articlesOnPage = 6, // articles on page count
+	articlesOnPage = 9, // articles on page count
 	pagesWrapper = document.querySelector(".pages"), // find button wrapper
 	totalPages = pagesWrapper.querySelector(".totalPages"), // find links wrapper
 	prevButton = pagesWrapper.querySelector(".prev"), // find prevPage button
@@ -11,13 +11,13 @@ const
 // folder      = folder with index file,
 // type        = project type (new, inProcess, updated, normal)
 let pages = [
-	 // {
-	 //   name: "Mishka",
-	 //   description: "Магазин милих штучок ручної роботи для будинку",
-         //   img: "mishka.jpg",
-	 //   folder: "Mishka/build",
-	 //   type: "inProcess"
-	 // },
+	{
+		name: "Mishka",
+		description: "Магазин милих штучок ручної роботи для будинку ^_^",
+		img: "mishka",
+		folder: "Mishka/build",
+		type: "inProcess"
+	},
 	{
 		name: "Pink",
 		description: "Додаток дозволить вам перемогти осінню нудьгу і депресії буквально в кілька кліків!",
@@ -130,9 +130,9 @@ function makeProduct(data) { // create function makeProduct
 	return wrapper; // return wrapper
 }
 
-if (articlesOnPage < pages.length) { // compares products count with articlesOnPage
-	pagesWrapper.classList.add("activePages"); // show pagesWrapper (added class name)
-	for (let i = 1; i <= Math.ceil(pages.length / articlesOnPage); i++) { //
+if (articlesOnPage < pages.length) {
+	pagesWrapper.classList.add("activePages");
+	for (let i = 1; i <= Math.ceil(pages.length / articlesOnPage); i++) { 
 		let pagesItem = makeElement("a", "", i);
 		totalPages.appendChild(pagesItem);
 	}
@@ -142,7 +142,7 @@ if (articlesOnPage < pages.length) { // compares products count with articlesOnP
 	for (let i = 0; i < articlesOnPage; i++) {
 		let newProduct = makeProduct(pages[i]);
 		productList.appendChild(newProduct);
-	};
+	}
 	for (let i = 0; i < allPages.length; i++) {
 		var activePage;
 		allPages[i].addEventListener('click', function(e) {
