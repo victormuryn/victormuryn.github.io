@@ -4,8 +4,7 @@
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
-html
-{
+html {
     line-height: 1.15;
     /* 1 */
 
@@ -18,8 +17,7 @@ html
 /**
  * Remove the margin in all browsers.
  */
-body
-{
+body {
     margin: 0;
 }
 
@@ -27,8 +25,7 @@ body
  * Correct the font size and margin on `h1` elements within `section` and
  * `article` contexts in Chrome, Firefox, and Safari.
  */
-h1
-{
+h1 {
     font-size: 2em;
 
     margin: .67em 0;
@@ -40,8 +37,7 @@ h1
  * 1. Add the correct box sizing in Firefox.
  * 2. Show the overflow in Edge and IE.
  */
-hr
-{
+hr {
     /* 1 */
     overflow: visible;
 
@@ -55,8 +51,7 @@ hr
  * 1. Correct the inheritance and scaling of font size in all browsers.
  * 2. Correct the odd `em` font sizing in all browsers.
  */
-pre
-{
+pre {
     font-family: monospace, monospace;
     /* 1 */
     font-size: 1em;
@@ -68,8 +63,7 @@ pre
 /**
  * Remove the gray background on active links in IE 10.
  */
-a
-{
+a {
     background-color: transparent;
 }
 
@@ -77,11 +71,10 @@ a
  * 1. Remove the bottom border in Chrome 57-
  * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
  */
-abbr[title]
-{
+abbr[title] {
     /* 1 */
-            text-decoration: underline;
-            text-decoration: underline dotted;
+    text-decoration: underline;
+    text-decoration: underline dotted;
 
     border-bottom: none;
     /* 2 */
@@ -94,8 +87,7 @@ abbr[title]
  * Add the correct font weight in Chrome, Edge, and Safari.
  */
 b,
-strong
-{
+strong {
     font-weight: bolder;
 }
 
@@ -105,8 +97,7 @@ strong
  */
 code,
 kbd,
-samp
-{
+samp {
     font-family: monospace, monospace;
     /* 1 */
     font-size: 1em;
@@ -116,8 +107,7 @@ samp
 /**
  * Add the correct font size in all browsers.
  */
-small
-{
+small {
     font-size: 80%;
 }
 
@@ -126,8 +116,7 @@ small
  * all browsers.
  */
 sub,
-sup
-{
+sup {
     font-size: 75%;
     line-height: 0;
 
@@ -136,13 +125,11 @@ sup
     vertical-align: baseline;
 }
 
-sub
-{
+sub {
     bottom: -.25em;
 }
 
-sup
-{
+sup {
     top: -.5em;
 }
 
@@ -151,8 +138,7 @@ sup
 /**
  * Remove the border on images inside links in IE 10.
  */
-img
-{
+img {
     border-style: none;
 }
 
@@ -166,8 +152,7 @@ button,
 input,
 optgroup,
 select,
-textarea
-{
+textarea {
     font-family: inherit;
     /* 1 */
     font-size: 100%;
@@ -184,8 +169,7 @@ textarea
  * 1. Show the overflow in Edge.
  */
 button,
-input
-{
+input {
     /* 1 */
     overflow: visible;
 }
@@ -195,8 +179,7 @@ input
  * 1. Remove the inheritance of text transform in Firefox.
  */
 button,
-select
-{
+select {
     /* 1 */
     text-transform: none;
 }
@@ -207,8 +190,7 @@ select
 button,
 [type='button'],
 [type='reset'],
-[type='submit']
-{
+[type='submit'] {
     -webkit-appearance: button;
 }
 
@@ -218,9 +200,8 @@ button,
 button::-moz-focus-inner,
 [type='button']::-moz-focus-inner,
 [type='reset']::-moz-focus-inner,
-[type='submit']::-moz-focus-inner
-{
-    padding: 0; 
+[type='submit']::-moz-focus-inner {
+    padding: 0;
 
     border-style: none;
 }
@@ -231,16 +212,14 @@ button::-moz-focus-inner,
 button:-moz-focusring,
 [type='button']:-moz-focusring,
 [type='reset']:-moz-focusring,
-[type='submit']:-moz-focusring
-{
+[type='submit']:-moz-focusring {
     outline: 1px dotted ButtonText;
 }
 
 /**
  * Correct the padding in Firefox.
  */
-fieldset
-{
+fieldset {
     padding: .35em .75em .625em;
 }
 
@@ -250,8 +229,7 @@ fieldset
  * 3. Remove the padding so developers are not caught out when they zero out
  *    `fieldset` elements in all browsers.
  */
-legend
-{
+legend {
     /* 2 */
     display: table;
 
@@ -272,16 +250,14 @@ legend
 /**
  * Add the correct vertical alignment in Chrome, Firefox, and Opera.
  */
-progress
-{
+progress {
     vertical-align: baseline;
 }
 
 /**
  * Remove the default vertical scrollbar in IE 10+.
  */
-textarea
-{
+textarea {
     overflow: auto;
 }
 
@@ -290,8 +266,7 @@ textarea
  * 2. Remove the padding in IE 10.
  */
 [type='checkbox'],
-[type='radio']
-{
+[type='radio'] {
     box-sizing: border-box;
     /* 1 */
     padding: 0;
@@ -302,8 +277,7 @@ textarea
  * Correct the cursor style of increment and decrement buttons in Chrome.
  */
 [type='number']::-webkit-inner-spin-button,
-[type='number']::-webkit-outer-spin-button
-{
+[type='number']::-webkit-outer-spin-button {
     height: auto;
 }
 
@@ -311,8 +285,7 @@ textarea
  * 1. Correct the odd appearance in Chrome and Safari.
  * 2. Correct the outline style in Safari.
  */
-[type='search']
-{
+[type='search'] {
     /* 1 */
     outline-offset: -2px;
 
@@ -323,8 +296,7 @@ textarea
 /**
  * Remove the inner padding in Chrome and Safari on macOS.
  */
-[type='search']::-webkit-search-decoration
-{
+[type='search']::-webkit-search-decoration {
     -webkit-appearance: none;
 }
 
@@ -332,8 +304,7 @@ textarea
  * 1. Correct the inability to style clickable types in iOS and Safari.
  * 2. Change font properties to `inherit` in Safari.
  */
-::-webkit-file-upload-button
-{
+::-webkit-file-upload-button {
     /* 1 */
     font: inherit;
 
@@ -346,16 +317,14 @@ textarea
 /*
  * Add the correct display in Edge, IE 10+, and Firefox.
  */
-details
-{
+details {
     display: block;
 }
 
 /*
  * Add the correct display in all browsers.
  */
-summary
-{
+summary {
     display: list-item;
 }
 
@@ -364,22 +333,19 @@ summary
 /**
  * Add the correct display in IE 10+.
  */
-template
-{
+template {
     display: none;
 }
 
 /**
  * Add the correct display in IE 10.
  */
-[hidden]
-{
+[hidden] {
     display: none;
 }
 
 /***********************  FONTS ********************************/
-@font-face
-{
+@font-face {
     font-family: 'Gilroy - Extra Bold';
     font-weight: 800;
     font-style: normal;
@@ -388,8 +354,7 @@ template
 }
 
 /*================= BASIC SETTING =========================*/
-body
-{
+body {
     font-family: 'Open Sans', Tahoma, Arial, Verdana, sans-serif;
 
     margin: 0;
@@ -398,34 +363,29 @@ body
 
 *,
 *::before,
-*::after
-{
+*::after {
     box-sizing: border-box;
 }
 
-img
-{
+img {
     max-width: 100%;
 }
 
-ul
-{
+ul {
     margin: 0;
     padding: 0;
 
     list-style: none;
 }
 
-button:hover
-{
+button:hover {
     cursor: pointer;
 }
 
-.visually-hidden
-{
+.visually-hidden {
     position: absolute !important;
 
-    overflow: hidden; 
+    overflow: hidden;
     clip: rect(1px 1px 1px 1px);
     /* IE6, IE7 */
     clip: rect(1px, 1px, 1px, 1px);
@@ -438,12 +398,11 @@ button:hover
 }
 
 /*======================= PAGE STYLE =========================*/
-header
-{
+header {
     display: -moz-flex;
-    display:  -ms-flex;
-    display:   -o-flex;
-    display:      flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
 
     height: 200px;
 
@@ -453,8 +412,7 @@ header
     justify-content: center;
 }
 
-header h1
-{
+header h1 {
     font-size: 55px;
     font-weight: 500;
     line-height: 55px;
@@ -465,12 +423,11 @@ header h1
     text-align: center;
 }
 
-footer
-{
+footer {
     display: -moz-flex;
-    display:  -ms-flex;
-    display:   -o-flex;
-    display:      flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
 
     max-width: 80.5%;
     margin: 0 auto;
@@ -479,35 +436,32 @@ footer
     align-items: center;
 }
 
-.socialLinks
-{
+.socialLinks {
     display: -moz-flex;
-    display:  -ms-flex;
-    display:   -o-flex;
-    display:      flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
 
     width: 100%;
 
     justify-content: center;
 }
 
-.socialLinks ul
-{
+.socialLinks ul {
     display: -moz-flex;
-    display:  -ms-flex;
-    display:   -o-flex;
-    display:      flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
 
     flex-wrap: wrap;
     justify-content: center;
 }
 
-.socialItem
-{
+.socialItem {
     display: -moz-flex;
-    display:  -ms-flex;
-    display:   -o-flex;
-    display:      flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
 
     width: 79px;
     height: 79px;
@@ -520,8 +474,7 @@ footer
     align-items: center;
 }
 
-.new
-{
+.new {
     position: absolute;
     top: 10px;
     right: -75px;
@@ -530,14 +483,13 @@ footer
     height: 30px;
 
     -webkit-transform: rotate(45deg);
-            transform: rotate(45deg);
+    transform: rotate(45deg);
     text-align: center;
 
     background-color: #ff5357;
 }
 
-.new p
-{
+.new p {
     font-size: 14px;
     line-height: 30px;
 
@@ -546,8 +498,7 @@ footer
     color: #fff;
 }
 
-.updated
-{
+.updated {
     position: absolute;
     top: 10px;
     right: -75px;
@@ -556,14 +507,13 @@ footer
     height: 30px;
 
     -webkit-transform: rotate(45deg);
-            transform: rotate(45deg);
+    transform: rotate(45deg);
     text-align: center;
 
     background-color: #00ca74;
 }
 
-.updated p
-{
+.updated p {
     font-size: 14px;
     line-height: 30px;
 
@@ -572,25 +522,21 @@ footer
     color: #fff;
 }
 
-.socialItem:last-child
-{
+.socialItem:last-child {
     margin-right: 0;
 }
 
-.socialItem:hover
-{
+.socialItem:hover {
     transition: .3s;
 
     background-color: #e74246;
 }
 
-.socialItem:active a img
-{
+.socialItem:active a img {
     opacity: .3;
 }
 
-.socialItem a
-{
+.socialItem a {
     overflow: hidden;
 
     padding: 30px;
@@ -598,15 +544,14 @@ footer
     border-radius: 50%;
 }
 
-.catalog
-{
+.catalog {
     display: -moz-flex;
-    display:  -ms-flex;
-    display:   -o-flex;
-    display:      flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
 
     width: 85vw;
-    max-width: 1200px; 
+    max-width: 1200px;
     margin: 0 auto;
     padding: 80px 0 0;
 
@@ -614,8 +559,7 @@ footer
     flex-wrap: wrap;
 }
 
-.catalog > div
-{
+.catalog>div {
     overflow: hidden;
 
     margin: 0 auto;
@@ -623,20 +567,17 @@ footer
     flex-basis: 360px;
 }
 
-.inProcessDiv img
-{
+.inProcessDiv img {
     opacity: .7;
 }
 
-.inProcessDiv
-{
+.inProcessDiv {
     position: relative;
 }
 
-.inProcess
-{
+.inProcess {
     position: absolute;
-    z-index: 2; 
+    z-index: 2;
     top: 50%;
     left: 0;
 
@@ -644,15 +585,14 @@ footer
     height: 50px;
 
     -webkit-transform: translateY(-50%);
-            transform: translateY(-50%);
+    transform: translateY(-50%);
 
     background-color: #00ca74;
 }
 
-.inProcess p
-{
+.inProcess p {
     font-size: 21px;
-    font-weight: 500; 
+    font-weight: 500;
     line-height: 50px;
 
     margin: 0;
@@ -662,8 +602,7 @@ footer
     color: #fff;
 }
 
-.product
-{
+.product {
     position: relative;
 
     display: block;
@@ -672,29 +611,25 @@ footer
     padding-top: 40px;
 }
 
-.productImg
-{
+.productImg {
     display: block;
 
     border-top: none;
 }
 
-.product:hover
-{
+.product:hover {
     cursor: pointer;
 }
 
 .product:hover .aboutProduct,
-.product:focus .aboutProduct
-{
+.product:focus .aboutProduct {
     display: block;
 }
 
-.product::before
-{
+.product::before {
     position: absolute;
     top: 0;
-    left: 0; 
+    left: 0;
 
     width: 100%;
 
@@ -703,20 +638,18 @@ footer
     opacity: .12;
 }
 
-.product:hover::before
-{
+.product:hover::before {
     -webkit-animation-name: browserAnimation;
-            animation-name: browserAnimation;
+    animation-name: browserAnimation;
     -webkit-animation-duration: 1s;
-            animation-duration: 1s;
+    animation-duration: 1s;
 
     opacity: 1;
 }
 
 .aboutProduct h4,
 .aboutProduct h4:active,
-.aboutProduct h4:visited
-{
+.aboutProduct h4:visited {
     font-weight: 700;
     line-height: 30px;
 
@@ -727,8 +660,7 @@ footer
     color: #000;
 }
 
-.aboutProduct
-{
+.aboutProduct {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -740,62 +672,56 @@ footer
     padding: 35px 0 43px;
 
     -webkit-animation-name: aboutProductAnimation;
-            animation-name: aboutProductAnimation;
+    animation-name: aboutProductAnimation;
     -webkit-animation-duration: 1s;
-            animation-duration: 1s;
+    animation-duration: 1s;
     text-align: center;
 
     background-color: #eee;
 }
 
-.aboutProduct p
-{
+.aboutProduct p {
     max-width: 80%;
     margin: 0 auto 30px;
 }
 
 .aboutProduct p,
 .aboutProduct p:active,
-.aboutProduct p:visited
-{
+.aboutProduct p:visited {
     line-height: 18px;
 
     color: #666;
 }
 
 /************************** PAGES LIST ************************************/
-.pages
-{
-    display: none; 
+.pages {
+    display: none;
 
     background-color: #ebebeb;
 }
 
-.activePages
-{
+.activePages {
     display: block;
 }
 
-.pagesContainer
-{
+.pagesContainer {
     display: -moz-flex;
-    display:  -ms-flex;
-    display:   -o-flex;
-    display:      flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
 
     max-width: 85vw;
     height: 70px;
     margin: 0 auto;
     margin-bottom: 73px;
-    margin-bottom: 33px; 
+    margin-bottom: 33px;
 
     justify-content: space-between;
     -ms-align-items: center;
-        align-items: center;
+    align-items: center;
 }
 
-.pages button
-{
+.pages button {
     font-family: 'Gilroy - Extra Bold';
     font-size: 16px;
     line-height: 70px;
@@ -812,25 +738,22 @@ footer
     background-color: transparent;
 }
 
-.pages button:hover
-{
+.pages button:hover {
     background-color: #d8d8d8;
 }
 
-.pages button:active
-{
+.pages button:active {
     color: rgba(0, 0, 0, .3);
     background-color: #d8d8d8;
 }
 
-.totalPages a
-{
+.totalPages a {
     font-family: 'Gilroy - Extra Bold', 'PT Sans', sans-serif;
     font-size: 16px;
 
     margin-right: 31px;
 
-    cursor: pointer; 
+    cursor: pointer;
     text-decoration: none;
     letter-spacing: .91px;
     text-transform: uppercase;
@@ -838,84 +761,73 @@ footer
     color: rgba(0, 0, 0, .3);
 }
 
-.totalPages a:last-of-type
-{
+.totalPages a:last-of-type {
     margin-right: 0;
 }
 
-.totalPages a:hover
-{
+.totalPages a:hover {
     color: rgba(0, 0, 0, .6);
 }
 
-.totalPages a:active
-{
+.totalPages a:active {
     color: #000;
 }
 
-.totalPages a.activePage
-{
+.totalPages a.activePage {
     color: #000;
 }
 
 /*************************** KEYFRAMES ****************************/
-@-webkit-keyframes aboutProductAnimation
-{
-    0%
-    {
+@-webkit-keyframes aboutProductAnimation {
+    0% {
         font-size: 0;
 
         height: 0;
         padding: 0;
     }
-    50%
-    {
+
+    50% {
         font-size: 0;
     }
-    100%
-    {
+
+    100% {
         height: 172px;
     }
 }
-@keyframes aboutProductAnimation
-{
-    0%
-    {
+
+@keyframes aboutProductAnimation {
+    0% {
         font-size: 0;
 
         height: 0;
         padding: 0;
     }
-    50%
-    {
+
+    50% {
         font-size: 0;
     }
-    100%
-    {
+
+    100% {
         height: 172px;
     }
 }
 
-@-webkit-keyframes browserAnimation
-{
-    0%
-    {
+@-webkit-keyframes browserAnimation {
+    0% {
         opacity: .12;
     }
-    100%
-    {
+
+    100% {
         opacity: 1;
     }
 }
 
-@keyframes browserAnimation
-{
-    0%
-    {
+@keyframes browserAnimation {
+    0% {
         opacity: .12;
     }
-    100%
-    {
+
+    100% {
         opacity: 1;
     }
 }
