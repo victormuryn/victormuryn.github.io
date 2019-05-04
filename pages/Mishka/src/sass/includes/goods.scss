@@ -16,6 +16,9 @@
 	line-height: 20px;
 	text-transform: uppercase;
 	margin: 8px 0 30px;
+	br {
+		display: none;
+	}
 }
 
 .goods_description {
@@ -60,6 +63,44 @@
 }
 
 .goods__image {
+	display: inline-block;
 	margin-top: 28px;
 }
 
+@media (min-width: 768px) {
+	.goods {
+		padding: 42px 50px;
+	}
+
+	.goods__title {
+		font-size: 43px;
+		line-height: 50px;
+	}
+
+	.goods__top {
+		line-height: 17px;
+		font-size: 17px;
+		position: absolute;
+		right: 50px;
+		top: 47px;
+		text-align: center;
+		br {
+			display: block;
+		}
+	}
+
+	.goods__text {
+		font-size: 17px;
+		line-height: 30px;
+	}
+
+	.goods__params-list {
+		font-size: 15px;
+		line-height: 20px;
+	}
+
+	.goods__price {
+		font-size: 20px;
+		line-height: 24;
+	}
+}

@@ -23,17 +23,18 @@
 
 .footer__author {
 	text-align: center;
+	margin-top: 15px;
 	p {
 		font-size: 19px;
 		font-weight: 700;
-		line-height: 25px;
+		line-height: 18px;
 		margin: 0;
 	}
 	a {
 		text-decoration: none;
 		font-size: 19px;
 		font-weight: 700;
-		line-height: 25px;
+		line-height: 20px;
 		color: $green;
 	}
 }
