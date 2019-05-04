@@ -1,4 +1,4 @@
-const8000
+const
 	productList = document.querySelector(".catalog"), // find catalog (wrapper)
 	articlesOnPage = 9, // articles on page count
 	pagesWrapper = document.querySelector(".pages"), // find button wrapper
