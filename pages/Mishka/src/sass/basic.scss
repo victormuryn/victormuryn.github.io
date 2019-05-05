@@ -54,3 +54,10 @@ button {
 	padding: 20px 0;
 }
 
+
+@media (min-width: 768px) {
+	.section__title {
+		font-size: 43px;
+    line-height: 50px;
+	}
+}

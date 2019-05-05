@@ -38,3 +38,28 @@
 		color: $green;
 	}
 }
+.footer__logo {
+	display: none;		
+}
+
+@media (min-width: 768px) {
+	.footer {
+		display: flex;
+		padding: 55px 50px;
+		justify-content: space-between;
+		align-items: center;
+
+		div {
+			width: 33.33%;
+		}
+	}
+
+	.footer__social-links {
+		padding: 0;
+		border: 0;
+	}
+
+	.footer__logo {
+		display: block;
+	}
+}

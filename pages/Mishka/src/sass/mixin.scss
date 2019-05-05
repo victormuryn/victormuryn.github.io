@@ -9,9 +9,15 @@
 		width: 100%;
 		height: 6px;
 		background: url('../img/svg/zigzag-line.svg.png') center center;
-
+		background-size: contain;
 		position: absolute;
 		left: 0;
 		bottom: 0;
+	}
+
+	@media (min-width: 768px) {
+		&::after {
+			height: 17px;
+		}
 	}
 }

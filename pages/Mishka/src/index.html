@@ -47,122 +47,154 @@
         </div>
       </div>
     </section>
+
     <!-- /.main -->
-    
     <section class="goods">
       <h2 class="goods__title section__title">Вязаные корзинки</h2>
-      <p class="goods__top">Товар <br> недели</p>
-      <p class="goods_description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
-      <dl class="goods__params-list">
-        <div>
-          <dt class="goods__key">Цвет:</dt>
-          <dd class="goods__value">«Тиффани»/серый</dd>
+      <p class="goods__top">Товар <span> </span><br> недели</p>
+      <div class="goods__container">
+        <div class="goods__description-wrapper">
+          <p class="goods__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
+          <dl class="goods__params-list">
+            <div>
+              <dt class="goods__key">Цвет:</dt>
+              <dd class="goods__value">«Тиффани»/серый</dd>
+            </div>
+            <div>
+              <dt class="goods__key">Диаметр:</dt>
+              <dd class="goods__value">25 см</dd>
+            </div>
+            <div>
+              <dt class="goods__key">Высота:</dt>
+              <dd class="goods__value">15 см</dd>
+            </div>
+          </dl>
         </div>
-        <div>
-          <dt class="goods__key">Диаметр:</dt>
-          <dd class="goods__value">25 см</dd>
+        <picture>
+          <source type="image/webp" srcset="img/goods1.webp 1x, img/goods1@2x.webp 2x">
+          <source type="image/jpeg" srcset="img/goods1.jpg 1x, img/goods1@2x.jpg 2x">
+          <img src="img/goods1.jpg" alt="Вязаные корзинки" class="goods__image">
+        </picture>
+        <div class="goods__buy">
+          <p class="goods__price">Цена: 990 руб.</p>
+          <a href="#" class="goods__button button">Заказать</a>
         </div>
-        <div>
-          <dt class="goods__key">Высота:</dt>
-          <dd class="goods__value">15 см</dd>
-        </div>
-      </dl>
-      <picture>
-        <source type="image/webp" srcset="img/goods1.webp 1x, img/goods1@2x.webp 2x">
-        <source type="image/jpeg" srcset="img/goods1.jpg 1x, img/goods1@2x.jpg 2x">
-        <img src="img/goods1.jpg" alt="Вязаные корзинки" class="goods__image">
-      </picture>
-      <p class="goods_price">Цена: 990 руб.</p>
-      <a href="#" class="goods_button button">Заказать</a>
+      </div>
     </section>
     <!-- /.goods -->
+
     <section class="about-us">
       <h2 class="section__title about-us__title">Коротко о нас:</h2>
       <dl class="about-us__list">
-        <dt class="about-us__img">
-          <svg width="32" height="37">
-            <use xlink:href="#icon-1"></use>
-          </svg>
-        </dt>
-        <dd class="about-us__text">
-          <p>Экологически чистые материалы</p>
-        </dd>
-        <dt class="about-us__img">
-          <svg width="47" height="27">
-            <use xlink:href="#icon-3"></use>
-          </svg>
-        </dt>
-        <dd class="about-us__text">
-          <p>Скандинавский стиль по российской цене</p>
-        </dd>
-        <dt class="about-us__img">
-          <svg width="34" height="27">
-            <use xlink:href="#icon-5"></use>
-          </svg>
-        </dt>
-        <dd class="about-us__text">
-          <p>Увеличивает лайки на фотографиях</p>
-        </dd>
-        <dt class="about-us__img">
-          <svg width="35" height="34">
-            <use xlink:href="#icon-2"></use>
-          </svg>
-        </dt>
-        <dd class="about-us__text">
-          <p>Связано вручную с любовью и умилением</p>
-        </dd>
-        <dt class="about-us__img">
-          <svg width="55" height="23">
-            <use xlink:href="#icon-4"></use>
-          </svg>
-        </dt>
-        <dd class="about-us__text">
-          <p>Поддержка отечественного производителя</p>
-        </dd>
-        <dt class="about-us__img">
-          <svg width="33" height="32">
-            <use xlink:href="#icon-6"></use>
-          </svg>
-        </dt>
-        <dd class="about-us__text">
-          <p>Поставляется в подарочной упаковке</p>
-        </dd>
+        <div>
+          <div>
+            <dt class="about-us__img">
+              <svg width="32" height="37">
+                <use xlink:href="#icon-1"></use>
+              </svg>
+            </dt>
+            <dd class="about-us__text">
+              <p>Экологически чистые материалы</p>
+            </dd>
+          </div>
+          <div>
+            <dt class="about-us__img">
+              <svg width="47" height="27">
+                <use xlink:href="#icon-3"></use>
+              </svg>
+            </dt>
+            <dd class="about-us__text">
+              <p>Скандинавский стиль по российской цене</p>
+            </dd>
+          </div>
+          <div>
+            <dt class="about-us__img">
+              <svg width="34" height="27">
+                <use xlink:href="#icon-5"></use>
+              </svg>
+            </dt>
+            <dd class="about-us__text">
+              <p>Увеличивает лайки на фотографиях</p>
+            </dd>
+          </div>
+        </div>
+        <div>
+          <div>
+            <dt class="about-us__img">
+              <svg width="35" height="34">
+                <use xlink:href="#icon-2"></use>
+              </svg>
+            </dt>
+            <dd class="about-us__text">
+              <p>Связано вручную с любовью и умилением</p>
+            </dd>
+          </div>
+          <div>
+            <dt class="about-us__img">
+              <svg width="55" height="23">
+                <use xlink:href="#icon-4"></use>
+              </svg>
+            </dt>
+            <dd class="about-us__text">
+              <p>Поддержка отечественного производителя</p>
+            </dd>
+          </div>
+          <div>
+            <dt class="about-us__img">
+              <svg width="33" height="32">
+                <use xlink:href="#icon-6"></use>
+              </svg>
+            </dt>
+            <dd class="about-us__text">
+              <p>Поставляется в подарочной упаковке</p>
+            </dd>
+          </div>
+        </div>
       </dl>
     </section>
     <!-- /.about-us -->
+
     <section class="reviews">
       <h2 class="reviews__title section__title">Отзывы</h2>
-      <div class="reviews__review">
-        <p class="reviews__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
-        <p class="reviews__name">Анастасия Красильникова</p>
-        <p class="reviews__link">@misssssiskras</p>
-      </div>
-      <div class="reviews__buttons">
-        <button class="reviews__button">
-          <img src="img/svg/arrow.svg" alt="Назад">
-        </button>
-        <button class="reviews__button" style="transform: rotate(180deg);">
-          <img src="img/svg/arrow.svg" alt="Вперед">
-        </button>
+      <p class="reviews__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
+      <div class="reviews__container">
+          <div>
+              <p class="reviews__name">Анастасия Красильникова</p>
+              <p class="reviews__link">@misssssiskras</p>
+          </div>
+          <div class="reviews__buttons">
+            <button class="reviews__button">
+              <img src="img/svg/arrow.svg" alt="Назад">
+            </button>
+            <button class="reviews__button" style="transform: rotate(180deg);">
+              <img src="img/svg/arrow.svg" alt="Вперед">
+            </button>
+          </div>
       </div>
       <a href="#" class="button reviews__write">Написать</a>
     </section>
     <!-- /.reviews -->
+
     <section class="contacts">
       <h2 class="contacts__title">Контакты</h2>
       <dl class="contacts__list">
-        <dt class="contacts__key">
-          <p>email:</p>
-        </dt>
-        <dd class="contacts__value contacts__value--email">
-          <a href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
-        </dd>
-        <dt class="contacts__key">
-          адрес:
-        </dt>
-        <dd class="contacts__value">
-          <a href="https://www.google.com/maps/search/%D0%B3.+%D0%A1%D0%B0%D0%BD%D0%BA%D1%82-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3,+%D1%83%D0%BB.+%D0%91%D0%BE%D0%BB%D1%8C%D1%88%D0%B0%D1%8F+%D0%9A%D0%BE%D0%BD%D1%8E%D1%88%D0%B5%D0%BD%D0%BD%D0%B0%D1%8F,++%D0%B4.+19%2F8,+%D0%BE%D1%84%D0%B8%D1%81+101/@59.9387165,30.3208587,17z/data=!3m1!4b1" target="_blank">г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101</a>
-        </dd>
+        <div>
+            <dt class="contacts__key">
+              <p>email:</p>
+            </dt>
+            <dd class="contacts__value contacts__value--email">
+              <a href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
+            </dd>
+        </div>
+
+        <div>
+            <dt class="contacts__key">
+              адрес:
+            </dt>
+            <dd class="contacts__value">
+              <a href="https://www.google.com/maps/search/%D0%B3.+%D0%A1%D0%B0%D0%BD%D0%BA%D1%82-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3,+%D1%83%D0%BB.+%D0%91%D0%BE%D0%BB%D1%8C%D1%88%D0%B0%D1%8F+%D0%9A%D0%BE%D0%BD%D1%8E%D1%88%D0%B5%D0%BD%D0%BD%D0%B0%D1%8F,++%D0%B4.+19%2F8,+%D0%BE%D1%84%D0%B8%D1%81+101/@59.9387165,30.3208587,17z/data=!3m1!4b1" target="_blank">г. Санкт-Петербург, <br> ул. Большая Конюшенная, <br> д. 19/8, офис 101</a>
+            </dd>
+        </div>
       </dl>
     </section>
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533198!2d30.320858716342304!3d59.93871648187627!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRltGPLCAxOTExODY!5e0!3m2!1suk!2sua!4v1556970311399!5m2!1suk!2sua" frameborder="0" style="border:0" allowfullscreen class="contacts__map"></iframe>
@@ -170,7 +202,13 @@
       <a href="#" class="button contacts__button">Напишите нам</a>
     </section>
     <!-- /.contacts -->
+
     <footer class="footer">
+        <div class="footer__logo">
+            <a href="/">
+                <img src="img/svg/logo-footer.svg.png" alt="Логотип">
+            </a>
+        </div>
       <div class="footer__social-links">
         <ul class="footer__social-list">
           <li class="footer__social-item">
@@ -191,7 +229,7 @@
         </ul>
       </div>
       <div class="footer__author">
-        <p>Разработано <a href="https://instagram.com/muryn.official">muryn.official</a></p>
+        <p>Разработано <a href="https://instagram.com/muryn.official" target="_blank">muryn.official</a></p>
       </div>
     </footer>
     <!-- /.footer -->

@@ -89,6 +89,15 @@ button
     border: 2px solid #444;
 }
 
+@media (min-width: 768px)
+{
+    .section__title
+    {
+        font-size: 43px;
+        line-height: 50px;
+    }
+}
+
 /* normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -741,6 +750,14 @@ template
     content: '';
 
     background: url('../img/svg/zigzag-line.svg.png') center center;
+    background-size: contain;
+}
+@media (min-width: 768px)
+{
+    .goods::after
+    {
+        height: 17px;
+    }
 }
 
 .goods__title
@@ -765,7 +782,7 @@ template
     display: none;
 }
 
-.goods_description
+.goods__description
 {
     font-size: 15px;
     font-weight: 400;
@@ -807,7 +824,7 @@ template
     margin: 0;
 }
 
-.goods_price
+.goods__price
 {
     font-size: 17px;
     font-weight: 700;
@@ -833,10 +850,63 @@ template
     {
         padding: 42px 50px;
     }
+    .goods__container
+    {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+            flex-direction: column;
+
+        height: 404px; 
+
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    }
+    .goods__description-wrapper
+    {
+        width: 43.6%;
+        margin-right: 6.5%; 
+
+        -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+        order: 1;
+    }
+    .goods__buy
+    {
+        width: 43.6%;
+        margin-right: 6.5%; 
+
+        -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+        order: 2;
+    }
+    picture
+    {
+        height: 404px; 
+
+        -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+        order: 3;
+    }
+    .goods__description
+    {
+        font-size: 17px;
+        line-height: 30px;
+
+        margin-bottom: 30px;
+    }
+    .goods__image
+    {
+        width: 333px;
+        height: 404px;
+        margin-top: 0;
+    }
     .goods__title
     {
-        font-size: 43px;
-        line-height: 50px;
+        margin-bottom: 55px;
     }
     .goods__top
     {
@@ -866,7 +936,17 @@ template
     .goods__price
     {
         font-size: 20px;
-        line-height: 24;
+
+        margin-top: 47px;
+        margin-bottom: 30px;
+    }
+    .goods__key
+    {
+        padding: 10px 0;
+    }
+    .goods__button
+    {
+        padding: 16px 0;
     }
 }
 
@@ -905,6 +985,42 @@ template
     margin: 0;
 }
 
+@media (min-width: 768px)
+{
+    .about-us
+    {
+        padding: 59px 50px 0;
+    }
+    .about-us__list
+    {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    }
+    .about-us__list > div
+    {
+        width: 45%;
+        margin-right: 10%;
+    }
+    .about-us__list > div:nth-of-type(even)
+    {
+        margin-right: 0;
+    }
+    .about-us__text p
+    {
+        font-size: 20px;
+        line-height: 22px;
+    }
+    .about-us__img
+    {
+        margin-top: 57px; 
+        padding: 0;
+    }
+}
+
 .reviews
 {
     position: relative; 
@@ -924,6 +1040,14 @@ template
     content: '';
 
     background: url('../img/svg/zigzag-line.svg.png') center center;
+    background-size: contain;
+}
+@media (min-width: 768px)
+{
+    .reviews::after
+    {
+        height: 17px;
+    }
 }
 
 .reviews__title
@@ -980,6 +1104,82 @@ template
 .reviews__button:first-of-type
 {
     border-right: 0;
+}
+
+@media (min-width: 768px)
+{
+    .reviews
+    {
+        margin-top: 82px;
+        padding: 83px 50px 116px;
+
+        background: url('../img/background/review.jpg') left top no-repeat;
+    }
+    .reviews__title
+    {
+        margin-top: 0;
+        margin-bottom: 55px;
+    }
+    .reviews__text
+    {
+        font-size: 17px;
+        line-height: 30px;
+
+        margin-bottom: 60px;
+    }
+    .reviews__name
+    {
+        font-size: 18px;
+        line-height: 24px;
+    }
+    .reviews__link
+    {
+        font-size: 17px;
+        line-height: 30px;
+    }
+    .reviews__write
+    {
+        position: absolute;
+        top: 82px;
+        right: 50px;
+
+        width: 175px;
+        padding: 16px 0;
+    }
+    .reviews__container
+    {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+    }
+    .reviews__buttons
+    {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+
+        width: 137px;
+        margin: 0;
+
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+    }
+    .reviews__button
+    {
+        width: 50px;
+        height: 26px;
+        padding: 0; 
+
+        border: 0;
+    }
 }
 
 .contacts
@@ -1053,6 +1253,62 @@ template
     border: 0;
 }
 
+@media (min-width: 768px)
+{
+    .contacts
+    {
+        padding: 68px 50px 0;
+    }
+    .contacts__title
+    {
+        font-size: 43px;
+        line-height: 50px;
+    }
+    .contacts__list
+    {
+        font-size: 17px;
+        line-height: 30px;
+
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex; 
+
+        margin-bottom: 61px;
+    }
+    .contacts__list div
+    {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex; 
+
+        width: 45.8%;
+    }
+    .contacts__list div:first-of-type
+    {
+        margin-right: 8.4%;
+    }
+    .contacts__value,
+    .contacts__key
+    {
+        width: auto;
+    }
+    .contacts__key
+    {
+        margin-right: 26px;
+    }
+    .contacts__button
+    {
+        width: 230px;
+        padding: 16px 0;
+    }
+    .contacts2
+    {
+        margin-bottom: 57px; 
+
+        text-align: center;
+    }
+}
+
 .footer
 {
     padding: 25px 30px; 
@@ -1114,4 +1370,42 @@ template
     text-decoration: none;
 
     color: #63d1bb;
+}
+
+.footer__logo
+{
+    display: none;
+}
+
+@media (min-width: 768px)
+{
+    .footer
+    {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+
+        padding: 55px 50px;
+
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+    .footer div
+    {
+        width: 33.33%;
+    }
+    .footer__social-links
+    {
+        padding: 0;
+
+        border: 0;
+    }
+    .footer__logo
+    {
+        display: block;
+    }
 }
