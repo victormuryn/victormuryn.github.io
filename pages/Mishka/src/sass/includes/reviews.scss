@@ -104,3 +104,14 @@
 		padding: 0;
 	}
 }
+
+@media (min-width: 1250px) { 
+	.reviews {
+		padding-left: 225px;
+		padding-top: 100px;
+	}
+
+	.reviews__text {
+		max-width: 770px;
+	}
+}

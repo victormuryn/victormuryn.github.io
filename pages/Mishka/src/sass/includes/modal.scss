@@ -85,6 +85,7 @@
 	font-weight: 700;
 	line-height: 16px;
 	text-transform: uppercase;
+	padding: 0;
 }
 
 #s-size:checked ~ .modal__label[for=s-size] {
@@ -116,6 +117,12 @@
 
 	.modal__text {
 		font-size: 17px;
-	}
+	}}
 
+@media (min-width: 1250px) {
+	.modal__wrapper {
+		width: 566px;
+		height: 336px;
+		border: 1px solid #c6c6c6;
+	}
 }

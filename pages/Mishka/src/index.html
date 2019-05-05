@@ -17,38 +17,41 @@
   <div style="display: none">
     <include src="build/img/sprite.svg"></include>
   </div>
-  <main>
-    <header class="header">
-      <div class="header__logo-wrapper">
-        <a href="/" class="header__logo-link">
-          <img src="img/svg/logo-mobile.png" alt="Mishka" class="header__logo header__logo--mobile">
-          <img src="img/svg/logo-tablet.svg.png" alt="Mishka" class="header__logo header__logo--tablet">
-          <img src="img/svg/logo-desktop.svg.png" alt="Mishka" class="header__logo header__logo--desktop">
-        </a>
-        <button class="header__menu-toggle">
-          <img src="img/svg/menu-close.svg.png" alt="Закрыть меню" class="header__menu-open">
-          <img src="img/svg/menu-open.svg.png" alt="Открыть меню" class=" header__menu-close header__menu-toggle--hidden">
-        </button>
-      </div>
-      <ul class="navigation">
-        <li class="navigation__item navigation__item--normal"><a href="#">Каталог товаров</a></li>
-        <li class="navigation__item navigation__item--normal"><a href="#">Вязание на заказ</a></li>
-        <li class="navigation__item navigation__item--search"><a href="#">Поиск по сайту</a></li>
-        <li class="navigation__item navigation__item--bin"><a href="#">Корзина: пока пуста</a></li>
-      </ul>
-    </header>
-    <!-- /.header -->
-    <section class="main">
-      <div class="main__title">
-        <h1 class="main__text">Милые штуки ручной <br> работы для дома</h1>
-        <p class="main__free-text">Бесплатная доставка по России</p>
-        <div class="main__buttons">
-          <button class="main__button main__button--first">Предметы <br> интерьера</button>
-          <button class="main__button main__button--second">Детские <br> игрушки</button>
+  <header class="header">
+    <div class="header__logo-wrapper">
+      <a href="/" class="header__logo-link">
+        <img src="img/svg/logo-mobile.png" alt="Mishka" class="header__logo header__logo--mobile">
+        <img src="img/svg/logo-tablet.svg.png" alt="Mishka" class="header__logo header__logo--tablet">
+        <img src="img/svg/logo-desktop.svg.png" alt="Mishka" class="header__logo header__logo--desktop">
+      </a>
+      <button class="header__menu-toggle">
+        <img src="img/svg/menu-close.svg.png" alt="Закрыть меню" class="header__menu-open">
+        <img src="img/svg/menu-open.svg.png" alt="Открыть меню" class=" header__menu-close header__menu-toggle--hidden">
+      </button>
+    </div>
+    <ul class="navigation">
+      <li class="navigation__item navigation__item--normal"><a href="#">Каталог товаров</a></li>
+      <li class="navigation__item navigation__item--normal"><a href="#">Вязание на заказ</a></li>
+      <li class="navigation__item navigation__item--search"><a href="#">Поиск по сайту</a></li>
+      <li class="navigation__item navigation__item--bin"><a href="#">Корзина: пока пуста</a></li>
+    </ul>
+  </header>
+  <!-- /.header -->
+
+  <div class="main__wrapper">
+      <section class="main">
+        <div class="main__title">
+          <h1 class="main__text">Милые штуки ручной <br> работы для дома</h1>
+          <p class="main__free-text">Бесплатная доставка по России</p>
+          <div class="main__buttons">
+            <button class="main__button main__button--first">Предметы <br> интерьера</button>
+            <button class="main__button main__button--second">Детские <br> игрушки</button>
+          </div>
         </div>
-      </div>
-    </section>
-    <!-- /.main -->
+      </section>
+  </div>
+  <!-- /.main -->
+  <main>
     <section class="goods">
       <h2 class="goods__title section__title">Вязаные корзинки</h2>
       <p class="goods__top">Товар <span> </span><br> недели</p>
@@ -173,31 +176,36 @@
     </section>
     <!-- /.reviews -->
     <section class="contacts">
-      <h2 class="contacts__title">Контакты</h2>
-      <dl class="contacts__list">
-        <div>
-          <dt class="contacts__key">
-            <p>email:</p>
-          </dt>
-          <dd class="contacts__value contacts__value--email">
-            <a href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
-          </dd>
-        </div>
-        <div>
-          <dt class="contacts__key">
-            адрес:
-          </dt>
-          <dd class="contacts__value">
-            <a href="https://www.google.com/maps/search/%D0%B3.+%D0%A1%D0%B0%D0%BD%D0%BA%D1%82-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3,+%D1%83%D0%BB.+%D0%91%D0%BE%D0%BB%D1%8C%D1%88%D0%B0%D1%8F+%D0%9A%D0%BE%D0%BD%D1%8E%D1%88%D0%B5%D0%BD%D0%BD%D0%B0%D1%8F,++%D0%B4.+19%2F8,+%D0%BE%D1%84%D0%B8%D1%81+101/@59.9387165,30.3208587,17z/data=!3m1!4b1" target="_blank">г. Санкт-Петербург, <br> ул. Большая Конюшенная, <br> д. 19/8, офис 101</a>
-          </dd>
-        </div>
-      </dl>
-    </section>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533198!2d30.320858716342304!3d59.93871648187627!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRltGPLCAxOTExODY!5e0!3m2!1suk!2sua!4v1556970311399!5m2!1suk!2sua" frameborder="0" style="border:0" allowfullscreen class="contacts__map"></iframe>
-    <section class="contacts contacts2">
-      <a href="#" class="button contacts__button">Напишите нам</a>
+      <div class="contacts__wrapper">
+        <h2 class="contacts__title">Контакты</h2>
+        <dl class="contacts__list">
+          <div>
+            <dt class="contacts__key">
+              <p>email:</p>
+            </dt>
+            <dd class="contacts__value contacts__value--email">
+              <a href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
+            </dd>
+          </div>
+          <div>
+            <dt class="contacts__key">
+              адрес:
+            </dt>
+            <dd class="contacts__value">
+              <a href="https://www.google.com/maps/search/%D0%B3.+%D0%A1%D0%B0%D0%BD%D0%BA%D1%82-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3,+%D1%83%D0%BB.+%D0%91%D0%BE%D0%BB%D1%8C%D1%88%D0%B0%D1%8F+%D0%9A%D0%BE%D0%BD%D1%8E%D1%88%D0%B5%D0%BD%D0%BD%D0%B0%D1%8F,++%D0%B4.+19%2F8,+%D0%BE%D1%84%D0%B8%D1%81+101/@59.9387165,30.3208587,17z/data=!3m1!4b1" target="_blank">г. Санкт-Петербург, <br> ул. Большая Конюшенная, <br> д. 19/8, офис 101</a>
+            </dd>
+          </div>
+        </dl>
+      </div>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533198!2d30.320858716342304!3d59.93871648187627!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRltGPLCAxOTExODY!5e0!3m2!1suk!2sua!4v1556970311399!5m2!1suk!2sua" frameborder="0" style="border:0" allowfullscreen class="contacts__map"></iframe>
+      <div class="contacts__wrapper contacts__wrapper--button">
+        <a href="#" class="button contacts__button">Напишите нам</a>
+      </div>
     </section>
     <!-- /.contacts -->
+  </main>
+  <!-- /.main -->
+  <div class="footer__main">
     <footer class="footer">
       <div class="footer__logo">
         <a href="/">
@@ -227,24 +235,24 @@
         <p>Разработано <a href="https://instagram.com/muryn.official" target="_blank">muryn.official</a></p>
       </div>
     </footer>
-    <!-- /.footer -->
-    <section class="modal">
-      <div class="modal__wrapper">
-        <h2 class="modal__title">Добавить в корзину</h2>
-        <p class="modal__text">Выберите размер:</p>
-        <div class="modal__radio-wrapper">
-          <input class="modal__input" type="radio" id="s-size" name="size" checked>
-          <label class="modal__label" for="s-size">S</label>
-          <input class="modal__input" type="radio" id="m-size" name="size">
-          <label class="modal__label" for="m-size">M</label>
-          <input class="modal__input" type="radio" id="l-size" name="size">
-          <label class="modal__label" for="l-size">L</label>
-        </div>
-        <button class="modal__button">Добавить</button>
+  </div>
+  <!-- /.footer -->
+  <section class="modal">
+    <div class="modal__wrapper">
+      <h2 class="modal__title">Добавить в корзину</h2>
+      <p class="modal__text">Выберите размер:</p>
+      <div class="modal__radio-wrapper">
+        <input class="modal__input" type="radio" id="s-size" name="size" checked>
+        <label class="modal__label" for="s-size">S</label>
+        <input class="modal__input" type="radio" id="m-size" name="size">
+        <label class="modal__label" for="m-size">M</label>
+        <input class="modal__input" type="radio" id="l-size" name="size">
+        <label class="modal__label" for="l-size">L</label>
       </div>
-    </section>
-    <!-- /.modal -->
-  </main>
+      <button class="modal__button">Добавить</button>
+    </div>
+  </section>
+  <!-- /.modal -->
   <script src="js/script.js"></script>
 </body>
 

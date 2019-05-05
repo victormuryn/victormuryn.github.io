@@ -20,4 +20,10 @@
 			height: 17px;
 		}
 	}
+
+	@media (min-width: 1250px) {
+		&::after {
+			height: 23px;
+		}
+	}
 }

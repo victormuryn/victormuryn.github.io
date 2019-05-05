@@ -60,3 +60,31 @@
 		display: none;
 	}
 }
+
+@media (min-width: 1250px) {
+	.header {
+		max-width: 1050px;
+		margin: 0 auto;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: relative;
+	}
+	.header__logo-wrapper {
+		order: 2;		
+		padding: 0;
+	}
+
+	.header__logo {
+		align-items: center;
+		padding: 0;
+
+		&--tablet {
+			display: none;
+		}
+
+		&--desktop {
+			display: block;
+		}
+	}
+}

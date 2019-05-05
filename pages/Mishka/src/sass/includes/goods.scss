@@ -93,6 +93,7 @@
   picture {
     order: 3;
     height: 404px;
+    text-align: right;
   }
 
   .goods__description {
@@ -144,5 +145,66 @@
 
   .goods__button {
     padding: 16px 0;
+  }
+}
+
+@media (min-width: 1250px) {
+  .goods {
+    padding-left: 225px;
+    margin-top: 71px;
+    padding-top: 63px;
+    padding-bottom: 100px;
+  }
+
+  .goods__top {
+    left: 97px;
+    top: 70px;
+    right: auto;
+    margin: 0;
+    
+    font-size: 17px;
+    line-height: 17px;
+  }
+  
+  .goods__container {
+    height: 466px;
+    width: 467px;
+  }
+  .goods__title {
+    position: relative;
+    z-index: 2  ;
+    margin-bottom: 50px;
+  }
+
+  .goods__description {
+    font-size: 17px;
+    line-height: 30px;
+    margin-bottom: 60px;
+    position: relative;
+    z-index: 2;
+    width: 350px;
+  }
+
+  .goods__image {
+    position: absolute;
+    top: 0;
+    right: 50px;
+    height: auto;
+    width: 525px;
+    z-index: 1;
+  }
+
+  .goods__params-list {
+    max-width: 291px;
+  }
+
+  .goods__buy {
+    width: 292px;
+    margin-right: 0;
+  }
+
+  .goods__price {
+    margin-top: 81px;
+    margin-bottom: 32px;
   }
 }

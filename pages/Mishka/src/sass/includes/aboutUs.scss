@@ -56,3 +56,14 @@
     margin-top: 57px;
   }
 }
+
+@media (min-width: 1250px) { 
+  .about-us {
+    padding-left: 225px;
+    padding-top: 70px;
+  }
+
+  .about-us__list > div {
+    width: 300px;
+  }
+}

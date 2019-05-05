@@ -50,7 +50,7 @@
 		align-items: center;
 
 		div {
-			width: 33.33%;
+			width: 30%;
 		}
 	}
 
@@ -61,5 +61,31 @@
 
 	.footer__logo {
 		display: block;
+	}
+}
+
+@media (min-width: 1250px) {
+	.footer__main {
+		background-color: #f1f1f1;
+	}
+	.footer {
+		max-width: 1250px;
+		margin: 0 auto;
+		flex-shrink: 1;
+	}
+	.footer__social-list {
+		justify-content: center;
+	}
+	.footer__social-item {
+		margin-right: 41px;
+
+		&:last-of-type {
+			margin-right: 0;
+		}
+	}
+
+	.footer__author {
+		margin: 0;
+		text-align: right;
 	}
 }
