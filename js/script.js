@@ -16,7 +16,7 @@ let pages = [
 		description: "Магазин милих штучок ручної роботи для будинку ^_^",
 		img: "mishka",
 		folder: "Mishka/build/",
-		type: "new"
+		type: "inProcess"
 	},
 	{
 		name: "Pink",
