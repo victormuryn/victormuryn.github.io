@@ -4,6 +4,10 @@
 	position: relative;
 }
 
+.main__free-text {
+	display: none;
+}
+
 .main__text {
 	margin: 0;
 	padding: 76px 38px 0;
@@ -74,6 +78,7 @@
 	.main__title {
 		height: 746px;
 		background-image: url('../../img/background/hero-desktop.jpg');
+		background-position: center -49px;
 	}
 
 	.main__text { 
@@ -94,5 +99,16 @@
 		display: inline-block;
 		font-size: 20px;
 		line-height: 30px;
+	}
+
+	.main__free-text {
+		display: block;
+		margin: 0;
+		color: $grey;
+		font-size: 15px;
+		line-height: 24px;
+		position: absolute;
+		right: 50px;
+		top: -20px;
 	}
 }

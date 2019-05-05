@@ -1,59 +1,108 @@
 .navigation {
-	display: none;
+  display: none;
+  padding: 0;
+  margin: 0;
 
-	&--open {
-		display: block;
-	}
-}
-
-.navigation__list {
-	padding: 0;
-	margin: 0;
+  &--open {
+    display: block;
+  }
 }
 
 .navigation__item {
-	list-style: none;
-	box-shadow: 0 1px 0 #ececec, inset 0 1px 0 #ececec;
+  list-style: none;
+  box-shadow: 0 1px 0 #ececec, inset 0 1px 0 #ececec;
 
-	&--search,
-	&--bin {
-		position: relative;
-		&::before {
-			position: absolute;
-			left: 32px;
-			top: 50%;
-			transform: translateY(-50%);
-			content: "";
-			@include square(18px);
-			background: url("../img/svg/cart.svg.png") no-repeat center center;
+  &--search,
+  &--bin {
+    position: relative;
+
+    &::before {
+      position: absolute;
+      left: 32px;
+      top: 50%;
+      transform: translateY(-50%);
+      content: "";
+      @include square(18px);
+      background: url("../img/svg/cart.svg.png") no-repeat center center;
+    }
+  }
+
+  &--search {
+    &::before {
+      background: url("../img/svg/search.svg.png") no-repeat center center;
+    }
+  }
+
+  a {
+    text-align: left;
+    padding: 31px 0;
+    padding-left: 76px;
+    display: block;
+    text-decoration: none;
+    color: #000;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 24px;
+    outline: none;
+
+    &:hover,
+    &:focus {
+      opacity: .6;
+    }
+
+    &:active {
+      opacity: .3;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .navigation {
+    display: flex;
+    background-color: #f9f9f9;
+  }
+
+  .navigation__item {
+    box-shadow: none;
+		&--normal {
+			padding-left: 50px;
+			&:nth-child(2) {
+				padding-left: 37px;
+			}
 		}
-	}
 
-	&--search {
-		&::before {
-			background: url("../img/svg/search.svg.png") no-repeat center center;
-		}
-	}
+    &--normal a {
+    	padding: 0;
+    	padding-top: 20px;
+    	font-size: 15px;
+			line-height: 24px;
+    }
+		
+    &--search {
+      order: 1;
+      position: absolute;
+      top: 0;
+      right: 337px;
 
-	a {
-		text-align: left;
-		padding: 31px 0;
-		padding-left: 76px;
-		display: block;
-		text-decoration: none;
-		color: #000;
-		font-size: 17px;
-		font-weight: 700;
-		line-height: 24px;
-		outline: none;	
+      a {
+        font-size: 0;
+      }
+    }
 
-		&:hover,
-		&:focus {
-			opacity: .6;
-		}
+    &--bin {
+      order: 2;
+      position: absolute;
+      right: 50px;
+      top: 0px;
+      border-left: 1px solid rgba($grey, .1);
+    }
 
-		&:active {
-			opacity: .3;
-		}
-	}
+    &:nth-of-type(1) {
+      order: 3;
+    }
+
+    &:nth-of-type(2) {
+      order: 4;
+    }
+  }
 }
