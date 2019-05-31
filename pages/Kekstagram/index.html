@@ -210,6 +210,7 @@
   <template id="picture">
     <a href="#" class="picture">
       <img class="picture__img" src="" width="182" height="182" alt="Случайная фотография">
+      <p class="picture__id" style="display: none"></p>
       <p class="picture__info">
         <span class="picture__comments"></span>
         <span class="picture__likes"></span>
@@ -220,10 +221,8 @@
   <!-- Шаблон коментария -->
   <template id="comment">
     <li class="social__comment social__comment--text">
-      <img class="social__picture" src=""
-        alt="Аватар комментатора фотографии"
-        width="35" height="35">
-        <p class="social__text"></p>
+      <img class="social__picture" src="" alt="Аватар комментатора фотографии" width="35" height="35">
+      <p class="social__text"></p>
     </li>
   </template>
 
@@ -255,6 +254,10 @@
     <div class="img-upload__message  img-upload__message--loading">Загружаем...</div>
   </template>
 
+  <script src="js/basic.js"></script>
+  <script src="js/images.js"></script>
+  <script src="js/render-big-picture.js"></script>
+  <script src="js/upload.js"></script>
   <script src="js/pictures.js"></script>
 </body>
 
