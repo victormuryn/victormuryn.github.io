@@ -33,7 +33,7 @@
         <div class="img-upload__wrapper">
           <h2 class="img-upload__title  visually-hidden">Загрузка фотографии</h2>
           <form class="img-upload__form" id="upload-select-image" method="post" enctype="multipart/form-data"
-            autocomplete="off">
+            autocomplete="off" action="https://js.dump.academy/kekstagram">
 
             <!-- Изначальное состояние поля для загрузки изображения -->
             <fieldset class="img-upload__start">
@@ -129,7 +129,7 @@
                 <!-- Добавление хэш-тегов и комментария к изображению -->
                 <fieldset class="img-upload__text text">
                   <input class="text__hashtags" name="hashtags" placeholder="#хэш-тег">
-                  <textarea class="text__description" name="description" placeholder="Ваш комментарий..."></textarea>
+                  <textarea class="text__description" name="description" placeholder="Ваш комментарий..." maxlength="140"></textarea>
                 </fieldset>
 
                 <!-- Кнопка для отправки данных на сервер -->
@@ -254,11 +254,11 @@
     <div class="img-upload__message  img-upload__message--loading">Загружаем...</div>
   </template>
 
-  <script src="js/basic.js"></script>
-  <script src="js/images.js"></script>
-  <script src="js/render-big-picture.js"></script>
-  <script src="js/upload.js"></script>
-  <script src="js/pictures.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/picture.js"></script>
+  <script src="js/preview.js"></script>
+  <script src="js/gallery.js"></script>
+  <script src="js/form.js"></script>
 </body>
 
 </html>
