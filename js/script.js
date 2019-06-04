@@ -90,7 +90,7 @@ function makeProduct(data) { // create function makeProduct
   if (data.type === 'new') {
     element.querySelector('.new').style.display = 'block';
   } else if (data.type === 'inProcess') {
-    element.querySelector('.product').href = "#";
+    element.querySelector('.product').href = "javascipt://0";
     element.querySelector('.product').target = "_self";
     element.querySelector('.column').classList.add('inProcessDiv');
     element.querySelector('.inProcess').style.display = 'block';
