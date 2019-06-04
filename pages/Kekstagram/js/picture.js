@@ -18,13 +18,18 @@
     imageElement.querySelector('.picture__comments').textContent = image.comments.length;
 
     return imageElement;
+
   };
   /* ******** CODE ******** */
   var fragment = document.createDocumentFragment();
-  for (var i = 0; i < window.data.images.length; i++) {
-    fragment.appendChild(renderImage(window.data.images[i]));
-  }
+  window.backend.load(function (images) {
+    window.picture = images;
 
-  var pictures = document.querySelector('.pictures');
-  pictures.appendChild(fragment);
+    for (var i = 0; i < images.length; i++) {
+      fragment.appendChild(renderImage(images[i]));
+    }
+
+    var pictures = document.querySelector('.pictures');
+    pictures.appendChild(fragment);
+  });
 })();

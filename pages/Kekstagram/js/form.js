@@ -1,7 +1,7 @@
 'use strict';
 
 (function () {
-  /********* CONSTS ******** */
+  /* ******** CONSTS ******** */
   var EFFECTS_LINE_WIDTH = 453;
   var ESC_KEYCODE = 27;
 
@@ -17,40 +17,48 @@
 
   var form = document.querySelector('.img-upload__form');
   var hashtags = document.querySelector('.text__hashtags');
+  var comments = document.querySelector('.text__description');
 
   /* ******** EXPORT ******** */
 
   /* ******** FUNCTIONS ******** */
   // addEventListener functions
+  var onInputFocus = function () {
+    document.removeEventListener('keydown', onDocumentKeyDown);
+  };
+
+  var onInputBlur = function () {
+    document.addEventListener('keydown', onDocumentKeyDown);
+  };
+
   var onCloseClick = function () {
     customImg.classList.add('hidden');
     cancelUpload.removeEventListener('click', onCloseClick);
     document.removeEventListener('keydown', onDocumentKeyDown);
     uploadInput.addEventListener('change', onOpenCustomImgClick);
     uploadInput.value = '';
-  }
+  };
 
   var onDocumentKeyDown = function (evt) {
     if (evt.keyCode === ESC_KEYCODE) {
       onCloseClick();
     }
-  }
+  };
 
   var onOpenCustomImgClick = function () {
     customImg.classList.remove('hidden');
     cancelUpload.addEventListener('click', onCloseClick);
     document.addEventListener('keydown', onDocumentKeyDown);
-    uploadInput.removeEventListener('change', onOpenCustomImgClick);
   };
 
-  var onFormSubmit = function () {
+  var onHashtagBlur = function () {
     var hashtagValue = hashtags.value.split(' ');
 
     for (var i = 0; i < hashtagValue.length; i++) {
       hashtagValue[i] = hashtagValue[i].toLowerCase();
     }
 
-    for (var i = 0; i < hashtagValue.length; i++) {
+    for (i = 0; i < hashtagValue.length; i++) {
       if (hashtagValue[i][0] !== '#') {
         hashtags.setCustomValidity('Хэштег должен начинатся с символа #');
       } else if (hashtagValue[i].length === 1) {
@@ -67,7 +75,15 @@
         hashtags.setCustomValidity('');
       }
     }
-  }
+  };
+
+  var onFormSubmit = function (evt) {
+    window.backend.save(new FormData(form), function () {
+      customImg.classList.add('hidden');
+    });
+    evt.preventDefault();
+    form.reset();
+  };
   // other functions
   var addClickListener = function (filter) {
     filter.addEventListener('click', function () {
@@ -82,7 +98,7 @@
       scalePin.style.left = 0 + 'px';
       effectDepth.style.width = 0 + 'px';
     });
-  }
+  };
 
   /* ******** CODE ******** */
   uploadInput.addEventListener('change', onOpenCustomImgClick);
@@ -104,17 +120,17 @@
       var position = scalePin.offsetLeft - shiftX;
 
       if (position < 0) {
-        position = 0
+        position = 0;
       } else if (position > EFFECTS_LINE_WIDTH) {
         position = EFFECTS_LINE_WIDTH;
       }
       scalePin.style.left = position + 'px';
       effectDepth.style.width = position + 'px';
-      var percent = position * 100 / EFFECTS_LINE_WIDTH
+      var percent = position * 100 / EFFECTS_LINE_WIDTH;
 
       switch (currentFilter) {
         case 'phobos':
-          percent = position * 3 / EFFECTS_LINE_WIDTH
+          percent = position * 3 / EFFECTS_LINE_WIDTH;
           imgUpload.style.filter = 'blur(' + percent + 'px)';
           break;
         case 'chrome':
@@ -128,7 +144,7 @@
           imgUpload.style.filter = 'invert(' + percent + '%)';
           break;
         case 'heat':
-          percent = position * 3 / EFFECTS_LINE_WIDTH
+          percent = position * 3 / EFFECTS_LINE_WIDTH;
           imgUpload.style.filter = 'brightness(' + percent + ')';
           break;
         default:
@@ -137,17 +153,21 @@
       }
     };
 
-    var onMouseUp = function (evt) {
-      evt.preventDefault()
+    var onMouseUp = function () {
+      evt.preventDefault();
 
       document.removeEventListener('mousemove', onMouseMove);
       document.removeEventListener('mouseup', onMouseUp);
-    }
+    };
 
     document.addEventListener('mousemove', onMouseMove);
     document.addEventListener('mouseup', onMouseUp);
   });
 
   form.addEventListener('submit', onFormSubmit);
-
+  comments.addEventListener('focus', onInputFocus);
+  hashtags.addEventListener('focus', onInputFocus);
+  comments.addEventListener('blur', onInputBlur);
+  hashtags.addEventListener('blur', onInputBlur);
+  hashtags.addEventListener('blur', onHashtagBlur);
 })();
