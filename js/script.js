@@ -29,7 +29,7 @@ let pages = [{
     description: "Shop cute handicraft items for home ^_^",
     img: "mishka",
     folder: "Mishka/build",
-    type: "inProcess"
+    type: "new"
   },
   {
     name: "Pink",
