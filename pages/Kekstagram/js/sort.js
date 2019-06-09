@@ -3,6 +3,7 @@
 (function () {
   /* ********  CONSTS   ******** */
   var NEW_PICTURES_COUNT = 10;
+  var DEBOUNCE_INTERVAL = 500;
 
   /* ******** VARIABLES ******** */
   var popularBtn = document.querySelector('#filter-popular');
@@ -31,8 +32,22 @@
     }
   };
 
+  var debounce = function (callback) {
+    var lastTimeout = null;
+
+    return function () {
+      var args = arguments;
+      if (lastTimeout) {
+        window.clearTimeout(lastTimeout);
+      }
+      lastTimeout = window.setTimeout(function () {
+        callback.apply(null, args);
+      }, DEBOUNCE_INTERVAL);
+    };
+  };
+
   /* ********   CODE   ******** */
-  onChangeSortClick(popularBtn, function () {
+  onChangeSortClick(popularBtn, debounce(function () {
     var pictures = document.querySelector('.pictures');
     var fragment = document.createDocumentFragment();
     window.picture.images.forEach(function (it) {
@@ -41,9 +56,9 @@
 
     pictures.appendChild(fragment);
     window.preview(window.picture.images);
-  });
+  }));
 
-  onChangeSortClick(newBtn, function () {
+  onChangeSortClick(newBtn, debounce(function () {
     var pictures = document.querySelector('.pictures');
     var fragment = document.createDocumentFragment();
     var used = [];
@@ -66,9 +81,9 @@
 
     pictures.appendChild(fragment);
     window.preview(newPictures);
-  });
+  }));
 
-  onChangeSortClick(discussedBtn, function () {
+  onChangeSortClick(discussedBtn, debounce(function () {
     var imagesCopy = window.picture.images.slice();
 
     imagesCopy.sort(function (left, right) {
@@ -83,5 +98,5 @@
 
     pictures.appendChild(fragment);
     window.preview(imagesCopy);
-  });
+  }));
 })();

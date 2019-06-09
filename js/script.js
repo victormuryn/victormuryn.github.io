@@ -13,16 +13,16 @@ const
 // folder      = folder with index file,
 // type        = project type (new, inProcess, updated, normal)
 let pages = [{
+    name: "Keksobooking",
+    description: "Keksobooking — a service for listing rental properties in downtown Tokyo",
+    img: "keksobooking",
+    folder: "Keksobooking",
+    type: "inProcess"
+  }, {
     name: "Kekstagram",
     description: "Kekstagram — image viewing service",
     img: "kekstagram",
     folder: "Kekstagram",
-    type: "inProcess"
-  }, {
-    name: "Code and Magic",
-    description: "Code and Magic — a promo site of the game with the ability to play the demo version",
-    img: "codeAndMagic",
-    folder: "Code-and-magic",
     type: "inProcess"
   }, {
     name: "Mishka",
@@ -40,8 +40,7 @@ let pages = [{
     name: "Device",
     description: "A huge selection of gadgets will not leave indifferent geeks, which is in each of us",
     img: "device",
-    folder: "Device",
-    type: "updated"
+    folder: "Device"
   }, {
     name: "Technomart",
     description: "Online store for building materials and repair tools",

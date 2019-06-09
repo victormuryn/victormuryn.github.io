@@ -83,7 +83,6 @@
     bigPicture.querySelector('.social__footer-text').addEventListener('blur', onInputBlur);
     bigPicture.querySelector('.social__comments-loader').addEventListener('click', function (evt) {
       evt.preventDefault();
-      debugger
       var start = document.querySelectorAll('.social__comment').length;
       loadComments(start);
       bigPicture.querySelector('.comments-now').textContent = showComments;
