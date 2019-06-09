@@ -20,7 +20,7 @@
       });
 
       xhr.responseType = 'json';
-      xhr.open('GET', URL);
+      xhr.open('POST', URL);
       xhr.send(data);
     },
 
@@ -40,11 +40,14 @@
       xhr.open('GET', URL);
       xhr.send();
     },
+
     onRequestError: function (err) {
-      var template = document.querySelector('.error').querySelector('.error');
+      var template = document.querySelector('.error').content.querySelector('.error');
 
       template.querySelector('.error__title').textContent = err;
       document.querySelector('body').appendChild(template);
+      // console.log(err);
+
     }
   };
 
