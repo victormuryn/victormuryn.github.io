@@ -47,7 +47,7 @@ main {
 }
 
 .hidden {
-  display: none;
+  display: none !important;
 }
 
 .visually-hidden {
@@ -533,7 +533,6 @@ main {
   justify-content: center;
 
   width: 600px;
-  height: 600px;
 
   background-color: #ffffff;
 }

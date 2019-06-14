@@ -2,6 +2,7 @@
 
 (function () {
   /* ********  CONSTS   ******** */
+  var ESC_KEYCODE = 27;
 
   /* ******** VARIABLES ******** */
 
@@ -12,11 +13,11 @@
       var xhr = new XMLHttpRequest();
 
       xhr.addEventListener('load', function () {
-        onSuccess(xhr.response);
-      });
-
-      xhr.addEventListener('error', function (err) {
-        window.backend.onRequestError(err);
+        if (xhr.status === 200) {
+          onSuccess(xhr.response);
+        } else {
+          window.backend.onRequestError(xhr.statusText);
+        }
       });
 
       xhr.responseType = 'json';
@@ -42,17 +43,14 @@
     },
 
     onRequestError: function (err) {
-      var template = document.querySelector('.error').content.querySelector('.error');
+      document.querySelector('.img-upload__overlay').classList.add('hidden');
+      var errorPopUp = document.querySelector('.error');
+      var close = errorPopUp.querySelector('.error__button');
+      errorPopUp.querySelector('.error__title').textContent = err;
 
-      template.querySelector('.error__title').textContent = err;
-      document.querySelector('body').appendChild(template);
-      // console.log(err);
-
+      var errPopUp = new window.PopUp(errorPopUp, close, null);
+      errPopUp.openPopUp();
+      errPopUp.closeListeners();
     }
   };
-
-  /* ******** FUNCTIONS ******** */
-  // addEventListener functions
-  // Other functions
-  /* ********   CODE   ******** */
 })();

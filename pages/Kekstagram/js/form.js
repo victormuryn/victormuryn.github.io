@@ -4,6 +4,11 @@
   /* ******** CONSTS ******** */
   var EFFECTS_LINE_WIDTH = 453;
   var ESC_KEYCODE = 27;
+  var FILE_EXTENSIONS = ['jpeg', 'jpg', 'png', 'gif'];
+  var MAX_SIZE = 5242880; // 2 MB
+  var MAX_VALUE = 100;
+  var MIN_VALUE = 25;
+  var SCALE_STEP = 25;
 
   /* ******** VARIAVLES ******** */
   var uploadInput = document.querySelector('#upload-file');
@@ -13,11 +18,15 @@
   var imgUpload = document.querySelector('.img-upload__preview img');
   var cancelUpload = document.querySelector('#upload-cancel');
   var filters = document.querySelectorAll('.effects__item');
+  var biggerButton = document.querySelector('.scale__control--bigger');
+  var smallerButton = document.querySelector('.scale__control--smaller');
+  var scaleValue = document.querySelector('.scale__control--value');
   var currentFilter = 'chrome';
-
   var form = document.querySelector('.img-upload__form');
   var hashtags = document.querySelector('.text__hashtags');
   var comments = document.querySelector('.text__description');
+  var previewImg = document.querySelector('.img-upload__preview img');
+  var success = document.querySelector('.success');
 
   /* ******** EXPORT ******** */
 
@@ -36,7 +45,7 @@
     cancelUpload.removeEventListener('click', onCloseClick);
     document.removeEventListener('keydown', onDocumentKeyDown);
     uploadInput.addEventListener('change', onOpenCustomImgClick);
-    uploadInput.value = '';
+    form.reset();
   };
 
   var onDocumentKeyDown = function (evt) {
@@ -49,6 +58,23 @@
     customImg.classList.remove('hidden');
     cancelUpload.addEventListener('click', onCloseClick);
     document.addEventListener('keydown', onDocumentKeyDown);
+
+    var file = uploadInput.files[0];
+    var fileName = file.name.toLowerCase();
+    var matches = FILE_EXTENSIONS.some(function (it) {
+      return fileName.endsWith(it);
+    });
+
+    if (matches && file.size <= MAX_SIZE) {
+      var reader = new FileReader();
+
+      reader.addEventListener('load', function () {
+        previewImg.src = reader.result;
+      });
+
+      reader.readAsDataURL(file);
+    }
+
   };
 
   var onHashtagBlur = function () {
@@ -81,6 +107,9 @@
     window.backend.save(new FormData(form), function () {
       customImg.classList.add('hidden');
       form.reset();
+      success.classList.remove('hidden');
+      success.querySelector('.success__button').addEventListener('click', closeSuccessPopUp);
+      document.addEventListener('keydown', onEscKeydown);
     });
     evt.preventDefault();
   };
@@ -98,6 +127,24 @@
       scalePin.style.left = 0 + 'px';
       effectDepth.style.width = 0 + 'px';
     });
+  };
+
+  var updateValue = function (value) {
+    scaleValue.value = value + '%';
+    previewImg.style.transform = 'scale(' + (value / 100) + ')';
+  };
+
+  var onEscKeydown = function (evt) {
+    if (evt.keyCode === ESC_KEYCODE) {
+      closeSuccessPopUp(evt);
+    }
+
+    document.removeEventListener('keydown', onEscKeydown);
+  };
+
+  var closeSuccessPopUp = function (evt) {
+    evt.preventDefault();
+    success.classList.add('hidden');
   };
 
   /* ******** CODE ******** */
@@ -127,6 +174,7 @@
       scalePin.style.left = position + 'px';
       effectDepth.style.width = position + 'px';
       var percent = position * 100 / EFFECTS_LINE_WIDTH;
+
 
       switch (currentFilter) {
         case 'phobos':
@@ -170,4 +218,25 @@
   comments.addEventListener('blur', onInputBlur);
   hashtags.addEventListener('blur', onInputBlur);
   hashtags.addEventListener('blur', onHashtagBlur);
+  biggerButton.addEventListener('click', function (evt) {
+    evt.preventDefault();
+    var value = +scaleValue.value.slice(0, -1);
+
+    if (value >= MAX_VALUE - SCALE_STEP) {
+      updateValue(MAX_VALUE);
+      return;
+    }
+    updateValue(value + SCALE_STEP);
+  });
+
+  smallerButton.addEventListener('click', function (evt) {
+    evt.preventDefault();
+    var value = +scaleValue.value.slice(0, -1);
+
+    if (value <= MIN_VALUE + SCALE_STEP) {
+      updateValue(MIN_VALUE);
+      return;
+    }
+    updateValue(value - SCALE_STEP);
+  });
 })();

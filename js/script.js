@@ -23,7 +23,7 @@ let pages = [{
     description: "Kekstagram — image viewing service",
     img: "kekstagram",
     folder: "Kekstagram",
-    type: "inProcess"
+    type: "new"
   }, {
     name: "Mishka",
     description: "Shop cute handicraft items for home ^_^",
