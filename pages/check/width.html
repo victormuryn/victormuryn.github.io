@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        body {
+            display: flex;
+            width: 2000px;
+            height: 100vh;
+        }
+
+        div {
+            width: 29px
+            height: 100%;
+            border-right: 1px solid red;
+        }
+
+        a {
+            position: fixed;
+            right: 20px;
+            bottom: 0;
+        }
+    </style>
+    <a href="index.html">height</a>
+    <script>
+        var body = document.querySelector('body');
+
+        for (let i = 30; i < 2000; i += 30) {
+            let elem = document.createElement('div');
+            elem.textContent = i;
+            body.appendChild(elem);
+        }
+    </script>
+</body>
+
+</html>

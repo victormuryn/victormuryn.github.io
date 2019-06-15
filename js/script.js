@@ -1,17 +1,20 @@
 const
   productList = document.querySelector(".catalog"), // find catalog (wrapper)
-  articlesOnPage = 9, // articles on page count
+  articlesOnPage = 9,                              // articles on page count
   pagesWrapper = document.querySelector(".pages"), // find button wrapper
   totalPages = pagesWrapper.querySelector(".totalPages"), // find links wrapper
   prevButton = pagesWrapper.querySelector(".prev"), // find prevPage button
   nextButton = pagesWrapper.querySelector(".next"), // find nextPage button
   template = document.querySelector('.template').content.querySelector('#project');
 
-// name        = product name,
-// description = product description,
-// img         = img name
-// folder      = folder with index file,
-// type        = project type (new, inProcess, updated, normal)
+/**
+ * Pages template
+ * name = product name,
+ * description = product descriptionm
+ * img = img name (in .jpg)m
+ * folder = folder with index file,
+ * type = project type (new, inProcess, update, normal)
+ */
 let pages = [{
     name: "Keksobooking",
     description: "Keksobooking — a service for listing rental properties in downtown Tokyo",
@@ -64,18 +67,16 @@ let pages = [{
   }
 ];
 
-function makeElement(tagName, className, text) { // create function makeElement
-  let element = document.createElement(tagName); // create element
-  if (className) { // check className availability
-    element.classList.add(className); // add className
-  }
-  if (text) { // check text availability
-    element.textContent = text; // add text
-  }
-  return element; // return element
+function makeElement(tagName, className, text) {
+  let element = document.createElement(tagName);
+
+  if (className) element.classList.add(className);
+  if (text) element.textContent = text;
+
+  return element;
 };
 
-function makeProduct(data) { // create function makeProduct
+function makeProduct(data) {
   let element = template.cloneNode(true);
 
   element.querySelector('.product').href = "pages/" + data.folder + "/index.html";
@@ -86,17 +87,17 @@ function makeProduct(data) { // create function makeProduct
   element.querySelector('h4').textContent = data.name;
   element.querySelector('.product__description').textContent = data.description;
 
-  if (data.type === 'new') {
+  if (data.type === 'new')
     element.querySelector('.new').style.display = 'block';
-  } else if (data.type === 'inProcess') {
+  else if (data.type === 'inProcess') {
     element.querySelector('.product').href = "javascipt://0";
     element.querySelector('.product').target = "_self";
     element.querySelector('.column').classList.add('inProcessDiv');
     element.querySelector('.inProcess').style.display = 'block';
-  } else if (data.type === "updated") {
+  } else if (data.type === "updated")
     element.querySelector('.updated').style.display = 'block';
-  }
-  return element; // return element
+
+  return element;
 }
 
 if (articlesOnPage < pages.length) {
@@ -114,10 +115,11 @@ if (articlesOnPage < pages.length) {
     let newProduct = makeProduct(pages[i]);
     productList.appendChild(newProduct);
   }
+
   for (let i = 0; i < allPages.length; i++) {
     var activePage;
     allPages[i].addEventListener('click', function (e) {
-      activePage = document.querySelector(".activePage")
+      activePage = document.querySelector(".activePage");
       e.preventDefault();
       activePage.classList.remove("activePage");
       allPages[i].classList.add("activePage");
@@ -132,6 +134,7 @@ if (articlesOnPage < pages.length) {
       }
     })
   }
+
   let activePageCount;
   prevButton.addEventListener("click", function (e) {
     e.preventDefault();
