@@ -27,7 +27,7 @@
   }, {
     name: 'Mishka',
     img: 'Mishka.png',
-    location: 'Mishka',
+    location: 'Mishka/build/',
     description: 'Shop cute handicraft items for home ^_^',
     textColor: "#141414",
     type: 'new'
