@@ -20,7 +20,7 @@
 
   /* ********   CODE   ******** */
 
-  document.addEventListener('scroll', function (e) {
+  window.addEventListener('scroll', function (e) {
     var centerNow = e.pageY + CENTER;
 
     for (let i = 0; i < works.length; i++) {
