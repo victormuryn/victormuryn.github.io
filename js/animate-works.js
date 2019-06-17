@@ -7,7 +7,6 @@
   /* ******** VARIABLES ******** */
   // HTMLElements
   var works = document.querySelectorAll('.project');
-  console.log(works[0]);
 
   // Other variables
 
@@ -17,10 +16,7 @@
   // addEventListener functions
 
   // Other functions
-
-  /* ********   CODE   ******** */
-
-  window.addEventListener('scroll', function (e) {
+  var onScroll = function (e) {
     var centerNow = e.pageY + CENTER;
 
     for (let i = 0; i < works.length; i++) {
@@ -29,6 +25,11 @@
       else
         works[i].style.transform = 'scale(1)';
     }
+  }
 
-  });
+  /* ********   CODE   ******** */
+
+  document.addEventListener('scroll', onScroll);
+
+  document.addEventListener('touchmove', onScroll);
 })();
