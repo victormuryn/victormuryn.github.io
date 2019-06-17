@@ -501,13 +501,15 @@ button
 
     position: absolute;
     z-index: 2; 
-    top: 50px;
-    right: 50px;
+    top: 2vw;
+    right: 2vw;
 
     margin: 0;
 
     -webkit-transform: rotate(45deg);
             transform: rotate(45deg);
+    -webkit-transform-origin: left center;
+            transform-origin: left center;
     text-transform: uppercase;
 
     color: #fff;
@@ -544,8 +546,9 @@ button
 {
     position: relative;
 
-    min-height: 100vh;
-    padding: 20vh 10px 20px;
+    height: 100vh;
+    min-height: 750px;
+    padding: 20vh 10px 0;
 }
 
 .header__title

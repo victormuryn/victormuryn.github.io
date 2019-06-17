@@ -7,12 +7,9 @@
   /* ******** VARIABLES ******** */
   // HTMLElements
   var works = document.querySelectorAll('.project');
-  var body = document.querySelector('body');
 
   // Other variables
-
   /* ********  EXPORT   ******** */
-
   /* ******** FUNCTIONS ******** */
   // addEventListener functions
 
@@ -21,10 +18,8 @@
     return self.pageYOffset || (document.documentElement && document.documentElement.scrollTop) || (document.body && document.body.scrollTop);
   }
 
-  var onScroll = function (e) {
-    // var centerNow = e.pageY + CENTER;
+  var onScroll = function () {
     var centerNow = getBodyScrollTop() + CENTER;
-
 
     for (let i = 0; i < works.length; i++) {
       if (centerNow >= works[i].offsetTop && centerNow <= works[i].offsetTop + works[i].clientHeight)

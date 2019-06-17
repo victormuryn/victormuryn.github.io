@@ -33,9 +33,9 @@
     var element = document.createElement(tagname);
 
     if (classes) {
-      for (let i = 0; i < classes.length; i++) {
-        element.classList.add(classes[i]);
-      }
+      classes.forEach(className => {
+        element.classList.add(className);
+      });
     }
 
     if (text)
