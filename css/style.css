@@ -390,7 +390,7 @@ template
     font-style: normal;
 
     font-display: swap;
-    src: local('Roboto Black'), local('Roboto-Black'), url('../fonts/woff2/Roboto-Black.woff2') format('woff2'), url('../fonts/woff2/Roboto-Black.woff') format('woff');
+    src: local('Roboto Black'), local('Roboto-Black'), url('../fonts/woff2/Roboto-Black.woff2') format('woff2'), url('../fonts/woff/Roboto-Black.woff') format('woff');
 }
 
 /* *** ROBOTO LIGHT *** */
@@ -401,7 +401,7 @@ template
     font-style: normal;
 
     font-display: swap;
-    src: local('Roboto Light'), local('Roboto-Light'), url('../fonts/woff2/Roboto-Light.woff2') format('woff2'), url('../fonts/woff2/Roboto-Light.woff') format('woff');
+    src: local('Roboto Light'), local('Roboto-Light'), url('../fonts/woff2/Roboto-Light.woff2') format('woff2'), url('../fonts/woff/Roboto-Light.woff') format('woff');
 }
 
 /* *** ROBOTO REGULAR*** */
@@ -412,7 +412,7 @@ template
     font-style: normal;
 
     font-display: swap;
-    src: local('Roboto Regular'), local('Roboto-Regular'), url('../fonts/woff2/Roboto-Regular.woff2') format('woff2'), url('../fonts/woff2/Roboto-Regular.woff') format('woff');
+    src: local('Roboto Regular'), local('Roboto-Regular'), url('../fonts/woff2/Roboto-Regular.woff2') format('woff2'), url('../fonts/woff/Roboto-Regular.woff') format('woff');
 }
 
 html,
@@ -544,8 +544,8 @@ button
 {
     position: relative;
 
-    height: 100vh;
-    padding: 20vh 10px 0;
+    min-height: 100vh;
+    padding: 20vh 10px 20px;
 }
 
 .header__title
@@ -572,7 +572,6 @@ button
         left: 50%;
 
         width: 80%; 
-        margin: 0;
 
         -webkit-transform: translate(-50%, -50%);
                 transform: translate(-50%, -50%);
