@@ -24,7 +24,6 @@
       upWrapper.style.opacity = "0";
       upWrapper.style.visibility = "hidden";
     }
-     sprite
 
   });
 

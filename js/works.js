@@ -27,7 +27,7 @@
   }, {
     name: 'Mishka',
     img: 'Mishka.png',
-    location: 'Mishka/build/',
+    location: 'Mishka/build',
     description: 'Shop cute handicraft items for home ^_^',
     textColor: "#141414",
     type: 'new'
@@ -43,7 +43,8 @@
     new: "New!",
     underDevelopment: 'Under Development',
     upgraded: "Upgraded!"
-  }
+  };
+
   /* ******** VARIABLES ******** */
   // HTMLElements
   var template = document.querySelector('#project').content.querySelector('.project');
@@ -64,8 +65,11 @@
     var project = template.cloneNode(true);
     var number = index % 3;
 
-    if (number === 1 || number === 2)
+    if ( number === 1 || number === 2 )
       project.classList.add('project--half');
+
+    if (number === 1 && index === PROJECTS.length - 1) // check is last and half
+      project.classList.remove('project--half');
 
     if (data.type) {
       project.querySelector('.project__type').textContent = TYPES[data.type];
@@ -75,9 +79,8 @@
     if (data.textColor)
       project.querySelector('.project__hover').style.color = data.textColor;
 
-    if (data.stroke) {
+    if (data.stroke)
       project.querySelector('.project__hover').style.textShadow = data.stroke;
-    }
 
     if (data.type === 'underDevelopment')
       project.querySelector('.project__link').href = 'javascript://0';
@@ -101,4 +104,5 @@
   }
 
   container.appendChild(fragment);
+
 })();

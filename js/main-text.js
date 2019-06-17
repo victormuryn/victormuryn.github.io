@@ -3,7 +3,7 @@
 (function () {
   /* ********  CONSTS   ******** */
   const COLORS = ['#FF8A47', '#8CEEEE', '#FC6170', '#E59DE6', '#FFD747', '#4CAF50']
-  const TITLE_TEXT = 'Hello, world! I\'m Victor, a front-end web developer looking for fun, friends and experience';
+  const TITLE_TEXT = document.querySelector('.header__title').textContent;
   const MS_TO_CHANGE_COLOR = 500;
   const TEXT_COLOR = 'rgba(255, 255, 255, .3)';
 
