@@ -13,27 +13,27 @@
    */
   var PROJECTS = [{
     name: 'Keksobooking',
-    img: 'Keksobooking.jpg',
+    img: 'Keksobooking',
     location: 'Keksobooking',
     description: 'Keksobooking — a service for listing rental properties in downtown Tokyo',
     type: 'underDevelopment',
     textColor: "#141414",
   }, {
     name: 'Kekstagram',
-    img: 'Kekstagram.jpg',
+    img: 'Kekstagram',
     location: 'Kekstagram',
     description: 'Kekstagram — image viewing service',
     type: 'new',
   }, {
     name: 'Mishka',
-    img: 'Mishka.png',
+    img: 'Mishka',
     location: 'Mishka/build',
     description: 'Shop cute handicraft items for home ^_^',
     textColor: "#141414",
     type: 'new'
   }, {
     name: 'Pink',
-    img: 'Pink.jpg',
+    img: 'Pink',
     location: 'Pink',
     description: 'The application will allow you to beat autumn boredom and depression literally in a few clicks!',
     stroke: '#000 0 0 2px'
@@ -87,7 +87,11 @@
     else
       project.querySelector('.project__link').href = 'pages/' + data.location + '/';
 
-    project.querySelector('.project__bg').style.backgroundImage = 'url(\'img/background/works/' + data.img + '\')';
+    project.querySelector('.project__bg').style.backgroundImage = 'url(\'img/background/works/' + data.img + '.jpg\')';
+
+    if (window.matchMedia("(-webkit-min-device-pixel-ratio: 1.5),(min - resolution: 144 dpi),(min - resolution: 2 ddpx)").matches) // check on dpr = 2
+      project.querySelector('.project__bg').style.backgroundImage = 'url(\'img/background/works/' + data.img + '@2x.jpg\')';
+
     project.querySelector('.project__title').textContent = data.name;
     project.querySelector('.project__description').textContent = data.description;
 

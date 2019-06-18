@@ -476,14 +476,13 @@ button
 
     visibility: visible;
 
-    width: 100vw;
-    height: 100vh;
+    height: 7px;
 
     -webkit-transition: all 1s;
             transition: all 1s;
 
     opacity: 1;
-    background: #110f11;
+    background: yellow;
 }
 .preloader--done
 {
@@ -492,54 +491,6 @@ button
     visibility: hidden; 
 
     opacity: 0;
-}
-
-.preloader__beta
-{
-    font-size: 30px;
-    font-weight: 400;
-
-    position: absolute;
-    z-index: 2; 
-    top: 2vw;
-    right: 2vw;
-
-    margin: 0;
-
-    -webkit-transform: rotate(45deg);
-            transform: rotate(45deg);
-    -webkit-transform-origin: left center;
-            transform-origin: left center;
-    text-transform: uppercase;
-
-    color: #fff;
-}
-
-.preloader__percent
-{
-    font-size: 70px;
-
-    position: absolute;
-    top: 50%;
-    left: 50%;
-
-    margin: 0;
-
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%); 
-
-    color: #fff;
-}
-
-.preloader__video
-{
-    position: absolute;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
 }
 
 .header
@@ -689,10 +640,12 @@ button
 
     width: 100%;
     height: 70vh;
-    margin-bottom: 40px; 
+    margin-bottom: 40px;
 
     -webkit-transition: all .5s;
             transition: all .5s;
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
 }
 .project:hover,
 .project:focus
@@ -709,6 +662,11 @@ button
 .project:focus .project__hover
 {
     opacity: 1;
+}
+.project--animated
+{
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
 }
 
 .project__link
@@ -940,6 +898,10 @@ button
 {
     margin-bottom: 10px;
 }
+.contacts__item a
+{
+    outline: 0;
+}
 
 .technologies__title,
 .technologies__list
@@ -966,7 +928,7 @@ button
     -ms-flex-align: center;
     align-items: center;
 }
-.technologies__list img
+.technologies__list .technologies__item
 {
     width: 150px;
     height: auto;
@@ -977,7 +939,9 @@ button
     -webkit-transition: all .3s;
             transition: all .3s;
 }
-.technologies__list img:hover
+.technologies__list .technologies__item--animated,
+.technologies__list .technologies__item:hover,
+.technologies__list .technologies__item:focus
 {
     -webkit-transform: scale(1.2);
             transform: scale(1.2);

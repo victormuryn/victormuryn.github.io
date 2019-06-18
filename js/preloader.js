@@ -5,7 +5,6 @@
   /* ******** VARIABLES ******** */
   // HTMLElements
   var images = document.images;
-  var percentDisplay = document.querySelector('.preloader__percent');
   var preloader = document.querySelector('.preloader');
 
   // Other variables
@@ -17,7 +16,7 @@
   // addEventListener functions
   var imageLoaded = function () {
     imagesLoadedCount++;
-    percentDisplay.textContent = Math.ceil((100 / imagesTotalCount) * imagesLoadedCount) + '%';
+    preloader.style.width = Math.ceil((100 / imagesTotalCount) * imagesLoadedCount) + '%';
 
     if (imagesLoadedCount >= imagesTotalCount) {
       setTimeout(function () {
@@ -30,7 +29,7 @@
   /* ********   CODE   ******** */
 
   if (imagesTotalCount <= 0) {
-    percentDisplay.textContent = '100%';
+    preloader.style.width = '100%';
     setTimeout(function () {
       preloader.classList.add('preloader--done');
     }, 1000);
