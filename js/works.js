@@ -87,10 +87,11 @@
     else
       project.querySelector('.project__link').href = 'pages/' + data.location + '/';
 
-    project.querySelector('.project__bg').style.backgroundImage = 'url(\'img/background/works/' + data.img + '.jpg\')';
+    project.querySelector('source:first-of-type').srcset = "img/works/" + data.img + ".webp 1x, img/works/" + data.img + "@2x.webp 2x";
+    project.querySelector('source:last-of-type').srcset = "img/works/" + data.img + ".jpg 1x, img/works/" + data.img + "@2x.jpg 2x";
+    project.querySelector('img').src = "img/works/" + data.img + ".jpg";
+    project.querySelector('img').alt = data.name;
 
-    if (window.matchMedia("(-webkit-min-device-pixel-ratio: 1.5),(min - resolution: 144 dpi),(min - resolution: 2 ddpx)").matches) // check on dpr = 2
-      project.querySelector('.project__bg').style.backgroundImage = 'url(\'img/background/works/' + data.img + '@2x.jpg\')';
 
     project.querySelector('.project__title').textContent = data.name;
     project.querySelector('.project__description').textContent = data.description;
