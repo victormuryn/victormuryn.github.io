@@ -2,43 +2,6 @@
 
 (function () {
   /* ********  CONSTS   ******** */
-  /**
-   * name - project name - default none
-   * img - image name - default none
-   * location - project folder - default none
-   * description - project description - default none
-   * textColor (not required) - change title and description color, default - #fff
-   * stroke (not requiere) - add stroke to title and desctiption - default none
-   * type (not required) - one of values (new, underDevelopment, upgraded) - default none
-   */
-  var PROJECTS = [{
-    name: 'Keksobooking',
-    img: 'Keksobooking',
-    location: 'Keksobooking',
-    description: 'Keksobooking — a service for listing rental properties in downtown Tokyo',
-    type: 'underDevelopment',
-    textColor: "#141414",
-  }, {
-    name: 'Kekstagram',
-    img: 'Kekstagram',
-    location: 'Kekstagram',
-    description: 'Kekstagram — image viewing service',
-    type: 'new',
-  }, {
-    name: 'Mishka',
-    img: 'Mishka',
-    location: 'Mishka/build',
-    description: 'Shop cute handicraft items for home ^_^',
-    textColor: "#141414",
-    type: 'new'
-  }, {
-    name: 'Pink',
-    img: 'Pink',
-    location: 'Pink',
-    description: 'The application will allow you to beat autumn boredom and depression literally in a few clicks!',
-    stroke: '#000 0 0 2px'
-  }];
-
   var TYPES = {
     new: "New!",
     underDevelopment: 'Under Development',
@@ -56,6 +19,21 @@
   // addEventListener functions
   // Other functions
 
+  var createElement = function (tagname, classes, text) {
+    var element = document.createElement(tagname);
+
+    if (classes) {
+      classes.forEach(className => {
+        element.classList.add(className);
+      });
+    }
+
+    if (text)
+      element.textContent = text;
+
+    return element;
+  };
+
   /**
    * @param {object} data - create new project
    * @param {number} index - number of project
@@ -65,10 +43,10 @@
     var project = template.cloneNode(true);
     var number = index % 3;
 
-    if ( number === 1 || number === 2 )
+    if (number === 1 || number === 2)
       project.classList.add('project--half');
 
-    if (number === 1 && index === PROJECTS.length - 1) // check is last and half
+    if (number === 1 && index === window.PROJECTS.length - 1) // check is last and half
       project.classList.remove('project--half');
 
     if (data.type) {
@@ -103,11 +81,11 @@
   /* ********   CODE   ******** */
   var fragment = document.createDocumentFragment();
 
-  for (let i = 0; i < PROJECTS.length; i++) {
-    var project = createProject(PROJECTS[i], i);
+  window.PROJECTS.forEach((element, i) => {
+    var project = createProject(element, i);
     fragment.appendChild(project);
-  }
+  });
 
+  fragment.appendChild(createElement('h3', ['works__tag'], '</projects>'));
   container.appendChild(fragment);
-
 })();

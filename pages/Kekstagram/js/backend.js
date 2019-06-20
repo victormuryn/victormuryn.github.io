@@ -2,8 +2,6 @@
 
 (function () {
   /* ********  CONSTS   ******** */
-  var ESC_KEYCODE = 27;
-
   /* ******** VARIABLES ******** */
 
   /* ********  EXPORT   ******** */

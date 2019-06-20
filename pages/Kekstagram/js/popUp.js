@@ -1,18 +1,4 @@
 'use strict';
-/** USAGE
- * var popUp = document.querySelector('.popUp');
- * var closeBtn = document.querySelector('.popUp__close');
- * var openBtn = document.querySelector('.popUp__open);
- *
- * // HTMLElement, HTMLElement, HTMLElements
- * var newPopUp = new window.PopUp(popUp, closeBtn, openBtn);
- *
- * // add close eventListeners
- * newPopUp.close();
- *
- * // add open eventListeners
- * newPopUp.open();
- */
 
 (function () {
   var ESC_CODE = 27;
