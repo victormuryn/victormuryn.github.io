@@ -86,6 +86,6 @@
     fragment.appendChild(project);
   });
 
-  fragment.appendChild(createElement('h3', ['works__tag'], '</projects>'));
+  fragment.appendChild( createElement('h3', ['works__tag'], '</projects>') );
   container.appendChild(fragment);
 })();
