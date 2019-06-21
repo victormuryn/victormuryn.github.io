@@ -978,6 +978,19 @@ button
     }
 }
 
+.good-luck
+{
+    font-size: 40px;
+    font-weight: 900;
+
+    padding: 10px; 
+
+    text-align: center;
+    text-transform: uppercase;
+
+    color: rgba(255, 255, 255, .4);
+}
+
 .footer
 {
     padding-bottom: 40px;
