@@ -834,7 +834,7 @@ button
 {
     opacity: 1;
 }
-.project--animated
+.project--animated .project__img
 {
     -webkit-transform: scale(1.05);
             transform: scale(1.05);
@@ -863,13 +863,19 @@ button
 .project__img
 {
     position: absolute;
-    top: 0; 
+    top: 0;
     left: 0;
+
+    width: 100%; 
 
     -webkit-transition: all .5s;
             transition: all .5s;
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0);
+    -webkit-transform: translate(0, 0) scale(1);
+            transform: translate(0, 0) scale(1);
+}
+.project__img img
+{
+    width: 100%;
 }
 
 .project__hover

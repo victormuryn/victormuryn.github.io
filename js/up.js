@@ -4,10 +4,10 @@
   /* ********  CONSTS   ******** */
   /* ******** VARIABLES ******** */
   // HTMLELements
-  var upWrapper = document.querySelector('.up');
+  const upWrapper = document.querySelector('.up');
 
   // Other variables
-  var minHeight = document.documentElement.clientHeight / 2.5;
+  const minHeight = document.documentElement.clientHeight / 2.5;
 
   /* ********  EXPORT   ******** */
   /* ******** FUNCTIONS ******** */
@@ -15,7 +15,7 @@
   // Other functions
 
   /* ********   CODE   ******** */
-  document.addEventListener('scroll', function () {
+  document.addEventListener('scroll', () => {
 
     if (window.pageYOffset >= minHeight) {
       upWrapper.style.opacity = "1";

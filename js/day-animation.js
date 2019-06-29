@@ -2,7 +2,7 @@
 
 (function () {
   /* ******** CONSTS ******** */
-  var FROM_NUMBER_TO_DAY = {
+  const FROM_NUMBER_TO_DAY = {
     0: 'Sunday',
     1: 'Monday',
     2: 'Tuesday',
@@ -11,7 +11,7 @@
     5: 'Friday',
     6: 'Saturday',
   };
-  var WORDS = ['ace', 'amazing', 'astonishing', 'astounding', 'awe-inspiring', 'awesome', 'badass',
+  const WORDS = ['ace', 'amazing', 'astonishing', 'astounding', 'awe-inspiring', 'awesome', 'badass',
     'beautiful',
     'bedazzling', 'bee\'s knees', 'best', 'breathtaking', 'brilliant', 'cat\'s meow', 'cat\'s pajamas',
     'classy',
@@ -40,12 +40,12 @@
 
   /* ******** VARIABLES ******** */
   // HTMLElements
-  var date = document.querySelector('.good-luck__day');
-  var wish = document.querySelector('.good-luck__wish');
-  var article = document.querySelector('.good-luck__article');
+  const date = document.querySelector('.good-luck__day');
+  const wish = document.querySelector('.good-luck__wish');
+  const article = document.querySelector('.good-luck__article');
 
   // Other variables
-  var todayDay = new Date().getDay();
+  const todayDay = new Date().getDay();
 
   /* ******** EXPORT ******** */
 
@@ -53,12 +53,9 @@
   // addEventListener functions
 
   // Other functions
-  var chooseRandomFromArray = function (array) {
-    var item = Math.floor(Math.random() * array.length);
-    return array[item];
-  };
+  const chooseRandomFromArray = (array) => array[ Math.floor( Math.random() * array.length ) ];
 
-  var isVowel = function (letter) {
+  const isVowel = (letter) => {
     letter = letter.toLowerCase();
 
     if (letter === 'a' || letter === 'e' || letter === 'o' || letter === 'i' || letter === 'u')
@@ -67,11 +64,10 @@
     return false;
   }
 
-  var renderText = function (text) {
-    var time = Math.floor(1500 / text.length);
+  const renderText = (text) => {
+    const time = Math.floor(1500 / text.length);
 
-
-    var addText = setInterval(() => {
+    const addText = setInterval(() => {
       wish.textContent = text.slice(0, wish.textContent.length + 1);
 
       if (wish.textContent.length === text.length) {
@@ -79,7 +75,7 @@
 
         setTimeout(() => {
 
-          var removeText = setInterval(() => {
+          const removeText = setInterval(() => {
             wish.textContent = wish.textContent.slice(0, -1);
 
             if (!wish.textContent.length) {
@@ -95,8 +91,8 @@
 
   };
 
-  var renderWish = function () {
-    var word = chooseRandomFromArray(WORDS);
+  var renderWish = () => {
+    const word = chooseRandomFromArray(WORDS);
 
     if (isVowel(word[0]))
       article.textContent = 'an';
@@ -110,5 +106,4 @@
 
   renderWish();
   setInterval(renderWish, 5000);
-
 })();

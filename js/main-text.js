@@ -9,7 +9,7 @@
 
   /* ******** VARIABLES ******** */
   // HTMLElements
-  var title = document.querySelector('.header__title');
+  const title = document.querySelector('.header__title');
 
   // Other variables
 
@@ -17,10 +17,7 @@
   /* ******** FUNCTIONS ******** */
   // addEventListener functions
   // Other functions
-  var chooseRandomFromArray = function (array) {
-    var item = Math.floor(Math.random() * array.length);
-    return array[item];
-  };
+  const chooseRandomFromArray = (array) => array[ Math.floor( Math.random() * array.length ) ];
 
   /**
    * @param {string} tagname
@@ -29,11 +26,11 @@
    *
    * @return new HTMLTagnameElement
    */
-  var createElement = function (tagname, classes, text) {
-    var element = document.createElement(tagname);
+  const createTag = (tagname, classes, text) => {
+    const element = document.createElement(tagname);
 
     if (classes) {
-      classes.forEach(className => {
+      classes.forEach((className) => {
         element.classList.add(className);
       });
     }
@@ -47,13 +44,12 @@
   title.textContent = '';
 
   for (let i = 0; i < TITLE_TEXT.length; i++) {
-
-    let letter = createElement('span', ['header__letter'], TITLE_TEXT[i]);
+    const letter = createTag('span', ['header__letter'], TITLE_TEXT[i]);
 
     if (letter.textContent !== '') {
       letter.dataset.color = chooseRandomFromArray(COLORS);
 
-      letter.addEventListener('mouseover', function () {
+      letter.addEventListener('mouseover', () => {
         letter.style.color = letter.dataset.color;
 
         setTimeout(() => {

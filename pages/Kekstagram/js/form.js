@@ -175,7 +175,6 @@
       effectDepth.style.width = position + 'px';
       var percent = position * 100 / EFFECTS_LINE_WIDTH;
 
-
       switch (currentFilter) {
         case 'phobos':
           percent = position * 3 / EFFECTS_LINE_WIDTH;
@@ -203,6 +202,9 @@
 
     var onMouseUp = function () {
       evt.preventDefault();
+
+      window.card.onMouseUp();
+      window.map.onMouseUp();
 
       document.removeEventListener('mousemove', onMouseMove);
       document.removeEventListener('mouseup', onMouseUp);

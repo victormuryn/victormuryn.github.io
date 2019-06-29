@@ -5,10 +5,10 @@
 
   /* ******** VARIABLES ******** */
   // HTMLElements
-  var burger = document.querySelector('.nav__burger');
-  var nav = document.querySelector('.nav');
-  var linkTemplate = document.querySelector('#link__item').content.querySelector('.nav__projects-item');
-  var list = document.querySelector('.nav__projects-list');
+  const burger = document.querySelector('.nav__burger');
+  const nav = document.querySelector('.nav');
+  const linkTemplate = document.querySelector('#link__item').content.querySelector('.nav__projects-item');
+  const list = document.querySelector('.nav__projects-list');
 
   // Other variables
 
@@ -18,10 +18,10 @@
   // addEventListener functions
 
   // Other functions
-  var createListItem = function (data) {
-    var clone = linkTemplate.cloneNode(true);
+  const createListItem = (data) => {
+    const clone = linkTemplate.cloneNode(true);
 
-    clone.querySelector('.nav__projects-link').href = 'pages/' + data.location + '/';
+    clone.querySelector('.nav__projects-link').href = data.type === 'underDevelopment' ? `/#${data.img}` : `pages/${data.location}/`;
     clone.querySelector('.nav__projects-link').textContent = data.name;
 
     return clone;
@@ -29,7 +29,7 @@
 
   /* ********   CODE   ******** */
 
-  burger.addEventListener('click', function (e) {
+  burger.addEventListener('click', (e) => {
     e.preventDefault();
     nav.style.backgroundColor = '#141414';
     burger.classList.toggle('nav__burger--active');
@@ -69,7 +69,7 @@
   });
 
   var listFragment = document.createDocumentFragment();
-  window.PROJECTS.forEach(element => {
+  window.PROJECTS.forEach((element) => {
     var link = createListItem(element);
     listFragment.appendChild(link);
   });
