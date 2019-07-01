@@ -1,23 +1,25 @@
-window.Animate = function (elements, activeClass) {
-  this.elements = elements;
-  this.activeClass = activeClass;
-  this._center = document.documentElement.clientHeight / 2;
+'use strict';
 
-  this._getBodyScrollTop = () => {
-    return self.pageYOffset || (document.documentElement && document.documentElement.scrollTop) || (document.body && document.body.scrollTop);
-  };
+(function () {
+  window.Animate = function (elements, activeClass) {
+    this.elements = elements;
+    this.activeClass = activeClass;
+    this._center = document.documentElement.clientHeight / 2;
 
-  document.addEventListener(`scroll`, () => {
-    const centerNow = this._getBodyScrollTop() + this._center;
+    this._getBodyScrollTop = () => {
+      return self.pageYOffset || (document.documentElement && document.documentElement.scrollTop) || (document.body && document.body.scrollTop);
+    };
 
-    for (let i = 0; i < this.elements.length; i++) {
+    document.addEventListener(`scroll`, () => {
+      const centerNow = this._getBodyScrollTop() + this._center;
 
-      if (centerNow >= this.elements[i].offsetTop && centerNow <= this.elements[i].offsetTop + this.elements[i].clientHeight)
-        this.elements[i].classList.add(this.activeClass);
-      else
-        this.elements[i].classList.remove(this.activeClass);
+      for (const element of this.elements) {
+        if (centerNow >= element.offsetTop && centerNow <= element.offsetTop + element.clientHeight)
+          element.classList.add(this.activeClass);
+        else
+          element.classList.remove(this.activeClass);
+      }
+    });
 
-    }
-  });
-
-}
+  }
+})();

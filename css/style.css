@@ -834,7 +834,7 @@ button
 {
     opacity: 1;
 }
-.project--animated .project__img
+.project--animated .project__img img
 {
     -webkit-transform: scale(1.05);
             transform: scale(1.05);
@@ -855,6 +855,13 @@ button
 
 .project__link
 {
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    left: 0;
+
+    width: 100%; 
+
     text-decoration: none;
 
     outline: none;
@@ -862,27 +869,28 @@ button
 
 .project__img
 {
-    position: absolute;
-    top: 0;
-    left: 0;
+    position: relative; 
 
-    width: 100%; 
+    width: 100%;
 
     -webkit-transition: all .5s;
             transition: all .5s;
     -webkit-transform: translate(0, 0) scale(1);
             transform: translate(0, 0) scale(1);
+
+    -o-object-fit: cover;
+       object-fit: cover;
 }
 .project__img img
 {
     width: 100%;
+
+    -webkit-transition: all .5s;
+            transition: all .5s;
 }
 
 .project__hover
 {
-    position: relative;
-    z-index: 2;
-
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;

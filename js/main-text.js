@@ -17,7 +17,7 @@
   /* ******** FUNCTIONS ******** */
   // addEventListener functions
   // Other functions
-  const chooseRandomFromArray = (array) => array[ Math.floor( Math.random() * array.length ) ];
+  const chooseRandomFromArray = (array) => array[Math.floor(Math.random() * array.length)];
 
   /**
    * @param {string} tagname
@@ -42,9 +42,9 @@
   };
   /* ********   CODE   ******** */
   title.textContent = '';
-
-  for (let i = 0; i < TITLE_TEXT.length; i++) {
-    const letter = createTag('span', ['header__letter'], TITLE_TEXT[i]);
+  
+  for (const character of TITLE_TEXT) {
+    const letter = createTag('span', ['header__letter'], character);
 
     if (letter.textContent !== '') {
       letter.dataset.color = chooseRandomFromArray(COLORS);
@@ -59,7 +59,6 @@
 
         letter.style.transition = '';
       });
-
     }
 
     title.appendChild(letter);
