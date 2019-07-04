@@ -13,6 +13,14 @@
    */
 
   window.PROJECTS = [{
+    name: 'Swedish Bitter',
+    img: 'swedish-bitter',
+    location: 'SwedishBitter',
+    description: 'Harvesting herbs Swedish Bitter - has no analogues in the world for the healing power and breadth of healing properties',
+    type: 'underDevelopment',
+    stroke: '#000 0 0 2px',
+    textColor: "#fff",
+  }, {
     name: 'Kekstagram',
     img: 'Kekstagram',
     location: 'Kekstagram',
