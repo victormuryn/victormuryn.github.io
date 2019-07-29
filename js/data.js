@@ -17,7 +17,7 @@
     img: 'swedish-bitter',
     location: 'SwedishBitter',
     description: 'Harvesting herbs Swedish Bitter - has no analogues in the world for the healing power and breadth of healing properties',
-    type: 'underDevelopment',
+    type: 'new',
     stroke: '#000 0 0 2px',
     textColor: "#fff",
   }, {
