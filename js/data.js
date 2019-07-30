@@ -13,6 +13,13 @@
    */
 
   window.PROJECTS = [{
+    name: 'Shoe Shop',
+    img: 'shoeshop',
+    location: 'shoeshop',
+    description: 'Shoe Shop is a modern online shoe store',
+    type: 'underDevelopment',
+    textColor: "#000",
+  }, {
     name: 'Swedish Bitter',
     img: 'swedish-bitter',
     location: 'SwedishBitter',
@@ -24,15 +31,13 @@
     name: 'Kekstagram',
     img: 'Kekstagram',
     location: 'Kekstagram',
-    description: 'Kekstagram — image viewing service',
-    type: 'new',
+    description: 'Kekstagram — image viewing service'
   }, {
     name: 'Mishka',
     img: 'Mishka',
     location: 'Mishka/build',
     description: 'Shop cute handicraft items for home ^_^',
-    textColor: "#141414",
-    type: 'new'
+    textColor: "#141414"
   }, {
     name: 'Pink',
     img: 'Pink',
