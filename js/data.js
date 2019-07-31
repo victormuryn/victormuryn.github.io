@@ -17,7 +17,7 @@
     img: 'shoeshop',
     location: 'shoeshop',
     description: 'Shoe Shop is a modern online shoe store',
-    type: 'underDevelopment',
+    type: 'new',
     textColor: "#000",
   }, {
     name: 'Swedish Bitter',
