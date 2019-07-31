@@ -15,7 +15,7 @@
   window.PROJECTS = [{
     name: 'Shoe Shop',
     img: 'shoeshop',
-    location: 'shoeshop',
+    location: 'Shoeshop',
     description: 'Shoe Shop is a modern online shoe store',
     type: 'new',
     textColor: "#000",
