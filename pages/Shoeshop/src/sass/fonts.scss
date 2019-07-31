@@ -1,0 +1,47 @@
+/* *** FILE NAME MUST BE *** */
+/* *** FontName-Weight *** */
+/* ***
+Weight:
+ 1. Thin
+ 2. ExtraLight
+ 3. Light
+ 4. Regular
+ 5. Medium
+ 6. SemiBold
+ 7. Bold
+ 8. ExtraBold
+ 9. Black
+*** */
+
+/* ***
+1. font-family
+2. font-style
+3. font-weight
+*** */
+
+/* *** Cormorant Garamond Bold *** */
+@include font("Cormorant Garamond", 700);
+
+/* *** Cormorant Garamond Medium *** */
+@include font("Cormorant Garamond", 500);
+
+/* *** Poppins Bold *** */
+@include font("Poppins", 700);
+
+/* *** Poppins Light *** */
+@include font("Poppins", 300);
+
+/* *** Poppins Medium *** */
+@include font("Poppins", 500);
+
+/* *** Poppins Regular *** */
+@include font("Poppins", 400);
+
+/* *** Roboto Bold *** */
+@include font("Roboto", 700);
+
+/* *** Roboto Regular *** */
+@include font("Roboto", 400);
+
+/* *** Ubuntu Medium *** */
+@include font("Ubuntu", 500);

@@ -1,0 +1,142 @@
+.footer {
+  max-width: 1171px;
+  margin: 0 auto;
+  margin-top: 205px;
+  border-top: 2px solid rgba(#dbdbdb, .72);
+  border-bottom: 2px solid rgba(#dbdbdb, .72);
+  padding: 55px 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__logo-link {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.footer__logo-text {
+  font-family: Ubuntu;
+  color: #61e9c2;
+  font-size: 25px;
+  font-weight: 500;
+  letter-spacing: 1.65px;
+  display: inline-block;
+  margin-left: 6px;
+
+  &--black {
+    color: #232323;
+  }
+}
+
+.footer__nav-list,
+.footer__links-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.footer__nav-item,
+.footer__links-item {
+  margin-bottom: 7px;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.footer__nav-link,
+.footer__links-link {
+  font-family: Poppins;
+  color: $text-color;
+  font-size: 15px;
+  letter-spacing: 0.75px;
+  text-decoration: none;
+}
+
+.footer__subscribe-text {
+  font-family: Poppins;
+  color: $text-color;
+  font-size: 15px;
+  line-height: 25px;
+  letter-spacing: 0.75px;
+  margin: 0;
+  margin-bottom: 30px;
+}
+
+.footer__subscribe-email {
+  width: 304px;
+  height: 47px;
+  box-shadow: 4px 3px 24px 1px rgba(231, 231, 231, 0.75);
+  background-color: #fff;
+  border: none;
+  padding-left: 32px;
+}
+
+.footer__subscribe-button {
+  width: 146px;
+  height: 47px;
+  box-shadow: 4px 3px 19px 1px rgba(242, 241, 241, 0.75);
+  background-color: $light;
+  margin-left: 3px;
+  font-family: Poppins;
+  color: #000;
+  font-size: 15px;
+  letter-spacing: 0.15px;
+  border: none;
+}
+
+.contact-us {
+  max-width: 1171px;
+  margin: 0 auto;
+  padding: 27px 10px;
+  text-align: right;
+}
+
+.contact-us__link {
+  font-family: Poppins;
+  color: #a6a5a5;
+  font-size: 15px;
+  font-weight: 300;
+  letter-spacing: 0.23px;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 900px) {
+  .footer {
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .footer {
+    margin-top: 100px;
+  }
+}
+
+
+@media screen and (max-width: 450px) {
+  .footer {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .footer__logo-link {
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .footer__subscribe {
+    margin-top: 30px;
+  }
+
+  .footer__subscribe-text {
+    margin-bottom: 15px;
+  }
+
+  .footer__subscribe-email {
+    margin-bottom: 10px;
+  }
+}

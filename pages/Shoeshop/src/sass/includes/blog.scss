@@ -1,0 +1,275 @@
+.blog {
+  margin-top: 100px;
+}
+
+.blog__title {
+  margin: 0;
+  text-align: center;
+  font-family: "Cormorant Garamond";
+  font-size: 45px;
+  font-weight: 500;
+  letter-spacing: 0.45px;
+}
+
+.blog__pages {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  padding-right: 18%;
+}
+
+.blog__dots-list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.blog__dots-item {
+  @include square(15px);
+  border-radius: 50%;
+  background-color: #232323;
+  margin-right: 15px;
+
+  &:nth-of-type(2) {
+    background-color: #a2f2db;
+  }
+
+  &:nth-of-type(3) {
+    background-color: #e1e1e1;
+  }
+}
+
+.blog__stripe {
+  width: 45px;
+  height: 2px;
+  background-color: #0e0e0e;
+  opacity: 0.72;
+  margin-right: 15px;
+}
+
+.blog__circle {
+  @include square(29px);
+  border-radius: 50%;
+  border: 6px solid #97f0d6;
+  margin-right: 19px;
+}
+
+.blog__pages-text {
+  font-family: Poppins;
+  color: #181818;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+  margin: 0;
+
+  &--total {
+    margin-right: 22px;
+    margin-left: 9px;
+  }
+
+  &--current {
+    margin-right: 9px;
+  }
+}
+
+.blog__pages-button {
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+  font-size: 25px;
+
+  &--next {
+    color: #5cdeb7;
+    margin-left: 12px;
+  }
+}
+
+.blog__article {
+  display: flex;
+  max-width: 1096px;
+  padding-right: 45px;
+  margin: 0 auto;
+  margin-top: 77px;
+}
+
+.article__img-wrapper {
+  box-shadow: 4px 3px 19px 1px rgba(223, 220, 220, 0.75);
+  background-color: rgba(#fff, .72);
+  padding: 6px;
+  position: relative;
+  z-index: 2;
+  width: 437px;
+  height: 472px;
+}
+
+.article__img-container {
+  position: relative;
+  margin-right: 85px;
+  margin-bottom: 22px;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 266px;
+    height: 352px;
+    border: 10px solid #f7f7f7;
+    border-radius: 5px;
+    position: absolute;
+    top: -57px;
+    left: -62px;
+    z-index: 1;
+    background-color: transparent;
+  }
+
+  &::after {
+    content: "Nike";
+    text-transform: uppercase;
+    display: block;
+    height: 266px;
+    width: 352px;
+    opacity: 0.72;
+    background-image: linear-gradient(-100deg, #d4fcf0 0%, #64e8c2 100%);
+    transform: rotate(-90deg);
+    line-height: 420px;
+    font-family: Poppins;
+    color: rgba(#fff, 0.13);
+    font-size: 150px;
+    font-weight: 700;
+    position: absolute;
+    letter-spacing: 1.5px;
+    right: -154px;
+    bottom: -146px;
+  }
+}
+
+.article__img {
+  width: 425px;
+  height: 460px;
+}
+
+.article__text-wrapper {
+  max-width: 531px;
+}
+
+.article__title {
+  font-family: Poppins;
+  color: #000;
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 0.2px;
+  margin: 14px 0 30px;
+
+}
+
+.article__text {
+  font-family: "Poppins";
+  font-weight: 300;
+  letter-spacing: 0.15px;
+  color: $text-color;
+  font-size: 15px;
+  line-height: 25px;
+  letter-spacing: 0.2px;
+  margin: 0;
+  margin-bottom: 72px;
+}
+
+.article__button {
+  display: block;
+  margin-left: auto;
+  margin-right: -45px;
+  @include button(-10px, -10px);
+  border: 0;
+  width: 146px;
+  height: 48px;
+  background-color: $light;
+  font-family: Poppins;
+  color: #0a0a0a;
+  font-size: 15px;
+  letter-spacing: 0.15px;
+}
+
+.blog__article:nth-of-type(2n) {
+  justify-content: space-between;
+
+  .article__img-container {
+    order: 1;
+    margin-right: 0;
+
+    &::before,
+    &::after {
+      display: none;
+    }
+  }
+
+  .article__text-wrapper {
+    order: 0;
+    margin-bottom: 30px;
+  }
+
+  .article__button {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.blog__article:not(.blog__article--active) {
+  display: none;
+}
+
+@media screen and (max-width: 1100px) {
+  .blog__pages {
+    padding-right: 50px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .blog__article {
+    flex-direction: column;
+    justify-content: center;
+    padding: 0;
+  }
+
+  .article__img-container {
+    margin-right: 0;
+
+    &::before,
+    &::after {
+      display: none;
+    }
+  }
+  .article__img-wrapper {
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .article__img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .article__text-wrapper {
+    padding: 0 10px;
+    max-width: none;
+  }
+
+  .article__button {
+    margin-right: auto;
+  }
+
+  .blog__pages {
+    margin-top: 30px;
+    padding-right: 0;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .blog__circle,
+  .blog__stripe,
+  .blog__dots-list {
+    display: none;
+  }
+}

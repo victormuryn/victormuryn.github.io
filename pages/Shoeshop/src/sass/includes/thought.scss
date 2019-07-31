@@ -1,0 +1,91 @@
+.thought {
+  background-color: #f8f8f8;
+  padding: 100px 10px;
+  margin-top: 204px;
+  text-align: center;
+  position: relative;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    display: block;
+    transform: translateY(-50%);
+    width: 114px;
+    height: 19px;
+    background: url("../img/thoughtArrow1.svg") no-repeat center center;
+  }
+
+  &::after {
+    left: auto;
+    right: 5%;
+    background-image: url("../img/thoughtArrow2.svg");
+  }
+}
+
+.thought__title {
+  margin: 0;
+  font-family: "Cormorant Garamond";
+  color: #0a0a0a;
+  font-size: 45px;
+  font-weight: 500;
+  letter-spacing: 0.45px;
+  margin-bottom: 35px;
+}
+
+.thought__text {
+  font-family: Poppins;
+  max-width: 832px;
+  color: $text-color;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 25px;
+  letter-spacing: 0.15px;
+  margin: 0 auto;
+  margin-bottom: 36px;
+}
+
+.thought__author {
+  font-family: Poppins;
+  color: #666;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 25px;
+  letter-spacing: 0.18px;
+  margin: 0;
+
+  span {
+    display: block;
+  }
+
+  &--job {
+    color: #51cda9;
+    font-size: 15px;
+    letter-spacing: 0.15px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .thought {
+    &::before,
+    &::after {
+      top: auto;
+      bottom: 100px;
+      transform: translateY(0);
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .thought {
+    margin-top: 100px;
+    padding-bottom: 115px;
+
+    &::before,
+    &::after {
+      bottom: 50px !important;
+    }
+  }
+}
