@@ -13,13 +13,6 @@
    */
 
   window.PROJECTS = [{
-    name: 'Neteller Pay',
-    img: 'neteller-pay',
-    location: 'netellerpay',
-    description: 'Neteller Pay — open your account with support for cards and cryptocurrencies online. Reliable storage of your funds is guaranteed!',
-    type: 'underDevelopment',
-    textColor: "#fff",
-  }, {
     name: 'Shoe Shop',
     img: 'shoeshop',
     location: 'shoeshop',
