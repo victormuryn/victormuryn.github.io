@@ -8,11 +8,18 @@
    * location - project folder - default none
    * description - project description - default none
    * textColor (not required) - change title and description color, default - #fff
-   * stroke (not requiere) - add stroke to title and desctiption - default none
+   * stroke(not requiredrequired) - add stroke to title and desctiption - default none
    * type (not required) - one of values (new, underDevelopment, upgraded) - default none
    */
 
   window.PROJECTS = [{
+    name: 'Zippy',
+    img: 'zippy',
+    location: 'zippy',
+    description: 'A good template for everything you need',
+    type: 'new',
+    textColor: "#000",
+  }, {
     name: 'Shoe Shop',
     img: 'shoeshop',
     location: 'shoeshop',
@@ -24,7 +31,6 @@
     img: 'swedish-bitter',
     location: 'SwedishBitter',
     description: 'Harvesting herbs Swedish Bitter - has no analogues in the world for the healing power and breadth of healing properties',
-    type: 'new',
     stroke: '#000 0 0 2px',
     textColor: "#fff",
   }, {
