@@ -19,11 +19,6 @@
   // addEventListener functions
   // Other functions
 
-  /**
-   * @param {object} data - create new project
-   * @param {number} index - number of project
-   * @returns new HTMLElement
-   */
   const createProject = (data, index) => {
     const project = template.cloneNode(true);
     const number = index % 3;

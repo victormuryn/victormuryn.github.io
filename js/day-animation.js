@@ -53,9 +53,9 @@
   // addEventListener functions
 
   // Other functions
-  const chooseRandomFromArray = (array) => array[ Math.floor( Math.random() * array.length ) ];
+  const chooseRandomFromArray = array => array[ Math.floor( Math.random() * array.length ) ];
 
-  const isVowel = (letter) => {
+  const isVowel = letter => {
     letter = letter.toLowerCase();
 
     if (letter === 'a' || letter === 'e' || letter === 'o' || letter === 'i' || letter === 'u')
@@ -64,7 +64,7 @@
     return false;
   }
 
-  const renderText = (text) => {
+  const renderText = text => {
     const time = Math.floor(1500 / text.length);
 
     const addText = setInterval(() => {

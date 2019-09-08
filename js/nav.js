@@ -18,7 +18,7 @@
   // addEventListener functions
 
   // Other functions
-  const createListItem = (data) => {
+  const createListItem = data => {
     const clone = linkTemplate.cloneNode(true);
 
     clone.querySelector('.nav__projects-link').href = data.type === 'underDevelopment' ? `/#${data.img}` : `pages/${data.location}/`;

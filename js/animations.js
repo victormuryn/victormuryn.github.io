@@ -15,9 +15,6 @@
   // Other functions
   /* ********   CODE   ******** */
 
-  if (works)
-    new window.Animate(works, `project--animated`);
-
   if (technologies)
     new window.Animate(technologies, `technologies__item--animated`);
 

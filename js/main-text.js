@@ -17,20 +17,13 @@
   /* ******** FUNCTIONS ******** */
   // addEventListener functions
   // Other functions
-  const chooseRandomFromArray = (array) => array[Math.floor(Math.random() * array.length)];
+  const chooseRandomFromArray = array => array[Math.floor(Math.random() * array.length)];
 
-  /**
-   * @param {string} tagname
-   * @param {array} class - classes list
-   * @param {text} text
-   *
-   * @return new HTMLTagnameElement
-   */
   const createTag = (tagname, classes, text) => {
     const element = document.createElement(tagname);
 
     if (classes) {
-      classes.forEach((className) => {
+      classes.forEach(className => {
         element.classList.add(className);
       });
     }
