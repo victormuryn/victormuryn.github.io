@@ -72,3 +72,20 @@
   container.insertBefore(fragment, document.querySelector('.works__tag--close'));
 
 })();
+
+(function () {
+  let close = document.querySelector(`.holiday__close`);
+  let holiday = document.querySelector(`.holiday`);
+
+  if (localStorage.getItem(`closed`) == `true`) {
+    holiday.classList.add(`holiday--closed`);
+  }
+
+  if (close) {
+    close.addEventListener(`click`, (e) => {
+      e.preventDefault();
+      localStorage.setItem(`closed`, `true`);
+      holiday.classList.add(`holiday--closed`);
+    });
+  }
+})();
