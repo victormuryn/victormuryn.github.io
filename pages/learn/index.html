@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Learn new words</title>
+
+  <style>
+    .correct-color {
+      width: 50px;
+      height: 20px;
+      background-color: green;
+    }
+    .incorrect .correct-color{
+      background-color: red;
+    }
+  </style>
+</head>
+<body>
+  Left: <span class="left"></span><br>
+  Mistakes: <span class="mistakes">0</span>
+  <div class="correct">
+    <p class="correct-text">Correct</p>
+    <p class="correct-name"></p>
+    <div class="correct-color"></div>
+  </div>
+
+  <p class="word-ukraininan">Несправедливість</p>
+  <input type="text" class="word-english">
+  <button class="check">Check</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
