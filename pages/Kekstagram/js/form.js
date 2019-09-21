@@ -4,7 +4,7 @@
   /* ******** CONSTS ******** */
   var EFFECTS_LINE_WIDTH = 453;
   var ESC_KEYCODE = 27;
-  var FILE_EXTENSIONS = ['jpeg', 'jpg', 'png', 'gif'];
+  var FILE_EXTENSIONS = ['jpeg', 'jpg', 'png', 'gif', 'webp'];
   var MAX_SIZE = 5242880; // 2 MB
   var MAX_VALUE = 100;
   var MIN_VALUE = 25;
@@ -202,9 +202,6 @@
 
     var onMouseUp = function () {
       evt.preventDefault();
-
-      window.card.onMouseUp();
-      window.map.onMouseUp();
 
       document.removeEventListener('mousemove', onMouseMove);
       document.removeEventListener('mouseup', onMouseUp);
