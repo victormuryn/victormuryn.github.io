@@ -113,6 +113,21 @@ let dictionary = {
   "розчарувати": "let down",
   "доглядати": "look after",
   "розійтися": "split up",
+  "додавати": "add up",
+  "повертатися(1)": "come back",
+  "поспішити": "hurry up",
+  "повертати гроші": "pay back",
+  "заощаджувати": "save up",
+  "поставити на місце": "take back",
+  "зняти": "take down",
+  "зламатися": "brake down",
+  "випадково натрапити": "come across",
+  "дізнатися": "find out",
+  "вигадати": "make up",
+  "зламати тягнучи": "pull of",
+  "викинути": "throw away",
+  "вимкнути": "turn off",
+  "ввіькнути": "turn on"
 };
 
 let randomKey = function (obj) {
