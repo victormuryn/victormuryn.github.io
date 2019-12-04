@@ -13,18 +13,24 @@
    */
 
   window.PROJECTS = [{
+    name: 'Dark Clothes',
+    img: 'dark-clothes',
+    location: 'darkclothes',
+    description: 'This is an online store of branded clothing Dark Clothes',
+    type: 'underDevelopment',
+    // textColor: "#000",
+    stroke: '#000 0 0 2px',
+  },{
     name: 'Zippy',
     img: 'zippy',
     location: 'zippy',
     description: 'A good template for everything you need',
-    type: 'new',
     textColor: "#000",
   }, {
     name: 'Shoe Shop',
     img: 'shoeshop',
     location: 'shoeshop',
     description: 'Shoe Shop is a modern online shoe store',
-    type: 'new',
     textColor: "#000",
   }, {
     name: 'Swedish Bitter',
