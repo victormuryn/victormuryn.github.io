@@ -17,8 +17,7 @@
     img: 'dark-clothes',
     location: 'darkclothes',
     description: 'This is an online store of branded clothing Dark Clothes',
-    type: 'underDevelopment',
-    // textColor: "#000",
+    type: 'new',
     stroke: '#000 0 0 2px',
   },{
     name: 'Zippy',
@@ -29,7 +28,7 @@
   }, {
     name: 'Shoe Shop',
     img: 'shoeshop',
-    location: 'shoeshop',
+    location: 'Shoeshop',
     description: 'Shoe Shop is a modern online shoe store',
     textColor: "#000",
   }, {
