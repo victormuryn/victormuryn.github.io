@@ -7,14 +7,6 @@
     "type": "underDevelopment",
     "stroke": "#000 0 0 2px"
   },
-	{
-    "name": "Koteyka",
-    "img": "cat-hotel",
-    "location": "cat-hotel",
-    "description": "Koteyka - a cozy hotel for cats and cats",
-    "type": "underDevelopment",
-    "stroke": "#000 0 0 2px"
-  },
   {
     "name": "Dark Clothes",
     "img": "dark-clothes",
