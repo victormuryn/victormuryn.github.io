@@ -16,20 +16,6 @@
     "stroke": "#000 0 0 2px"
   },
   {
-    "name": "Zippy",
-    "img": "zippy",
-    "location": "zippy",
-    "description": "A good template for everything you need",
-    "textColor": "#000"
-  },
-  {
-    "name": "Shoe Shop",
-    "img": "shoeshop",
-    "location": "Shoeshop",
-    "description": "Shoe Shop is a modern online shoe store",
-    "textColor": "#000"
-  },
-  {
     "name": "Swedish Bitter",
     "img": "swedish-bitter",
     "location": "SwedishBitter",
