@@ -1,13 +1,5 @@
 [
   {
-    "name": "School №27",
-    "img": "school",
-    "location": "cat-hotel",
-    "description": "Main page of my school",
-    "type": "underDevelopment",
-    "stroke": "#000 0 0 2px"
-  },
-  {
     "name": "Dark Clothes",
     "img": "dark-clothes",
     "location": "darkclothes",
