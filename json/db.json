@@ -1,10 +1,15 @@
 [
   {
+    "name": "Koteyka",
+    "img": "cat-hotel",
+    "location": "cat-hotel",
+    "description": "Koteyka is a cozy hotel for cats and cats"
+  },
+  {
     "name": "Dark Clothes",
     "img": "dark-clothes",
     "location": "darkclothes",
     "description": "This is an online store of branded clothing Dark Clothes",
-    "type": "new",
     "stroke": "#000 0 0 2px"
   },
   {
@@ -14,12 +19,6 @@
     "description": "Harvesting herbs Swedish Bitter - has no analogues in the world for the healing power and breadth of healing properties",
     "stroke": "#000 0 0 2px",
     "textColor": "#fff"
-  },
-  {
-    "name": "Kekstagram",
-    "img": "Kekstagram",
-    "location": "Kekstagram",
-    "description": "Kekstagram — image viewing service"
   },
   {
     "name": "Mishka",
