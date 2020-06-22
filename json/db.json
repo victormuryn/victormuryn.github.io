@@ -3,7 +3,8 @@
     "name": "Koteyka",
     "img": "cat-hotel",
     "location": "cat-hotel",
-    "description": "Koteyka is a cozy hotel for cats and cats"
+    "description": "Koteyka is a cozy hotel for cats and cats",
+    "stroke": "#000 0 0 2px"
   },
   {
     "name": "Dark Clothes",
