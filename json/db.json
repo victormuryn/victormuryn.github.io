@@ -1,9 +1,10 @@
 [
   {
-    "name": "Koteyka",
-    "img": "cat-hotel",
-    "location": "cat-hotel",
-    "description": "Koteyka is a cozy hotel for cats and cats",
+    "name": "School",
+    "img": "school",
+    "location": "school",
+    "description": "I created a website for my school",
+    "type": "underDevelopment",
     "stroke": "#000 0 0 2px"
   },
   {
@@ -20,13 +21,6 @@
     "description": "Harvesting herbs Swedish Bitter - has no analogues in the world for the healing power and breadth of healing properties",
     "stroke": "#000 0 0 2px",
     "textColor": "#fff"
-  },
-  {
-    "name": "Mishka",
-    "img": "Mishka",
-    "location": "Mishka/build",
-    "description": "Shop cute handicraft items for home ^_^",
-    "textColor": "#141414"
   },
   {
     "name": "Pink",
