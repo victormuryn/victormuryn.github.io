@@ -1,4 +1,12 @@
 [
+    {
+    "name": "Travel Inside",
+    "img": "travelinside",
+    "location": "#",
+    "description": "Website for a small travel company",
+    "type": "new",
+    "stroke": "#000 0 0 2px"
+  },
   {
     "name": "School",
     "img": "school",
