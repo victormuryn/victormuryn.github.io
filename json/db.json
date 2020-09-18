@@ -1,18 +1,17 @@
 [
+  {
+    "name": "School",
+    "img": "school",
+    "location": "https://school27.com.ua",
+    "description": "I created a website for my school",
+    "type": "new",
+    "stroke": "#000 0 0 2px"
+  },
     {
     "name": "Travel Inside",
     "img": "travelinside",
     "location": "#",
     "description": "Website for a small travel company",
-    "type": "new",
-    "stroke": "#000 0 0 2px"
-  },
-  {
-    "name": "School",
-    "img": "school",
-    "location": "school",
-    "description": "I created a website for my school",
-    "type": "underDevelopment",
     "stroke": "#000 0 0 2px"
   },
   {
