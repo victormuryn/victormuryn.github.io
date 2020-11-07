@@ -71,8 +71,7 @@
 			constructor(input) {
 				this.calc(input);
 
-				input.addEventListener(`input`, (e) => {
-					e.preventDefault();
+				input.addEventListener(`input`, () => {
 					this.calc(input);
 
 					const color = [inputs.day.getRBG(), inputs.month.getRBG(), inputs.year.getRBG()];
