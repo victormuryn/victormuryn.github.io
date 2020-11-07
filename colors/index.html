@@ -25,7 +25,8 @@
 		.wrapper {
 			display: flex;
 			flex-direction: column;
-			width: 400px;
+			max-width: 440px;
+			padding: 0 20px;
 		}
 
 		input {	
@@ -38,6 +39,12 @@
 			color: var(--color);
 			border-bottom: 2px solid var(--color);
 			font-size: 30px;
+			width: 100%;
+		}
+
+		input::placeholder {
+			color: var(--color);
+			opacity: .8;
 		}
 
 		input:last-of-type {
