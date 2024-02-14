@@ -1,0 +1,37 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #ff9494;
+    color: #fff5e4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+    font-family: 'Courier', serif;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+img {
+    margin-bottom: 30px;
+}
+
+button {
+    border:0;
+    color: #ff9494;
+    font-weight: bold;
+    font-size: 1rem;
+    background-color: #fff5e4;
+    cursor: pointer;
+    padding: 15px 25px;
+    border-radius: 67px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+.no-active {
+    position: absolute;
+}
